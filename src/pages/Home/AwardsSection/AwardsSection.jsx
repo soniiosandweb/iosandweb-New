@@ -1,6 +1,7 @@
 import SubHeading from "../../../components/SubHeading/SubHeading";
 import "./AwardsSection.css";
 import OwlCarousel from "react-owl-carousel";
+import Partners from "../../../components/Partners"
 
 const goodFirmLogo = `${process.env.REACT_APP_API_URL}/assests/images/awards/good-firms-logo.webp`;
 const appFutura = `${process.env.REACT_APP_API_URL}/assests/images/awards/appfutura.webp`;
@@ -71,6 +72,11 @@ const AwardsSection = () => {
                     </div>
                 ))}
             </OwlCarousel>
+
+            <div className="brands_block less-bottom-padding">
+                <h2 className="heading_main less-top-padding less-bottom-padding">Our Work Has Transformed Experiences for Leading Brands Worldwide</h2>
+                <Partners />
+            </div>
         </div>
     )
 }

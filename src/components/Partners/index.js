@@ -1,6 +1,5 @@
-import React from "react";
 import './style.css';
-import { Container, Row, Col } from "react-bootstrap";
+import OwlCarousel from "react-owl-carousel";
 
 const onmen = `${process.env.REACT_APP_API_URL}/assests/images/partners/ONMEN.png`;
 const gopuff = `${process.env.REACT_APP_API_URL}/assests/images/partners/Gopuff.webp`;
@@ -19,66 +18,107 @@ const walgreeens = `${process.env.REACT_APP_API_URL}/assests/images/partners/wal
 
 const ten = `${process.env.REACT_APP_API_URL}/assests/images/partners/ten-white-2.png`;
 
-function Partners(){
+const partnersLists = [
+    {
+        logo: onmen,
+        title: "ONMEN",
+    },
+    {
+        logo: srgn,
+        title: "SRGN",
+    },
+    {
+        logo: aesthetic,
+        title: "Aesthetic",
+    },
+    {
+        logo: vertical,
+        title: "Vertical",
+    },
+    {
+        logo: mygermany,
+        title: "MyGermany",
+    },
+    {
+        logo: ten,
+        title: "Ten World",
+    },
+    {
+        logo: lowes,
+        title: "Lowes",
+    },
+    {
+        logo: gopuff,
+        title: "Gopuff",
+    },
+    {
+        logo: grubhub,
+        title: "Grubhub",
+    },
+    {
+        logo: doorDash,
+        title: "DoorDash",
+    },
+    {
+        logo: Instacart,
+        title: "Instacart",
+    },
+    {
+        logo: seamless,
+        title: "Seamless",
+    },
+    {
+        logo: walgreeens,
+        title: "Walgreeens",
+    },
+    {
+        logo: uber,
+        title: "Uber",
+    },
+    {
+        logo: chownow,
+        title: "Chownow",
+    }
+]
+
+const Partners = () => {
     return(
         <>
-            <div className="partners-panel section-padding">
-                <Container>
-                    <Row>
-                        <Col>
-                            <div className="leadtxt text-center">
-                                <h3>Our Efforts Have Revolutionized <br/>Your Experience With These Global Leaders</h3>
+            <div className="partners-panel">
+                <OwlCarousel 
+                    className="owl-theme partner-logos" 
+                    loop 
+                    autoplay={true} 
+                    autoplayTimeout={3000} 
+                    autoplayHoverPause={true} 
+                    nav={false} 
+                    dots={false} 
+                    items={5}
+                    responsive={
+                        {
+                            '0': {
+                                items: 3,
+                            },
+                            '768': {
+                                items: 3,
+                            },
+                            '992': {
+                                items: 4,
+                            },
+                            '1200': {
+                                items: 5,
+                            }
+                        }
+                    }
+                >
+                    {partnersLists.map((item,i) => (
+                        <div className="item" key={i}>
+                            <div className="partner-logo">
+                                <img src={item.logo} alt={item.title} className="brands_image" />
                             </div>
-                            <ul className="partner-logos">
-                                <li className="partner-logo">
-                                    <img src={onmen} alt="ONMEN" />
-                                </li>
-                                <li className="partner-logo">
-                                    <img src={srgn} alt="srgn" />
-                                </li>
-                                <li className="partner-logo">
-                                    <img src={aesthetic} alt="aesthetic" />
-                                </li>
-                                <li className="partner-logo">
-                                    <img src={vertical} alt="vertical" />
-                                </li>
-                                <li className="partner-logo">
-                                    <img src={mygermany} alt="mygermany" />
-                                </li>
-                                <li className="partner-logo">
-                                    <img src={ten} alt="ten" />
-                                </li>
-                                <li className="partner-logo">
-                                    <img src={lowes} alt="lowes" />
-                                </li>
-                                <li className="partner-logo">
-                                    <img src={gopuff} alt="gopuff" />
-                                </li>
-                                <li className="partner-logo">
-                                    <img src={grubhub} alt="grubhub" />
-                                </li>
-                                <li className="partner-logo">
-                                    <img src={chownow} alt="chownow" />
-                                </li>
-                                <li className="partner-logo">
-                                    <img src={doorDash} alt="doorDash" />
-                                </li>
-                                <li className="partner-logo">
-                                    <img src={Instacart} alt="Instacart" />
-                                </li>
-                                <li className="partner-logo">
-                                    <img src={seamless} alt="seamless" />
-                                </li>
-                                <li className="partner-logo">
-                                    <img src={walgreeens} alt="walgreeens" />
-                                </li>
-                                <li className="partner-logo">
-                                    <img src={uber} alt="uber" />
-                                </li>
-                            </ul>
-                        </Col>
-                    </Row>
-                </Container>
+                        </div>
+                    ))}
+                </OwlCarousel>
             </div>
         </>
     )

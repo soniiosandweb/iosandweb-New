@@ -1,0 +1,39 @@
+.home-banner {
+    position: relative;
+    width: 100%;
+    height: calc(100vh);
+    background: #000;
+    overflow: hidden;
+    padding: 100px 0;
+}
+.home-banner-overlay {
+    background: rgb(0 0 0 / 50%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.home-banner .container,
+.home-banner .row{
+    height: 100%;
+}
+.home-banner .intro-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.home-banner .intro_video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    right: 0;
+    border: 0;
+    object-fit: cover;
+}

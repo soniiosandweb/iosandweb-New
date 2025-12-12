@@ -17,3 +17,28 @@
         padding: 2rem 1rem;
     }
 }
+
+/* Brands */
+.brands_block .heading_main {
+    text-align: center;
+    color: var(--color-darkpurple);
+    margin: 0;
+}
+.partner-logos .partner-logo {
+    justify-content: center;
+    display: flex;
+    height: 45px;
+    align-items: center;
+    padding: 0 20px;
+}
+.brands_block .partners-panel {
+    background-color: #f2f2f2;
+    padding: 10px 0;
+    max-width: 1140px;
+    margin: auto;
+}
+@media (max-width: 480px) {
+    .partner-logos .partner-logo {
+        padding: 0 10px;
+    }
+}

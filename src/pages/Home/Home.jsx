@@ -1,6 +1,7 @@
 import SEO from "../../components/SEO";
 import AboutSection from "./About/About";
 import Banner from "./Banner/Banner";
+import InnovativeSection from "./InnovativeSection/InnovativeSection";
 import PoweringSection from "./PoweringSection/PoweringSection";
 
 const Home = () => {
@@ -114,6 +115,9 @@ const Home = () => {
 
             {/* Powering and Award section */}
             <PoweringSection />
+
+            {/* Innovative section */}
+            <InnovativeSection />
         </>
     )
 }

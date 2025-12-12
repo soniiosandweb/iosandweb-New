@@ -10,9 +10,10 @@
 .partner-logos .partner-logo img {
     filter: invert(100%) sepia(0) saturate(100%) hue-rotate(284deg) brightness(220%) contrast(0%);
     cursor: pointer;
-    width: fit-content;
+    width: max-content;
     object-fit: contain;
     max-width: 100%;
+    height: 100%;
 }
 .partner-logos .partner-logo img:hover {
     filter: none;

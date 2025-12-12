@@ -1,0 +1,179 @@
+.innovative_section {
+    position: relative;
+}
+.innovativeBG {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 877px;
+    object-fit: contain;
+}
+.innovative_section .container {
+    position: relative;
+}
+.innovative_section_flex {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.innovative_section_flex .innovative_left_col {
+    flex:1;
+}
+.innovative_section_flex .innovative_right_col {
+    flex: 1;
+    max-width: 426px;
+}
+.innovative_lists_grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.innovative_lists_grid .innovative_lists_item {
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(var(--color-lightblack), var(--color-lightblack)) padding-box,
+              linear-gradient(90deg, var(--color-lightblack) 0%, var(--color-lightblack) 100%) border-box;
+    border: 1px solid transparent;
+    color: var(--color-white);
+    text-decoration: none;
+}
+.innovative_lists_grid .innovative_lists_item:hover {
+    background: linear-gradient(#2d163a, #2d163a) padding-box,
+              linear-gradient(90deg, var(--color-gradientblue) 0%, var(--color-pink) 100%) border-box;
+}
+.innovative_lists_grid .innovative_lists_item:hover::after {
+    width: 4px;
+}
+.innovative_lists_grid .innovative_lists_item::after {
+    content: "";
+    width: 0;
+    height: 70%;
+    background: linear-gradient(180deg, #BF00FF 0%, #0044FF 100%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.innovative_lists_item .innovative_lists_icon {
+    width: 40px;
+    height: 40px;
+}
+.innovative_lists_item .innovative_lists_heading {
+    font-size: 25px;
+    font-family: var(--font-poppins-sembold);
+    font-weight: 600;
+    margin: 0;
+    flex: 1;
+}
+.innovative_blocks_image {
+    position: relative;
+    max-width: 557px;
+    margin-right: 80px;
+}
+.innovative_blocks_image .innovative_img {
+    width: 100%;
+}
+.innovative_items_span {
+    border-radius: 25px;
+    background: linear-gradient(var(--color-black), var(--color-black)) padding-box,
+              linear-gradient(90deg, var(--color-gradient1) 0%, var(--color-gradient2) 100%) border-box;
+    border: 2px solid transparent;
+    padding: 10px 30px;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: max-content;
+    height: max-content;
+}
+.innovative_items_span:hover {
+    background: linear-gradient(90deg, var(--color-blue), var(--color-purple)) padding-box,
+              linear-gradient(90deg, var(--color-blue) 0%, var(--color-purple) 100%) border-box;
+}
+.innovative_items_span.innovation {
+    right: -15px;
+    left: auto;
+    top: -10px;
+}
+.innovative_items_span.growth {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin: auto;
+}
+.innovative_items_span.scalability {
+    top: 64%;
+    right: -80px;
+    left: auto;
+}
+.innovative_items_span.security {
+    bottom: -40px;
+    top: auto;
+    left: 20%;
+}
+@media (max-width: 1199px) {
+    .innovative_lists_item .innovative_lists_heading {
+        font-size: 20px;
+    }
+    .innovative_section_flex .innovative_right_col {
+        max-width: 360px;
+    }
+    .innovativeBG {
+        height: auto;
+        max-width: 600px;
+    }
+}
+@media (max-width: 991px) {
+    .innovative_section_flex {
+        flex-direction: column;
+        gap: 100px;
+    }
+    .innovative_lists_item .innovative_lists_icon {
+        width: 30px;
+        height: 30px;
+    }
+    .innovative_section_flex .innovative_right_col {
+        max-width: 346px;
+    }
+    .innovative_blocks_image {
+        margin: 0 80px;
+    }
+}
+@media (max-width: 767px) {
+    .innovative_items_span.reliability {
+        left: -50px;
+    }
+}
+@media (max-width: 480px) {
+    .innovative_items_span {
+        font-size: 15px;
+        padding: 6px 16px;
+    }
+    .innovative_blocks_image .innovative_img {
+        max-width: 246px;
+    }
+    .innovative_blocks_image {
+        margin: 0 50px 25px;
+    }
+    .innovative_items_span.security {
+        bottom: -25px;
+        top: auto;
+        left: -15px;
+    }
+    .innovative_items_span.scalability {
+        top: 70%;
+        right: -50px;
+    }
+    .innovative_items_span.innovation {
+        right: -50px;
+    }
+    .innovative_items_span.reliability {
+        left: -45px;
+    }
+}
