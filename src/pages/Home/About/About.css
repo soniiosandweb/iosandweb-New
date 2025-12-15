@@ -24,6 +24,7 @@
 .btn-gradient-blue {
     text-decoration: unset;
     font-size: 18px;
+    line-height: 22px;
     display: inline-flex;
     align-items: center;
     gap: 8px; 
@@ -58,6 +59,7 @@
     }
     .btn-gradient-blue {
         font-size: 16px;
+        line-height: 20px;
     }
     .about_section_flex {
         gap: 1rem;

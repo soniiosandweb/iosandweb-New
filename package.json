@@ -26,6 +26,8 @@
     "react-phone-number-input": "^3.3.7",
     "react-router-sitemap": "^1.2.0",
     "react-scripts": "^5.0.1",
+    "react-slick": "^0.31.0",
+    "slick-carousel": "^1.8.1",
     "source-map-loader": "^5.0.0",
     "styled-components": "^6.1.1",
     "web-vitals": "^2.1.4"

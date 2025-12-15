@@ -1,8 +1,12 @@
 import SEO from "../../components/SEO";
 import AboutSection from "./About/About";
+import AIPoweredSection from "./AIPoweredSection/AIPoweredSection";
 import Banner from "./Banner/Banner";
+import IndustriesSection from "./IndustriesSection/IndustriesSection";
 import InnovativeSection from "./InnovativeSection/InnovativeSection";
 import PoweringSection from "./PoweringSection/PoweringSection";
+import ServicesSection from "./ServicesSection/ServicesSection";
+import StrategicPartners from "./StrategicPartners/StrategicPartners";
 
 const Home = () => {
 
@@ -118,6 +122,18 @@ const Home = () => {
 
             {/* Innovative section */}
             <InnovativeSection />
+
+            {/* Industries section */}
+            <IndustriesSection />
+
+            {/* AI Powered section */}
+            <AIPoweredSection />
+
+            {/* Services Section */}
+            <ServicesSection />
+
+            {/* Our Strategic Partners */}
+            <StrategicPartners />
         </>
     )
 }

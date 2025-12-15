@@ -1,5 +1,6 @@
+import { useEffect, useRef, useState } from 'react';
 import './style.css';
-import OwlCarousel from "react-owl-carousel";
+import Slider from "react-slick";
 
 const onmen = `${process.env.REACT_APP_API_URL}/assests/images/partners/ONMEN.png`;
 const gopuff = `${process.env.REACT_APP_API_URL}/assests/images/partners/Gopuff.webp`;
@@ -82,34 +83,37 @@ const partnersLists = [
 ]
 
 const Partners = () => {
+
+    const partnersRef = useRef(null);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    
+    const isMobilePartner = windowWidth < 768;
+    const isTabletPartner = windowWidth < 1200;
+    
+    useEffect(() => {
+        const handleResize = () => setWindowWidth(window.innerWidth);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+    
+    const partnersSettings = {
+        dots: false,
+        arrows: false,
+        infinite: true,
+        slidesToShow: isMobilePartner ? 3 : isTabletPartner ? 4 : 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        pauseOnHover: true,
+    };
+
     return(
         <>
             <div className="partners-panel">
-                <OwlCarousel 
-                    className="owl-theme partner-logos" 
-                    loop 
-                    autoplay={true} 
-                    autoplayTimeout={3000} 
-                    autoplayHoverPause={true} 
-                    nav={false} 
-                    dots={false} 
-                    items={5}
-                    responsive={
-                        {
-                            '0': {
-                                items: 3,
-                            },
-                            '768': {
-                                items: 3,
-                            },
-                            '992': {
-                                items: 4,
-                            },
-                            '1200': {
-                                items: 5,
-                            }
-                        }
-                    }
+                <Slider 
+                    className="partner-logos" 
+                    {...partnersSettings}
+                    ref={partnersRef}
                 >
                     {partnersLists.map((item,i) => (
                         <div className="item" key={i}>
@@ -118,7 +122,7 @@ const Partners = () => {
                             </div>
                         </div>
                     ))}
-                </OwlCarousel>
+                </Slider>
             </div>
         </>
     )

@@ -1,39 +1,30 @@
 /* partners section */
-.partner-logos {
-    padding-left: 0;
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    align-items: center;
-    gap: 60px;
-}
 .partner-logos .partner-logo img {
-    filter: invert(100%) sepia(0) saturate(100%) hue-rotate(284deg) brightness(220%) contrast(0%);
-    cursor: pointer;
-    width: max-content;
-    object-fit: contain;
-    max-width: 100%;
-    height: 100%;
+  filter: invert(100%) sepia(0) saturate(100%) hue-rotate(284deg) brightness(220%) contrast(0%);
+  cursor: pointer;
+  width: max-content;
+  object-fit: contain;
+  max-width: 100%;
+  height: 45px;
 }
 .partner-logos .partner-logo img:hover {
-    filter: none;
+  filter: none;
 }
-@media (min-width: 767px) and (max-width: 1024px) {
-    .partner-logos {
-      grid-template-columns: repeat(4,1fr);
-      gap: 50px;
-    }
-}
-  
-@media (max-width: 767px) {
-    .partner-logos {
-      grid-template-columns: repeat(2,1fr);
-      gap: 40px;
-    }
+.partner-logos .partner-logo {
+  justify-content: center;
+  display: flex;
+  height: 52px;
+  align-items: center;
+  padding: 0 20px;
 }
 @media (max-width: 480px) {
-    .partner-logos {
-      grid-template-columns: repeat(1,1fr);
-      text-align: center;
-    }
+  .partner-logos .partner-logo {
+    padding: 0 10px;
+  }
+  .partner-logos .partner-logo {
+    height: 45px;
+  }
+  .partner-logos .partner-logo img {
+    height: 30px;
+  }
 }

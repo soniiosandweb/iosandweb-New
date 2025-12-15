@@ -1,13 +1,15 @@
 import SubHeading from "../../../components/SubHeading/SubHeading";
 import "./AwardsSection.css";
-import OwlCarousel from "react-owl-carousel";
 import Partners from "../../../components/Partners"
+import Slider from "react-slick";
+import { useEffect, useRef, useState } from "react";
 
 const goodFirmLogo = `${process.env.REACT_APP_API_URL}/assests/images/awards/good-firms-logo.webp`;
 const appFutura = `${process.env.REACT_APP_API_URL}/assests/images/awards/appfutura.webp`;
 const itFirms = `${process.env.REACT_APP_API_URL}/assests/images/awards/itfirm.webp`;
 const topDevelopment = `${process.env.REACT_APP_API_URL}/assests/images/awards/top-development.webp`;
 const upWork = `${process.env.REACT_APP_API_URL}/assests/images/awards/upwork.webp`;
+const trustpilot = `${process.env.REACT_APP_API_URL}/assests/images/awards/trustpilot.webp`;
 
 const awardsLists = [
     { 
@@ -29,40 +31,47 @@ const awardsLists = [
     { 
         img: appFutura,
         title: "Most promising mobile app solution provider"
+    },
+    { 
+        img: trustpilot,
+        title: "Web development company of the year"
     }
 ];
 
 const AwardsSection = () => {
+
+    const testimonialRef = useRef(null);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    const isMobile = windowWidth < 768;
+    const isTablet = windowWidth < 1200;
+
+    useEffect(() => {
+        const handleResize = () => setWindowWidth(window.innerWidth);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    const awardsSettings = {
+        dots: false,
+        arrows: false,
+        infinite: true,
+        slidesToShow: isMobile ? 3 : isTablet ? 4 : 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        pauseOnHover: true,
+    };
+
     return(
         <div className="awards_section">
             <SubHeading text={"Awards"} />
             <h2 className="heading_main">Every Award Marks a Milestone in Our Journey of Excellence</h2>
 
-            <OwlCarousel 
-                className="owl-theme awards-section-carousel" 
-                loop 
-                autoplay={true} 
-                autoplayTimeout={3000} 
-                autoplayHoverPause={true} 
-                nav={false} 
-                dots={false} 
-                items={5}
-                responsive={
-                    {
-                        '0': {
-                            items: 3,
-                        },
-                        '768': {
-                            items: 3,
-                        },
-                        '992': {
-                            items: 4,
-                        },
-                        '1200': {
-                            items: 5,
-                        }
-                    }
-                }
+            <Slider 
+                className="awards-section-carousel" 
+                {...awardsSettings}
+                ref={testimonialRef}
             >
                 {awardsLists.map((item,i) => (
                     <div className="item" key={i}>
@@ -71,7 +80,7 @@ const AwardsSection = () => {
                         </div>
                     </div>
                 ))}
-            </OwlCarousel>
+            </Slider>
 
             <div className="brands_block less-bottom-padding">
                 <h2 className="heading_main less-top-padding less-bottom-padding">Our Work Has Transformed Experiences for Leading Brands Worldwide</h2>

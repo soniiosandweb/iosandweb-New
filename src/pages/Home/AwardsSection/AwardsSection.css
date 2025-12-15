@@ -11,6 +11,7 @@
 .award_list_item .award_image {
     max-width: 158px;
     margin: auto;
+    width: 100%;
 }
 @media (max-width: 575px) {
     .awards_section {
@@ -24,21 +25,10 @@
     color: var(--color-darkpurple);
     margin: 0;
 }
-.partner-logos .partner-logo {
-    justify-content: center;
-    display: flex;
-    height: 45px;
-    align-items: center;
-    padding: 0 20px;
-}
+
 .brands_block .partners-panel {
     background-color: #f2f2f2;
     padding: 10px 0;
     max-width: 1140px;
     margin: auto;
-}
-@media (max-width: 480px) {
-    .partner-logos .partner-logo {
-        padding: 0 10px;
-    }
 }
