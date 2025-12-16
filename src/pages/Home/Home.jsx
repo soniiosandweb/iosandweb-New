@@ -1,12 +1,16 @@
+import AnimatedText from "../../components/AnimatedText/AnimatedText";
 import SEO from "../../components/SEO";
 import AboutSection from "./About/About";
 import AIPoweredSection from "./AIPoweredSection/AIPoweredSection";
 import Banner from "./Banner/Banner";
+import CaseStudies from "./CaseStudies/CaseStudies";
+import ElevateSuccess from "./ElevateSuccess/ElevateSuccess";
 import IndustriesSection from "./IndustriesSection/IndustriesSection";
 import InnovativeSection from "./InnovativeSection/InnovativeSection";
 import PoweringSection from "./PoweringSection/PoweringSection";
 import ServicesSection from "./ServicesSection/ServicesSection";
 import StrategicPartners from "./StrategicPartners/StrategicPartners";
+import WhyChoose from "./WhyChoose/WhyChoose";
 
 const Home = () => {
 
@@ -134,6 +138,18 @@ const Home = () => {
 
             {/* Our Strategic Partners */}
             <StrategicPartners />
+
+            {/* Elevate success */}
+            <ElevateSuccess />
+
+            {/* Case Studies */}
+            <CaseStudies />
+
+            {/* Why Choose */}
+            <WhyChoose />
+
+            {/* Animated Text */}
+            <AnimatedText />
         </>
     )
 }

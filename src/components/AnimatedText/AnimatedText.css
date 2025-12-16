@@ -1,0 +1,34 @@
+.animated_gradient {
+    width: 100%;
+    overflow: hidden;
+    background: var(--color-body);
+}
+
+.animated_gradient_track {
+    display: flex;
+    gap: 4rem;
+    width: max-content;
+    animation: marquee 20s linear infinite;
+}
+
+.animated_gradient_track span {
+    font-size: clamp(45px, 10vw, 120px);
+    font-family: var(--font-poppins-semibold);
+    white-space: nowrap;
+    color: var(--color-body);
+    -webkit-text-fill-color: var(--color-body);
+    -webkit-text-stroke-width: 2px;
+    background: linear-gradient(90deg, #A600FF 0%, #4B57FF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    position: relative;
+}
+/* Continuous scrolling */
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}

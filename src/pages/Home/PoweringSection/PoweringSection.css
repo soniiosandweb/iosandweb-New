@@ -37,7 +37,7 @@
 .powering_grid_item span {
     font-size: 75px;
     line-height: 86px;
-    font-family: var(--font-poppins-sembold);
+    font-family: var(--font-poppins-semibold);
 }   
 .powering_grid_item .content_powering {
     margin-top: 20px;

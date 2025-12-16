@@ -43,9 +43,6 @@ const serviceSlider = [
 ]
 
 const ServicesSection = () => {
-
-    const total = serviceSlider.length;
-    const [current, setCurrent] = useState(1);
     
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const isLessSer = windowWidth < 480;
@@ -57,18 +54,13 @@ const ServicesSection = () => {
         slidesToScroll: 1,
         infinite: true,
         arrows: false,
-        dots: false,
+        dots: true,
         autoplay: true,
         autoplaySpeed: 5000,
         pauseOnHover: true,
         centerPadding: isLessSer ? "30px" : "50px",
         centerMode: isSmallSer ? true : false,
-        afterChange: (index) => {
-            setCurrent(index + 1);
-        },
     };
-
-    const progressWidth = (current / total) * 100;
     
     useEffect(() => {
         const handleResize = () => setWindowWidth(window.innerWidth);
@@ -112,13 +104,6 @@ const ServicesSection = () => {
                                     </div>
                                 ))}
                             </Slider>
-
-                            {/* Progress */}
-                            <div className="industries_progress">
-                                <div className="progress-bar">
-                                    <span style={{ width: `${progressWidth}%` }} />
-                                </div>
-                            </div>
                         </div>
                     </Col>
                 </Row>

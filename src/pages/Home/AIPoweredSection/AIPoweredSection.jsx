@@ -17,9 +17,15 @@ const appStore = `${process.env.REACT_APP_API_URL}/assests/images/home-new/aiPow
 const android = `${process.env.REACT_APP_API_URL}/assests/images/home-new/aiPowered/android.svg`;
 const fluter = `${process.env.REACT_APP_API_URL}/assests/images/home-new/aiPowered/fluter.svg`;
 const native = `${process.env.REACT_APP_API_URL}/assests/images/home-new/aiPowered/native.svg`;
-const PWA = `${process.env.REACT_APP_API_URL}/assests/images/home-new/aiPowered/technology.svg`;
-// const technology = `${process.env.REACT_APP_API_URL}/assests/images/home-new/aiPowered/technology.svg`;
-// const technology = `${process.env.REACT_APP_API_URL}/assests/images/home-new/aiPowered/technology.svg`;
+const PWA = `${process.env.REACT_APP_API_URL}/assests/images/home-new/aiPowered/pwa.svg`;
+const encrypted = `${process.env.REACT_APP_API_URL}/assests/images/home-new/aiPowered/encrypted.svg`;
+const smartContract = `${process.env.REACT_APP_API_URL}/assests/images/home-new/aiPowered/smart-contract.svg`;
+const decentralized = `${process.env.REACT_APP_API_URL}/assests/images/home-new/aiPowered/decentralized.svg`;
+const planning = `${process.env.REACT_APP_API_URL}/assests/images/home-new/aiPowered/planning.svg`;
+const office = `${process.env.REACT_APP_API_URL}/assests/images/home-new/aiPowered/office.svg`;
+const uxDesign = `${process.env.REACT_APP_API_URL}/assests/images/home-new/aiPowered/ux-design.svg`;
+const promotion = `${process.env.REACT_APP_API_URL}/assests/images/home-new/aiPowered/promotion.svg`;
+const investment = `${process.env.REACT_APP_API_URL}/assests/images/home-new/aiPowered/investment.svg`;
 
 const sectionsData = [
     {
@@ -109,6 +115,138 @@ const sectionsData = [
                 icon: PWA,
             }
         ]
+    },
+    {
+        id: "blockchain",
+        menu_title: "Blockchain",
+        title: "Powering the Next Era of Decentralization",
+        subheading: "Enabling businesses with secure, efficient, and future-ready decentralized technologies",
+        color: "green",
+        apps: false,
+        features: [
+            {
+                text: "Enterprise-Grade Security Architecture",
+                icon: encrypted,
+            },
+            {
+                text: "Future-Ready Smart Contracts",
+                icon: smartContract,
+            },
+            {
+                text: "Scalable Decentralized Solutions",
+                icon: decentralized,
+            }
+        ],
+        lists: [
+            {
+                text: "Blockchain Consulting & Development",
+                icon: seo,
+            },
+            {
+                text: "Tokenization & NFT Solutions",
+                icon: softwareDevelopment,
+            },
+            {
+                text: "Custom Crypto Solutions",
+                icon: communicationSkills,
+            },
+            {
+                text: "Smart Contract Design & Auditing",
+                icon: machineLearning,
+            },
+            {
+                text: "Metaverse Solutions",
+                icon: chatbot,
+            }
+        ]
+    },
+    {
+        id: "startup",
+        menu_title: "Startup",
+        title: "A Strategic Launchpad for the Next Big Startups",
+        subheading: "Empowering startups to go from idea to impact with expert guidance and advanced technology.",
+        color: "yellow",
+        apps: false,
+        features: [
+            {
+                text: "User-Centric Design Excellence",
+                icon: encrypted,
+            },
+            {
+                text: "AI-Assisted Wireframing & Prototyping",
+                icon: smartContract,
+            },
+            {
+                text: "Strategic Brand Architecture",
+                icon: decentralized,
+            }
+        ],
+        lists: [
+            {
+                text: "Business Planning",
+                icon: planning,
+            },
+            {
+                text: "Legal Setup",
+                icon: office,
+            },
+            {
+                text: "UI/UX Design",
+                icon: uxDesign,
+            },
+            {
+                text: "Marketing Strategy",
+                icon: promotion,
+            },
+            {
+                text: "Investor Pitch Decks",
+                icon: investment,
+            }
+        ]
+    },
+    {
+        id: "app",
+        menu_title: "App",
+        title: "AI-Driven App Creation Suite",
+        subheading: "Pre-built tech solutions designed for real business use cases—launch faster with zero coding.",
+        color: "pink",
+        apps: false,
+        features: [
+            {
+                text: "70% Ready Code Architecture",
+                icon: encrypted,
+            },
+            {
+                text: "Get It Customized Your Way",
+                icon: smartContract,
+            },
+            {
+                text: "Launch MVP in 2 Days",
+                icon: decentralized,
+            }
+        ],
+        lists: [
+            {
+                text: "Ordering & Service Booking",
+                icon: planning,
+            },
+            {
+                text: "Delivery Management",
+                icon: office,
+            },
+            {
+                text: "Taxi & Mobility Solution",
+                icon: uxDesign,
+            },
+            {
+                text: "Online Consultation",
+                icon: promotion,
+            },
+            {
+                text: "All-in-one Marketplace",
+                icon: investment,
+            }
+        ]
     }
 ];
 
@@ -116,24 +254,78 @@ const AIPoweredSection = () => {
 
     const [activeId, setActiveId] = useState("intelligence");
     const sectionRefs = useRef({});
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+    const menuRefs = useRef({});
 
     const scrollToSection = (id) => {
         sectionRefs.current[id]?.scrollIntoView({
             behavior: "smooth",
-            block: "start",
+            block: "center",
         });
     };
 
     useEffect(() => {
+    if (!isMobile) return;
+
+    const activeMenu = menuRefs.current[activeId];
+        if (activeMenu) {
+            activeMenu.scrollIntoView({
+            behavior: "smooth",
+            inline: "center",
+            block: "nearest",
+            });
+        }
+    }, [activeId, isMobile]);
+
+    useEffect(() => {
+  if (!isMobile) return;
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+        let visibleSection = null;
+
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+            visibleSection = entry.target.id;
+            }
+        });
+
+        if (visibleSection) {
+            setActiveId(visibleSection);
+        }
+        },
+        {
+        rootMargin: "-45% 0px -45% 0px",
+        threshold: 0,
+        }
+    );
+
+    Object.values(sectionRefs.current).forEach((section) => {
+        observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+    }, [isMobile]);
+
+
+    useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setActiveId(entry.target.id);
-                    }
-                });
+            let maxRatio = 0;
+            let visibleId = activeId;
+
+            entries.forEach((entry) => {
+                if (entry.intersectionRatio > maxRatio) {
+                maxRatio = entry.intersectionRatio;
+                visibleId = entry.target.id;
+                }
+            });
+
+            setActiveId(visibleId);
             },
-            { threshold: 0.5 }
+            {
+            threshold: [0.25, 0.5, 0.75, 1],
+            }
         );
 
         Object.values(sectionRefs.current).forEach((section) => {
@@ -141,10 +333,10 @@ const AIPoweredSection = () => {
         });
 
         return () => observer.disconnect();
-    }, []);
+    }, [activeId]);
 
     return(
-        <div className="ai_powered_section section-padding body-background">
+        <div className="ai_powered_section section-padding no-bottom-padding body-background">
             <Container>
                 <Row>
                     <Col>
@@ -160,6 +352,7 @@ const AIPoweredSection = () => {
                                             activeId === item.id ? "active" : ""
                                         }`}
                                         onClick={() => scrollToSection(item.id)}
+                                        ref={(el) => (menuRefs.current[item.id] = el)}
                                     >
                                         <h2 className="heading_main">
                                             <span className={`${item.color}`}>CB</span> 
@@ -181,6 +374,26 @@ const AIPoweredSection = () => {
                                     >
                                         <h2 className={`heading_main ${item.color}`}>{item.title}</h2>
                                         <p className="paragraph_content">{item.subheading}</p>
+                                        <div className="features_lists less-top-padding less-bottom-padding">
+                                            {item.features.map((feature,index) => (
+                                                <div className="features_lists_item" key={index}>
+                                                    <div className="features_item_icon">
+                                                        <img src={feature.icon} alt={feature.text} className="features_icon" />
+                                                    </div>
+                                                    <p className="features_item_text">{feature.text}</p>
+                                                </div>
+                                            ))}
+                                        </div>
+                                        <div className={`powered_lists_grid ${item.apps && "apps"}`}>
+                                            {item.lists.map((list,index) => (
+                                                <div className="powered_lists_item" key={index}>
+                                                    <div className="powered_item_icon">
+                                                        <img src={list.icon} alt={list.text} className="powered_icon" />
+                                                    </div>
+                                                    <p className="powered_item_text">{list.text}</p>
+                                                </div>
+                                            ))}
+                                        </div>
                                     </div>
                                 ))}
                             </div>

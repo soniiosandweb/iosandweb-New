@@ -30,7 +30,7 @@ const partnersLists = [
 
 const StrategicPartners = () => {
     return(
-        <div className="strategic_partners section-padding body-background">
+        <div className="strategic_partners section-padding body-background no-bottom-padding">
             <Container>
                 <Row>
                     <Col>

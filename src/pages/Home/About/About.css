@@ -12,7 +12,7 @@
 .heading_main {
     font-size: 35px;
     line-height: 40px;
-    font-family: var(--font-poppins-sembold);
+    font-family: var(--font-poppins-semibold);
     margin-bottom: 20px;
 }
 .paragraph_content {

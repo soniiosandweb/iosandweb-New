@@ -84,8 +84,6 @@ const industriesLists = [
 const IndustriesSection = () => {
 
     const navigate = useNavigate();
-    const total = industriesLists.length;
-    const [current, setCurrent] = useState(1);
 
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const isSmallInd = windowWidth < 768;
@@ -105,16 +103,11 @@ const IndustriesSection = () => {
         slidesToScroll: 1,
         infinite: isMobileInd ? false : true,
         arrows: false,
-        dots: false,
+        dots: true,
         autoplay: false,
         autoplaySpeed: 8000,
         pauseOnHover: true,
-        afterChange: (index) => {
-            setCurrent(index + 1);
-        },
     };
-
-    const progressWidth = (current / total) * 100;
 
     useEffect(() => {
         const handleResize = () => setWindowWidth(window.innerWidth);
@@ -123,7 +116,7 @@ const IndustriesSection = () => {
     }, []);
 
     return(
-        <div className="industries_section section-padding body-background">
+        <div className="industries_section section-padding no-bottom-padding body-background">
             <Container>
                 <Row>
                     <Col>
@@ -165,13 +158,6 @@ const IndustriesSection = () => {
                                     </div>
                                 ))}
                             </Slider>
-                            
-                            {/* Progress */}
-                            <div className="industries_progress">
-                                <div className="progress-bar">
-                                    <span style={{ width: `${progressWidth}%` }} />
-                                </div>
-                            </div>
 
                             <div className="slider_prev_next">
                                 <button className="button" onClick={previous}>

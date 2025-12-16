@@ -1,7 +1,7 @@
 .heading_sub {
     margin: 0;
     color: var(--color-gray);
-    font-family: var(--font-poppins-sembold);
+    font-family: var(--font-poppins-semibold);
     font-size: 18px;
     text-transform: uppercase;
     display: inline-flex;
