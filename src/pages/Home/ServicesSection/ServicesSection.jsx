@@ -7,12 +7,12 @@ import { faAnglesRight } from "@fortawesome/free-solid-svg-icons"
 import Slider from "react-slick";
 import { useEffect, useState } from "react";
 
-const servicesBG = `${process.env.REACT_APP_API_URL}/assests/images/home-new/services/services_bg.webp`;
-const artificialIcon = `${process.env.REACT_APP_API_URL}/assests/images/home-new/services/artificial-intelligence.svg`;
-const aiIcon = `${process.env.REACT_APP_API_URL}/assests/images/home-new/services/aii.svg`;
-const blockchainIcon = `${process.env.REACT_APP_API_URL}/assests/images/home-new/services/blockchain.svg`;
-const dataIcon = `${process.env.REACT_APP_API_URL}/assests/images/home-new/services/data-science.svg`;
-const analysisIcon = `${process.env.REACT_APP_API_URL}/assests/images/home-new/services/analysis.svg`;
+const servicesBG = `${process.env.REACT_APP_API_URL}/assests/images/home/services/services_bg.webp`;
+const artificialIcon = `${process.env.REACT_APP_API_URL}/assests/images/home/services/artificial-intelligence.svg`;
+const aiIcon = `${process.env.REACT_APP_API_URL}/assests/images/home/services/aii.svg`;
+const blockchainIcon = `${process.env.REACT_APP_API_URL}/assests/images/home/services/blockchain.svg`;
+const dataIcon = `${process.env.REACT_APP_API_URL}/assests/images/home/services/data-science.svg`;
+const analysisIcon = `${process.env.REACT_APP_API_URL}/assests/images/home/services/analysis.svg`;
 
 const serviceSlider = [
     {
@@ -84,7 +84,7 @@ const ServicesSection = () => {
                                 <div className="services_scale_content">
                                     <p className="struggling_text">Is Your Business Struggling with Tech Roadblocks?</p>
                                     <h2 className="heading_main">Scale Your Business While We Power Your Technology Evolution.</h2>
-                                    <Link to="/contact-us" className="btn-gradient-blue">Schedule a 30-Minute Executive Strategy Consultation <FontAwesomeIcon icon={faAnglesRight} /></Link>
+                                    <Link reloadDocument to="/contact-us" className="btn-gradient-blue">Schedule a 30-Minute Executive Strategy Consultation <FontAwesomeIcon icon={faAnglesRight} /></Link>
                                 </div>
                             </div>
                         </div>

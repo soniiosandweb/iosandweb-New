@@ -6,11 +6,11 @@ import { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight, faCirclePlay } from "@fortawesome/free-solid-svg-icons";
 
-const testimonialBG = `${process.env.REACT_APP_API_URL}/assests/images/home-new/testimonials/testimonials_bg.webp`;
-const video1 = `${process.env.REACT_APP_API_URL}/assests/images/home-new/testimonials/Video_Generation_From_User_Feedback.mp4`;
-const video2 = `${process.env.REACT_APP_API_URL}/assests/images/home-new/testimonials/Positive_SEO_Service_Review_and_Video.mp4`;
-const testimonial1 = `${process.env.REACT_APP_API_URL}/assests/images/home-new/testimonials/testimonial1.webp`;
-const testimonial2 = `${process.env.REACT_APP_API_URL}/assests/images/home-new/testimonials/testimonial2.webp`;
+const testimonialBG = `${process.env.REACT_APP_API_URL}/assests/images/home/testimonials/testimonials_bg.webp`;
+const video1 = `${process.env.REACT_APP_API_URL}/assests/images/home/testimonials/Video_Generation_From_User_Feedback.mp4`;
+const video2 = `${process.env.REACT_APP_API_URL}/assests/images/home/testimonials/Positive_SEO_Service_Review_and_Video.mp4`;
+const testimonial1 = `${process.env.REACT_APP_API_URL}/assests/images/home/testimonials/testimonial1.webp`;
+const testimonial2 = `${process.env.REACT_APP_API_URL}/assests/images/home/testimonials/testimonial2.webp`;
 
 const testimonials = [
     {

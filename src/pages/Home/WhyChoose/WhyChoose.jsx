@@ -3,7 +3,7 @@ import "./WhyChoose.css";
 import { Accordion, Col, Container, Row } from "react-bootstrap";
 import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 
-const whyChooseImg = `${process.env.REACT_APP_API_URL}/assests/images/home-new/why_choose.webp`;
+const whyChooseImg = `${process.env.REACT_APP_API_URL}/assests/images/home/why_choose.webp`;
 
 const whyChooseLists = [
     {

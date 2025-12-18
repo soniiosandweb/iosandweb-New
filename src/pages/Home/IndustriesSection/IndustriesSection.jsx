@@ -7,16 +7,16 @@ import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesRight, faArrowRight, faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
-const ecommerce = `${process.env.REACT_APP_API_URL}/assests/images/home-new/industries/ecommerce-img.webp`;
-const ecommerceIcon = `${process.env.REACT_APP_API_URL}/assests/images/home-new/industries/grocery-store.webp`;
-const realestate = `${process.env.REACT_APP_API_URL}/assests/images/home-new/industries/realestate-img.webp`;
-const realestateIcon = `${process.env.REACT_APP_API_URL}/assests/images/home-new/industries/realestate.webp`;
-const artificial = `${process.env.REACT_APP_API_URL}/assests/images/home-new/industries/artificial-img.webp`;
-const artificialIcon = `${process.env.REACT_APP_API_URL}/assests/images/home-new/industries/artificial-intelligence.webp`;
-const healthcare = `${process.env.REACT_APP_API_URL}/assests/images/home-new/industries/healthcare-img.webp`;
-const healthcareIcon = `${process.env.REACT_APP_API_URL}/assests/images/home-new/industries/healthcare.webp`;
-const finance = `${process.env.REACT_APP_API_URL}/assests/images/home-new/industries/finance-img.webp`;
-const financeIcon = `${process.env.REACT_APP_API_URL}/assests/images/home-new/industries/finance.webp`;
+const ecommerce = `${process.env.REACT_APP_API_URL}/assests/images/home/industries/ecommerce-img.webp`;
+const ecommerceIcon = `${process.env.REACT_APP_API_URL}/assests/images/home/industries/grocery-store.webp`;
+const realestate = `${process.env.REACT_APP_API_URL}/assests/images/home/industries/realestate-img.webp`;
+const realestateIcon = `${process.env.REACT_APP_API_URL}/assests/images/home/industries/realestate.webp`;
+const artificial = `${process.env.REACT_APP_API_URL}/assests/images/home/industries/artificial-img.webp`;
+const artificialIcon = `${process.env.REACT_APP_API_URL}/assests/images/home/industries/artificial-intelligence.webp`;
+const healthcare = `${process.env.REACT_APP_API_URL}/assests/images/home/industries/healthcare-img.webp`;
+const healthcareIcon = `${process.env.REACT_APP_API_URL}/assests/images/home/industries/healthcare.webp`;
+const finance = `${process.env.REACT_APP_API_URL}/assests/images/home/industries/finance-img.webp`;
+const financeIcon = `${process.env.REACT_APP_API_URL}/assests/images/home/industries/finance.webp`;
 
 const industriesLists = [
     {
@@ -142,7 +142,7 @@ const IndustriesSection = () => {
                                                     <img src={item.icon} alt={item.title} className="industries_title_icon" />
                                                     <p className="industries_title">{item.title}</p>
                                                 </div>
-                                                <Link to={item.link} className="industries_item_link">
+                                                <Link reloadDocument to={item.link} className="industries_item_link">
                                                     <FontAwesomeIcon icon={faArrowRight} />
                                                 </Link>
                                             </div>

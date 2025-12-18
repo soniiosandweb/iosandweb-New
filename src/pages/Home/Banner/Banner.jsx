@@ -1,7 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import "./Banner.css";
 
-const homeBanner = `${process.env.REACT_APP_API_URL}/assests/images/home-new/home-banner.webp`;
+const homeBanner = `${process.env.REACT_APP_API_URL}/assests/images/home/home-banner.webp`;
 
 // Home video
 const homeVideo = `${process.env.REACT_APP_API_URL}/assests/home-video.mp4`;

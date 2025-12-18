@@ -4,16 +4,16 @@ import { Col, Container, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 
-const innovativeImg = `${process.env.REACT_APP_API_URL}/assests/images/home-new/innovative/imnnovative-img.webp`;
-const innovativeBg = `${process.env.REACT_APP_API_URL}/assests/images/home-new/innovative/innovative-bg.webp`;
-const softwareIcon = `${process.env.REACT_APP_API_URL}/assests/images/home-new/innovative/software.webp`;
-const designIcon = `${process.env.REACT_APP_API_URL}/assests/images/home-new/innovative/ui-design.webp`;
-const codingIcon = `${process.env.REACT_APP_API_URL}/assests/images/home-new/innovative/coding.webp`;
-const pocIcon = `${process.env.REACT_APP_API_URL}/assests/images/home-new/innovative/poc.webp`;
-const digitalIcon = `${process.env.REACT_APP_API_URL}/assests/images/home-new/innovative/digital.webp`;
-const payIcon = `${process.env.REACT_APP_API_URL}/assests/images/home-new/innovative/pay.webp`;
-const blockchainIcon = `${process.env.REACT_APP_API_URL}/assests/images/home-new/innovative/blockchain.webp`;
-const targetIcon = `${process.env.REACT_APP_API_URL}/assests/images/home-new/innovative/target.webp`;
+const innovativeImg = `${process.env.REACT_APP_API_URL}/assests/images/home/innovative/imnnovative-img.webp`;
+const innovativeBg = `${process.env.REACT_APP_API_URL}/assests/images/home/innovative/innovative-bg.webp`;
+const softwareIcon = `${process.env.REACT_APP_API_URL}/assests/images/home/innovative/software.webp`;
+const designIcon = `${process.env.REACT_APP_API_URL}/assests/images/home/innovative/ui-design.webp`;
+const codingIcon = `${process.env.REACT_APP_API_URL}/assests/images/home/innovative/coding.webp`;
+const pocIcon = `${process.env.REACT_APP_API_URL}/assests/images/home/innovative/poc.webp`;
+const digitalIcon = `${process.env.REACT_APP_API_URL}/assests/images/home/innovative/digital.webp`;
+const payIcon = `${process.env.REACT_APP_API_URL}/assests/images/home/innovative/pay.webp`;
+const blockchainIcon = `${process.env.REACT_APP_API_URL}/assests/images/home/innovative/blockchain.webp`;
+const targetIcon = `${process.env.REACT_APP_API_URL}/assests/images/home/innovative/target.webp`;
 
 const innovativeLists = [
     {
@@ -112,7 +112,7 @@ const InnovativeSection = () => {
                                     ))}
                                 </div>
 
-                                <Link to="/contact-us" className="btn-gradient-blue">Get Expert Help <FontAwesomeIcon icon={faAnglesRight} /></Link>
+                                <Link reloadDocument to="/contact-us" className="btn-gradient-blue">Get Expert Help <FontAwesomeIcon icon={faAnglesRight} /></Link>
                             </div>
                             <div className="innovative_right_col">
                                 <div className="innovative_lists_grid">
