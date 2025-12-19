@@ -1,22 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import './style.css';
-import {Container} from 'react-bootstrap';
+import {Container, Offcanvas} from 'react-bootstrap';
 import { useLocation } from "react-router-dom";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 import Dropdown from 'react-bootstrap/Dropdown';
-import NavItem from 'react-bootstrap/NavItem';
-import NavLink from 'react-bootstrap/NavLink';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAnglesRight, faBars } from "@fortawesome/free-solid-svg-icons";
-import { faClose } from "@fortawesome/free-solid-svg-icons";
+import { faAnglesRight, faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import OwlCarousel from "react-owl-carousel";
 
 const logo = `${process.env.REACT_APP_API_URL}/assests/images/IAW-logo-white.png`;
-// const logoBlack = `${process.env.REACT_APP_API_URL}/assests/images/IAW-black-logo.png`;
+const menuIcon = `${process.env.REACT_APP_API_URL}/assests/menu_icon.png`;
 
 // service menu
 const mobileApp = `${process.env.REACT_APP_API_URL}/assests/images/home/Mobile-app.svg`;
@@ -46,7 +43,6 @@ const topDevelopment = `${process.env.REACT_APP_API_URL}/assests/images/awards/t
 const upWork = `${process.env.REACT_APP_API_URL}/assests/images/awards/upwork.webp`;
 
 // Portfolio images
-const portfolioIcon = `${process.env.REACT_APP_API_URL}/assests/images/portfolio.png`;
 const maprouteIcon = `${process.env.REACT_APP_API_URL}/assests/images/map-route.png`;
 const aiIcon = `${process.env.REACT_APP_API_URL}/assests/images/chat-bot.png`;
 const xrpIcon = `${process.env.REACT_APP_API_URL}/assests/images/xrp.png`;
@@ -151,12 +147,6 @@ const companyMenu = [
     url: "/iaw-team",
     image: teamIcon,
     class: "bg-green"
-  },
-  {
-    title: "Portfolio",
-    url: "/portfolio",
-    image: portfolioIcon,
-    class: "bg-purple"
   },
   {
     title: "Career",
@@ -440,86 +430,355 @@ function Header() {
   const [showPortfolio, setShowPortfolio] = useState(false);
   const [showProducts, setShowProducts] = useState(false);
 
-  const listenScrollEvent = () => {
-    if (locationValue[1] === "") {
-      if (window.scrollY > 50) {
-        setImage(logo);
-        setHeaderbg("white text-white border-bottom");
-      } else {
-        setImage(logo);
-        setHeaderbg("transparent text-white");
-        handleResize();
-      }
-    } else {
-      setHeaderbg("white text-white border-bottom");
-    }
-  };
+  const portfolioRef = useRef(null);
+  const productsRef = useRef(null);
+  const industryRef = useRef(null);
+  const aboutRef = useRef(null);
+  const servicesRef = useRef(null);
 
-  const changeheaderclass = () => {
-    if (locationValue[1] === "") {
-      setFixed("fixed-top text-white");
-      setHeaderbg("transparent text-white");
-      setImage(logo);
-      handleResize();
-    } else {
+  const isMobile = window.innerWidth < 992;
+
+  const NON_FIXED_ROUTES = ["blog", "privacy", "terms-and-conditions", "cancellation-policy"];
+
+  const isNonFixedRoute = NON_FIXED_ROUTES.includes(locationValue[1]);
+
+  const updateHeader = React.useCallback(() => {
+    if (isNonFixedRoute) {
       setFixed("sticky-top text-white");
       setHeaderbg("white text-white border-bottom");
       setImage(logo);
+      return;
     }
-  }
-  const handleResize = () => {
-    if(locationValue[1] === ""){
-      if (window.innerWidth <= 991) {
-        setFixed("sticky-top text-white");
-        setHeaderbg("white text-white border-bottom");
-        setImage(logo);
-      } else {
-        setFixed("fixed-top text-white");
-        setHeaderbg("transparent text-white");
-        setImage(logo);
-      }
+
+    setFixed("fixed-top text-white");
+
+    if (window.scrollY > 50) {
+      setHeaderbg("white text-white border-bottom");
+    } else {
+      setHeaderbg("transparent text-white");
     }
-    
-  }
+
+    setImage(logo);
+  }, [isNonFixedRoute]);
+
+  
+  const listenScrollEvent = React.useCallback(() => {
+    if (!isNonFixedRoute) {
+      updateHeader();
+    }
+  }, [isNonFixedRoute, updateHeader]);
+
+  const handleResize = React.useCallback(() => {
+    if (!isNonFixedRoute) {
+      updateHeader();
+    }
+  }, [isNonFixedRoute, updateHeader]);
+
+  useEffect(() => {
+    updateHeader();
+  }, [updateHeader]);
 
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
-    changeheaderclass();
-    window.addEventListener("resize", handleResize)
-    // eslint-disable-next-line
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("scroll", listenScrollEvent);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [listenScrollEvent, handleResize]);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (portfolioRef.current && !portfolioRef.current.contains(e.target)) {
+        setShowPortfolio(false);
+      }
+
+      if (productsRef.current && !productsRef.current.contains(e.target)) {
+        setShowProducts(false);
+      }
+
+      if (industryRef.current && !industryRef.current.contains(e.target)) {
+        setShowIndustry(false);
+      }
+
+      if (aboutRef.current && !aboutRef.current.contains(e.target)) {
+        setShowAbout(false);
+      }
+
+      if (servicesRef.current && !servicesRef.current.contains(e.target)) {
+        setShow(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
   }, []);
-  
 
   return (
-    <Navbar collapseOnSelect expand="lg" className={`header ${fixed} ${headerbg}`}>
+    <Navbar expand="lg" className={`header ${fixed} ${headerbg}`}>
       <Container className="header-container">
         <Navbar.Brand href="/">
           <img src={image} alt="IosAndWeb logo" className="responsive logo" />
         </Navbar.Brand>
 
+        <Nav.Link href="/contact-us" className={locationValue[1] === "contact" ? "btn mobile active" : "mobile btn"}>
+          Get In Touch
+          <FontAwesomeIcon icon={faAnglesRight} />
+        </Nav.Link>
+
         <Navbar.Toggle aria-controls="responsive-navbar-nav">
-          <FontAwesomeIcon icon={faBars} className="bars-icon" />
-          <FontAwesomeIcon icon={faClose} className="close-icon" />
+          <img src={menuIcon} alt="Menu" className="bars-icon" />
         </Navbar.Toggle>
 
-        <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
-          <Nav className="container">
-            <Dropdown 
-              as={NavItem} 
-              show={show}
-              onMouseEnter={() => setShow(true)}
-              onMouseLeave={() => setShow(false)}
-              onToggle={() => setShow(!show)}
-            >
-              <Dropdown.Toggle as={NavLink}>Services</Dropdown.Toggle>
-              <Dropdown.Menu>
-                
-                <div className="header-submenu-wrap">
-                  <div className="header-submenu-left">
+        <Navbar.Offcanvas id="responsive-navbar-nav" className="justify-content-end mobile_menu_offcanvas" placement="end">
+          <Offcanvas.Header closeButton>
+          </Offcanvas.Header>
+
+          <Offcanvas.Body>
+            <Nav className="container">
+
+              {/* Products */}
+              <Nav.Item
+                ref={servicesRef}
+                className="nav-item-dropdown"
+                onMouseEnter={!isMobile ? () => setShow(true) : undefined}
+                onMouseLeave={!isMobile ? () => setShow(false) : undefined}
+              >
+                <div className="nav-link-wrapper">
+                  <Nav.Link
+                    href="/services"
+                  >
+                    Services
+                  </Nav.Link>
+                  <span
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setShow((prev) => !prev);
+                    }}
+                    className="down_arrow"
+                  >
+                    <FontAwesomeIcon icon={faCaretDown} />
+                  </span>
+                </div>
+
+                {show && (
+                  <div className="dropdown-menu-custom">
+                    <div className="header-submenu-wrap">
+                      <div className="header-submenu-left">
+                        <ul className="header-submenu-items">
+                          {servicesMenu.map((link, i) => (
+                            <li className="submenu-item" key={i}>
+                              <Dropdown.Item href={link.url} target={link.blank ? "_blank" : "_self"} rel="noreferrer">
+                                <div className={`${link.class} submenu-img`}>
+                                  <img src={link.image} className="service-img" alt={link.title} /> 
+                                </div>
+                                {link.title}
+                                <FontAwesomeIcon icon={faArrowRight} className="close-icon" />
+                              </Dropdown.Item>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="header-submenu-right">
+                        <OwlCarousel className="owl-theme header-awards-carousel" loop autoplay={true} autoplayTimeout={1500} nav={false} dots={true} items={1} center={true} >
+                          <div className="item">
+                            <div className="award-item-block">
+                              <div className="award-item-logo">
+                                <img src={goodFirmLogo} alt="App development" />
+                              </div>
+                              <div className="award-item-text">
+                                <span>App development company of the year</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="item">
+                            <div className="award-item-block">
+                                <div className="award-item-logo">
+                                  <img src={appFutura} alt="App solution" />
+                                </div>
+                                <div className="award-item-text">
+                                  <span>Most promising mobile app solution provider</span>
+                                </div>
+                            </div>
+                          </div>
+                          <div className="item">
+                            <div className="award-item-block">
+                              <div className="award-item-logo">
+                                <img src={itFirms} alt="India's Growth Champions" />
+                              </div>
+                              <div className="award-item-text">
+                                <span>India's Growth Champions in IT</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="item">
+                            <div className="award-item-block">
+                              <div className="award-item-logo">
+                                <img src={upWork} alt="India's Growth Champions" />
+                              </div>
+                              <div className="award-item-text">
+                                <span>Software development company of the year</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="item">
+                            <div className="award-item-block">
+                              <div className="award-item-logo">
+                                <img src={topDevelopment} alt="Tech Company Of The Year" />
+                              </div>
+                              <div className="award-item-text">
+                                <span>Tech Company Of The Year</span>
+                              </div>
+                            </div>
+                          </div>
+                        </OwlCarousel>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </Nav.Item>
+
+              {/* Portfolio Menu */}
+              <Nav.Item
+                ref={portfolioRef}
+                className="nav-item-dropdown"
+                onMouseEnter={!isMobile ? () => setShowPortfolio(true) : undefined}
+                onMouseLeave={!isMobile ? () => setShowPortfolio(false) : undefined}
+              >
+                <div className="nav-link-wrapper">
+                  <Nav.Link
+                    href="/portfolio"
+                  >
+                    Portfolio
+                  </Nav.Link>
+                  <span
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setShowPortfolio((prev) => !prev);
+                    }}
+                    className="down_arrow"
+                  >
+                    <FontAwesomeIcon icon={faCaretDown} />
+                  </span>
+                </div>
+
+                {showPortfolio && (
+                  <div className="dropdown-menu-custom portfolio-dropdown">
+                    <div className="header-submenu-wrap">
+                      <div className="header-submenu-left">
+                        <ul className="header-submenu-items">
+
+                          {portfolioMenu.map((link, i) => (
+                            <li className="submenu-item" key={i}>
+                              <Dropdown.Item href={link.url} target={"_blank"} rel="noreferrer">
+                                <div className={`${link.class} submenu-img`}>
+                                  <img src={link.image} className="service-img" alt={link.title} /> 
+                                </div>
+                                <p>{link.title} <span>({link.tech})</span></p>
+                                <FontAwesomeIcon icon={faArrowRight} className="close-icon" />
+                              </Dropdown.Item>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </Nav.Item>
+
+              {/* Products */}
+              <Nav.Item
+                ref={productsRef}
+                className="nav-item-dropdown"
+                onMouseEnter={!isMobile ? () => setShowProducts(true) : undefined}
+                onMouseLeave={!isMobile ? () => setShowProducts(false) : undefined}
+              >
+                <div className="nav-link-wrapper">
+                  <Nav.Link
+                    href="/portfolio"
+                  >
+                    Products
+                  </Nav.Link>
+                  <span
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setShowProducts((prev) => !prev);
+                    }}
+                    className="down_arrow"
+                  >
+                    <FontAwesomeIcon icon={faCaretDown} />
+                  </span>
+                </div>
+
+                {showProducts && (
+                  <div className="dropdown-menu-custom portfolio-dropdown">
+                    <div className="header-submenu-wrap">
+                      <div className="header-submenu-left">
+                        <ul className="header-submenu-items">
+
+                          {portfolioStagingMenu.map((link, i) => (
+                            <li className="submenu-item" key={i}>
+                              <Dropdown.Item href={link.url} target={"_blank"} rel="noreferrer">
+                                <div className={`${link.class} submenu-img`}>
+                                  <img src={link.image} className="service-img" alt={link.title} /> 
+                                </div>
+                                <p>{link.title} <span>({link.tech})</span></p>
+                                <FontAwesomeIcon icon={faArrowRight} className="close-icon" />
+                              </Dropdown.Item>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </Nav.Item>
+
+              {/* Industries */}
+              <Nav.Item
+                ref={industryRef}
+                className="nav-item-dropdown less-dropdown"
+                onMouseEnter={!isMobile ? () => setShowIndustry(true) : undefined}
+                onMouseLeave={!isMobile ? () => setShowIndustry(false) : undefined}
+              >
+                <div className="nav-link-wrapper">
+                  <Nav.Link
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setShowIndustry((prev) => !prev);
+                    }}
+                  >
+                    Industries
+                  </Nav.Link>
+                  <span
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setShowIndustry((prev) => !prev);
+                    }}
+                    className="down_arrow"
+                  >
+                    <FontAwesomeIcon icon={faCaretDown} />
+                  </span>
+                </div>
+
+                {showIndustry && (
+                  <div className="dropdown-menu-custom portfolio-dropdown">
                     <ul className="header-submenu-items">
-                      {servicesMenu.map((link, i) => (
+                      {industriesMenu.map((link, i) => (
                         <li className="submenu-item" key={i}>
-                          <Dropdown.Item href={link.url} target={link.blank ? "_blank" : "_self"} rel="noreferrer">
+                          <Dropdown.Item href={link.url}>
                             <div className={`${link.class} submenu-img`}>
                               <img src={link.image} className="service-img" alt={link.title} /> 
                             </div>
@@ -530,189 +789,66 @@ function Header() {
                       ))}
                     </ul>
                   </div>
-                  <div className="header-submenu-right">
-                    <OwlCarousel className="owl-theme header-awards-carousel" loop autoplay={true} autoplayTimeout={1500} nav={false} dots={true} items={1} center={true} >
-                      <div className="item">
-                        <div className="award-item-block">
-                          <div className="award-item-logo">
-                            <img src={goodFirmLogo} alt="App development" />
-                          </div>
-                          <div className="award-item-text">
-                            <span>App development company of the year</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="item">
-                        <div className="award-item-block">
-                            <div className="award-item-logo">
-                              <img src={appFutura} alt="App solution" />
-                            </div>
-                            <div className="award-item-text">
-                              <span>Most promising mobile app solution provider</span>
-                            </div>
-                        </div>
-                      </div>
-                      <div className="item">
-                        <div className="award-item-block">
-                          <div className="award-item-logo">
-                            <img src={itFirms} alt="India's Growth Champions" />
-                          </div>
-                          <div className="award-item-text">
-                            <span>India's Growth Champions in IT</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="item">
-                        <div className="award-item-block">
-                          <div className="award-item-logo">
-                            <img src={upWork} alt="India's Growth Champions" />
-                          </div>
-                          <div className="award-item-text">
-                            <span>Software development company of the year</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="item">
-                        <div className="award-item-block">
-                          <div className="award-item-logo">
-                            <img src={topDevelopment} alt="Tech Company Of The Year" />
-                          </div>
-                          <div className="award-item-text">
-                            <span>Tech Company Of The Year</span>
-                          </div>
-                        </div>
-                      </div>
-                    </OwlCarousel>
-                  </div>
+                )}
+              </Nav.Item>
+
+              {/* About */}
+              <Nav.Item
+                ref={aboutRef}
+                className="nav-item-dropdown less-dropdown"
+                onMouseEnter={!isMobile ? () => setShowAbout(true) : undefined}
+                onMouseLeave={!isMobile ? () => setShowAbout(false) : undefined}
+              >
+                <div className="nav-link-wrapper">
+                  <Nav.Link
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setShowAbout((prev) => !prev);
+                    }}
+                  >
+                    Company
+                  </Nav.Link>
+                  <span
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setShowAbout((prev) => !prev);
+                    }}
+                    className="down_arrow"
+                  >
+                    <FontAwesomeIcon icon={faCaretDown} />
+                  </span>
                 </div>
-                
-              </Dropdown.Menu>
-            </Dropdown>
 
-            {/* <Nav.Link href="/portfolio" className={locationValue[1] === "portfolio" ? "active" : ""}>Portfolio</Nav.Link> */}
-
-            <Dropdown 
-              className="portfolio-dropdown"
-              as={NavItem} 
-              show={showPortfolio}
-              onMouseEnter={() => setShowPortfolio(true)}
-              onMouseLeave={() => setShowPortfolio(false)}
-              onToggle={() => setShowPortfolio(!showPortfolio)}
-            >
-              <Dropdown.Toggle as={NavLink}>Portfolio</Dropdown.Toggle>
-              <Dropdown.Menu>
-                <div className="header-submenu-wrap">
-                  <div className="header-submenu-left">
+                {showAbout && (
+                  <div className="dropdown-menu-custom portfolio-dropdown">
                     <ul className="header-submenu-items">
-
-                      {portfolioMenu.map((link, i) => (
+                      {companyMenu.map((link, i) => (
                         <li className="submenu-item" key={i}>
-                          <Dropdown.Item href={link.url} target={"_blank"} rel="noreferrer">
+                          <Dropdown.Item href={link.url}>
                             <div className={`${link.class} submenu-img`}>
                               <img src={link.image} className="service-img" alt={link.title} /> 
                             </div>
-                            <p>{link.title} <span>({link.tech})</span></p>
+                            {link.title}
                             <FontAwesomeIcon icon={faArrowRight} className="close-icon" />
                           </Dropdown.Item>
                         </li>
                       ))}
                     </ul>
                   </div>
-                </div>
-              </Dropdown.Menu>
-            </Dropdown>
+                )}
+              </Nav.Item>
 
-            <Dropdown 
-              className="portfolio-dropdown"
-              as={NavItem} 
-              show={showProducts}
-              onMouseEnter={() => setShowProducts(true)}
-              onMouseLeave={() => setShowProducts(false)}
-              onToggle={() => setShowProducts(!showProducts)}
-            >
-              <Dropdown.Toggle as={NavLink}>Products</Dropdown.Toggle>
-              <Dropdown.Menu>
-                <div className="header-submenu-wrap">
-                  <div className="header-submenu-left">
-                    <ul className="header-submenu-items">
-
-                      {portfolioStagingMenu.map((link, i) => (
-                        <li className="submenu-item" key={i}>
-                          <Dropdown.Item href={link.url} target={"_blank"} rel="noreferrer">
-                            <div className={`${link.class} submenu-img`}>
-                              <img src={link.image} className="service-img" alt={link.title} /> 
-                            </div>
-                            <p>{link.title} <span>({link.tech})</span></p>
-                            <FontAwesomeIcon icon={faArrowRight} className="close-icon" />
-                          </Dropdown.Item>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </Dropdown.Menu>
-            </Dropdown>
-
-            <Dropdown 
-              className="less-dropdown"
-              as={NavItem} 
-              show={showIndustry}
-              onMouseEnter={() => setShowIndustry(true)}
-              onMouseLeave={() => setShowIndustry(false)}
-              onToggle={() => setShowIndustry(!showIndustry)}
-            >
-              <Dropdown.Toggle as={NavLink}>Industries</Dropdown.Toggle>
-              <Dropdown.Menu>
-                
-                <ul className="header-submenu-items">
-                  {industriesMenu.map((link, i) => (
-                    <li className="submenu-item" key={i}>
-                      <Dropdown.Item href={link.url}>
-                        <div className={`${link.class} submenu-img`}>
-                          <img src={link.image} className="service-img" alt={link.title} /> 
-                        </div>
-                        {link.title}
-                        <FontAwesomeIcon icon={faArrowRight} className="close-icon" />
-                      </Dropdown.Item>
-                    </li>
-                  ))}
-                </ul>
-              </Dropdown.Menu>
-            </Dropdown>
-
-            <Dropdown 
-              className="less-dropdown"
-              as={NavItem} 
-              show={showAbout}
-              onMouseEnter={() => setShowAbout(true)}
-              onMouseLeave={() => setShowAbout(false)}
-              onToggle={() => setShowAbout(!showAbout)}
-            >
-              <Dropdown.Toggle as={NavLink}>Company</Dropdown.Toggle>
-              <Dropdown.Menu>
-                <ul className="header-submenu-items">
-                  {companyMenu.map((link, i) => (
-                    <li className="submenu-item" key={i}>
-                      <Dropdown.Item href={link.url}>
-                        <div className={`${link.class} submenu-img`}>
-                          <img src={link.image} className="service-img" alt={link.title} /> 
-                        </div>
-                        {link.title}
-                        <FontAwesomeIcon icon={faArrowRight} className="close-icon" />
-                      </Dropdown.Item>
-                    </li>
-                  ))}
-                </ul>
-              </Dropdown.Menu>
-            </Dropdown>
-
-            <Nav.Link href="/blog" className={locationValue[1] === "blog" ? "active" : ""}>Blog</Nav.Link>
-            <Nav.Link href="/contact-us" className={locationValue[1] === "contact" ? "btn active" : "btn"}>
-              Get In Touch
-              <FontAwesomeIcon icon={faAnglesRight} />
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
+              <Nav.Link href="/blog" className={locationValue[1] === "blog" ? "active" : ""}>Blog</Nav.Link>
+              <Nav.Link href="/contact-us" className={locationValue[1] === "contact" ? "btn active" : "btn"}>
+                Get In Touch
+                <FontAwesomeIcon icon={faAnglesRight} />
+              </Nav.Link>
+            </Nav>
+          </Offcanvas.Body>
+        </Navbar.Offcanvas>
 
       </Container>
     </Navbar>

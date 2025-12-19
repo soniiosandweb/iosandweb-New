@@ -1,6 +1,17 @@
 import { useLocation } from "react-router-dom";
 import SEO from "../../../components/SEO";
 import Banner from "./Banner/Banner";
+import FeaturesPointsSection from "../../../components/FeaturesPointsSection/FeaturesPointsSection";
+import SmartDigital from "./SmartDigital/SmartDigital";
+import BusinessGoals from "./BusinessGoals/BusinessGoals";
+import PerformanceSection from "./PerformanceSection/PerformanceSection";
+import ReliableCustomSection from "./ReliableCustomSection/ReliableCustomSection";
+
+const featuresPoints = [
+    "AI-Powered Digital Solutions for Tomorrow",
+    "Blockchain-Enhanced Security & Privacy",
+    "User-Centric Design Boosting Conversions & Loyalty"
+]
 
 const SoftwareDevelopment = () => {
 
@@ -18,6 +29,21 @@ const SoftwareDevelopment = () => {
 
             {/* Banner */}
             <Banner />
+
+            {/* Features Points */}
+            <FeaturesPointsSection lists={featuresPoints} />
+
+            {/* Smart Digital */}
+            <SmartDigital />
+
+            {/* Business Goals */}
+            <BusinessGoals />
+
+            {/* Performance Section */}
+            <PerformanceSection />
+
+            {/* Reliable Custom Section */}
+            <ReliableCustomSection />
         </>
     )
 }

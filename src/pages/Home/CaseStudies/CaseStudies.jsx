@@ -159,7 +159,7 @@ const CaseStudies = () => {
     }, [activeIndex]);
 
     return(
-        <div className="case_studies_section section-padding">
+        <div className="case_studies_section section-padding linear-dark-background">
             <img src={casestudiesBG} alt="Case Studies" className="casestudies_bg" />
             <Container>
                 <Row>

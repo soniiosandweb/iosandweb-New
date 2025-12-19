@@ -1,0 +1,27 @@
+.smart_digital_flex {
+    display: flex;
+    gap: 2rem;
+    align-items: start;
+}
+.smart_digital_flex .smart_digital_cols {
+    flex: 1;
+}
+.smart_digital_cols.text-right {
+    text-align: right;
+}
+.smart_digital_cols .smart_digital_image {
+    max-height: 347px;
+    border-radius: 10px;
+    max-width: 100%;
+    width: fit-content;
+    filter: grayscale(1);
+    cursor: pointer;
+}
+.smart_digital_cols .smart_digital_image:hover {
+    filter: unset;
+}
+@media (max-width: 767px) {
+    .smart_digital_flex {
+        flex-direction: column;
+    }
+}

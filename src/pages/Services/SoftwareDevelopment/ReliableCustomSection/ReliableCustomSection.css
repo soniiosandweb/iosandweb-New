@@ -1,0 +1,28 @@
+.reliable_custom_section {
+    position: relative;
+}
+.reliable_custom_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: scale-down;
+    width: 600px;
+}
+.reliable_custom_flexs {
+    display: flex;
+    gap: 4rem;
+}
+.reliable_custom_cols {
+    flex: 1;
+}
+.reliable_numbers_cols {
+    width: 257px;
+}
+.reliable_numbers_cols  .numbers_grid_section {
+    grid-template-columns: repeat(1, 1fr);
+}
+@media (max-width: 767px) {
+    .reliable_custom_overlay {
+        display: none;
+    }
+}
