@@ -40,10 +40,20 @@ const ReliableCustomSection = () => {
                     <Col>
                         <div className="reliable_custom_flexs">
                             <div className="reliable_custom_cols">
-                                <h2 className="heading_main">What Makes Us a Reliable Custom Software Development Company</h2>
-                                <p className="paragraph_content">Mutual trust and transparency form the foundation of our partnerships.</p>
+                                <h2 className="heading_main desktop">What Makes Us a Reliable Custom Software Development Company</h2>
+                                <p className="paragraph_content desktop">Mutual trust and transparency form the foundation of our partnerships.</p>
+                                <div className="reliable_links_grid less-top-padding">
+                                    {reliableLinks.map((item, i) => (
+                                        <div className="reliable_links_item" key={i}>
+                                            <p className="reliable_item_title">{item.title}</p>
+                                            <p className="paragraph_content">{item.text}</p>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                             <div className="reliable_numbers_cols">
+                                <h2 className="heading_main mobile">What Makes Us a Reliable Custom Software Development Company</h2>
+                                <p className="paragraph_content mobile">Mutual trust and transparency form the foundation of our partnerships.</p>
                                 <NumbersGrid />
                             </div>
                         </div>

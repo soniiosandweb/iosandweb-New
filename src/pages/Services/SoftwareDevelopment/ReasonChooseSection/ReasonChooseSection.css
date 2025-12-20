@@ -1,0 +1,105 @@
+.reasons_lists_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+.reasons_lists_item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+}
+.reasons_lists_item .reasons_item_icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+.reasons_lists_item .reasons_title_text {
+    font-size: 25px;
+    font-family: var(--font-poppins-semibold);
+    line-height: 1.2;
+    margin: 0;
+}
+.reasons_lists_item .reasons_item_bottom {
+    padding: 20px 20px;
+    background: linear-gradient(90deg, #4C4C4C 0%, #4C4C4C 100%) padding-box,
+              linear-gradient(90deg, var(--color-gradientblue) 0%, var(--color-pink) 100%) border-box;
+    border: 1px solid transparent;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    min-height: 260px;
+    cursor: pointer;
+}
+.reasons_lists_item:hover .reasons_item_bottom {
+    background: linear-gradient(90deg, #3A1C4A 0%, #3A1C4A 100%) padding-box,
+              linear-gradient(90deg, var(--color-gradientblue) 0%, var(--color-pink) 100%) border-box;
+}
+.reasons_lists_item .reasons_item_text {
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.2;
+}
+.reasons_lists_item .reasons_icon {
+    width: 117px;
+    height: 117px;
+    object-fit: contain;
+    opacity: 0;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+.reasons_lists_item:hover .reasons_icon,
+.reasons_lists_item:hover .reasons_arrow_icon {
+    opacity: 1;
+}
+.reasons_lists_item .reasons_arrow_icon {
+    width: 33px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--color-white);
+    rotate: -30deg;
+    opacity: 0;
+    background: linear-gradient(90deg, #004EFF 0%, #5500FF 100%);
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+@media (max-width: 1199px) {
+    .reasons_lists_grid {
+        gap: 20px;
+    }
+    .reasons_lists_item .reasons_title_text {
+        font-size: 20px;
+    }
+    .reasons_lists_item .reasons_item_bottom {
+        min-height: 295px;
+    }
+}
+@media (max-width: 991px) {
+    .reasons_lists_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .reasons_lists_item .reasons_item_bottom {
+        min-height: 220px;
+    }
+}
+@media (max-width: 767px) {
+    .reasons_lists_grid {
+        grid-template-columns: repeat(1, 350px);
+        justify-content: center;
+        gap: 40px;
+    }
+    .reasons_lists_item .reasons_item_bottom {
+        min-height: auto;
+    }
+}
+@media (max-width: 375px) {
+    .reasons_lists_grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

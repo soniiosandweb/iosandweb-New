@@ -6,6 +6,8 @@ import SmartDigital from "./SmartDigital/SmartDigital";
 import BusinessGoals from "./BusinessGoals/BusinessGoals";
 import PerformanceSection from "./PerformanceSection/PerformanceSection";
 import ReliableCustomSection from "./ReliableCustomSection/ReliableCustomSection";
+import ReasonChooseSection from "./ReasonChooseSection/ReasonChooseSection";
+import MoreThanWebSection from "./MoreThanWebSection/MoreThanWebSection";
 
 const featuresPoints = [
     "AI-Powered Digital Solutions for Tomorrow",
@@ -44,6 +46,12 @@ const SoftwareDevelopment = () => {
 
             {/* Reliable Custom Section */}
             <ReliableCustomSection />
+
+            {/* Reason choose section */}
+            <ReasonChooseSection />
+
+            {/* More Than Web section */}
+            <MoreThanWebSection />
         </>
     )
 }

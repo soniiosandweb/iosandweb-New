@@ -8,6 +8,9 @@
     object-fit: scale-down;
     width: 600px;
 }
+.reliable_custom_section .container {
+    position: relative;
+}
 .reliable_custom_flexs {
     display: flex;
     gap: 4rem;
@@ -18,11 +21,78 @@
 .reliable_numbers_cols {
     width: 257px;
 }
-.reliable_numbers_cols  .numbers_grid_section {
+.reliable_numbers_cols .numbers_grid_section {
     grid-template-columns: repeat(1, 1fr);
+}
+.reliable_numbers_cols .numbers_grid_section .numbers_grid_item {
+    padding: 20px 15px;
+}
+.reliable_custom_flexs .reliable_links_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 4rem;
+}
+.reliable_links_grid .reliable_links_item {
+    position: relative;
+    padding: 30px 0;
+    border-top: 1px solid var(--color-white);
+}
+.reliable_links_grid .reliable_links_item:first-child,
+.reliable_links_grid .reliable_links_item:nth-child(2) {
+    border-top: 0px;
+}
+.reliable_links_item .reliable_item_title {
+    font-size: 20px;
+    line-height: 25px;
+    font-family: var(--font-poppins-semibold);
+    margin-bottom: 20px;
+}
+.reliable_links_item .paragraph_content {
+    font-family: var(--font-poppins-medium);
+    margin: 0;
+}
+.reliable_custom_flexs .mobile {
+    display: none;
+}
+@media (max-width: 1199px) {
+    .reliable_custom_flexs {
+        gap: 2rem;
+    }
+    .reliable_custom_flexs .reliable_links_grid {
+        gap: 0 2rem;
+    }
+}
+@media (max-width: 991px) {
+    .reliable_custom_flexs .reliable_links_grid {
+        grid-template-columns: repeat(1, 1fr);
+        padding-top: 0;
+        gap: 0;
+    }
+    .reliable_links_grid .reliable_links_item:nth-child(2) {
+        border-top: 1px solid var(--color-white);
+    }
 }
 @media (max-width: 767px) {
     .reliable_custom_overlay {
         display: none;
+    }
+    .reliable_custom_flexs {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+    .reliable_custom_flexs .mobile {
+        display: block;
+    }
+    .reliable_custom_flexs .desktop {
+        display: none;
+    }
+    .reliable_numbers_cols {
+        width: 100%;
+        flex: 1;
+    }
+    .reliable_numbers_cols .numbers_grid_section {
+        grid-template-columns: repeat(1, 257px);
+        justify-content: center;
+        margin-top: 30px;
     }
 }
