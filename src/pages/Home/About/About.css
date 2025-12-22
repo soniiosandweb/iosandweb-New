@@ -1,5 +1,5 @@
 .about_section {
-    padding-bottom: 250px;
+    padding-bottom: 300px;
     background-color: var(--color-black);
     color: var(--color-white);
 }
@@ -22,6 +22,10 @@
     line-height: 24px;
     font-family: var(--font-poppins-medium);
     margin-bottom: 20px;
+}
+.paragraph_content a {
+    color: var(--color-white);
+    text-underline-offset: 3px;
 }
 .btn-gradient-blue {
     text-decoration: unset;

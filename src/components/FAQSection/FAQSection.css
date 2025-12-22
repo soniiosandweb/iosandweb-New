@@ -2,6 +2,9 @@
     max-width: 1140px;
     margin: auto;
 }
+.faq_container.full-width {
+    max-width: 100%;
+}
 .faq_container .heading_sub {
     color: var(--color-white);
 }
@@ -32,6 +35,7 @@
     font-family: var(--font-poppins-medium);
     padding: 20px 25px;
     box-shadow: unset !important;
+    text-transform: capitalize;
 }
 .faq_container .faq_Accordion .accordion-button::after {
     content: "\+";

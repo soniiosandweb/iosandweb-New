@@ -231,7 +231,6 @@
         scroll-snap-type: x mandatory;
         flex-direction: row;
         width: 100%;
-        top: 0;
         background-color: var(--color-body);
         border-radius: 0px;
         padding: 25px 0;

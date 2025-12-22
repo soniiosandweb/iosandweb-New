@@ -184,6 +184,7 @@ const Home = () => {
                 subheading={"Insights"}
                 heading={"Frequently Asked Questions"}
                 lists={faqLists}
+                fullwidth={false}
             />
         </>
     )

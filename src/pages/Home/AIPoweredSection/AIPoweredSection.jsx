@@ -256,8 +256,12 @@ const AIPoweredSection = () => {
     const sectionRefs = useRef({});
     const isMobile = window.matchMedia("(max-width: 767px)").matches;
     const menuRefs = useRef({});
+    const menuContainerRef = useRef(null);
+    const hasMounted = useRef(false);
+    const hasUserScrolled = useRef(false);
 
     const scrollToSection = (id) => {
+        hasUserScrolled.current = true;
         sectionRefs.current[id]?.scrollIntoView({
             behavior: "smooth",
             block: "center",
@@ -265,50 +269,72 @@ const AIPoweredSection = () => {
     };
 
     useEffect(() => {
-    if (!isMobile) return;
+        if (!isMobile) return;
 
-    const activeMenu = menuRefs.current[activeId];
-        if (activeMenu) {
-            activeMenu.scrollIntoView({
+        const onScroll = () => {
+            hasUserScrolled.current = true;
+            window.removeEventListener("scroll", onScroll);
+        };
+
+        window.addEventListener("scroll", onScroll, { passive: true });
+
+        return () => window.removeEventListener("scroll", onScroll);
+    }, [isMobile]);
+
+    useEffect(() => {
+        if (!isMobile) return;
+        if (!hasMounted.current) return;
+        if (!hasUserScrolled.current) return;
+
+        const activeMenu = menuRefs.current[activeId];
+        activeMenu?.scrollIntoView({
             behavior: "smooth",
             inline: "center",
             block: "nearest",
-            });
-        }
+        });
     }, [activeId, isMobile]);
 
     useEffect(() => {
-  if (!isMobile) return;
+        if (!isMobile) return;
 
-    const observer = new IntersectionObserver(
-        (entries) => {
-        let visibleSection = null;
+        const observer = new IntersectionObserver(
+            (entries) => {
+                if (!hasMounted.current) return;
 
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-            visibleSection = entry.target.id;
+                let visibleId = null;
+                let maxRatio = 0;
+
+                entries.forEach((entry) => {
+                    if (entry.intersectionRatio > maxRatio) {
+                        maxRatio = entry.intersectionRatio;
+                        visibleId = entry.target.id;
+                    }
+                });
+
+                if (visibleId) setActiveId(visibleId);
+            },
+            {
+                threshold: [0.25, 0.5, 0.75],
             }
-        });
+        );
 
-        if (visibleSection) {
-            setActiveId(visibleSection);
-        }
-        },
-        {
-        rootMargin: "-45% 0px -45% 0px",
-        threshold: 0,
-        }
-    );
+        Object.values(sectionRefs.current).forEach((section) =>
+            observer.observe(section)
+        );
 
-    Object.values(sectionRefs.current).forEach((section) => {
-        observer.observe(section);
-    });
-
-    return () => observer.disconnect();
+        return () => observer.disconnect();
     }, [isMobile]);
 
+    useEffect(() => {
+        hasMounted.current = true;
+    }, []);
 
     useEffect(() => {
+
+        const container = menuContainerRef.current;
+
+        if (!container) return;
+
         const observer = new IntersectionObserver(
             (entries) => {
             let maxRatio = 0;
@@ -344,7 +370,7 @@ const AIPoweredSection = () => {
                         <h2 className="heading_main">AI-Powered Solutions <br />Built for Global Impact by IosAndWeb Technologies</h2>
 
                         <div className="ai_powered_flex_block less-top-padding">
-                            <div className="ai_powered_sidebar">
+                            <div className="ai_powered_sidebar" ref={menuContainerRef}>
                                 {sectionsData.map((item) => (
                                     <div 
                                         key={item.id}

@@ -4,12 +4,12 @@ import Partners from "../../../components/Partners"
 import Slider from "react-slick";
 import { useEffect, useRef, useState } from "react";
 
-const goodFirmLogo = `${process.env.REACT_APP_API_URL}/assests/images/awards/good-firms-logo.webp`;
-const appFutura = `${process.env.REACT_APP_API_URL}/assests/images/awards/appfutura.webp`;
-const itFirms = `${process.env.REACT_APP_API_URL}/assests/images/awards/itfirm.webp`;
-const topDevelopment = `${process.env.REACT_APP_API_URL}/assests/images/awards/top-development.webp`;
-const upWork = `${process.env.REACT_APP_API_URL}/assests/images/awards/upwork.webp`;
-const trustpilot = `${process.env.REACT_APP_API_URL}/assests/images/awards/trustpilot.webp`;
+const goodFirmLogo = `${process.env.REACT_APP_API_URL}/assests/awards/good-firms-logo.webp`;
+const appFutura = `${process.env.REACT_APP_API_URL}/assests/awards/appfutura.webp`;
+const itFirms = `${process.env.REACT_APP_API_URL}/assests/awards/itfirm.webp`;
+const topDevelopment = `${process.env.REACT_APP_API_URL}/assests/awards/top-development.webp`;
+const upWork = `${process.env.REACT_APP_API_URL}/assests/awards/upwork.webp`;
+const trustpilot = `${process.env.REACT_APP_API_URL}/assests/awards/trustpilot.webp`;
 
 const awardsLists = [
     { 

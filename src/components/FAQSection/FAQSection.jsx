@@ -2,13 +2,13 @@ import { Accordion, Col, Container, Row } from "react-bootstrap";
 import "./FAQSection.css";
 import SubHeading from "../SubHeading/SubHeading";
 
-const FAQSection = ({subheading, heading, lists}) => {
+const FAQSection = ({subheading, heading, lists, fullwidth}) => {
     return(
         <div className="faq_section_block section-padding body-background">
             <Container>
                 <Row>
                     <Col>
-                        <div className="faq_container">
+                        <div className={`faq_container ${fullwidth && "full-width"}`}>
                             <SubHeading text={subheading ? subheading : "Insights"} />
                             <h2 className="heading_main">{heading ? heading : "Frequently Asked Questions"}</h2>
 

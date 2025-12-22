@@ -36,11 +36,11 @@ const careerIcon = `${process.env.REACT_APP_API_URL}/assests/menu/career-icon.pn
 const howWorkIcon = `${process.env.REACT_APP_API_URL}/assests/menu/how-we-work.png`;
 
 // Award images
-const goodFirmLogo = `${process.env.REACT_APP_API_URL}/assests/menu/awards/good-firms-logo.webp`;
-const appFutura = `${process.env.REACT_APP_API_URL}/assests/menu/awards/appfutura.webp`;
-const itFirms = `${process.env.REACT_APP_API_URL}/assests/menu/awards/itfirm.webp`;
-const topDevelopment = `${process.env.REACT_APP_API_URL}/assests/menu/awards/top-development.webp`;
-const upWork = `${process.env.REACT_APP_API_URL}/assests/menu/awards/upwork.webp`;
+const goodFirmLogo = `${process.env.REACT_APP_API_URL}/assests/awards/good-firms-logo.webp`;
+const appFutura = `${process.env.REACT_APP_API_URL}/assests/awards/appfutura.webp`;
+const itFirms = `${process.env.REACT_APP_API_URL}/assests/awards/itfirm.webp`;
+const topDevelopment = `${process.env.REACT_APP_API_URL}/assests/awards/top-development.webp`;
+const upWork = `${process.env.REACT_APP_API_URL}/assests/awards/upwork.webp`;
 
 // Portfolio images
 const maprouteIcon = `${process.env.REACT_APP_API_URL}/assests/menu/map-route.png`;

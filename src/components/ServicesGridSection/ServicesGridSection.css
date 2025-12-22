@@ -1,0 +1,113 @@
+.services_grid_block {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    position: relative;
+    overflow: hidden;
+}
+.services_grid_item a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: unset;
+}
+.services_grid_item {
+    position: relative;
+}
+.services_grid_item::after {
+    content: "";
+    width: 1px;
+    height: calc(100% + 60px);
+    background-color: var(--color-white);
+    position: absolute;
+    top: 0;
+    right: -30px;
+}
+.services_grid_item::before {
+    content: "";
+    height: 1px;
+    width: calc(100% + 60px);
+    background-color: var(--color-white);
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+}
+.services_grid_item .services_lists_icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+.services_grid_item .services_lists_title {
+    font-size: 20px;
+    line-height: 1.3;
+    font-family: var(--font-poppins-semibold);
+    color: #FFC300;
+    margin: 0;
+}
+.services_grid_item a:hover .services_lists_title {
+    color: #AE86FF;
+}
+.services_grid_item .services_features_lists {
+    margin: 0;
+    list-style: none;
+    padding: 40px 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.services_features_lists .services_features_item {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+}
+.services_features_item svg {
+    font-size: 16px;
+    width: 16px;
+    color: #FFC300;
+}
+.services_features_item span {
+    flex: 1;
+}
+@media (max-width: 1199px) {
+    .services_grid_block {
+        gap: 40px;
+    }
+    .services_grid_item::after {
+        height: calc(100% + 40px);
+        right: -20px;
+    }
+    .services_grid_item::before {
+        width: calc(100% + 40px);
+        bottom: -20px;
+    }
+    .services_grid_item .services_features_lists {
+        padding: 40px 0 20px;
+    }
+}
+@media (max-width: 991px) {
+    .services_grid_block {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 575px) {
+    .services_grid_block {
+        grid-template-columns: repeat(1, 280px);
+        justify-content: center;
+        gap: 60px;
+    }
+    .services_grid_item::after {
+        display: none;
+    }
+    .services_grid_item::before {
+        width: 100%;
+        bottom: -30px;
+    }
+    .services_grid_item .services_features_lists  {
+        padding: 30px 0 0;
+    }
+}
+@media (max-width: 350px) {
+    .services_grid_block {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
