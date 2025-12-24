@@ -1,0 +1,24 @@
+.portfolio_box_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.portfolio_box_grid .portfolio_box_item {
+    background-color: #040812;
+    color: var(--color-white);
+    padding: 20px 40px;
+    border-radius: 8px;
+}
+.portfolio_box_grid .portfolio_box_item .portfolio_box_item_content {
+    margin: 0;
+}
+@media (max-width: 1199px) {
+    .portfolio_box_grid .portfolio_box_item {
+        padding: 20px 30px;
+    }
+}
+@media (max-width: 991px) {
+    .portfolio_box_grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

@@ -1,0 +1,87 @@
+.portfolio_slider_block {
+    border-radius: 15px;
+    background: linear-gradient(90deg, #0b0b0b 0%, #0b0b0b 100%) padding-box,
+              linear-gradient(180deg, rgba(153, 0, 255, 0.52) 0%, rgba(0, 140, 255, 0.52) 100%) border-box;
+    border: 1px solid transparent;
+    padding: 20px;
+    position: relative;
+}
+.portfolio_slider_block::after {
+    content: "";
+    background: linear-gradient(90deg, rgba(0, 78, 255, 0.47) 0%, rgba(85, 0, 255, 0.47) 100%);
+    filter: blur(104px);
+    height: 140px;
+    width: 100%;
+    max-width: 1100px;
+    border-radius: 1000px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.portfolio_slider_carousel {
+    position: relative;
+    z-index: 1;
+}
+.portfolio_slider_item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: transparent !important;
+    outline: none;
+    color: var(--color-white);
+    line-height: normal;
+    font-size: 15px;
+    white-space: normal;
+    padding: 10px 15px;
+    text-decoration: unset;
+}
+.portfolio_slider_item .portfolio_slider_img {
+    padding: 6px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    border-radius: 5px;
+}
+.portfolio_slider_item p {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+    font-family: var(--font-poppins-semibold);
+}
+.portfolio_slider_item p span {
+    font-size: 12px;
+    font-family: var(--font-poppins);
+}
+.portfolio_slider_block .slick-dots {
+    position: relative;
+    bottom: 0;
+    margin-top: 20px;
+}
+.portfolio_slider_block .slick-dots li button,
+.portfolio_slider_block .slick-dots li {
+    width: 10px;
+    height: 10px;
+}
+.portfolio_slider_block .slick-dots li button:before {
+    color: #D9D9D9;
+    opacity: 1;
+    font-size: 8px;
+    line-height: 8px;
+    width: 10px;
+    height: 10px;
+}
+.portfolio_slider_block .slick-dots li.slick-active button:before {
+    color: #4509fe;
+}
+@media (max-width: 480px) {
+    .portfolio_slider_block {
+        padding: 20px 0;
+    }
+    .portfolio_slider_block .slick-list {
+        padding-left: 0 !important;
+    }
+}

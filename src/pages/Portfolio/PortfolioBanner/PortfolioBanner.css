@@ -1,0 +1,56 @@
+.portfolio_banner_section {
+    background: radial-gradient(42.34% 148.57% at 50.63% 50.13%, #0E66A1 0%, #090B42 100%);
+    color: var(--color-white);
+    min-height: 788px;
+}
+.portfolio_banner_flex {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    min-height: calc(788px - 300px);
+}
+.portfolio_banner_flex .portfolio_left_cols {
+    max-width: 483px;
+    flex: 1;
+}
+.portfolio_banner_flex .portfolio_right_cols {
+    flex: 1;
+}
+.portfolio_banner_flex .btn-gradient-blue {
+    margin-top: 2rem;
+}
+.portfolio_gif_image {
+    object-fit: contain;
+    width: 100%;
+    max-height: 550px;
+}
+.animated_gradient_portfolio {
+    width: 100%;
+    overflow: hidden;
+}
+
+.animated_gradient_track_portfolio {
+    display: flex;
+    gap: 4rem;
+    width: max-content;
+    animation: marquee 20s linear infinite;
+}
+
+.animated_gradient_track_portfolio span {
+    font-size: clamp(65px, 12vw, 125px);
+    font-family: var(--font-poppins-bold);
+    white-space: nowrap;
+    position: relative;
+    color: var(--color-white);
+}
+@media (max-width: 767px) {
+    .portfolio_banner_flex {
+        flex-direction: column;
+        min-height: auto;
+    }
+    .portfolio_banner_section {
+        padding-top: 150px;
+        min-height: auto;
+    }
+}

@@ -3,7 +3,9 @@
     overflow: hidden;
     background: var(--color-body);
 }
-
+.animated_gradient.black {
+    background: var(--color-black);
+}
 .animated_gradient_track {
     display: flex;
     gap: 4rem;
@@ -22,7 +24,9 @@
     color: var(--color-body);
     -webkit-text-stroke: 2px transparent;
 }
-
+.animated_gradient.black .animated_gradient_track span {
+    color: var(--color-black);
+}
 /* Continuous scrolling */
 @keyframes marquee {
     from {

@@ -40,7 +40,7 @@
     margin-bottom: 20px;
     text-transform: uppercase;
 }
-.services_banner_contents .heading_main span {
+.heading_main span {
     background: radial-gradient(50% 50% at 50% 50%, #0011FF 0%, #A600FF 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;

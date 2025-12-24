@@ -2,7 +2,7 @@ import './App.css';
 import Layout from './layout/Layout';
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import About from './pages/About';
-import Portfolio from './pages/Portfolio';
+import Portfolio from './pages/Portfolio/Portfolio';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import NoPage from './pages/NoPage';

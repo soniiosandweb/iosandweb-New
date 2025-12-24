@@ -1,0 +1,14 @@
+.portfolio_expertise_grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 30px;
+}
+.portfolio_expertise_grid .portfolio_expertise_item {
+    background: linear-gradient(90deg, #111111 0%, #111111 100%) padding-box,
+              linear-gradient(90deg, #A600FF 0%, #3C49FF 100%) border-box;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    font-family: var(--font-poppins-medium);
+    margin: 0;
+    padding: 12px 25px;
+}

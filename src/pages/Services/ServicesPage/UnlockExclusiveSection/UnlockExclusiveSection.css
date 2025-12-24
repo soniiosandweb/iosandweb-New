@@ -51,3 +51,15 @@
         display: none;
     }
 }
+
+/* Visions block */
+.services_visions_block .paragraph_content {
+    font-size: 14px;
+}
+.services_visions_block .visions_btns_group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}

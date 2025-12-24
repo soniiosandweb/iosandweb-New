@@ -1,72 +1,101 @@
 [
     {
         "id": 1,
-        "title": "Vertical Brands",
-        "description": "Connecting digital experiences, creators and conversions, Vertical keep brands at the forefront of what's next to drive impact and sustainable growth.",
-        "url": "https://www.verticalbrands.co/",
-        "image": "/portfolioImages/vertical.webp"
+        "title": "Obgyn",
+        "description": "Modern healthcare website designed for OB-GYN services, focused on patient trust, accessibility, and easy appointment booking.",
+        "url": "https://obgyn.com/",
+        "image": "/assests/portfolio/obgyn.webp",
+        "platform": "WordPress",
+        "highlights": "Responsive design, service pages, appointment forms, SEO-friendly structure."
     },
     {
         "id": 2,
-        "title": "SRGN",
-        "description": "Best-in-class Cosmetic Surgery & Aesthetic Clinic designed to enhance your natural beauty",
-        "url": "https://www.srgn.co/",
-        "image": "/portfolioImages/srgn.webp"
+        "title": "Hair Restoration",
+        "description": "A conversion-focused medical website promoting hair restoration treatments with strong visual storytelling and lead generation.",
+        "url": "https://www.hairrestoration.com/",
+        "image": "/assests/portfolio/hairrestoration.webp",
+        "platform": "WordPress",
+        "highlights": "Before/after galleries, inquiry forms, fast loading, optimized UX"
     },
     {
         "id": 3,
-        "title": "Aesthetic Intelligence",
-        "description": "The inception of Aesthetic Intelligence was driven by a patient-centric philosophy, emphasising the need for patients to receive care of the highest standard.",
-        "url": "https://www.aestheticintelligence.co.uk/",
-        "image": "/portfolioImages/aesthetic.webp"
+        "title": "Body Massage",
+        "description": "A wellness-focused website designed to promote massage services and increase bookings through calming visuals and simple navigation.",
+        "url": "https://bodymassage.com/",
+        "image": "/assests/portfolio/bodymassage.webp",
+        "platform": "WordPress",
+        "highlights": "Service listings, booking forms, SEO optimization."
     },
     {
         "id": 4,
-        "title": "MyGermany",
-        "description": "MyGermany is the best Germany-based international shipping and forwarding company established in 2012 by two friends and headquartered in the middle of Germany, in Weimar.",
-        "url": "https://mygermany.com/",
-        "image": "/portfolioImages/mygermany.webp"
+        "title": "Whopping SEO",
+        "description": "A bold digital marketing website built to showcase SEO services and attract high-quality business leads.",
+        "url": "https://whoppingseo.com/",
+        "image": "/assests/portfolio/WhoppingSEO.webp",
+        "platform": "WordPress",
+        "highlights": "Service sections, performance-focused layout, lead capture forms."
     },
     {
         "id": 5,
-        "title": "Greystone",
-        "description": "Experience the unmatched quality and durability of American-made products and services for your commercial and industrial needs. Trust Greystone to provide top-of-the-line solutions made right here in the USA.",
-        "url": "https://www.greystonecs.us/",
-        "image": "/portfolioImages/greystonecs.webp"
+        "title": "Blockchain77",
+        "description": "A professional blockchain-focused website presenting technology solutions in a clear and engaging manner. ",
+        "url": "https://blockchain77.com/",
+        "image": "/assests/portfolio/Blockchain77.webp",
+        "platform": "WordPress",
+        "highlights": "Informational pages, modern UI, scalable structure."
     },
     {
         "id": 6,
-        "title": "Dropshipper",
-        "description": "The Largest Dropshipping Portal - Your one-stop shop for wholesale. Quick View Electronics 3.5mm 4 Pole Female To Micro USB Male Angle Angled Adapter Active Clip Mic Microphone Cable Converter Cord.",
-        "url": "https://dropshipper.com/",
-        "image": "/portfolioImages/dropshipper.webp"
+        "title": "Silver Street London",
+        "description": "A feature-rich eCommerce website developed for a premium retail brand with seamless shopping experience.",
+        "url": "http://104.156.231.22/silverstreetlondon",
+        "image": "/assests/portfolio/SilverStreetLondon.webp",
+        "platform": "Magento",
+        "highlights": "Secure payments, product management, scalable Magento architecture."
     },
     {
         "id": 7,
-        "title": "Ten Spa",
-        "description": "World-class massage therapists provide an excellent spa experience tailored to the needs of our guests. With several years of experience, our therapists have carefully mastered their craft to provide the best massage services in Kuwait City.",
-        "url": "https://thetenworld.com/",
-        "image": "/portfolioImages/thetenworld.webp"
+        "title": "Fresh Organic Grocery",
+        "description": "A high-performance grocery platform designed for fast browsing and real-time product management.",
+        "url": "http://freshorganicgrocery.com/",
+        "image": "/assests/portfolio/FreshOrganicGrocery.webp",
+        "platform": "React JS & Node JS",
+        "highlights": "Dynamic UI, API-driven backend, optimized performance."
     },
     {
         "id": 8,
-        "title": "Sprout",
-        "description": "Get counseling support at The Sprouts Singapore to empower and balance the lives of overwhelmed working women.",
-        "url": "https://thesprout.sg/",
-        "image": "/portfolioImages/thesprout.webp"
+        "title": "Ship From Germany",
+        "description": "A logistics and shipping service website designed to simplify international shipping processes for customers. ",
+        "url": "https://shipfromgermany.com/",
+        "image": "/assests/portfolio/ShipFromGermany.webp",
+        "platform": "WordPress",
+        "highlights": "Clear service flow, inquiry forms, SEO-ready pages"
     },
     {
         "id": 9,
-        "title": "Arrive-London Taxis",
-        "description": "Arrive is London's electric-only taxi app. That might be the cheapest, the quickest, a female driver or even one with an AUX that doesn't mind you drinking in the car.",
-        "url": "https://apps.apple.com/gb/app/arrive-london-taxis/id455670693",
-        "image": "/portfolioImages/arrive-london.webp"
+        "title": "SEO Rockers",
+        "description": "A custom-built SEO agency website focused on speed, flexibility, and performance.",
+        "url": "https://seorockers.com/",
+        "image": "/assests/portfolio/SEORockers.webp",
+        "platform": "PHP",
+        "highlights": "Custom backend, service management, lightweight architecture."
     },
     {
         "id": 10,
-        "title": "Astral Skin World",
-        "description": "Astral Skin World in Zirakpur, India, is dedicated to providing the most advanced solutions in skin care and cosmetic treatments.",
-        "url": "https://astralskinworld.com/",
-        "image": "/portfolioImages/astralskinworld.webp"
+        "title": "Ananta Aspire Zirakpur",
+        "description": "A modern real estate website built to showcase premium residential projects with immersive UI",
+        "url": "https://anantaaspirezirakpur.co/",
+        "image": "/assests/portfolio/AnantaAspireZirakpur.webp",
+        "platform": "React JS",
+        "highlights": "Property listings, interactive layouts, fast load times."
+    },
+    {
+        "id": 11,
+        "title": "Vamana Residences",
+        "description": "A visually engaging real estate platform designed to highlight luxury living spaces",
+        "url": "https://vamanaresidences.com/",
+        "image": "/assests/portfolio/VamanaResidences.webp",
+        "platform": "React JS",
+        "highlights": "Responsive design, interactive sections, smooth navigation."
     }
 ]

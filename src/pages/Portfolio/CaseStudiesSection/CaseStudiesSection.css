@@ -1,0 +1,173 @@
+.portfolio_case_studies {
+    position: relative;
+    overflow: hidden;
+}
+.portfolio_case_studies .portfolio_case_studies_bg {
+    background: linear-gradient(254.09deg, #0D0F38 15.15%, #093142 83.93%);
+    max-height: 788px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.portfolio_case_studies_bg .portfolio_circle {
+    position: absolute;
+    left: -200px;
+    top: auto;
+    bottom: 150px;
+    width: 118px;
+    height: 118px;
+    object-fit: contain;
+}
+.portfolio_case_studies_bg .portfolio_square {
+    position: absolute;
+    right: -200px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 84px;
+    height: 84px;
+    object-fit: contain;
+    z-index: 1;
+}
+.portfolio_case_studies_bg .portfolio_square.square_top {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    left: 0;
+}
+.portfolio_case_studies .container {
+    position: relative;
+    z-index: 1;
+}
+.portfolio_casestudies_block {
+    max-width: 1100px;
+    margin: auto;
+}
+.portfolio_casestudies_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 20px;
+}
+.portfolio_casestudies_item {
+    background-color: #06102B;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.portfolio_casestudies_item .portfolio_casestudies_link {
+    height: 300px;
+    display: block;
+}
+.portfolio_casestudies_item .portfolio_casestudies_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+.portfolio_casestudies_item .portfolio_casestudies_content {
+    padding: 25px;
+}
+.portfolio_casestudies_content .portfolio_casestudies_title {
+    font-size: 20px;
+    line-height: 25px;
+    font-family: var(--font-poppins-semibold);
+    margin-bottom: 15px;
+}
+.portfolio_casestudies_content .portfolio_casestudies_text {
+    font-size: 14px;
+    margin: 0;
+}
+.portfolio_casestudies_content .portfolio_casestudies_features {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.portfolio_casestudies_features .portfolio_casestudies_item {
+    display: flex;
+    gap: 10px;
+}
+.portfolio_casestudies_item .portfolio_features_title {
+    font-family: var(--font-poppins-semibold);
+    margin: 0;
+    min-width: 100px;
+}
+.portfolio_casestudies_item .portfolio_features_content {
+    font-size: 14px;
+    margin: 0;
+    flex: 1;
+}
+.portfolio_casestudies_block .portfolio_pagination {
+    margin: 3rem 0 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+.portfolio_casestudies_block .portfolio_pagination .page-item a {
+    height: 41px;
+    min-width: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background: #D9D9D9;
+    color: var(--color-black);
+}
+.portfolio_casestudies_block .portfolio_pagination .page-item.active a,
+.portfolio_casestudies_block .portfolio_pagination .page-item:hover a {
+    background: linear-gradient(270deg, #0011FF 0%, #A600FF 100%);
+    color: var(--color-white);
+}
+.portfolio_casestudies_block .portfolio_pagination li a {
+    color: var(--color-white);
+    font-family: var(--font-poppins-semibold);
+    font-size: 20px;
+    text-decoration: unset;
+}
+.portfolio_casestudies_block .portfolio_pagination li:hover a {
+    color: #A600FF;
+}
+.portfolio_casestudies_block .portfolio_pagination li.previous {
+    margin-right: auto;
+}
+.portfolio_casestudies_block .portfolio_pagination li.next {
+    margin-left: auto;
+}
+.portfolio_casestudies_block .portfolio_pagination li.disabled a {
+    color: #AEAEAE;
+}
+@media (max-width: 991px) {
+    .portfolio_casestudies_grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media (max-width: 575px) {
+    .portfolio_casestudies_block .portfolio_pagination li a {
+        font-size: 14px;
+    }
+    .portfolio_casestudies_block .portfolio_pagination .page-item a {
+        height: 30px;
+        min-width: 30px;
+    }
+    .portfolio_casestudies_block .portfolio_pagination {
+        gap: 8px;
+    }
+}
+@media (max-width: 480px) {
+    .portfolio_casestudies_item .portfolio_casestudies_link {
+        height: 250px;
+    }
+}
+@media (max-width: 380px) {
+    .portfolio_casestudies_item .portfolio_casestudies_content {
+        padding: 25px 15px;
+    }
+    .portfolio_casestudies_item .portfolio_casestudies_link {
+        height: 200px;
+    }
+}

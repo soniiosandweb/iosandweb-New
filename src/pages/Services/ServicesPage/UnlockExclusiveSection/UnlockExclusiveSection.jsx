@@ -1,5 +1,8 @@
+import { Link } from "react-router-dom";
 import "./UnlockExclusiveSection.css";
 import { Col, Container, Row } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 
 const innovativeBg = `${process.env.REACT_APP_API_URL}/assests/home/innovative/innovative-bg.webp`;
 
@@ -30,7 +33,7 @@ const exclusiveLists = [
     }
 ]
 
-const UnlockExclusiveSection = () => {
+const UnlockExclusiveSection = ({visions}) => {
     return (
         <div className="services_unlock_exclusive_section section-padding linear-dark-background">
             <img src={innovativeBg} alt="We Design. We Build. We Deliver." className="services_unlock_bgimg" />
@@ -47,6 +50,17 @@ const UnlockExclusiveSection = () => {
                                 </div>
                             ))}
                         </div>
+
+                        {visions &&
+                            <div className="services_visions_block less-top-padding">
+                                <h3 className="heading_main text-center">Turn Your Vision Into a Powerful Reality</h3>
+                                <p className="paragraph_content text-center">Let's Build Something Amazing Together</p>
+                                <div className="visions_btns_group">
+                                    <Link to="/contact-us" reloadDocument className="btn-gradient-blue">Contact Us <FontAwesomeIcon icon={faAnglesRight} /></Link>
+                                    <Link to="/contact-us" reloadDocument className="btn-gradient-blue">View More Projects <FontAwesomeIcon icon={faAnglesRight} /></Link>
+                                </div>
+                            </div>
+                        }
                     </Col>
                 </Row>
             </Container>
