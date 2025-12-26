@@ -43,6 +43,10 @@
     position: relative;
     overflow: hidden;
 }
+.btn-gradient-blue:hover {
+    background: linear-gradient(90deg, var(--color-purple) 0%, var(--color-blue) 100%) padding-box,
+              linear-gradient(90deg, var(--color-purple) 0%, var(--color-blue) 100%) border-box;
+}
 .btn-gradient-blue::before {
     animation: shine 1.5s ease-in-out infinite;
     content: "";

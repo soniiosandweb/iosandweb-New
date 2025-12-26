@@ -37,3 +37,20 @@
     border: 0;
     object-fit: cover;
 }
+.home-banner .heading_main span {
+    color: var(--color-white);
+    background: none;
+    background-clip: unset;
+    -webkit-text-fill-color: unset;
+}
+.home-banner .heading_main{
+    font-size: 52px;
+    line-height: 1.2;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+@media (max-width: 767px) {
+    .home-banner .heading_main {
+      font-size: 40px;
+    }
+}

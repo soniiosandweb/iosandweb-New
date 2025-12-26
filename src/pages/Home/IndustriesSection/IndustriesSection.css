@@ -57,12 +57,11 @@
     height: 100%;
     top: 0;
     left: 0;
-    filter: blur(18.2px);
     object-fit: cover;
     object-position: center;
 }
 .industries_lists_item:hover .industries_item_img {
-    filter: blur(2px);
+    filter: blur(18.2px);
 }
 .industries_lists_item .industries_item_content {
     position: relative;
@@ -119,8 +118,14 @@
     font-family: var(--font-poppins-medium);
     border-radius: 8px;
     border: 1px solid var(--color-white);
+    color: var(--color-black);
+    background-color: #9494948C;
     max-width: fit-content;
     padding: 6px 10px;
+}
+.industries_lists_item:hover .industries_content_lists_item {
+    background-color: var(--color-transparent);
+    color: var(--color-white);
 }
 .industries_lists_item .btn-gradient-blue {
     padding: 6px 15px;

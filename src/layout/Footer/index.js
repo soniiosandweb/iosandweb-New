@@ -18,32 +18,42 @@ const twitter = `${process.env.REACT_APP_API_URL}/assests/twitter.png`;
 const instagram = `${process.env.REACT_APP_API_URL}/assests/instagram.png`;
 const linkedin = `${process.env.REACT_APP_API_URL}/assests/linkedin.png`;
 const whatsapp = `${process.env.REACT_APP_API_URL}/assests/whatsapp.png`;
+const facebookWhite = `${process.env.REACT_APP_API_URL}/assests/facebook-white.png`;
+const twitterWhite = `${process.env.REACT_APP_API_URL}/assests/twitter-white.png`;
+const instagramWhite = `${process.env.REACT_APP_API_URL}/assests/instagram-white.png`;
+const linkedinWhite = `${process.env.REACT_APP_API_URL}/assests/linkedin-white.png`;
+const whatsappWhite = `${process.env.REACT_APP_API_URL}/assests/whatsapp-white.png`;
 
 const socialLinks = [
     {
         title: "Facebook",
         link: "https://www.facebook.com/iosandwebtechnologies/",
         icon: facebook,
+        white: facebookWhite,
     },
     {
         title: "Twitter",
         link: "https://https://twitter.com/Iosandwebtech.com/Iosandwebtech",
         icon: twitter,
+        white: twitterWhite,
     },
     {
         title: "Instagram",
         link: "https://www.instagram.com/iosandwebtechnologies/",
         icon: instagram,
+        white: instagramWhite,
     },
     {
         title: "Linkedin",
         link: "https://www.linkedin.com/company/iosandweb-technologies",
         icon: linkedin,
+        white: linkedinWhite,
     },
     {
         title: "Whatsapp",
         link: "https://api.whatsapp.com/send/?phone=919915841204&text&type=phone_number&app_absent=0",
         icon: whatsapp,
+        white: whatsappWhite,
     }
 ]
 
@@ -211,7 +221,8 @@ function Footer(){
                                             {socialLinks.map((item,i) => (
                                                 <li className="social_icons_item" key={i}>
                                                     <a href={item.link} target="_blank" rel="noreferrer">
-                                                        <img src={item.icon} alt={item.title} />
+                                                        <img src={item.icon} alt={item.title} className="social_hover" />
+                                                        <img src={item.white} alt={item.title} className="social_white" />
                                                     </a>
                                                 </li>
                                             ))}

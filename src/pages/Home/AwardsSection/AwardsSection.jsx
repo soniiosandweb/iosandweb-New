@@ -60,7 +60,7 @@ const AwardsSection = () => {
         slidesToShow: isSmall ? 2 : isMobile ? 3 : isTablet ? 4 : 5,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 3000,
         pauseOnHover: true,
     };
 

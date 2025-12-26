@@ -56,7 +56,7 @@ const ServicesSection = () => {
         arrows: false,
         dots: true,
         autoplay: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 3000,
         pauseOnHover: true,
         centerPadding: isLessSer ? "30px" : "50px",
         centerMode: isSmallSer ? true : false,

@@ -1,0 +1,158 @@
+.main_banner_section {
+    background: linear-gradient(321.36deg, #090B2A 52.92%, #0B2733 92.21%);
+    color: var(--color-white);
+    min-height: 735px;
+    position: relative;
+    padding-top: 71px;
+}
+.main_banner_section .contactus_banner_bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+    opacity: 29%;
+}
+.main_banner_section .container {
+    position: relative;
+}
+.main_banner_flex {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    min-height: calc(735px - 71px);
+    padding: 3rem 0;
+}
+.main_banner_flex .main_banner_left_col {
+    max-width: 483px;
+    flex: 1;
+}
+.main_banner_flex .main_banner_right_col {
+    flex: 1;
+}
+.main_banner_gif_image {
+    object-fit: contain;
+    width: 100%;
+    max-height: 550px;
+}
+.main_banner_btn_section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+.btn-gradient-pink {
+    text-decoration: unset;
+    font-size: 18px;
+    line-height: 22px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; 
+    border-radius: 25px;
+    color: var(--color-white);
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #A600FF 0%, var(--color-purple) 100%) padding-box,
+              linear-gradient(90deg, #A600FF 0%, var(--color-purple) 100%) border-box;
+    border: 1px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+.btn-gradient-pink::before {
+    animation: shine 1.5s ease-in-out infinite;
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, .5), transparent);
+}
+.btn-gradient-pink:hover {
+    background: linear-gradient(90deg, var(--color-purple) 0%, #A600FF 100%) padding-box,
+              linear-gradient(90deg, var(--color-purple) 0%, #A600FF 100%) border-box;
+}
+.btn-gradient-pink:hover::before{
+    width: 100%;
+}
+.btn-text-only {
+    text-decoration: unset;
+    font-size: 18px;
+    line-height: 22px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; 
+    border-radius: 25px;
+    color: var(--color-white);
+    padding: 11px 20px;
+    background: var(--color-transparent);
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+.btn-text-only:hover {
+    background: linear-gradient(90deg, #A600FF 0%, #0011FF 100%);
+}
+.btn-text-only::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #A600FF 0%, #0011FF 100%);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.btn-text-only::after {
+    animation: shine 1.5s ease-in-out infinite;
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, .5), transparent);
+}
+.btn-text-only:hover::after{
+    width: 100%;
+}
+.gradient_heading {
+    background: -webkit-linear-gradient(360deg, #A600FF 0%, #0011FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.main_banner_subheading {
+    font-size: 18px;
+    line-height: 24px;
+    font-family: var(--font-poppins-medium);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+@media (max-width: 991px) {
+    .main_banner_flex {
+        min-height: calc(640px - 71px);
+    }
+    .main_banner_section {
+        min-height: 640px;
+    }
+}
+@media (max-width: 767px) {
+    .main_banner_flex {
+        flex-direction: column;
+        min-height: auto;
+    }
+    .main_banner_section {
+        /* padding-top: 150px; */
+        min-height: auto;
+    }
+}
+@media (max-width: 480px) {
+    /* .main_banner_section {
+        padding-top: 120px;
+    } */
+}

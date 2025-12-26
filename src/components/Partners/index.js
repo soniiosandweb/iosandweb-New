@@ -104,7 +104,7 @@ const Partners = () => {
         slidesToShow: isSmallPartner ? 2 : isMobilePartner ? 3 : isTabletPartner ? 4 : 5,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 3000,
         pauseOnHover: true,
     };
 

@@ -126,6 +126,15 @@
     height: 30px;
     object-fit: contain;
 }
+.social_icons_lists .social_icons_item:hover .social_white {
+    display: none;
+}
+.social_icons_lists .social_icons_item .social_hover {
+    display: none;
+}
+.social_icons_lists .social_icons_item:hover .social_hover {
+    display: block;
+}
 @media (max-width: 1199px) {
     .footer-section .footer_columns {
         width: 45%;
