@@ -23,6 +23,8 @@
 .ai_powered_sidebar_items .heading_main span {
     color: #8F8F8F;
     padding-right: 5px;
+    background: none;
+    -webkit-text-fill-color : unset;
 }
 
 .ai_powered_sidebar_items .powered_text {

@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import About from './pages/About';
 import Portfolio from './pages/Portfolio/Portfolio';
 import Blog from './pages/Blog';
-import Contact from './pages/Contact';
+import Contact from './pages/Contact/Contact';
 import NoPage from './pages/NoPage';
 import BlogDetails from './pages/BlogDetails';
 import PrivacyPolicy from './pages/PrivacyPolicy';

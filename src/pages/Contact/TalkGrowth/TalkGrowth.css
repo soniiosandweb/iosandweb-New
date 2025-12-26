@@ -1,0 +1,22 @@
+.contact_talk_growth_heading {
+    display: flex;
+    gap: 10px;
+    align-items: start;
+}
+.contact_talk_growth_heading_block {
+    flex: 1;
+}
+.contact_talk_growth_heading .contact_lock {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    margin-top: 5px;
+}
+.contact_talk_growth_section .session-iframe {
+    height: 700px;
+}
+@media (max-width: 1199px) {
+    .contact_talk_growth_section .session-iframe {
+      height: 1200px;
+    }
+}

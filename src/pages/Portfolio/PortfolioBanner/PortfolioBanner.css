@@ -54,3 +54,8 @@
         min-height: auto;
     }
 }
+@media (max-width: 480px) {
+    .portfolio_banner_section {
+        padding-top: 120px;
+    }
+}

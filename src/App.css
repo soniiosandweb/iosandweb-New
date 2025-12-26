@@ -260,6 +260,9 @@ h1, h2, h3, h4, h5, h6{
   background: linear-gradient(254.09deg, #090B2A 15.15%, #0B2733 83.93%);
   color: var(--color-white);
 }
+.responsive-img {
+    width: 100%;
+}
 @media (max-width: 1399px) {
   .header-wrapper h1 {
     font-size: 40px;

@@ -1,0 +1,61 @@
+.contact_banner_section {
+    background: linear-gradient(321.36deg, #090B2A 52.92%, #0B2733 92.21%);
+    color: var(--color-white);
+    min-height: 735px;
+    position: relative;
+}
+.contact_banner_section .contactus_banner_bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+    opacity: 29%;
+}
+.contact_banner_section .container {
+    position: relative;
+}
+.contactus_banner_flex {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    min-height: calc(735px - 12rem);
+}
+.contactus_banner_flex .contactus_left_cols {
+    max-width: 620px;
+    flex: 1;
+}
+.contactus_banner_flex .contactus_right_cols {
+    flex: 1;
+}
+.contactus_gif_image {
+    object-fit: contain;
+    width: 100%;
+    max-height: 550px;
+}
+@media (max-width: 991px) {
+    .contactus_banner_flex {
+        min-height: calc(640px - 12rem);;
+    }
+    .contact_banner_section {
+        min-height: 640px;
+    }
+}
+@media (max-width: 767px) {
+    .contactus_banner_flex {
+        flex-direction: column;
+        min-height: auto;
+    }
+    .contact_banner_section {
+        padding-top: 150px;
+        min-height: auto;
+    }
+}
+@media (max-width: 480px) {
+    .contact_banner_section {
+        padding-top: 120px;
+    }
+}

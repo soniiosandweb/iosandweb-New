@@ -13,16 +13,17 @@
 }
 .portfolio_case_studies_bg .portfolio_circle {
     position: absolute;
-    left: -200px;
+    left: -50px;
     top: auto;
     bottom: 150px;
     width: 118px;
     height: 118px;
     object-fit: contain;
+    animation: rotate-animation 15s infinite linear;
 }
 .portfolio_case_studies_bg .portfolio_square {
     position: absolute;
-    right: -200px;
+    right: -30px;
     top: 0;
     bottom: 0;
     margin: auto;
@@ -30,12 +31,16 @@
     height: 84px;
     object-fit: contain;
     z-index: 1;
+    animation: rotate-animation 15s infinite linear;
 }
 .portfolio_case_studies_bg .portfolio_square.square_top {
     position: absolute;
     top: 0;
     margin: 0;
     left: 0;
+}
+.portfolio_case_studies_bg .container {
+    height: 100%;
 }
 .portfolio_case_studies .container {
     position: relative;
@@ -54,6 +59,11 @@
     background-color: #06102B;
     border-radius: 8px;
     overflow: hidden;
+    border: 1px solid transparent;
+}
+.portfolio_casestudies_item:hover {
+    background: linear-gradient(90deg, #06102B 0%, #06102B 100%) padding-box,
+              linear-gradient(270deg, #0011FF 0%, #A600FF 100%) border-box;
 }
 .portfolio_casestudies_item .portfolio_casestudies_link {
     height: 300px;
@@ -84,16 +94,16 @@
     flex-direction: column;
     gap: 8px;
 }
-.portfolio_casestudies_features .portfolio_casestudies_item {
+.portfolio_casestudies_features .portfolio_casestudies_features_item {
     display: flex;
     gap: 10px;
 }
-.portfolio_casestudies_item .portfolio_features_title {
+.portfolio_casestudies_features_item .portfolio_features_title {
     font-family: var(--font-poppins-semibold);
     margin: 0;
     min-width: 100px;
 }
-.portfolio_casestudies_item .portfolio_features_content {
+.portfolio_casestudies_features_item .portfolio_features_content {
     font-size: 14px;
     margin: 0;
     flex: 1;
@@ -141,9 +151,36 @@
 .portfolio_casestudies_block .portfolio_pagination li.disabled a {
     color: #AEAEAE;
 }
+@media (max-width: 1399px) {
+    .portfolio_case_studies_bg .portfolio_circle {
+        left: -70px;
+    }
+    .portfolio_case_studies_bg .portfolio_square {
+        right: -50px;
+    }
+}
 @media (max-width: 991px) {
     .portfolio_casestudies_grid {
         grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media (max-width: 767px) {
+    .portfolio_case_studies .heading_main {
+        padding-top: 1rem;
+    }
+    .portfolio_case_studies_bg .portfolio_circle {
+        width: 95px;
+        height: 95px;
+        bottom: 50%;
+        left: -10px;
+    }
+    .portfolio_case_studies_bg .portfolio_square.square_top {
+        display: none;
+    }
+    .portfolio_case_studies_bg .portfolio_square {
+        top: 0;
+        bottom: auto;
+        right: -10px;
     }
 }
 @media (max-width: 575px) {
@@ -169,5 +206,8 @@
     }
     .portfolio_casestudies_item .portfolio_casestudies_link {
         height: 200px;
+    }
+    .portfolio_case_studies_bg .portfolio_circle {
+        bottom: 43%;
     }
 }

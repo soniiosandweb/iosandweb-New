@@ -58,8 +58,11 @@
     top: 0;
     left: 0;
     filter: blur(18.2px);
-    object-size: cover;
+    object-fit: cover;
     object-position: center;
+}
+.industries_lists_item:hover .industries_item_img {
+    filter: blur(2px);
 }
 .industries_lists_item .industries_item_content {
     position: relative;

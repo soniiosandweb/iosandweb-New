@@ -1,0 +1,80 @@
+.contactpageForm .form-group {
+    padding-bottom: 5px;
+}
+.contactpageForm .form-group .form-control {
+    background-color: #0C0C0C6E;
+    color: var(--color-white);
+    border-radius: 8px;
+    border: 1px solid #0C0C0C6E;
+    padding: 12px 20px;
+    font-family: var(--font-poppins);
+    box-shadow: unset;
+}
+.contactpageForm .form-group .form-control::placeholder {
+    color: var(--color-white);
+}
+.contactpageForm .form-group .PhoneInputInput {
+    background-color: var(--color-transparent);
+    color: var(--color-white);
+    padding: 0;
+}
+.contactpageForm .form-group .PhoneInputCountry {
+    margin-right: 10px;
+}
+.contactpageForm .form-group .PhoneInputCountrySelectArrow {
+    opacity: 1;
+}
+.contactpageForm .form-group .text-danger {
+    font-size: 14px;
+    line-height: 1;
+    margin: 0;
+    visibility: hidden;
+}
+.contactpageForm .form-group .text-danger.visible {
+    visibility: visible;
+}
+.contactpageForm .form-group .message .text-danger {
+    font-size: 16px;
+    margin-top: 10px;
+    font-family: var(--font-poppins-semibold);
+}
+.contactpageForm .form-group .message .text-success {
+    font-size: 16px;
+    margin: 10px 0 0;
+    font-family: var(--font-poppins-semibold);
+}
+.contactpageForm .form-submit-group {
+    padding-top: 26px;
+}
+.contactpageForm .form-submit-btn {
+    text-decoration: unset;
+    width: 100%;
+    font-size: 16px;
+    line-height: 22px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; 
+    border-radius: 8px;
+    color: var(--color-white);
+    padding: 14px 20px;
+    background: linear-gradient(90deg, #A600FF 0%, #0011FF 100%);
+    border: none;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.contactpageForm .form-submit-btn:hover {
+    background: linear-gradient(90deg, #0011FF 0%, #A600FF 100%);
+}
+.contactpageForm .form-submit-btn::before {
+    animation: shine 1.5s ease-in-out infinite;
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, .5), transparent);
+}
+.contactpageForm .form-submit-btn:hover::before{
+    width: 100%;
+}

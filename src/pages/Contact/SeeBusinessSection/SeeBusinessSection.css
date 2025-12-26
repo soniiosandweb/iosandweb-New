@@ -1,0 +1,51 @@
+.see_business_flexs {
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+.see_business_flexs .see_business_contact_col {
+    padding: 3rem 2rem;
+    width: 100%;
+    flex: 1;
+}
+.see_business_contact_col .see_business_contact {
+    max-width: 362px;
+    margin: auto;
+}
+.see_business_contact_col .see_business_contact .heading_main {
+    font-size: 25px;
+    line-height: 30px;
+}
+.see_business_contact_col .see_business_contact .paragraph_content {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 50px;
+}
+.see_business_flexs .see_business_gif {
+    flex: 1;
+    text-align: center;
+}
+.see_business_flexs .see_business_gif .contact_business_img {
+    width: 100%;
+    margin: auto;
+    max-height: 450px;
+    object-fit: contain;
+}
+@media (max-width: 991px) {
+    .see_business_contact_col .see_business_contact .paragraph_content {
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 767px) {
+    .see_business_flexs {
+        flex-direction: column;
+    }
+    .see_business_flexs .see_business_contact_col {
+        padding: 3rem 2rem 0;
+    }
+}
+@media (max-width: 375px) {
+    .see_business_flexs .see_business_contact_col {
+        padding: 2rem 1.5rem 0;
+    }
+}

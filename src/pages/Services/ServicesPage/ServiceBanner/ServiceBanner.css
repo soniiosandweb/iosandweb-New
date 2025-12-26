@@ -2,6 +2,15 @@
     position: relative;
     overflow: hidden;
 }
+.services_banner_main .service_banner_video {
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
 .services_banner_main .services_page_bannerbg {
     position: absolute;
     object-fit: cover;

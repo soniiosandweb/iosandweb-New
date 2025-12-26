@@ -9,6 +9,8 @@ const serviceLayer = `${process.env.REACT_APP_API_URL}/assests/services/services
 const upIcon = `${process.env.REACT_APP_API_URL}/assests/services/services-page/upIcon.svg`;
 const groupIcon = `${process.env.REACT_APP_API_URL}/assests/services/services-page/groupIcon.svg`;
 
+const bannerVideo = `${process.env.REACT_APP_API_URL}/assests/services/services-page/service-banner-video.mp4`;
+
 const servicesBannerItem = [
     {
         icon: upIcon,
@@ -27,7 +29,10 @@ const servicesBannerItem = [
 const ServiceBanner = () => {
     return(
         <div className="services_banner_main">
-            <img src={bannerBG} alt="Your Growth Partner, Not Just Another Agency." className="services_page_bannerbg" />
+            <video className="service_banner_video" poster={bannerBG} autoPlay={true} muted={true} loop={true}>
+                <source src={bannerVideo} type="video/mp4"></source>
+            </video>
+            {/* <img src={bannerBG} alt="Your Growth Partner, Not Just Another Agency." className="services_page_bannerbg" /> */}
             <div className="services_banner_bg">
                 <Container> 
                     <Row>

@@ -69,11 +69,11 @@ const CaseStudiesSection = () => {
                                             <p className="portfolio_casestudies_text">{item.description}</p>
 
                                             <div className="portfolio_casestudies_features">
-                                                <div className="portfolio_casestudies_item">
+                                                <div className="portfolio_casestudies_features_item">
                                                     <p className="portfolio_features_title">Platform:</p>
                                                     <p className="portfolio_features_content">{item.platform}</p>
                                                 </div>
-                                                <div className="portfolio_casestudies_item">
+                                                <div className="portfolio_casestudies_features_item">
                                                     <p className="portfolio_features_title">Highlights:</p>
                                                     <p className="portfolio_features_content">{item.highlights}</p>
                                                 </div>

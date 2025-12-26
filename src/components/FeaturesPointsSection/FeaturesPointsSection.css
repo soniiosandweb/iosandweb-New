@@ -39,10 +39,34 @@
     font-family: var(--font-poppins-semibold);
     margin: 0;
 }
+.features_points_item.list_title .features_points_title_block {
+    display: flex;
+    gap: 10px;
+}
+.features_points_item.list_title .features_point_title {
+    flex: 1;
+    font-size: 18px;
+    line-height: 25px;
+    font-family: var(--font-poppins-semibold);
+    margin: 0;
+}
+.features_points_item.list_title .features_point {
+    font-size: 14px;
+    line-height: 18px;
+}
+@media (max-width: 1199px) {
+    .features_points_item.list_title .features_point_title {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
 @media (max-width: 991px) {
     .features_points_item .features_point {
         font-size: 18px;
         line-height: 24px;
+    }
+    .features_points_item.list_title .features_points_title_block {
+        flex-direction: column;
     }
 }
 @media (max-width: 767px) {
@@ -60,6 +84,9 @@
     .features_points_item .features_point {
         font-size: 20px;
         line-height: 25px;
+    }
+    .features_points_item.list_title .features_points_title_block {
+        flex-direction: row;
     }
 }
 @media (max-width: 480px) {
