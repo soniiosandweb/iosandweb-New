@@ -15,8 +15,20 @@ const artificial = `${process.env.REACT_APP_API_URL}/assests/home/industries/art
 const artificialIcon = `${process.env.REACT_APP_API_URL}/assests/home/industries/artificial-intelligence.webp`;
 const healthcare = `${process.env.REACT_APP_API_URL}/assests/home/industries/healthcare-img.webp`;
 const healthcareIcon = `${process.env.REACT_APP_API_URL}/assests/home/industries/healthcare.webp`;
-const finance = `${process.env.REACT_APP_API_URL}/assests/home/industries/finance-img.webp`;
-const financeIcon = `${process.env.REACT_APP_API_URL}/assests/home/industries/finance.webp`;
+const restaurant = `${process.env.REACT_APP_API_URL}/assests/home/industries/restaurant-img.webp`;
+const restaurantIcon = `${process.env.REACT_APP_API_URL}/assests/home/industries/restaurant.webp`;
+const entertainment = `${process.env.REACT_APP_API_URL}/assests/home/industries/entertainment-img.webp`;
+const entertainmentIcon = `${process.env.REACT_APP_API_URL}/assests/home/industries/entertainment.webp`;
+const onDemand = `${process.env.REACT_APP_API_URL}/assests/home/industries/on-demand-img.webp`;
+const onDemandIcon = `${process.env.REACT_APP_API_URL}/assests/home/industries/on-demand.webp`;
+const socialmedia = `${process.env.REACT_APP_API_URL}/assests/home/industries/socialmedia-img.webp`;
+const socialmediaIcon = `${process.env.REACT_APP_API_URL}/assests/home/industries/socialmedia.webp`;
+const logistic = `${process.env.REACT_APP_API_URL}/assests/home/industries/logistic-img.webp`;
+const logisticIcon = `${process.env.REACT_APP_API_URL}/assests/home/industries/logistic.webp`;
+const education = `${process.env.REACT_APP_API_URL}/assests/home/industries/education-img.webp`;
+const educationIcon = `${process.env.REACT_APP_API_URL}/assests/home/industries/education.webp`;
+const travel = `${process.env.REACT_APP_API_URL}/assests/home/industries/travel-img.webp`;
+const travelIcon = `${process.env.REACT_APP_API_URL}/assests/home/industries/travel.webp`;
 
 const industriesLists = [
     {
@@ -68,16 +80,88 @@ const industriesLists = [
         icon: healthcareIcon,
     },
     {
-        title: "Finance",
+        title: "Restaurant",
         lists: [
-            "Risk Management",
-            "Investment Planning",
-            "Financial Analysis",
-            "Regulatory Compliance",
+            "AI- Based Menu Insights",
+            "Virtual Tours",
+            "Lead Management",
+            "AI-Enhanced Property Valuation",
         ],
         link: "/",
-        image: finance,
-        icon: financeIcon,
+        image: restaurant,
+        icon: restaurantIcon,
+    },
+    {
+        title: "Entertainment",
+        lists: [
+            "Streaming Platforms",
+            "OTT Apps",
+            "Content Management",
+            "AI-Powered Content Insights",
+        ],
+        link: "/",
+        image: entertainment,
+        icon: entertainmentIcon,
+    },
+    {
+        title: "On - Demand",
+        lists: [
+            "Service Marketplaces",
+            "Delivery Management",
+            "Payment Solutions",
+            "AI-Enhanced Delivery Routing",
+        ],
+        link: "/",
+        image: onDemand,
+        icon: onDemandIcon,
+    },
+    {
+        title: "Social Media",
+        lists: [
+            "Community Platforms",
+            "Content Sharing",
+            "Messaging Solutions",
+            "AI- Enhanced Ad Targeting",
+        ],
+        link: "/",
+        image: socialmedia,
+        icon: socialmediaIcon,
+    },
+    {
+        title: "Logistic",
+        lists: [
+            "Route Optimization",
+            "Fleet Management",
+            "AI-Driven Demand Forecasting",
+            "Tracking Solutions",
+        ],
+        link: "/",
+        image: logistic,
+        icon: logisticIcon,
+    },
+    {
+        title: "Education",
+        lists: [
+            "Education",
+            "VR Classrooms",
+            "Data-Driven Course Insights",
+            "AI-Powered Adaptive Learning",
+        ],
+        link: "/",
+        image: education,
+        icon: educationIcon,
+    },
+    {
+        title: "Travel",
+        lists: [
+            "Booking Platforms",
+            "Inventory Management",
+            "Loyalty Programs",
+            "AI-Powered Travel Assistants",
+        ],
+        link: "/",
+        image: travel,
+        icon: travelIcon,
     }
 ];
 

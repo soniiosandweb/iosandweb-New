@@ -32,6 +32,9 @@
 }
 .main_banner_flex .main_banner_right_col {
     flex: 1;
+    padding: 0 20px 0 0;
+    text-align: center;
+    width: 100%;
 }
 .main_banner_gif_image {
     object-fit: contain;
@@ -133,12 +136,63 @@
     margin-bottom: 10px;
     text-transform: uppercase;
 }
+.about_image_wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 500px;
+    margin: auto;
+}
+.about_image_wrapper .about_image_shape {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+.about_image_wrapper .about_image {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    left: auto;
+    top: 0px;
+    right: -20px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: top center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    transition: opacity 0.8s ease-in-out;
+}
+@media (max-width: 1399px) {
+    .about_image_wrapper {
+        max-width: 550px;
+        height: 450px;
+    }
+}
+@media (max-width: 1199px) {
+    .about_image_wrapper {
+        max-width: 430px;
+        height: 380px;
+    }
+}
 @media (max-width: 991px) {
     .main_banner_flex {
         min-height: calc(640px - 71px);
     }
     .main_banner_section {
         min-height: 640px;
+    }
+    .about_image_wrapper {
+        max-width: 380px;
+        height: 280px;
     }
 }
 @media (max-width: 767px) {
@@ -147,12 +201,22 @@
         min-height: auto;
     }
     .main_banner_section {
-        /* padding-top: 150px; */
         min-height: auto;
     }
+    .about_image_wrapper {
+        max-width: 350px;
+        height: 290px;
+    }
 }
-@media (max-width: 480px) {
-    /* .main_banner_section {
-        padding-top: 120px;
-    } */
+@media (max-width: 410px) {
+    .about_image_wrapper {
+        max-width: 260px;
+        height: 230px;
+    }
+    .about_image_wrapper .about_image {
+        right: -10px;
+    }
+    .main_banner_flex .main_banner_right_col {
+        padding: 0 10px 0 0;
+    }
 }

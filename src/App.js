@@ -1,7 +1,7 @@
 import './App.css';
 import Layout from './layout/Layout';
-import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
-import About from './pages/About';
+import { BrowserRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import About from './pages/About/About';
 import Portfolio from './pages/Portfolio/Portfolio';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact/Contact';
@@ -86,9 +86,38 @@ const RedirectToPPCService = () => {
   return null;
 };
 
+const BodyBackground = () => {
+  const { pathname } = useLocation();
+
+  const bgRules = [
+    { path: "/", bg: "#080707" },
+    { path: "/about-us", bg: "#000" },
+    { path: "/contact-us", bg: "#080707" },
+    { path: "/portfolio", bg: "#000" },
+    { path: "/services", bg: "#000" },
+    { path: "/custom-software-development-company", bg: "#080707" }
+  ];
+
+  useEffect(() => {
+    const match = bgRules.find(rule =>
+      pathname === rule.path || pathname.startsWith(rule.path + "/")
+    );
+
+    document.body.style.background = match?.bg || "#ffffff";
+
+    return () => {
+      document.body.style.background = "";
+    };
+    // eslint-disable-next-line
+  }, [pathname]);
+
+  return null;
+};
+
 function App() {
   return (
     <BrowserRouter>
+      <BodyBackground />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

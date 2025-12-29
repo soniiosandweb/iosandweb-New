@@ -173,7 +173,7 @@ const PortfolioSlider = () => {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 5000,
-        pauseOnHover: true,
+        pauseOnHover: false,
         centerPadding: issmallest ? "30px" : isSmall ? "50px" : "0px",
         centerMode: isSmall ? true : false,
     };

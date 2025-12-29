@@ -105,7 +105,7 @@ const Partners = () => {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
-        pauseOnHover: true,
+        pauseOnHover: false,
     };
 
     return(

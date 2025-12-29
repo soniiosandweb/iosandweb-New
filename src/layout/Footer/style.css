@@ -84,6 +84,17 @@
     font-size: 20px;
     color: #fff;
     padding-bottom: 10px;
+    width: max-content;
+    position: relative;
+}
+.footer-col-head::after {
+    content: "";
+    background-color: #0F41D5;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 .footer-col-list {
     list-style: none;
@@ -151,7 +162,10 @@
 }
 @media (max-width: 991px) {
     .footer-col-head{
-      margin: 10px 0 0;
+      margin: 10px 0 10px;
+    }
+    .social_icons_lists {
+        margin-top: 20px;
     }
 }
 @media (max-width: 767px) {
@@ -161,7 +175,7 @@
     .footer-col-head{
       font-size: 20px;
       padding-bottom: 10px;
-      margin: 10px 0 0;
+      margin: 10px auto;
       text-align: center;
     }
     .footer-col,

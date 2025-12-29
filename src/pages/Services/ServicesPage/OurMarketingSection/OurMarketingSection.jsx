@@ -24,9 +24,9 @@ const marketingLists = [
     }
 ]
 
-const OurMarketingSection = () => {
+const OurMarketingSection = ({classes}) => {
     return(
-        <div className="services_our_marketing_section body-background">
+        <div className={`services_our_marketing_section ${classes ? classes : "body-background"}`}>
             <Container>
                 <Row>
                     <Col>

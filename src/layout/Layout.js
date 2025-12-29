@@ -11,7 +11,7 @@ function Layout(){
     const pathname = location.pathname;
     const locationValue = pathname.split("/");
 
-    const NON_FIXED_ROUTES = ["contact-us"];
+    const NON_FIXED_ROUTES = ["contact-us", "about-us"];
 
     const isNonContact = NON_FIXED_ROUTES.includes(locationValue[1]);
 

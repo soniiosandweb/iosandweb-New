@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './style.css';
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import axios from 'axios';
 import { Row, Col, Container, Spinner } from "react-bootstrap";
 import SEO from "../../components/SEO";
@@ -8,6 +8,7 @@ import BlogDetailsForm from "../../components/BlogDetailsForm";
 const defaultImage = `${process.env.REACT_APP_API_URL}/assests/placeholder-image.webp`;
 
 function BlogDetails() {
+    const navigate = useNavigate();
     const url = useParams().url;
     // console.log(url)
     const location = useLocation();
@@ -52,7 +53,8 @@ function BlogDetails() {
             }
         })
         .catch(() => {
-            console.log('Error')
+            console.log('Error');
+            navigate("/blog");
         })
         .finally(() => {
             setLoading(false);
@@ -80,7 +82,7 @@ function BlogDetails() {
         }
 
 
-    }, [url, blogId]);
+    }, [url, blogId, navigate]);
 
     return (
         <>

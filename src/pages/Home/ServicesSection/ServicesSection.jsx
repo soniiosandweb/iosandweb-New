@@ -89,7 +89,7 @@ const ServicesSection = () => {
                             </div>
                         </div>
 
-                        <div className="servics_slider_block section-padding no-bottom-padding">
+                        <div className="servics_slider_block">
                             <Slider 
                                 {...servicesSettings}
                             >

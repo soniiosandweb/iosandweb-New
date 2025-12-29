@@ -5,10 +5,12 @@ import { Col, Container, Row } from "react-bootstrap"
 import { Link } from "react-router-dom";
 
 const portfolioGif = `${process.env.REACT_APP_API_URL}/assests/portfolio/Portfolio.gif`;
+const contactBg = `${process.env.REACT_APP_API_URL}/assests/contact/bannerbg.webp`;
 
 const PortfolioBanner = () => {
     return(
         <div className="portfolio_banner_section section-padding no-bottom-padding">
+            <img src={contactBg} alt="Contact Us" className="portfolio_banner_bg" />
             <Container>
                 <Row>
                     <Col>

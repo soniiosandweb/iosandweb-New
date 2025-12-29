@@ -1,0 +1,73 @@
+.redefining_work_section {
+    position: relative;
+    overflow: hidden;
+}
+.redefining_work_section .redefining_overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 480px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.redefining_work_section .container {
+    position: relative;
+}
+.redefining_animations .redefining_circle {
+    position: absolute;
+    left: -60px;
+    top: auto;
+    top: 150px;
+    width: 118px;
+    height: 118px;
+    object-fit: contain;
+    animation: rotate-animation 15s infinite linear;
+}
+.redefining_animations {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.redefining_animations .redefining_square {
+    position: absolute;
+    right: -30px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 84px;
+    height: 84px;
+    object-fit: contain;
+    z-index: 1;
+    animation: rotate-animation 15s infinite linear;
+}
+.redefining_animations .redefining_square.square_top {
+    position: absolute;
+    top: 20px;
+    margin: 0;
+    right: 10%;
+}
+.redefining_animations .container {
+    height: 100%;
+}
+@media (max-width: 1399px) {
+    .redefining_animations .redefining_square.square_top {
+        right: 0px;
+    }
+}
+@media (max-width: 575px) {
+    .redefining_work_section .redefining_overlay {
+        display: none;
+    }
+    .redefining_animations .redefining_circle {
+        width: 89px;
+        height: 89px;
+        left: 0;
+    }
+    .redefining_animations .redefining_square {
+        right: 0;
+    }
+}

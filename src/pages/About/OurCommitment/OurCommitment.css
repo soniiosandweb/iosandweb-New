@@ -1,0 +1,54 @@
+.our_commitment_grids {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.our_commitment_grids_item {
+    background-color: #040812;
+    border: 0.25px solid var(--color-white);
+    border-radius: 8px;
+    padding: 30px;
+}
+.our_commitment_grids_item .our_commitment_item_block {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.our_commitment_item_block .our_commitment_item_heading {
+    flex: 1;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0;
+    font-family: var(--font-poppins-medium);
+}
+.our_commitment_item_block .our_commitment_item_count {
+    font-size: 35px;
+    line-height: 25px;
+    margin: 0;
+    font-family: var(--font-poppins-semibold);
+}
+.our_commitment_grids_item .our_commitment_item_content {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0;
+}
+@media (max-width: 1199px) {
+    .our_commitment_grids_item {
+        padding: 20px;
+    }
+}
+@media (max-width: 991px) {
+    .our_commitment_grids {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 767px) {
+    .our_commitment_grids {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .our_commitment_grids_item {
+        max-width: 320px;
+        margin: auto;
+    }
+}
