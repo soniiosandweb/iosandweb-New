@@ -59,7 +59,7 @@ const WeDesignSection = () => {
             <Container>
                 <Row>
                     <Col>
-                        <h2 className="heading_main text-center">We Design. We Build. We Deliver.</h2>
+                        <h2 className="heading_main text-center split">We Design. We Build. We Deliver.</h2>
                         <p className="paragraph_content text-center">Digital Experiences That Convert Visitors Into Customers</p>
 
                         <div className="we_design_deliver_block">

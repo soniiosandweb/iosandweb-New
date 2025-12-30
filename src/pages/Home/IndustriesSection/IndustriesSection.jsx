@@ -205,7 +205,7 @@ const IndustriesSection = () => {
                 <Row>
                     <Col>
                         <SubHeading text={"Industries"} />
-                        <h2 className="heading_main">Serving Diverse Industry Needs with Tailored Solutions</h2>
+                        <h2 className="heading_main split">Serving Diverse Industry Needs with Tailored Solutions</h2>
                         <p className="paragraph_content">At IosAndWeb Tech, we understand that each industry comes with its own unique challenges and opportunities. That's why we offer specialized software and digital solutions designed to meet the specific needs of a wide range of sectors:</p>
 
                         <div className="industries_wrapper less-top-padding">

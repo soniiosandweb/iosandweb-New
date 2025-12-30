@@ -263,6 +263,11 @@ h1, h2, h3, h4, h5, h6{
 .responsive-img {
     width: 100%;
 }
+.split-word {
+  display: inline-block;
+  transform-origin: left center;
+  will-change: transform;
+}
 @media (max-width: 1399px) {
   .header-wrapper h1 {
     font-size: 40px;

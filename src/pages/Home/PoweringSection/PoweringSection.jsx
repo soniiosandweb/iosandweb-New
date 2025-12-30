@@ -91,7 +91,7 @@ const PoweringSection = () => {
                         <AwardsSection />
 
                         <div className="powering_content_block section-padding no-bottom-padding text-center">
-                            <h2 className="heading_main">Powering Your Growth with Smart Tech</h2>
+                            <h2 className="heading_main split">Powering Your Growth with Smart Tech</h2>
                             <p className="paragraph_content">We specialize in crafting software solutions tailored to your unique business needs. With our expertise, innovation and commitment to excellence, we empower businesses to thrive in today's competitive digital landscape.</p>
                             <div className="powering_grid less-top-padding less-bottom-padding">
                                 {poweringLists.map((item,i) => (

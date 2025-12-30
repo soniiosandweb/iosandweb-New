@@ -22,7 +22,7 @@ const OurCommitment = () => {
             <Container>
                 <Row>
                     <Col>
-                        <h2 className="heading_main text-center">Our Commitment to Excellence</h2>
+                        <h2 className="heading_main text-center split">Our Commitment to Excellence</h2>
                         <p className="paragraph_content text-center less-bottom-padding">Supporting People Beyond the Workplace</p>
                         <div className="our_commitment_grids">
                             {commitmentLists.map((item,index) => {

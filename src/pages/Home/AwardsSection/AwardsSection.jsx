@@ -1,8 +1,6 @@
 import SubHeading from "../../../components/SubHeading/SubHeading";
 import "./AwardsSection.css";
 import Partners from "../../../components/Partners"
-import Slider from "react-slick";
-import { useEffect, useRef, useState } from "react";
 
 const goodFirmLogo = `${process.env.REACT_APP_API_URL}/assests/awards/good-firms-logo.webp`;
 const appFutura = `${process.env.REACT_APP_API_URL}/assests/awards/appfutura.webp`;
@@ -40,48 +38,24 @@ const awardsLists = [
 
 const AwardsSection = () => {
 
-    const awardRef = useRef(null);
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-    const isSmall = windowWidth < 380;
-    const isMobile = windowWidth < 768;
-    const isTablet = windowWidth < 1200;
-
-    useEffect(() => {
-        const handleResize = () => setWindowWidth(window.innerWidth);
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
-
-    const awardsSettings = {
-        dots: false,
-        arrows: false,
-        infinite: true,
-        slidesToShow: isSmall ? 2 : isMobile ? 3 : isTablet ? 4 : 5,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        pauseOnHover: false,
-    };
-
     return(
         <div className="awards_section">
             <SubHeading text={"Awards"} />
-            <h2 className="heading_main">Every Award Marks a Milestone in Our Journey of Excellence</h2>
+            <h2 className="heading_main split">Every Award Marks a Milestone in Our Journey of Excellence</h2>
 
-            <Slider 
-                className="awards-section-carousel" 
-                {...awardsSettings}
-                ref={awardRef}
-            >
-                {awardsLists.map((item,i) => (
-                    <div className="item" key={i}>
-                        <div className="award_list_item">
-                            <img src={item.img} alt={item.title} className="award_image" />
+            <div className="marquee-container left-right">
+                <div className="marquee">
+                    {[0, 1].map((_, i) => (
+                        <div className="marquee-track" key={i}>
+                            {awardsLists.map((item,i) => (
+                                <div className="award_list_item" key={i}>
+                                    <img src={item.img} alt={item.title} className="award_image" />
+                                </div>
+                            ))}
                         </div>
-                    </div>
-                ))}
-            </Slider>
+                    ))}
+                </div>
+            </div>
 
             <div className="brands_block less-bottom-padding">
                 <h2 className="heading_main less-top-padding less-bottom-padding">Our Work Has Transformed Experiences for Leading Brands Worldwide</h2>

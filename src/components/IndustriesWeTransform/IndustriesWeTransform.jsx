@@ -77,7 +77,7 @@ const IndustriesWeTransform = () => {
             <Container>
                 <Row>
                     <Col>
-                        <h2 className="heading_main text-center">Industries We Transform</h2>
+                        <h2 className="heading_main text-center split">Industries We Transform</h2>
                         <p className="paragraph_content text-center">Building Digital Excellence Across Every Vertical</p>
                         <div className="industries_transform_grid less-top-padding">
                             {industriesLists.map((item,i) => (

@@ -11,7 +11,7 @@ const MoreThanWebSection = () => {
                 <Container>
                     <Row>
                         <Col className="text-center">
-                            <h2 className="heading_main">More Than Web App Development Company We're Your Strategic Partner In Building A Digital Presence That Thrives.</h2>
+                            <h2 className="heading_main split">More Than Web App Development Company We're Your Strategic Partner In Building A Digital Presence That Thrives.</h2>
                             <Link to="/contact-us" reloadDocument className="btn-gradient-blue">Create Your Digital Success <FontAwesomeIcon icon={faAnglesRight} /></Link>
                         </Col>
                     </Row>

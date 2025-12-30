@@ -162,7 +162,7 @@ function Footer(){
                     <Container>
                         <Row>
                             <Col>  
-                                <h4 className="collaborate_heading">Let's Collaborate <FontAwesomeIcon icon={faAnglesRight} /></h4>
+                                <h4 className="collaborate_heading split">Let's Collaborate <FontAwesomeIcon icon={faAnglesRight} /></h4>
                             </Col>
                         </Row>
                     </Container>

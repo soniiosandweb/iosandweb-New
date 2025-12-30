@@ -113,7 +113,7 @@ const HowWeHelp = () => {
                 <Row>
                     <Col>
                         <p className="paragraph_content text-center">Proven Results Backed by Powerful Software Solutions</p>
-                        <h2 className="heading_main text-center">See how we help organizations accelerate growth through custom-built software.</h2>
+                        <h2 className="heading_main text-center split">See how we help organizations accelerate growth through custom-built software.</h2>
                         <div className="how_we_help_grids less-top-padding">
                             {howWeHelpLists.map((item,index) => {
                                 const patternIndex = (index % 5) + 1;

@@ -54,7 +54,7 @@ const CaseStudiesSection = () => {
                 <Row>
                     <Col>
                         <p className="paragraph_content">Each case study below highlights our commitment to delivering solutions that are not only visually appealing but also optimized for speed, SEO, and user engagement. These projects showcase how we turn ideas into impactful digital products.</p>
-                        <h2 className="heading_main less-top-padding">Case Studies</h2>
+                        <h2 className="heading_main less-top-padding split">Case Studies</h2>
                         <p className="paragraph_content">Explore some of our recent projects across various platforms and industries.</p>
 
                         <div className="portfolio_casestudies_block">

@@ -76,7 +76,7 @@ const ServicesSection = () => {
                         <div className="services_section_flex">
                             <div className="services_flex_left">
                                 <SubHeading text={"Service"} />
-                                <h2 className="heading_main">We build innovative solutions and upgrade existing systems using next-gen technologies to future-proof your business.</h2>
+                                <h2 className="heading_main split">We build innovative solutions and upgrade existing systems using next-gen technologies to future-proof your business.</h2>
                                 <p className="paragraph_content">We build innovative digital solutions and modernize outdated systems using cutting-edge, next-generation technologies to ensure your business stays future-ready. Our approach focuses on enhancing performance, improving scalability, and integrating intelligent automation to help you stay competitive in an evolving digital landscape. Whether you need a completely new product or a smarter version of what you already have, we deliver solutions that are secure, efficient, and designed for long-term success.</p>
                             </div>
                             <div className="services_flex_right">

@@ -367,7 +367,7 @@ const AIPoweredSection = () => {
                 <Row>
                     <Col>
                         <SubHeading text={"Solutions"} />
-                        <h2 className="heading_main">AI-Powered Solutions <br />Built for Global Impact by IosAndWeb Technologies</h2>
+                        <h2 className="heading_main split">AI-Powered Solutions <br />Built for Global Impact by IosAndWeb Technologies</h2>
 
                         <div className="ai_powered_flex_block less-top-padding">
                             <div className="ai_powered_sidebar" ref={menuContainerRef}>
@@ -398,7 +398,7 @@ const AIPoweredSection = () => {
                                         id={item.id}
                                         ref={(el) => (sectionRefs.current[item.id] = el)}
                                     >
-                                        <h2 className={`heading_main ${item.color}`}>{item.title}</h2>
+                                        <h2 className={`heading_main split ${item.color}`}>{item.title}</h2>
                                         <p className="paragraph_content">{item.subheading}</p>
                                         <div className="features_lists less-top-padding less-bottom-padding">
                                             {item.features.map((feature,index) => (

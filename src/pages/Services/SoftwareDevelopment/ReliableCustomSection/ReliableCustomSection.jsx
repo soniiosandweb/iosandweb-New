@@ -40,7 +40,7 @@ const ReliableCustomSection = () => {
                     <Col>
                         <div className="reliable_custom_flexs">
                             <div className="reliable_custom_cols">
-                                <h2 className="heading_main desktop">What Makes Us a Reliable Custom Software Development Company</h2>
+                                <h2 className="heading_main desktop split">What Makes Us a Reliable Custom Software Development Company</h2>
                                 <p className="paragraph_content desktop">Mutual trust and transparency form the foundation of our partnerships.</p>
                                 <div className="reliable_links_grid less-top-padding">
                                     {reliableLinks.map((item, i) => (
@@ -52,7 +52,7 @@ const ReliableCustomSection = () => {
                                 </div>
                             </div>
                             <div className="reliable_numbers_cols">
-                                <h2 className="heading_main mobile">What Makes Us a Reliable Custom Software Development Company</h2>
+                                <h2 className="heading_main mobile split">What Makes Us a Reliable Custom Software Development Company</h2>
                                 <p className="paragraph_content mobile">Mutual trust and transparency form the foundation of our partnerships.</p>
                                 <NumbersGrid />
                             </div>

@@ -67,7 +67,7 @@ const ReasonChooseSection = () => {
             <Container>
                 <Row>
                     <Col>
-                        <h2 className="heading_main text-center">Reasons to Choose Top Custom Software Developer</h2>
+                        <h2 className="heading_main text-center split">Reasons to Choose Top Custom Software Developer</h2>
                         <p className="paragraph_content text-center">Custom software development aims to produce software solutions that are customized to a company's particular business needs. Many organisations often reject the idea of developing, implementing, and maintaining a custom software solution for themselves due to the expenses involved with software developer.</p> 
                         <p className="paragraph_content text-center">Rest assured, though, that these are merely initial investments that can be swiftly recovered by addressing certain problems that the market's typical, off-the-shelf solutions are unable to solve. Because there are so many commercially accessible software solutions, many organisations may not require a software solution that is specifically tailored for them with software development services. But it has been shown that when a piece of software is made especially to meet a particular set of business demands, performance and efficiency rise, providing the business a competitive edge in the market.The top ten reasons for developing a unique software solution are listed below.</p>
 

@@ -15,7 +15,7 @@ const SeeBusinessSection = () => {
                         <div className="see_business_flexs linear-dark-background">
                             <div className="see_business_contact_col">
                                 <div className="see_business_contact">
-                                    <h2 className="heading_main">See Your Business 6 Months From Now <br/>Free Future-State Analysis</h2>
+                                    <h2 className="heading_main split">See Your Business 6 Months From Now <br/>Free Future-State Analysis</h2>
                                     <p className="paragraph_content">We'll show you exactly where you could be with the right strategy. No pitch, just insights you can act on today.</p>
                                     <Link to="/services" reloadDocument className="btn-gradient-blue">What Sets Us Apart <FontAwesomeIcon icon={faAnglesRight} /></Link>
                                 </div>

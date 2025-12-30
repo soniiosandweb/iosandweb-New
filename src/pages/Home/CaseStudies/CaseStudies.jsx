@@ -165,7 +165,7 @@ const CaseStudies = () => {
                 <Row>
                     <Col>
                         <SubHeading text={"Case studies"} />
-                        <h2 className="heading_main">Leading the Next Wave of Innovation</h2>
+                        <h2 className="heading_main split">Leading the Next Wave of Innovation</h2>
                         <p className="paragraph_content">Experience how ideas evolve into innovation powered by cutting-edge tech.</p>
                         <div className="case_studies_slider less-top-padding">
                             <div className="case_studies_sidebar" ref={navContainerRef}>

@@ -44,7 +44,7 @@ const AboutBanner = () => {
                         <div className="main_banner_flex section-padding">
                             <div className="main_banner_left_col">
                                 <p className="main_banner_subheading">Who We Are</p>
-                                <h1 className="heading_main">Building Digital Excellence For Tomorrow</h1>
+                                <h1 className="heading_main split">Building Digital Excellence For Tomorrow</h1>
                                 <p className="paragraph_content">We are premier digital transformation agency crafting bespoke mobile apps, web solution, and custom software. We turn ambitious idea into powerful digital realities.</p>
                                 <div className="main_banner_btn_section">
                                     <Link to="/portfolio" reloadDocument className="btn-gradient-pink">View Our Work <FontAwesomeIcon icon={faAnglesRight} /></Link>

@@ -40,7 +40,7 @@ const ServiceBanner = () => {
                             <div className="services_banner_flex section-padding">
                                 <div className="services_banner_contents">
                                     <p className="services_banner_subheading">Our Digital Services</p>
-                                    <h1 className="heading_main">Your Growth <span className="gradient">Partner,</span> Not Just Another Agency.</h1>
+                                    <h1 className="heading_main split">Your Growth <span className="gradient">Partner,</span> Not Just Another Agency.</h1>
                                     <p className="paragraph_content">Your Growth Partner, Not Just Another Agency. We build digital experiences that turn visitors into customers and customers into advocates. With full-stack expertise spanning SEO, development, and strategy, we're the team that helps ambitious brands break through the noise and dominate their market.</p>
                                     <Link to="/contact-us" reloadDocument className="btn-gradient-blue">See What We Do <FontAwesomeIcon icon={faAnglesRight} /></Link>
                                 </div>

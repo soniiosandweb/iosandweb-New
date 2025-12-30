@@ -30,7 +30,7 @@ const OurMarketingSection = ({classes}) => {
             <Container>
                 <Row>
                     <Col>
-                        <h2 className="heading_main text-center">Our Marketing Strategy</h2>
+                        <h2 className="heading_main text-center split">Our Marketing Strategy</h2>
                         <p className="paragraph_content text-center">We Dont Guess. We Calculate</p>
                         <div className="our_marketing_grids less-top-padding">
                             {marketingLists.map((item,i) => (

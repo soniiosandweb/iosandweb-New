@@ -68,11 +68,11 @@ const SolutionsSection = () => {
                 <Row>
                     <Col>
                         <SubHeading text={"The Iosandweb Advantage"} />
-                        <h2 className="heading_main">Where Technical Precision Meets Growth Strategy</h2>
+                        <h2 className="heading_main split">Where Technical Precision Meets Growth Strategy</h2>
                         <p className="paragraph_content">For over a decade, we've helped ambitious brands dominate their markets through full-stack digital solutions. Our battle-tested methodology blends advanced SEO tactics, high-performance development, and data-driven strategy to deliver what matters most: more visibility, more leads, and measurable revenue growth. We build digital assets that compound in value over time.</p>
 
                         <div className="services_powering_section">
-                            <h2 className="heading_main text-center">Powering Your Growth with Smart Tech</h2>
+                            <h2 className="heading_main text-center split">Powering Your Growth with Smart Tech</h2>
 
                             <Slider 
                                 className="services_powering_carousel" 

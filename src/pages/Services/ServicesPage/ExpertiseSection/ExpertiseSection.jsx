@@ -68,7 +68,7 @@ const ExpertiseSection = () => {
             <Container>
                 <Row>
                     <Col className="less-top-padding">
-                        <h2 className="heading_main text-center">Our Expertise</h2>
+                        <h2 className="heading_main text-center split">Our Expertise</h2>
                         <p className="paragraph_content text-center">Comprehensive Digital Solutions, Delivered With Precision</p>
                         <div className="services_expertise_grid less-top-padding">
                             {servicesLists.map((item,i) => (

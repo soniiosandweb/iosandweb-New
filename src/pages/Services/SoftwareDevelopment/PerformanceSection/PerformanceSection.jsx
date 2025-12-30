@@ -47,7 +47,7 @@ const PerformanceSection = () => {
                     <Col>
                         <div className="performance_section_flex">
                             <div className="performance_cols">
-                                <h2 className="heading_main">Are Legacy Systems Limiting Your Business Performance?</h2>
+                                <h2 className="heading_main split">Are Legacy Systems Limiting Your Business Performance?</h2>
                             </div>
                             <div className="performance_cols">
                                 <p className="performance_text">

@@ -40,7 +40,7 @@ const UnlockExclusiveSection = ({visions}) => {
             <Container>
                 <Row>
                     <Col>
-                        <h2 className="heading_main text-center">Unlock Exclusive Advantages by Partnering with Us</h2>
+                        <h2 className="heading_main text-center split">Unlock Exclusive Advantages by Partnering with Us</h2>
                         <p className="paragraph_content text-center">Six Reasons Your Competitors Wish They'd Chosen Us First</p>
                         <div className="services_unlock_grid less-top-padding">
                             {exclusiveLists.map((item,i) => (

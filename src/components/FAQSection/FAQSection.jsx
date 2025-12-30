@@ -10,7 +10,7 @@ const FAQSection = ({subheading, heading, lists, fullwidth}) => {
                     <Col>
                         <div className={`faq_container ${fullwidth && "full-width"}`}>
                             <SubHeading text={subheading ? subheading : "Insights"} />
-                            <h2 className="heading_main">{heading ? heading : "Frequently Asked Questions"}</h2>
+                            <h2 className="heading_main split">{heading ? heading : "Frequently Asked Questions"}</h2>
 
                             <Accordion 
                                 defaultActiveKey={0}

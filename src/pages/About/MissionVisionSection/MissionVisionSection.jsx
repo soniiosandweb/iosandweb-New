@@ -29,7 +29,7 @@ const MissionVisionSection = () => {
                                     <div className="mission_vision_icon">
                                         <img src={item.icon} alt={item.title} className="mission_vision_img" />
                                     </div>
-                                    <h3 className="mission_vision_title">{item.title}</h3>
+                                    <h3 className="mission_vision_title split">{item.title}</h3>
                                     <p className="mission_vision_text">{item.text}</p>
                                 </div>
                             ))}

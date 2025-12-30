@@ -42,7 +42,7 @@ const BusinessGoals = () => {
             <Container>
                 <Row>
                     <Col>
-                        <h2 className="heading_main">How Our Custom Software Solutions Support Your Business Goals</h2>
+                        <h2 className="heading_main split">How Our Custom Software Solutions Support Your Business Goals</h2>
                         <div className="business_goals_grid less-top-padding">
                             {goalsLists.map((item,index) => (
                                 <div className="business_goals_item" key={index}>

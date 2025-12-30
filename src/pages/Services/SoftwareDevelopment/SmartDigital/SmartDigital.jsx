@@ -12,7 +12,7 @@ const SmartDigital = () => {
                         <div className="smart_digital_flex">
                             <div className="smart_digital_cols">
                                 <p className="paragraph_content">Prepared to Drive Strategic Transformation for Your Business?</p>
-                                <h2 className="heading_main">Smart digital solutions that deliver results today. Enabling growth and innovation for the future.</h2>
+                                <h2 className="heading_main split">Smart digital solutions that deliver results today. Enabling growth and innovation for the future.</h2>
                             </div>
                             <div className="smart_digital_cols text-right">
                                 <img src={smartImg} alt="Smart digital solutions" className="smart_digital_image" />

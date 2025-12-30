@@ -48,7 +48,7 @@ const FooterContactSection = () => {
                             <div className="footer_contact_cols footer_left_col">
                                 <div className="footer_left_contents">
                                     <SubHeading text={"Contact Us"} />
-                                    <h2 className="heading_main">Ready To Fuel Your Vision With AI-Powered Innovation?</h2>
+                                    <h2 className="heading_main split">Ready To Fuel Your Vision With AI-Powered Innovation?</h2>
                                 </div>
 
                                 <div className="footer_left_contents">

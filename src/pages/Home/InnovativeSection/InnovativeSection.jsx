@@ -96,7 +96,7 @@ const InnovativeSection = () => {
             <Container>
                 <Row>
                     <Col>
-                        <h2 className="heading_main">Innovative IosAndWeb Technology Solutions</h2>
+                        <h2 className="heading_main split">Innovative IosAndWeb Technology Solutions</h2>
                         <p className="paragraph_content">In the dynamically changing digital landscape of today, creating robust, scalable, and user-centric technology solutions is crucial to meaningful business growth. Bird is an award-winning global tech development agency that uses cutting-edge frameworks, modern architectures, and engineering excellence to elevate your digital presence across all platforms.</p>
 
                         <p className="paragraph_content">At Blink, our forward-thinking iOS and web technology experts are skilled in native iOS development, cross-platform solutions, and advanced web engineering. This team develops seamless user experiences, improves performance, and delivers measurable results. By crafting intelligent apps, optimizing digital workflows, and deploying high-impact web solutions, we're helping your brand rise above in an extremely competitive technological landscape.</p>

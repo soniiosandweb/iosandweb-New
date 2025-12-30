@@ -20,7 +20,7 @@ const ReadyBuildSection = () => {
                                     <img src={readyBuildImg} alt="Ready to Build Powerful, Secure & Feature-Rich Software?" className="ready_left_image" />
                                 </div>
                                 <div className="ready_build_content">
-                                    <h2 className="heading_main">Ready to Build Powerful, Secure & Feature-Rich Software?</h2>
+                                    <h2 className="heading_main split">Ready to Build Powerful, Secure & Feature-Rich Software?</h2>
                                     <p className="paragraph_content">Skip generic solutions—choose custom software development built uniquely for your business.</p>
                                     <Link to="/contact-us" reloadDocument className="btn-gradient-blue">Build Your Website Today  <FontAwesomeIcon icon={faAnglesRight} /></Link>
                                 </div>

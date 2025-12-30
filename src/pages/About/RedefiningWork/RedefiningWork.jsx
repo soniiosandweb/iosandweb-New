@@ -96,7 +96,7 @@ const RedefiningWork = () => {
             <Container>
                 <Row>
                     <Col>
-                        <h2 className="heading_main text-center">Redefining Work-Life Balance Through Innovation</h2>
+                        <h2 className="heading_main text-center split">Redefining Work-Life Balance Through Innovation</h2>
                         <p className="paragraph_content text-center less-bottom-padding">Supporting People Beyond the Workplace</p>
                         <ServicesGridSection lists={services} />
                     </Col>

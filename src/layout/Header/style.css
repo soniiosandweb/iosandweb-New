@@ -3,6 +3,9 @@
     padding: 0;
     background-color: #0000007A;
 }
+.header.borderbottom {
+    border-bottom: 0.2px solid #dee2e67a;
+}
 .header-container{
     position: relative;
 }

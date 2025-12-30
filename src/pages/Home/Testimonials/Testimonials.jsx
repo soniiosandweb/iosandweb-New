@@ -170,7 +170,7 @@ const Testimonials = () => {
                             <div className="testimonials_contents">
                                 <div className="testimonials_headings">
                                     <SubHeading text={"Testimonials"} />
-                                    <h2 className="heading_main">Don't Just Take Our Word for It—See What Our Clients Say</h2>
+                                    <h2 className="heading_main split">Don't Just Take Our Word for It—See What Our Clients Say</h2>
                                 </div>
                             </div>
                             <Slider 

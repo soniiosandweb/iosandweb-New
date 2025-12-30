@@ -60,7 +60,7 @@ const WhyChoose = () => {
                     <Col>
                         <div className="why_choose_flex_block">
                             <div className="why_choose_cols why_choose_left_col">
-                                <h2 className="heading_main">Why Choose IAW Technologies, You May Ask?</h2>
+                                <h2 className="heading_main split">Why Choose IAW Technologies, You May Ask?</h2>
                                 <p className="paragraph_content">We ensure web solutions that work flawlessly across multiple devices.</p>
                                 <img src={whyChooseImg} alt="Why Choose IAW Technologies" className="why_choose_img" />
                             </div>

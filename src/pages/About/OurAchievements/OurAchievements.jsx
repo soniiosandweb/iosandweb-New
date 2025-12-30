@@ -73,7 +73,7 @@ const OurAchievements = () => {
             <Container>
                 <Row>
                     <Col>
-                        <h2 className="heading_main text-center">Our Achievements</h2>
+                        <h2 className="heading_main text-center split">Our Achievements</h2>
                         <p className="paragraph_content text-center">With the utmost priority of adding value to the projects we undertake, we ensure that our partners stay ahead of the clutter and achieve excellence.</p>
                         <div className="our_achievements_slider_block">
                             <Slider 

@@ -34,7 +34,7 @@ const StrategicPartners = () => {
             <Container>
                 <Row>
                     <Col>
-                        <h2 className="heading_main">Our Strategic Partners Include</h2>
+                        <h2 className="heading_main split">Our Strategic Partners Include</h2>
                         <div className="partners_flex_block">
                             <Link reloadDocument to="/contact-us" className="btn-gradient-blue">Get Expert Help <FontAwesomeIcon icon={faAnglesRight} /></Link>
                             <div className="partners_grid_block">

@@ -39,7 +39,7 @@ const AboutWhyChoose = () => {
                     <Col>
                         <div className="about_why_choose_flex">
                             <div className="about_why_choose_cols">
-                                <h2 className="heading_main">Why Choose Us</h2>
+                                <h2 className="heading_main split">Why Choose Us</h2>
                                 <p className="paragraph_content">We Don't Just write code; we build partnership. Here is why Client trust us with their critical projects.</p>
                                 <div className="about_choose_grids less-top-padding">
                                     {whyChooseLists.map((item,i) => (

@@ -15,7 +15,7 @@ const TechnicalExpert = () => {
             <Container>
                 <Row>
                     <Col>
-                        <h2 className="heading_main">Technical Expertise</h2>
+                        <h2 className="heading_main split">Technical Expertise</h2>
                         <p className="paragraph_content">Our Toolkit is vast, Modern, and Continuously evolving.</p>
                         <div className="portfolio_expertise_grid less-top-padding">
                             {expertiseLists.map((item,i) => (

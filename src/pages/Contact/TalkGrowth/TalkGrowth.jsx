@@ -12,7 +12,7 @@ const TalkGrowth = () => {
                         <div className="contact_talk_growth_heading">
                             <img src={lock} alt="Lock" className="contact_lock" />
                             <div className="contact_talk_growth_heading_block">
-                                <h2 className="heading_main">Let's Talk Growth- Schedule Your Free Call Now</h2>
+                                <h2 className="heading_main split">Let's Talk Growth- Schedule Your Free Call Now</h2>
                                 <p className="paragraph_content">Start Your Growth Journey With a Free Strategy Session</p>
                             </div>
                         </div>

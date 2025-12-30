@@ -1,6 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
 import './style.css';
-import Slider from "react-slick";
 
 const onmen = `${process.env.REACT_APP_API_URL}/assests/images/partners/ONMEN.png`;
 const gopuff = `${process.env.REACT_APP_API_URL}/assests/images/partners/Gopuff.webp`;
@@ -84,46 +82,22 @@ const partnersLists = [
 
 const Partners = () => {
 
-    const partnersRef = useRef(null);
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-    
-    const isSmallPartner = windowWidth < 380;
-    const isMobilePartner = windowWidth < 768;
-    const isTabletPartner = windowWidth < 1200;
-    
-    useEffect(() => {
-        const handleResize = () => setWindowWidth(window.innerWidth);
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
-    
-    const partnersSettings = {
-        dots: false,
-        arrows: false,
-        infinite: true,
-        slidesToShow: isSmallPartner ? 2 : isMobilePartner ? 3 : isTabletPartner ? 4 : 5,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        pauseOnHover: false,
-    };
-
     return(
         <>
             <div className="partners-panel">
-                <Slider 
-                    className="partner-logos" 
-                    {...partnersSettings}
-                    ref={partnersRef}
-                >
-                    {partnersLists.map((item,i) => (
-                        <div className="item" key={i}>
-                            <div className="partner-logo">
-                                <img src={item.logo} alt={item.title} className="brands_image" />
+                <div className="marquee-container">
+                    <div className="marquee">
+                        {[0, 1].map((_, i) => (
+                            <div className="marquee-track" key={i}>
+                                {partnersLists.map((item,i) => (
+                                    <div className="partner-logo" key={i}>
+                                        <img src={item.logo} alt={item.title} className="brands_image" />
+                                    </div>
+                                ))}
                             </div>
-                        </div>
-                    ))}
-                </Slider>
+                        ))}
+                    </div>
+                </div>
             </div>
         </>
     )

@@ -16,7 +16,7 @@ const PortfolioBanner = () => {
                     <Col>
                         <div className="portfolio_banner_flex">
                             <div className="portfolio_left_cols">
-                                <h1 className="heading_main">Our Success Stories: <br/><span className="gradient">Real Solution, Real Result</span> Increase Revenue.</h1>
+                                <h1 className="heading_main split">Our Success Stories: <br/><span className="gradient">Real Solution, Real Result</span> Increase Revenue.</h1>
                                 <p className="paragraph_content">Explore How IosAndWeb Technologies Transform Ideas into Powerful Digital Experiences</p>
                                 <Link to="/contact-us" reloadDocument className="btn-gradient-blue">Request Professional Expertise <FontAwesomeIcon icon={faAnglesRight} /></Link>
                             </div>

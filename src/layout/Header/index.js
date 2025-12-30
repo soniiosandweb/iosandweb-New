@@ -445,7 +445,7 @@ function Header() {
   const updateHeader = React.useCallback(() => {
     if (isNonFixedRoute) {
       setFixed("sticky-top text-white");
-      setHeaderbg("white text-white border-bottom");
+      setHeaderbg("white text-white borderbottom");
       setImage(logo);
       return;
     }
@@ -453,7 +453,7 @@ function Header() {
     setFixed("fixed-top text-white");
 
     if (window.scrollY > 50) {
-      setHeaderbg("white text-white border-bottom");
+      setHeaderbg("white text-white borderbottom");
     } else {
       setHeaderbg("transparent text-white");
     }
