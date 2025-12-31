@@ -7,6 +7,8 @@
     object-fit: contain;
     right: 0;
     bottom: 0;
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
 }
 .we_design_deliver_block {
     background-color: #06102B;

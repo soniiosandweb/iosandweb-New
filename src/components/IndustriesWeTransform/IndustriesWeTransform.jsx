@@ -3,6 +3,9 @@ import "./IndustriesWeTransform.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLongArrowRight } from "@fortawesome/free-solid-svg-icons";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
 
 const foodRestaurant = `${process.env.REACT_APP_API_URL}/assests/services/services-page/food-restaurant.webp`;
 const onDemand = `${process.env.REACT_APP_API_URL}/assests/services/services-page/on-demand.webp`;
@@ -72,8 +75,45 @@ const industriesLists = [
 ]
 
 const IndustriesWeTransform = () => {
+
+    const industriesRef = useRef(null);
+
+    useEffect(() => {
+        let ctx;
+
+        const initAnimation = () => {
+            ctx = gsap.context(() => {
+            gsap.fromTo(
+                ".industries_boxes",
+                { y: 60, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.6,
+                    ease: "power3.out",
+                    stagger: 0.2,
+                    scrollTrigger: {
+                        trigger: industriesRef.current,
+                        start: "top 75%",
+                        toggleActions: "play reverse play reverse",
+                    }
+                }
+            );
+            }, industriesRef);
+
+            ScrollTrigger.refresh();
+        };
+
+        const timeout = setTimeout(initAnimation, 150);
+
+        return () => {
+            clearTimeout(timeout);
+            ctx && ctx.revert();
+        };
+    }, []);
+
     return(
-        <div className="industries_we_transform section-padding body-background">
+        <div className="industries_we_transform section-padding body-background" ref={industriesRef}>
             <Container>
                 <Row>
                     <Col>
@@ -81,7 +121,7 @@ const IndustriesWeTransform = () => {
                         <p className="paragraph_content text-center">Building Digital Excellence Across Every Vertical</p>
                         <div className="industries_transform_grid less-top-padding">
                             {industriesLists.map((item,i) => (
-                                <Link reloadDocument to={item.link} key={i} className="industries_transform_item">
+                                <Link reloadDocument to={item.link} key={i} className="industries_transform_item industries_boxes">
                                     <img src={item.image} alt={item.title} className="industries_transform_image" />
                                     <div className="industries_transform_contents">
                                         <div className="industries_transform_left">

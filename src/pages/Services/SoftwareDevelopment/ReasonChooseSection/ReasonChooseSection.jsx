@@ -2,6 +2,9 @@ import "./ReasonChooseSection.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
 
 const designIcon = `${process.env.REACT_APP_API_URL}/assests/services/software-development/design-development.webp`;
 const moreSecureIcon = `${process.env.REACT_APP_API_URL}/assests/services/software-development/more-secure.webp`;
@@ -62,6 +65,43 @@ const reasonsLists = [
 ]
 
 const ReasonChooseSection = () => {
+
+    const reasonsRef = useRef(null);
+
+    useEffect(() => {
+        let ctx;
+
+        const initAnimation = () => {
+            ctx = gsap.context(() => {
+            gsap.fromTo(
+                ".reasons_boxes",
+                { y: 60, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.6,
+                    ease: "power3.out",
+                    stagger: 0.2,
+                    scrollTrigger: {
+                        trigger: reasonsRef.current,
+                        start: "top 75%",
+                        toggleActions: "play reverse play reverse",
+                    }
+                }
+            );
+            }, reasonsRef);
+
+            ScrollTrigger.refresh();
+        };
+
+        const timeout = setTimeout(initAnimation, 150);
+
+        return () => {
+            clearTimeout(timeout);
+            ctx && ctx.revert();
+        };
+    }, []);
+    
     return(
         <div className="reason_choose_section section-padding body-background">
             <Container>
@@ -71,9 +111,9 @@ const ReasonChooseSection = () => {
                         <p className="paragraph_content text-center">Custom software development aims to produce software solutions that are customized to a company's particular business needs. Many organisations often reject the idea of developing, implementing, and maintaining a custom software solution for themselves due to the expenses involved with software developer.</p> 
                         <p className="paragraph_content text-center">Rest assured, though, that these are merely initial investments that can be swiftly recovered by addressing certain problems that the market's typical, off-the-shelf solutions are unable to solve. Because there are so many commercially accessible software solutions, many organisations may not require a software solution that is specifically tailored for them with software development services. But it has been shown that when a piece of software is made especially to meet a particular set of business demands, performance and efficiency rise, providing the business a competitive edge in the market.The top ten reasons for developing a unique software solution are listed below.</p>
 
-                        <div className="reasons_lists_grid less-top-padding">
+                        <div className="reasons_lists_grid less-top-padding" ref={reasonsRef}>
                             {reasonsLists.map((item,i) => (
-                                <div className="reasons_lists_item" key={i}>
+                                <div className="reasons_lists_item reasons_boxes" key={i}>
                                     <div className="reasons_item_top">
                                         <img src={item.icon} alt={item.title} className="reasons_item_icon" />
                                         <h3 className="reasons_title_text">{item.title}</h3>

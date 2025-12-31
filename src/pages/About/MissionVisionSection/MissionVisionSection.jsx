@@ -1,5 +1,8 @@
 import "./MissionVisionSection.css";
 import { Col, Container, Row } from "react-bootstrap";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
 
 const arrow = `${process.env.REACT_APP_API_URL}/assests/about/arrow.svg`;
 const visible = `${process.env.REACT_APP_API_URL}/assests/about/visible.svg`;
@@ -18,14 +21,51 @@ const missionVision = [
 ]
 
 const MissionVisionSection = () => {
+
+    const missionRef = useRef(null);
+
+    useEffect(() => {
+        let ctx;
+
+        const initAnimation = () => {
+            ctx = gsap.context(() => {
+            gsap.fromTo(
+                ".mission_boxes",
+                { y: 60, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.6,
+                    ease: "power3.out",
+                    stagger: 0.2,
+                    scrollTrigger: {
+                        trigger: missionRef.current,
+                        start: "top 75%",
+                        toggleActions: "play reverse play reverse",
+                    }
+                }
+            );
+            }, missionRef);
+
+            ScrollTrigger.refresh();
+        };
+
+        const timeout = setTimeout(initAnimation, 150);
+
+        return () => {
+            clearTimeout(timeout);
+            ctx && ctx.revert();
+        };
+    }, []);
+
     return(
-        <div className="mission_vision_section section-padding black-background">
+        <div className="mission_vision_section section-padding black-background" ref={missionRef}>
             <Container>
                 <Row>
                     <Col>
                         <div className="mission_vision_grid">
                             {missionVision.map((item,i) => (
-                                <div className="mission_vision_grid_item" key={i}>
+                                <div className="mission_vision_grid_item mission_boxes" key={i}>
                                     <div className="mission_vision_icon">
                                         <img src={item.icon} alt={item.title} className="mission_vision_img" />
                                     </div>

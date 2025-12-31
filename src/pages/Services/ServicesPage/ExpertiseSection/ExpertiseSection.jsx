@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 import "./ExpertiseSection.css";
 import { Col, Container, Row } from "react-bootstrap";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
+
 
 const webDevelopment = `${process.env.REACT_APP_API_URL}/assests/services/services-page/web-development.svg`;
 const mobileAppDevelop = `${process.env.REACT_APP_API_URL}/assests/services/services-page/mobile-app-develop.svg`;
@@ -63,8 +67,45 @@ const servicesLists = [
 ]
 
 const ExpertiseSection = () => {
+
+    const expertiseRef = useRef(null);
+    
+    useEffect(() => {
+        let ctx;
+    
+        const initAnimation = () => {
+            ctx = gsap.context(() => {
+            gsap.fromTo(
+                ".expertise_boxes",
+                { y: 60, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.6,
+                    ease: "power3.out",
+                    stagger: 0.2,
+                    scrollTrigger: {
+                        trigger: expertiseRef.current,
+                        start: "top 75%",
+                        toggleActions: "play reverse play reverse",
+                    }
+                }
+            );
+            }, expertiseRef);
+    
+            ScrollTrigger.refresh();
+        };
+    
+        const timeout = setTimeout(initAnimation, 150);
+    
+        return () => {
+            clearTimeout(timeout);
+            ctx && ctx.revert();
+        };
+    }, []);
+
     return(
-        <div className="services_expertise_section section-padding no-bottom-padding body-background">
+        <div className="services_expertise_section section-padding no-bottom-padding body-background" ref={expertiseRef}>
             <Container>
                 <Row>
                     <Col className="less-top-padding">
@@ -72,7 +113,7 @@ const ExpertiseSection = () => {
                         <p className="paragraph_content text-center">Comprehensive Digital Solutions, Delivered With Precision</p>
                         <div className="services_expertise_grid less-top-padding">
                             {servicesLists.map((item,i) => (
-                                <Link reloadDocument to={item.link} className="services_expertise_item" key={i}>
+                                <Link reloadDocument to={item.link} className="services_expertise_item expertise_boxes" key={i}>
                                     <div className="services_expertise_icon_box">
                                         <img src={item.icon} alt={item.title} className="services_expertise_icon" />
                                     </div>

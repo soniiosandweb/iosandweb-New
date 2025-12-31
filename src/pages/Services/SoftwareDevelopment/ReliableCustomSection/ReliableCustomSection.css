@@ -7,6 +7,8 @@
     left: 0;
     object-fit: scale-down;
     width: 600px;
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
 }
 .reliable_custom_section .container {
     position: relative;

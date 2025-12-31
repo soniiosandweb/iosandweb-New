@@ -9,6 +9,8 @@
     left: 0;
     object-fit: scale-down;
     width: 500px;
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
 }
 .powering_section .container {
     position: relative;

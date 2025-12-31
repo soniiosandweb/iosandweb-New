@@ -1,6 +1,9 @@
 import NumbersGrid from "../../../../components/NumbersGrid/NumbersGrid";
 import "./ReliableCustomSection.css";
 import { Col, Container, Row } from "react-bootstrap";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
 
 const bgOverlay = `${process.env.REACT_APP_API_URL}/assests/home/powering/bg_overlay.webp`;
 
@@ -32,8 +35,45 @@ const reliableLinks = [
 ]
 
 const ReliableCustomSection = () => {
+
+    const reliableRef = useRef(null);
+    
+        useEffect(() => {
+            let ctx;
+    
+            const initAnimation = () => {
+                ctx = gsap.context(() => {
+                gsap.fromTo(
+                    ".reliable_boxes",
+                    { y: 60, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        ease: "power3.out",
+                        stagger: 0.2,
+                        scrollTrigger: {
+                            trigger: reliableRef.current,
+                            start: "top 75%",
+                            toggleActions: "play reverse play reverse",
+                        }
+                    }
+                );
+                }, reliableRef);
+    
+                ScrollTrigger.refresh();
+            };
+    
+            const timeout = setTimeout(initAnimation, 150);
+    
+            return () => {
+                clearTimeout(timeout);
+                ctx && ctx.revert();
+            };
+        }, []);
+
     return(
-        <div className="reliable_custom_section section-padding linear-dark-background">
+        <div className="reliable_custom_section section-padding linear-dark-background" ref={reliableRef}>
             <img src={bgOverlay} alt="Powering Your Growth with Smart Tech" className="reliable_custom_overlay" />
             <Container>
                 <Row>
@@ -44,7 +84,7 @@ const ReliableCustomSection = () => {
                                 <p className="paragraph_content desktop">Mutual trust and transparency form the foundation of our partnerships.</p>
                                 <div className="reliable_links_grid less-top-padding">
                                     {reliableLinks.map((item, i) => (
-                                        <div className="reliable_links_item" key={i}>
+                                        <div className="reliable_links_item reliable_boxes" key={i}>
                                             <p className="reliable_item_title">{item.title}</p>
                                             <p className="paragraph_content">{item.text}</p>
                                         </div>

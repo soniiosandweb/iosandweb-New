@@ -4,6 +4,12 @@ import { Col, Container, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const innovativeBg = `${process.env.REACT_APP_API_URL}/assests/home/innovative/innovative-bg.webp`;
 
 const exclusiveLists = [
@@ -34,8 +40,45 @@ const exclusiveLists = [
 ]
 
 const UnlockExclusiveSection = ({visions}) => {
+
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+        let ctx;
+
+        const initAnimation = () => {
+            ctx = gsap.context(() => {
+            gsap.fromTo(
+                ".slide_boxes",
+                { y: 60, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.6,
+                    ease: "power3.out",
+                    stagger: 0.2,
+                    scrollTrigger: {
+                        trigger: containerRef.current,
+                        start: "top 75%",
+                        toggleActions: "play reverse play reverse",
+                    }
+                }
+            );
+            }, containerRef);
+
+            ScrollTrigger.refresh();
+        };
+
+        const timeout = setTimeout(initAnimation, 150);
+
+        return () => {
+            clearTimeout(timeout);
+            ctx && ctx.revert();
+        };
+    }, []);
+
     return (
-        <div className="services_unlock_exclusive_section section-padding linear-dark-background">
+        <div className="services_unlock_exclusive_section section-padding linear-dark-background" ref={containerRef}>
             <img src={innovativeBg} alt="We Design. We Build. We Deliver." className="services_unlock_bgimg" />
             <Container>
                 <Row>
@@ -44,7 +87,7 @@ const UnlockExclusiveSection = ({visions}) => {
                         <p className="paragraph_content text-center">Six Reasons Your Competitors Wish They'd Chosen Us First</p>
                         <div className="services_unlock_grid less-top-padding">
                             {exclusiveLists.map((item,i) => (
-                                <div className="services_unlock_item" key={i}>
+                                <div className="services_unlock_item slide_boxes" key={i}>
                                     <p className="paragraph_content">{item.title}</p>
                                     <p className="services_unlock_content">{item.text}</p>
                                 </div>

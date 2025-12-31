@@ -14,6 +14,8 @@
     right: 0;
     margin: auto;
     object-fit: contain;
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
 }
 .contactpage_form_section .container {
     position: relative;

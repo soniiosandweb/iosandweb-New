@@ -5,6 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 import { useCountUp } from "react-countup";
 import AwardsSection from "../AwardsSection/AwardsSection";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
 
 const bgOverlay = `${process.env.REACT_APP_API_URL}/assests/home/powering/bg_overlay.webp`;
 const briefcase = `${process.env.REACT_APP_API_URL}/assests/home/powering/briefcase.webp`;
@@ -80,6 +83,42 @@ const PoweringSection = () => {
         scrollSpyDelay: 0,
         scrollSpyOnce: true
     });
+
+    const poweringRef = useRef(null);
+    
+        useEffect(() => {
+            let ctx;
+    
+            const initAnimation = () => {
+                ctx = gsap.context(() => {
+                gsap.fromTo(
+                    ".powering_boxes",
+                    { y: 60, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        ease: "power3.out",
+                        stagger: 0.2,
+                        scrollTrigger: {
+                            trigger: poweringRef.current,
+                            start: "top 75%",
+                            toggleActions: "play reverse play reverse",
+                        }
+                    }
+                );
+                }, poweringRef);
+    
+                ScrollTrigger.refresh();
+            };
+    
+            const timeout = setTimeout(initAnimation, 150);
+    
+            return () => {
+                clearTimeout(timeout);
+                ctx && ctx.revert();
+            };
+        }, []);
         
     return(
         <div className="powering_section section-padding">
@@ -90,12 +129,12 @@ const PoweringSection = () => {
                         {/* Awards */}
                         <AwardsSection />
 
-                        <div className="powering_content_block section-padding no-bottom-padding text-center">
+                        <div className="powering_content_block section-padding no-bottom-padding text-center" ref={poweringRef}>
                             <h2 className="heading_main split">Powering Your Growth with Smart Tech</h2>
                             <p className="paragraph_content">We specialize in crafting software solutions tailored to your unique business needs. With our expertise, innovation and commitment to excellence, we empower businesses to thrive in today's competitive digital landscape.</p>
                             <div className="powering_grid less-top-padding less-bottom-padding">
                                 {poweringLists.map((item,i) => (
-                                    <div className="powering_grid_item" key={i}>
+                                    <div className="powering_grid_item powering_boxes" key={i}>
                                         <span id={item.id} />
                                         <div className="content_powering">
                                             <div className="powering_icon">

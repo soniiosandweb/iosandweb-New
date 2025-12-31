@@ -3,6 +3,9 @@ import "./InnovativeSection.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
 
 const innovativeImg = `${process.env.REACT_APP_API_URL}/assests/home/innovative/imnnovative-img.webp`;
 const innovativeBg = `${process.env.REACT_APP_API_URL}/assests/home/innovative/innovative-bg.webp`;
@@ -90,6 +93,43 @@ const innovativeItems = [
 ];
 
 const InnovativeSection = () => {
+
+    const innovativeRef = useRef(null);
+
+    useEffect(() => {
+        let ctx;
+
+        const initAnimation = () => {
+            ctx = gsap.context(() => {
+            gsap.fromTo(
+                ".innovative_boxes",
+                { y: 60, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.6,
+                    ease: "power3.out",
+                    stagger: 0.2,
+                    scrollTrigger: {
+                        trigger: innovativeRef.current,
+                        start: "top 75%",
+                        toggleActions: "play reverse play reverse",
+                    }
+                }
+            );
+            }, innovativeRef);
+
+            ScrollTrigger.refresh();
+        };
+
+        const timeout = setTimeout(initAnimation, 150);
+
+        return () => {
+            clearTimeout(timeout);
+            ctx && ctx.revert();
+        };
+    }, []);
+    
     return(
         <div className="innovative_section section-padding bg-black text-white">
             <img src={innovativeBg} alt="Innovative IosAndWeb Technology" className="innovativeBG" />
@@ -103,7 +143,7 @@ const InnovativeSection = () => {
 
                         <p className="paragraph_content">With a focus on innovation, reliability, and future-ready development, Bird empowers businesses to create powerful digital products that connect, engage, and scale effortlessly.</p>
 
-                        <div className="innovative_section_flex less-top-padding">
+                        <div className="innovative_section_flex less-top-padding" ref={innovativeRef}>
                             <div className="innovative_left_col">
                                 <div className="innovative_blocks_image">
                                     <img src={innovativeImg} alt="Innovative IosAndWeb" className="innovative_img" />
@@ -117,7 +157,7 @@ const InnovativeSection = () => {
                             <div className="innovative_right_col">
                                 <div className="innovative_lists_grid">
                                     {innovativeLists.map((item, i) => (
-                                        <Link to={item.link} target={item.blank ? "_blank" : "_self"} className="innovative_lists_item" key={i}>
+                                        <Link to={item.link} target={item.blank ? "_blank" : "_self"} className="innovative_lists_item innovative_boxes" key={i}>
                                             <img src={item.icon} alt={item.text} className="innovative_lists_icon" />
                                             <p className="innovative_lists_heading">{item.text}</p>
                                         </Link>

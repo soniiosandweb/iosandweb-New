@@ -1,20 +1,31 @@
 .portfolio_box_grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 60px;
 }
 .portfolio_box_grid .portfolio_box_item {
     background-color: #040812;
     color: var(--color-white);
-    padding: 20px 40px;
+    padding: 30px 60px;
     border-radius: 8px;
 }
 .portfolio_box_grid .portfolio_box_item .portfolio_box_item_content {
     margin: 0;
 }
+@media (max-width: 1399px) {
+    .portfolio_box_grid {
+        gap: 40px;
+    }
+    .portfolio_box_grid .portfolio_box_item  {
+        padding: 30px 40px;
+    }
+}
 @media (max-width: 1199px) {
     .portfolio_box_grid .portfolio_box_item {
         padding: 20px 30px;
+    }
+    .portfolio_box_grid {
+        gap: 20px;
     }
 }
 @media (max-width: 991px) {

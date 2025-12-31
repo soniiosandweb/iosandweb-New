@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import './style.css';
 import { Container, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
 import AnalogClock from "analog-clock-react";
 import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 
@@ -153,6 +155,62 @@ function Footer(){
         hours: usHours,
     };
 
+    const clocksRef = useRef(null);
+    const footerColsRef = useRef(null);
+    
+    useEffect(() => {
+        let ctx;
+    
+        const initAnimation = () => {
+            ctx = gsap.context(() => {
+                gsap.fromTo(
+                    ".clock_boxes",
+                    { y: 60, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        ease: "power3.out",
+                        stagger: 0.2,
+                        scrollTrigger: {
+                            trigger: clocksRef.current,
+                            start: "top 75%",
+                            toggleActions: "play reverse play reverse",
+                        }
+                    }
+                );
+            }, clocksRef);
+
+            ctx = gsap.context(() => {
+                gsap.fromTo(
+                    ".footer_boxes",
+                    { y: 60, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        ease: "power3.out",
+                        stagger: 0.2,
+                        scrollTrigger: {
+                            trigger: footerColsRef.current,
+                            start: "top 75%",
+                            toggleActions: "play reverse play reverse",
+                        }
+                    }
+                );
+            }, footerColsRef);
+    
+            ScrollTrigger.refresh();
+        };
+    
+        const timeout = setTimeout(initAnimation, 150);
+    
+        return () => {
+            clearTimeout(timeout);
+            ctx && ctx.revert();
+        };
+    }, []);
+
     return(
         <>
             <div className="footer_main">
@@ -168,11 +226,11 @@ function Footer(){
                     </Container>
                 </div>
 
-                <div className="footer-top section-padding text-white">
+                <div className="footer-top section-padding text-white" ref={clocksRef}>
                     <Container>
                         <Row className="location-wrapper-footer">
                             <Col md={4}>
-                                <div className="location-div">
+                                <div className="location-div clock_boxes">
                                     <img src={india} alt="India" className="location-image" />
                                     <div className="location-heading">HQ India</div>
                                     <p className="location-text">SCO 30, First Floor, <br/>Near Devaji Plaza, VIP Road, <br/>Zirakpur, PB (India)</p>
@@ -182,7 +240,7 @@ function Footer(){
                                 </div>
                             </Col>
                             <Col md={4}>
-                                <div className="location-div">
+                                <div className="location-div clock_boxes">
                                     <img src={hqUk} alt="United Kingdom" className="location-image" />
                                     <div className="location-heading">United Kingdom</div>
                                     <p className="location-text">Sheffield City Centre, <br/>Sheffield, S1 1AA, <br/>United Kingdom</p>
@@ -192,7 +250,7 @@ function Footer(){
                                 </div>
                             </Col>
                             <Col md={4}>
-                                <div className="location-div">
+                                <div className="location-div clock_boxes">
                                     <img src={hqUs} alt="United States" className="location-image" />
                                     <div className="location-heading">United States</div>
                                     <p className="location-text">Suite #304, 11200 Manchaca, <br/>Austin, Texas, <br/>United States, 78748</p>
@@ -205,10 +263,10 @@ function Footer(){
                     </Container>
                 </div>
 
-                <div className="footer-section less-top-padding section-padding text-white">
+                <div className="footer-section less-top-padding section-padding text-white" ref={footerColsRef}>
                     <Container>
                         <Row>
-                            <Col md={6} lg={4} className="footer_columns col1">
+                            <Col md={6} lg={4} className="footer_columns col1 footer_boxes">
                                 <div className="footer-col">
                                     <a href="/"><img src={logoWhite} alt="IAW logo" className="footer-logo" /></a>
                                     <p className="footer-about">IosAndWeb Technologies believes in achieving goals and client satisfaction. We deliver inspiring & eye-catching websites and conduct profitable marketing campaigns that attract the audience and boost the client's business. We provide Support & Maintenance even after the completion of the project.</p>
@@ -231,7 +289,7 @@ function Footer(){
                                 </div>
                             </Col>
                             
-                            <Col md={6} lg={3} className="footer_columns col2">
+                            <Col md={6} lg={3} className="footer_columns col2 footer_boxes">
                                 <h5 className="footer-col-head">Services</h5>
                                 <ul className="footer-col-list">
                                     <li><a href="/custom-software-development-company">Software Development</a></li>
@@ -242,7 +300,7 @@ function Footer(){
                                     <li><a href="/digital-marketing-services">Digital Marketing</a></li>
                                 </ul>
                             </Col>
-                            <Col md={6} lg={2} className="footer_columns col3">
+                            <Col md={6} lg={2} className="footer_columns col3 footer_boxes">
                                 <h5 className="footer-col-head">About</h5>
                                 <ul className="footer-col-list">
                                     <li><a href="/about-us">About us</a></li>
@@ -252,7 +310,7 @@ function Footer(){
                                     <li><a href="/portfolio">Portfolio</a></li>
                                 </ul>
                             </Col>
-                            <Col md={6} lg={3} className="footer_columns col4">
+                            <Col md={6} lg={3} className="footer_columns col4 footer_boxes">
                                 <h5 className="footer-col-head">Resources</h5>
                                 <ul className="footer-col-list">
                                     <li><a href="/blog">Blog</a></li>

@@ -1,5 +1,8 @@
 import { Col, Container, Row } from "react-bootstrap";
 import "./BusinessGoals.css";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
 
 const checkIcon = `${process.env.REACT_APP_API_URL}/assests/checkmark.svg`;
 const businessPocess = `${process.env.REACT_APP_API_URL}/assests/services/software-development/business_pocess.webp`;
@@ -37,15 +40,52 @@ const goalsLists = [
 ]
 
 const BusinessGoals = () => {
+
+    const goalsRef = useRef(null);
+    
+        useEffect(() => {
+            let ctx;
+    
+            const initAnimation = () => {
+                ctx = gsap.context(() => {
+                gsap.fromTo(
+                    ".goals_boxes",
+                    { y: 60, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        ease: "power3.out",
+                        stagger: 0.2,
+                        scrollTrigger: {
+                            trigger: goalsRef.current,
+                            start: "top 75%",
+                            toggleActions: "play reverse play reverse",
+                        }
+                    }
+                );
+                }, goalsRef);
+    
+                ScrollTrigger.refresh();
+            };
+    
+            const timeout = setTimeout(initAnimation, 150);
+    
+            return () => {
+                clearTimeout(timeout);
+                ctx && ctx.revert();
+            };
+        }, []);
+
     return (
-        <div className="business_goals_section section-padding no-top-padding body-background">
+        <div className="business_goals_section section-padding no-top-padding body-background" ref={goalsRef}>
             <Container>
                 <Row>
                     <Col>
                         <h2 className="heading_main split">How Our Custom Software Solutions Support Your Business Goals</h2>
                         <div className="business_goals_grid less-top-padding">
                             {goalsLists.map((item,index) => (
-                                <div className="business_goals_item" key={index}>
+                                <div className="business_goals_item goals_boxes" key={index}>
                                     <div className="business_goals_header">
                                         <img src={item.icon} alt={item.title} className="goals_item_icon" />
                                         <p className="goals_item_title">{item.title}</p>

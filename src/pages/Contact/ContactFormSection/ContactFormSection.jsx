@@ -2,6 +2,9 @@ import ContactPageForm from "../../../components/ContactPageForm";
 import SubHeading from "../../../components/SubHeading/SubHeading";
 import "./ContactFormSection.css";
 import { Col, Container, Row } from "react-bootstrap";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
 
 const indiaIcon = `${process.env.REACT_APP_API_URL}/assests/contact/cont-loc-india.webp`;
 const ukIcon = `${process.env.REACT_APP_API_URL}/assests/contact/cont-loc-uk.webp`;
@@ -47,8 +50,45 @@ const locations = [
 ]
 
 const ContactFormSection = () => {
+
+    const contactFormRef = useRef(null);
+
+    useEffect(() => {
+        let ctx;
+
+        const initAnimation = () => {
+            ctx = gsap.context(() => {
+            gsap.fromTo(
+                ".contactForm_boxes",
+                { y: 60, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.6,
+                    ease: "power3.out",
+                    stagger: 0.2,
+                    scrollTrigger: {
+                        trigger: contactFormRef.current,
+                        start: "top 75%",
+                        toggleActions: "play reverse play reverse",
+                    }
+                }
+            );
+            }, contactFormRef);
+
+            ScrollTrigger.refresh();
+        };
+
+        const timeout = setTimeout(initAnimation, 150);
+
+        return () => {
+            clearTimeout(timeout);
+            ctx && ctx.revert();
+        };
+    }, []);
+
     return(
-        <div className="contactpage_form_section section-padding linear-dark-background">
+        <div className="contactpage_form_section section-padding linear-dark-background" ref={contactFormRef}>
             <img src={contactBG} alt="IosAndWeb Technologies Serving Businesses Worldwide" className="contactpage_bg" />
             <Container>
                 <Row>
@@ -59,7 +99,7 @@ const ContactFormSection = () => {
                                 <h3 className="heading_main small">Global Presence, Local Expertise</h3>
                                 <div className="contactpage_locations_block less-top-padding">
                                     {locations.map((item, i) => (
-                                        <div className="contactpage_locations_item" key={i}>
+                                        <div className="contactpage_locations_item contactForm_boxes" key={i}>
                                             <img src={item.icon} alt={item.title} className="contact_location_img" />
                                             <div className="contactpage_location_text">
                                                 <p className="paragraph_content location_title">{item.title}</p>
