@@ -59,7 +59,7 @@
     p.presence_lists_text.split {
     font-size: 14px;
     margin-top: 12px;
-    font-family: var(--font-poppins-semibold);
+    font-family: var(--font-poppins-medium);
     max-width: 100%;
     line-height: 18px;
 }
