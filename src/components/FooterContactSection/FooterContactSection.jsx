@@ -14,14 +14,19 @@ const presenceLists = [
     {
         image: indiaFlag,
         text: "India",
+        para:"SCO 30, First Floor, Near Devaji Plaza, VIP Road,Zirakpur, PB (India)"
     },
     {
         image: USFlag,
         text: "United States",
+        para:"Suite #304, 11200 Manchaca, Austin, Texas,United States, 78748"
+
     },
     {
         image: UKFlag,
         text: "United Kingdom",
+        para:"Sheffield City Centre, Sheffield, S1 1AA, United Kingdom"
+
     }
 ]
 
@@ -48,7 +53,7 @@ const FooterContactSection = () => {
                             <div className="footer_contact_cols footer_left_col">
                                 <div className="footer_left_contents">
                                     <SubHeading text={"Contact Us"} />
-                                    <h2 className="heading_main split">Ready To Fuel Your Vision With AI-Powered Innovation?</h2>
+                                    <h2 className="heading_main split center">Ready To Fuel Your Vision With AI-Powered Innovation?</h2>
                                 </div>
 
                                 <div className="footer_left_contents">
@@ -57,6 +62,7 @@ const FooterContactSection = () => {
                                         {presenceLists.map((item,i) => (
                                             <li className="presence_lists_item" key={i}>
                                                 <img src={item.image} alt={item.text} className="presence_image" />
+                                                <p className="presence_lists_text split">{item.para}</p>
                                             </li>
                                         ))}
                                     </ul>
@@ -68,7 +74,7 @@ const FooterContactSection = () => {
                                         {contactLists.map((item,i) => (
                                             <Link to={item.link} className="footer_contact_item" key={i}>
                                                 <FontAwesomeIcon icon={item.icon} />
-                                                <p className="footer_contact_text">{item.text}</p>
+                                                <p className="footer_contact_text ">{item.text}</p>
                                             </Link>
                                         ))}
                                     </div>

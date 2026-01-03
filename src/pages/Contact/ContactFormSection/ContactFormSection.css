@@ -57,6 +57,16 @@
     bottom: -30px;
     left: 0;
 }
+
+@media screen and (min-width: 1192px) and (max-width: 1340px) {
+    .FontSize_25 {
+        font-size: 25px !important;
+    }
+    .FontSize_30{
+        font-size: 30px !important;
+    }
+}
+
 .contactpage_locations_block .contactpage_locations_item:last-child::after {
     display: none;
 }

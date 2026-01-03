@@ -95,8 +95,8 @@ const ContactFormSection = () => {
                     <Col>
                         <div className="contactpage_form_flexs">
                             <div className="contactpage_form_left_col">
-                                <h2 className="heading_main split">IosAndWeb Technologies Serving Businesses Worldwide</h2>
-                                <h3 className="heading_main small">Global Presence, Local Expertise</h3>
+                                <h2 className="heading_main split FontSize_30">IosAndWeb Technologies Serving Businesses Worldwide</h2>
+                                <h3 className="heading_main small FontSize_25">Global Presence, Local Expertise</h3>
                                 <div className="contactpage_locations_block less-top-padding">
                                     {locations.map((item, i) => (
                                         <div className="contactpage_locations_item contactForm_boxes" key={i}>
@@ -110,7 +110,7 @@ const ContactFormSection = () => {
                                 </div>
                             </div>
                             <div className="contactpage_form_right_col">
-                                <h3 className="heading_main small split">Reach Out & Let's Build Something Exceptional Together</h3>
+                                <h3 className="heading_main small split FontSize_25">Reach Out & Let's Build Something Exceptional Together</h3>
                                 <div className="contactpage_form_block">
                                     <div className="contactpage_form_block_content">
                                         <h4 className="contactpage_form_heading">Share Details & Begin</h4>
