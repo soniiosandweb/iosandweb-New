@@ -11,6 +11,9 @@ const video1 = `${process.env.REACT_APP_API_URL}/assests/home/testimonials/Video
 const video2 = `${process.env.REACT_APP_API_URL}/assests/home/testimonials/Positive_SEO_Service_Review_and_Video.mp4`;
 const testimonial1 = `${process.env.REACT_APP_API_URL}/assests/home/testimonials/testimonial1.webp`;
 const testimonial2 = `${process.env.REACT_APP_API_URL}/assests/home/testimonials/testimonial2.webp`;
+const testimonial3 = `${process.env.REACT_APP_API_URL}/assests/home/testimonials/testimonials_3bg.webp`;
+
+const video3 = `${process.env.REACT_APP_API_URL}/assests/home/testimonials/testimonial3.mp4`;
 
 const testimonials = [
     {
@@ -26,10 +29,10 @@ const testimonials = [
         image: testimonial2,
     },
     {
-        name: "Lorem Ipsum",
-        content: "“Amazing experience! The team genuinely cares about delivering results and the way of reports like every single link you can check where they promote our website. I have been working with the Iosandweb team for 1.8 year now. I think my search for SEO is over and I can assure my further work with Utkarsh and his team. Satisfied with the results and professional behavior. I will recommend Iosandweb team.”",
-        video: video1,
-        image: testimonial1,
+        name: "Paul Azzurro",
+        content: "“Hi Finally I found a web designer who has created me the coolest designed chess site ever love it (chessondemand.com). I have had several developers throughout the years some good most just hold you hostages and never seem to finish what they started. Utkarsh and his team have exceeded my expectations great service honest affordable pricing and their skill level with web design and seo is top notch. I highly recommend them they are the real deal. Thank you.”",
+        video: video3,
+        image: testimonial3,
     }
 ]
 
