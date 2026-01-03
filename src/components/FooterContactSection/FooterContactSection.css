@@ -56,12 +56,12 @@
 .footer_left_contents.mobile_block {
     display: none;
 }
-p.presence_lists_text.split {
-    font-size: 12px;
+    p.presence_lists_text.split {
+    font-size: 14px;
     margin-top: 12px;
     font-family: var(--font-poppins-semibold);
-    max-width: 130px;
-    line-height: 14px;
+    max-width: 100%;
+    line-height: 18px;
 }
 @media (max-width: 1199px) {
     .footer_contact_flex {
@@ -70,6 +70,13 @@ p.presence_lists_text.split {
     .footer_contact_cols.footer_left_col {
         gap: 1rem;
     }
+    p.presence_lists_text.split {
+    font-size: 12px;
+    margin-top: 12px;
+    font-family: var(--font-poppins-semibold);
+    max-width: 100%;
+    line-height: 14px;
+}
     
 }
 @media (max-width: 991px) {
@@ -84,6 +91,13 @@ p.presence_lists_text.split {
     .footer_left_contents.desktop_block {
         display: none;
     }
+    p.presence_lists_text.split {
+    font-size: 14px;
+    margin-top: 12px;
+    font-family: var(--font-poppins-semibold);
+    max-width: 100%;
+    line-height: 18px;
+}
 }
 @media (max-width: 767px) {
     .footer_contact_cols .heading_main {
@@ -95,7 +109,14 @@ p.presence_lists_text.split {
      .footer_contact_cols .presence_lists {
     flex-direction: column;
     gap: 20px;
-    align-items: center;
+    /* align-items: center; */
+}
+p.presence_lists_text.split {
+    font-size: 14px;
+    margin-top: 12px;
+    font-family: var(--font-poppins-semibold);
+    max-width: 90%;
+    line-height: 18px;
 }
 .presence_lists_item {
     display: flex;
@@ -105,11 +126,11 @@ p.presence_lists_text.split {
 .footer_contact_section .footer_left_contents {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
 }
-.footer_left_contents > .heading_sub {
+/* .center > .heading_sub {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 }
