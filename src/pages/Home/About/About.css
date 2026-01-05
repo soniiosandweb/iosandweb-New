@@ -101,6 +101,10 @@
     }
 }
 @media (max-width: 767px) {
+    .about_section_div{
+        display: flex;
+        align-items: center;
+    }
     .about_img.mobile_img {
         display: block;
         margin-bottom: 20px;

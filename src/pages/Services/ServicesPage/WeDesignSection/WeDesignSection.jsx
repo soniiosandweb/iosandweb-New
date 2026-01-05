@@ -61,6 +61,7 @@ const WeDesignSection = () => {
                     <Col>
                         <h2 className="heading_main text-center split">We Design. We Build. We Deliver.</h2>
                         <p className="paragraph_content text-center">Digital Experiences That Convert Visitors Into Customers</p>
+                        <div className="about_section_div">
 
                         <div className="we_design_deliver_block">
                             <div className="we_design_contents">
@@ -76,6 +77,7 @@ const WeDesignSection = () => {
                                         <img src={item.icon} alt={item.title} className="we_design_icon_img" key={i} />
                                     ))}
                                 </div>
+                            </div>
                             </div>
                         </div>
                     </Col>

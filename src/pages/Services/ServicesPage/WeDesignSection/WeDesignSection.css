@@ -82,8 +82,15 @@
         flex-direction: column;
         gap: 20px;
     }
+    .about_section_div{
+        display: flex;
+        justify-content: center;
+    }
     .we_design_lists_content .we_design_lists_item {
         text-align: center;
+    }
+    .we_design_deliver_block .we_design_contents {
+        margin: 2rem 5rem;
     }
     .we_design_lists_content .we_design_lists_item::after {
         height: 1px;
@@ -107,4 +114,7 @@
     .services_we_design_section .we_design_bgimg {
         width: 100%;
     }
+    .we_design_deliver_block .we_design_contents {
+    margin: 2rem 3rem;
+}
 }
