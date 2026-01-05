@@ -44,6 +44,9 @@
     .services_expertise_item {
         padding: 20px;
     }
+    .paragraph_content {
+    font-size: 14px;
+}
 }
 @media (max-width: 1199px) {
     .services_expertise_grid {

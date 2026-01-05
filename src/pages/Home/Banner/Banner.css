@@ -49,6 +49,9 @@
     margin-bottom: 0;
     font-weight: 700;
 }
+.bannerPadding > span{
+    margin-bottom:12px;
+}
 @media (max-width: 767px) {
     .home-banner .heading_main {
       font-size: 40px;

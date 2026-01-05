@@ -92,8 +92,11 @@
         left: 0;
         top: auto;
     }
+    .we_design_deliver_block{
+        display: flex;
+    }
     .we_design_deliver_block .we_design_icons_block {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
 }

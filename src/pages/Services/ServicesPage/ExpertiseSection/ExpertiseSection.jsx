@@ -32,7 +32,7 @@ const servicesLists = [
         icon: magento,
         link: "/magento-development-services",
         title: "Magento Development",
-        content: "Development demands strong planning, design, content, and execution—and IosAndWeb expertly manages every aspect",
+        content: "End-to-end strategic eCommerce solutions",
     },
     {
         icon: blockchain,
@@ -50,7 +50,7 @@ const servicesLists = [
         icon: algorand,
         link: "https://www.blockchain77.com/services/",
         title: "Algorand Smart Contract",
-        content: "We develop smart contracts that simplify execution and support Hyperledger Fabric and Ethereum ecosystems",
+        content: "High-performance smart contract development",
     },
     {
         icon: POCICO,
@@ -62,7 +62,7 @@ const servicesLists = [
         icon: ideation,
         link: "/web-designing-services",
         title: "Ideation & Design Strategy",
-        content: "We transform ideas into interactive digital experiences that boost engagement, usability, and long-term growth",
+        content: "User-centered design driving growth",
     },
 ]
 

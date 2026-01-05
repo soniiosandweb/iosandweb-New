@@ -161,6 +161,8 @@
 @media (max-width: 1399px) {
     .industries_wrapper .slick-list {
         margin: 0 -10px;
+    }.industries_content_lists_item{
+        font-size: 12px !important;
     }
 
     .industries_wrapper  .slick-slide > div {
