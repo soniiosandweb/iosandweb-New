@@ -3,7 +3,7 @@ import Layout from './layout/Layout';
 import { BrowserRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import About from './pages/About/About';
 import Portfolio from './pages/Portfolio/Portfolio';
-import Blog from './pages/Blog';
+import Blog from './pages/Blog/Blog.jsx';
 import Contact from './pages/Contact/Contact';
 import NoPage from './pages/NoPage';
 import BlogDetails from './pages/BlogDetails';
