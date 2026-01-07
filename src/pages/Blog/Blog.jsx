@@ -32,7 +32,7 @@ function Blog(){
     const [page, setPage] = useState(0);
     const [filterData, setFilterData] = useState();
     const [loading, setLoading] = useState(true);
-    const n = 12;
+    const n = 30;
 
     const handlePageClick = (pageNumber) => {
         setPage(pageNumber);

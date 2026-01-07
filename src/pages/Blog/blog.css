@@ -53,7 +53,7 @@
 .pagination li a {
     padding: 5px 15px;
     border: 1px solid #eee;
-    color: #000;
+    color: white;
     border-radius: 4px;
     margin: 5px;
 }
@@ -114,6 +114,9 @@ background: linear-gradient(151.1deg, rgba(184, 184, 184, 0.08) 6.8%, rgba(154, 
     background-color: black;
     color: white;
 }
+.pagination li {
+    cursor: pointer;
+}
 .WhyFollwBlog {
     display: grid;
     grid-template-columns: repeat(2 ,1fr);
@@ -133,10 +136,11 @@ background: linear-gradient(151.1deg, rgba(184, 184, 184, 0.08) 6.8%, rgba(154, 
     display: flex;
     gap: 12px;
 }span.BlueBoxx {
+    min-width: 12px;
+    height: 12px;
     border-radius: 50%;
-    height: 35%;
-    width: 14%;
-    background: blue;
+    background: #1050bc;
+    margin-top: 6px;
 }
 .whyRoFlowBlogSectionLIstItem >img{
     height: 24px;
@@ -154,12 +158,11 @@ background: linear-gradient(151.1deg, rgba(184, 184, 184, 0.08) 6.8%, rgba(154, 
     grid-template-columns: repeat(2,1fr);
 
 }
-span.BlueBoxx {
-    border-radius: 50%;
-    height: 39px;
-    width: 50px;
-    background: blue;
-}
+    span.BlueBoxx {
+        min-width: 12px;
+        height: 12px;
+    }
+
 .WhyFollwBlog {
     display: grid;
     grid-template-columns: none;
