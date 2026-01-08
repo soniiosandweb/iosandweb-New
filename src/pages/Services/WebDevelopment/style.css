@@ -17,7 +17,94 @@
         background-position: center;
     }
 }
+.responsiveSectionBannerImage {
+    right: 0px;
+    width: 50%;
+    position: absolute;
+    height: 100%;
+    z-index: 1;
+}
+.webDevlopomentBannerSection{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+ .webDevlopment_banner_bg {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    object-fit: cover;
+    object-position: center;
+    opacity: 29%;
+}
 
+.software_banner_cols .lines-wrapper {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: space-around;
+    pointer-events: none;
+    top: 0;
+    right: 0;
+    width: calc(36% + 13vw);
+    bottom: 0;
+    left: auto;
+}
+.software_banner_cols .lines-wrapper .line {
+    position: relative;
+    width: 1px;
+    height: 100%;
+    background: #FFFFFF;
+    overflow: hidden;
+}
+.software_banner_cols .lines-wrapper .gradient-block {
+    position: absolute;
+    top: -30%;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(180deg, #BF00FF 0%, #0044FF 100%);
+    animation-name: moveUpDown;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+/* animation */
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(430%);
+    }
+}
+
+.delay-1 {
+    animation-duration: 6s;
+    animation-delay: -0s;
+}
+
+.delay-2 {
+    animation-duration: 6s;
+    animation-delay: -1.2s;
+}
+
+.delay-3 {
+    animation-duration: 6s;
+    animation-delay: -2.4s;
+}
+
+.delay-4 {
+    animation-duration: 6s;
+    animation-delay: -3.6s;
+}
+
+.delay-5 {
+    animation-duration: 6s;
+    animation-delay: -4.8s;
+}
 /* ============================= */
 /* Services Listing */
 /* ============================= */
@@ -34,6 +121,60 @@
     flex: 1 0 50%;
     padding: 6px 0;
 }
+/* ============================= */
+/* Tablet & Mobile Banner Fix */
+/* ============================= */
+@media (max-width: 991px) {
+
+  .webDevlopomentBannerSection {
+    flex-direction: column-reverse;
+    padding-top: 80px;
+    padding-bottom: 0;
+  }
+
+  /* TEXT COLUMN */
+  .webDevlopomentBannerSection .heading-wrapper {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  /* MAIN IMAGE */
+  .responsiveSectionBannerImage {
+    position: relative;
+    width: 100%;
+    height: auto;
+    right: unset;
+    top: unset;
+    z-index: 2;
+  }
+
+  /* BACKGROUND IMAGE */
+  .webDevlopment_banner_bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    opacity: 0.25;
+  }
+
+  /* LINES */
+  .software_banner_cols .lines-wrapper {
+    width: 100%;
+    right: 0;
+    left: 0;
+    justify-content: space-evenly;
+  }
+
+  .software_banner_cols {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+}
+
 
 @media (max-width: 480px) {
     .services-listing li{
@@ -286,7 +427,6 @@ span.arrow-btn:hover{
 .concluding_sectionCssDiv{
     display: flex;
     flex-direction: column;
-    gap: ;
 }
 /* ============================= */
 /* Responsive */

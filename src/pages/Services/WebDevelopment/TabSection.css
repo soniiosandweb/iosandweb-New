@@ -1,0 +1,54 @@
+.tab-header {
+    justify-content: center;
+    display: flex;
+    gap: 8rem;
+    margin-top: 20px;
+    font-family: "Poppins-Bold";
+    font-size: 25px;
+}
+
+.tab-item {
+  cursor: pointer;
+  padding-bottom: 8px;
+  position: relative;
+  color: #aaa;
+}
+.mt-4 {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+
+}
+
+.tab-item.active {
+  color: #fff;
+}
+
+.tab-item.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+background: linear-gradient(90deg, #A600FF 0%, #0011FF 100%);
+
+}
+
+.tab-card img {
+  max-width: 80px;
+  margin-bottom: 10px;
+}
+.tab-card {
+    padding: 28px;
+    border: 0.5px solid rgba(255, 255, 255, 1);
+    width: 178px;
+    height: 178px;
+    background: rgba(16, 16, 16, 1);
+}
+
+.tab-card:hover{
+    background: linear-gradient(180deg, #0011FF 0%, #A600FF 100%);
+    
+
+}
