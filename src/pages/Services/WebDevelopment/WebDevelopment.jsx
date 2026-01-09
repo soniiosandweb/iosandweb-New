@@ -1,23 +1,23 @@
-import './style.css';
+import './WebDevelopment.css';
 import { Container, Row, Col } from "react-bootstrap";
-import SEO from "../../../components/SEO";
-import ReasonToChooseSection from './ReasonToChooseSection';
+import SEO from "../../../components/SEO/index.js";
+import ReasonToChooseSection from './ReasonToChooseSection/ReasonToChooseSection.jsx';
 import { useLocation } from "react-router-dom";
-import FeaturesPointsSection from "../../../components/FeaturesPointsSection/FeaturesPointsSection";
-import NumbersGrid from "../../../components/NumbersGrid/NumbersGrid";
-import ServicesLists from "./ServicesLists.jsx";
-import MoreThanWebSection from './MoreThanWebSection.jsx'
-import ReadyBuildSection from "./ReadyBuildSection.jsx";
-import HowWeHelp from './howWeHelp.jsx';
+import FeaturesPointsSection from "../../../components/FeaturesPointsSection/FeaturesPointsSection.jsx";
+import NumbersGrid from "../../../components/NumbersGrid/NumbersGrid.jsx";
+import ServicesLists from "./ServicesLists/ServicesLists.jsx";
+import MoreThanWebSection from './MoreThanWebSection/MoreThanWebSection.jsx'
+import ReadyBuildSection from "./ReadyBuildSection/ReadyBuildSection.jsx";
+import HowWeHelp from './howWeHelp/howWeHelp.jsx';
 import AnimatedText from "../../../components/AnimatedText/AnimatedText.jsx";
-import ConcludingSection from "./ConcludingSection.jsx";
+import ConcludingSection from "../MobileAppDevelopment/ConcludingSection/ConcludingSection.jsx";
 import FAQSection from "../../../components/FAQSection/FAQSection.jsx";
-import BusinessGoals from "./BusinessGoals.jsx";
+import BusinessGoals from "./BusinessGoals/BusinessGoals.jsx";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
-import TabSection from './TabSection.jsx';
+import TabSection from './TabSection/TabSection.jsx';
 
 // Services includes images
 const whytosectionim1 = `${process.env.REACT_APP_API_URL}/assests/services/webdevlopment/whytosectionim1.webp`;
@@ -154,6 +154,32 @@ function WebDevelopment() {
         }
     ]
 
+const innovativeItems = [
+    {
+        title: "WordPress",
+        text: "reliability"
+    },
+    {
+        title: "CSS",
+        text: "innovation"
+    },
+    {
+        title: "Bootstrap",
+        text: "growth"
+    },
+    {
+        title: "JavaScript",
+        text: "scalability"
+    },
+    {
+        title: "Webflow",
+        text: "security"
+    },    {
+        title: "PHP",
+        text: "dummy"
+    }
+];
+
     return (
         <>
             <SEO
@@ -165,11 +191,13 @@ function WebDevelopment() {
             />
             {/* Web Development Banner */}
                 <div className="portfolio_banner_section section-padding centerAlign webDevlopomentBannerSection ">
-                 
+                  <div className='bannerImgContanier'>
                   <img src={webdevBg} className="responsiveSectionBannerImage" alt="Portfolio" />
                     <img src={contactBg} alt="Contact Us" className="webDevlopment_banner_bg" />
-
-                                            <div className="software_banner_cols">
+                        {innovativeItems.map((item, i) => (
+                            <span className={`innovative_items_span ${item.text}`} key={i}>  {item.title}</span>
+                                    ))}
+                             <div className="software_banner_cols">
                                  <div className="lines-wrapper">
                                     <div className="line line-1">
                                         <span className="gradient-block delay-1" />
@@ -191,7 +219,7 @@ function WebDevelopment() {
                                         <span className="gradient-block delay-5" />
                                     </div>
                                 </div>
-             
+             </div>
                             </div>
                      <Container>
                          <Row className="align-items-center">
@@ -262,7 +290,7 @@ function WebDevelopment() {
                 {/* what set us oart */}
                 <div className="what_set_us_part black section-padding text-white no-top-padding">
                     <Container>
-                        <Row className="align-items-center">
+                        <Row className="align-items-center textaliginCenter">
                             <Col>
                                 <div className='padding'>
                                     <h1 ref={goalsRef}>What We Deliver Through Our Web Development Expertise</h1>

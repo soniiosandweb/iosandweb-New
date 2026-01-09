@@ -1,4 +1,3 @@
-import { faLanguage } from '@fortawesome/free-solid-svg-icons';
 import React, { useState } from "react";
 import "./TabSection.css"
 import { Container, Row, Col } from "react-bootstrap";
@@ -11,9 +10,7 @@ const IOS_SDK = `${basePath}/TabSection/IOS_SDK.webp`;
 const MENGODB = `${basePath}/TabSection/MENGODB.webp`;
 const nodejs = `${basePath}/TabSection/nodejs.webp`;
 const objC = `${basePath}/TabSection/objC.webp`;
-const objective = `${basePath}/TabSection/objective.webp`;
 const REALM = `${basePath}/TabSection/REALM.webp`;
-const REDIS = `${basePath}/TabSection/REDIS.webp`;
 const SQLITE = `${basePath}/TabSection/SQLITE.webp`;
 const SWIFT = `${basePath}/TabSection/SWIFT.webp`;
 const XCODE = `${basePath}/TabSection/XCODE.webp`;

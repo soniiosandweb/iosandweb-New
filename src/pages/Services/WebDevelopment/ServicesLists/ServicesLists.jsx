@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
-import ServicesGridSection from "../../../components/ServicesGridSection/ServicesGridSection";
+import ServicesGridSection from "../../../../components/ServicesGridSection/ServicesGridSection";
 
 const software = `${process.env.REACT_APP_API_URL}/assests/services/software-development/software.webp`;
 const mobileApp = `${process.env.REACT_APP_API_URL}/assests/services/software-development/mobile-app.webp`;

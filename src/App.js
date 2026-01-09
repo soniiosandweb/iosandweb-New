@@ -13,7 +13,7 @@ import CancellationPolicy from './pages/CancellationPolicy';
 import HowWeWork from './pages/HowWeWork';
 import Team from './pages/Team';
 import SoftwareDevelopment from './pages/Services/SoftwareDevelopment/SoftwareDevelopment';
-import WebDevelopment from './pages/Services/WebDevelopment';
+import WebDevelopment from './pages/Services/WebDevelopment/WebDevelopment.jsx';
 import MobileAppDevelopment from './pages/Services/MobileAppDevelopment';
 import WebDesigning from './pages/Services/WebDesigning';
 import DigitalMarketing from './pages/Services/DigitalMarketing';

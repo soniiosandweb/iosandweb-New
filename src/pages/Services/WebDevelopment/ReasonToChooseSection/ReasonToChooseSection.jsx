@@ -105,7 +105,7 @@ const ReasonChooseSection = () => {
                                         <h3 className="reasons_title_text">{item.title}</h3>
                                     </div>
                                     <div className="reasons_item_bottom">
-                                        <ul>
+                                        <ul className="reasons_item_list">
                                             <li className="reasons_item_text">{item.content1}</li>
                                             <li className="reasons_item_text">{item.content2}</li>
                                             <li className="reasons_item_text">{item.content3}</li>

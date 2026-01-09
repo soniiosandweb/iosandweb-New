@@ -258,8 +258,9 @@ h1, h2, h3, h4, h5, h6{
   color: var(--color-white);
 }
 .black-background {
-  background-color: var(--color-black);
-  color: var(--color-white);
+  background-color: var(--color-black) !important;
+  color: var(--color-white) !important;
+  background: var(--color-black);
 }
 .banner-overlay{
   background: rgb(0 0 0 / 20%);
@@ -286,6 +287,7 @@ h1, h2, h3, h4, h5, h6{
 .black{
   color: white;
   background-color: var(--color-body) !important;
+  background: var(--color-body) !important;
 }
 .FontSize18{
   font-size: 18px;

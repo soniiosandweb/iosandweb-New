@@ -4,7 +4,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 import { useCountUp } from "react-countup";
-import AwardsSection from "../AwardsSection/AwardsSection";
+import AwardsSection from "../../Services/MobileAppDevelopment/AwardSection";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";

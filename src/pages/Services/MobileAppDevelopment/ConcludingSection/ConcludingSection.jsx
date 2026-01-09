@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
-import ConcludingServicesLists from "../../../components/ConcludingServicesLists/ConcludingServicesLists";
+import ConcludingServicesLists from "../../../../components/ConcludingServicesLists/ConcludingServicesLists";
 
 const appDevelopment = `${process.env.REACT_APP_API_URL}/assests/services/app-development.webp`;
 const crmDevelopment = `${process.env.REACT_APP_API_URL}/assests/services/crm-development.webp`;
@@ -36,19 +36,15 @@ const ConcludingSection = () => {
                 <Row>
                     <Col>
                     <div className="concluding_sectionCssDiv">
-                        <h2 className="heading_main split">Your Digital Success Starts Here</h2>
+                        <h2 className="heading_main split">Strategic Conclusion: Why Your Choice Matters</h2>
                         <h2 className="FontSize25 bold">IosAndWeb Technologies doesn't just build websites—we engineer digital experiences that transform businesses.</h2>
                         
-                        <h2 className="FontSize18">Here's what sets us apart: we're obsessed with results. Innovation isn't a buzzword for us—it's how we approach every project. Usability isn't optional—it's fundamental. Performance isn't negotiable—it's guaranteed.</h2>
+                        <h2 className="FontSize18">Choosing the right development and marketing partner is the difference between launching an app and launching a market leader. Here are the final insights to consider when finalizing your digital strategy:</h2>
 
-                        <h2 className="FontSize18">Our web development services combine strategic thinking with technical mastery. We craft solutions that don't just look impressive—they work flawlessly, engage deeply, and deliver measurable business outcome</h2>
+                        <h2 className="FontSize25">The Power of Unified Digital Ecosystems :</h2>
 
-                        <h2 className="FontSize25 bold">From concept to launch and beyond, we're your partner in digital excellence.</h2>
-
-                        <h2 className="FontSize18 ">Whether you need a sleek corporate website, a robust web application, a high-converting e-commerce platform, or a complete digital transformation—we deliver solutions that exceed expectations and drive real growth.</h2>
-
-                        <h2 className="FontSize25 bold">Ready to explore what's possible?</h2>
- </div>
+                        <h2 className="FontSize18 ">Modern businesses succeed when their marketing and technology are in total alignment. By integrating high-performance digital marketing with custom mobile engineering, you create a seamless loop where your app doesn't just exist—it is actively discovered and optimized for conversions.</h2>
+                     </div>
 
                         <ConcludingServicesLists lists={servicesLists} classname={"less-top-padding"} />
                     </Col>
