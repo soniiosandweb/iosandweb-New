@@ -9,3 +9,26 @@
 .designing-services-section .specification-block svg {
     color: #1050bc;
 }
+
+
+
+
+
+
+
+
+.subheadidngTowEsswntailFactorSectionContent{
+    font-size: 30px;
+    font-family: "Poppins-SemiBold";
+    line-height: 40px;
+}
+.paraTowEsswntailFactorSectionContent{
+    font-size: 20px;
+    font-family: "Poppins-SemiBold";
+    line-height: 25px;
+
+}
+.TowEsswntailFactorSection .row{
+    display: flex;
+    gap: 20px;
+}

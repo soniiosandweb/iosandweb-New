@@ -21,6 +21,10 @@ const industry = `${process.env.REACT_APP_API_URL}/assests/blog/industry.webp`;
 const manual = `${process.env.REACT_APP_API_URL}/assests/blog/manual.webp`;
 const systemUpdate = `${process.env.REACT_APP_API_URL}/assests/blog/system-update.webp`;
 const whyToFlowPic = `${process.env.REACT_APP_API_URL}/assests/blog/whyToFlowPic.webp`;
+const reliability = `${process.env.REACT_APP_API_URL}/assests/blog/reliability.webp`;
+const professionalSuccess = `${process.env.REACT_APP_API_URL}/assests/blog/professional-success.webp`;
+const statistics = `${process.env.REACT_APP_API_URL}/assests/blog/statistics.webp`;
+const target = `${process.env.REACT_APP_API_URL}/assests/blog/target.webp`;
 
 
 function Blog(){
@@ -198,6 +202,7 @@ function Blog(){
                              <div className="WhyFollwBlog less-top-padding">                                
                                 <div className="WhyFollwBlogListDiv ">
                                     <span className="BlueBoxx">
+                                        <img src={target} alt="" />
 
                                     </span>
                                     <div className="ContanetTowhyFollwPage ">
@@ -209,6 +214,7 @@ function Blog(){
                                 </div>                                
                                 <div className="WhyFollwBlogListDiv ">
                                     <span className="BlueBoxx">
+                                        <img src={statistics} alt="" />
 
                                     </span>
                                     <div className="ContanetTowhyFollwPage">
@@ -217,9 +223,9 @@ function Blog(){
                                         </span>
                                     </div>
                                 </div>                                
-                                <div className="WhyFollwBlogListDiv ">
+                                <div className="WhyFollwBlogListDiv padding ">
                                     <span className="BlueBoxx">
-
+                                    <img src={professionalSuccess} alt="" />
                                     </span>
                                     <div className="ContanetTowhyFollwPage">
                                         <h4>Growth Insights</h4>
@@ -229,6 +235,7 @@ function Blog(){
                                 </div>                                
                                 <div className="WhyFollwBlogListDiv ">
                                     <span className="BlueBoxx">
+                                        <img src={reliability} alt="" />
 
                                     </span>
                                     <div className="ContanetTowhyFollwPage">

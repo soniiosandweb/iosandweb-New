@@ -33,13 +33,22 @@ img.imgWhite {
     top: -9.2rem;
 }
 img.imgBlack{
-    top: -2rem;
+    top: 1rem;
 }
 
+@media (max-width:1191px) {
+    .samllBannerSection {
+    min-height: 690px;
+    background: linear-gradient(254.09deg, #090B2A 15.15%, #0B2733 83.93%);
+    color: white;
+    padding-top: 8rem;
+}
+    
+}
 @media (max-width:991px){
      .samllBannerSection {
     min-height: 570px;
-    height: 1312px;
+    height: 1330px;
 }
 .samllBanerImgDiv {
     position: relative;
@@ -49,7 +58,7 @@ img.imgBlack{
 @media  (max-width:787px){
     .samllBannerSection {
     min-height: 570px;
-    height: 1158px;
+    height: 1208px;
 }
 }
 @media (max-width:400px){
@@ -60,7 +69,7 @@ img.imgBlack{
 
 .samllBannerSection {
     min-height: 570px;
-    height: 1072px;
+    height: 1112px;
 }
 }
 @media (max-width:5675px){

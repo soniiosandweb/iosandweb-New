@@ -45,6 +45,10 @@ background: linear-gradient(90deg, #A600FF 0%, #0011FF 100%);
     width: 178px;
     height: 178px;
     background: rgba(16, 16, 16, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .tab-card:hover{

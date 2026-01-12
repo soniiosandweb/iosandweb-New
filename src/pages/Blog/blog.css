@@ -118,6 +118,7 @@ background: linear-gradient(151.1deg, rgba(184, 184, 184, 0.08) 6.8%, rgba(154, 
     display: grid;
     grid-template-columns: repeat(2 ,1fr);
     gap: 2rem;
+    align-items: center;
 }
 .ContanetTowhyFollwPage > h4{
     font-family: "Poppins-SemiBold";
@@ -132,12 +133,14 @@ background: linear-gradient(151.1deg, rgba(184, 184, 184, 0.08) 6.8%, rgba(154, 
 .WhyFollwBlogListDiv {
     display: flex;
     gap: 12px;
+    align-items: start;
 }span.BlueBoxx {
-    min-width: 12px;
-    height: 12px;
+    /* min-width: 12px; */
+    /* height: 12px; */
+    padding: 6px;
     border-radius: 50%;
     background: #1050bc;
-    margin-top: 6px;
+    /* margin-top: 6px; */
 }
 .whyRoFlowBlogSectionLIstItem >img{
     height: 24px;
@@ -155,10 +158,7 @@ background: linear-gradient(151.1deg, rgba(184, 184, 184, 0.08) 6.8%, rgba(154, 
     grid-template-columns: repeat(2,1fr);
 
 }
-    span.BlueBoxx {
-        min-width: 12px;
-        height: 12px;
-    }
+
 
 .WhyFollwBlog {
     display: grid;
@@ -175,4 +175,8 @@ background: linear-gradient(151.1deg, rgba(184, 184, 184, 0.08) 6.8%, rgba(154, 
 .centerAlign{
     display: flex;
     align-items: center;
+}
+
+.whyRoFlowBlogSectionLIstItem:hover{
+    border: 2px blue solid;
 }

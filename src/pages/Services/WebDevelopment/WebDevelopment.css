@@ -10,6 +10,27 @@
     font-family: "Poppins-SemiBold";
 }
 
+.bannerImgContanier .innovative_items_span {
+    position: relative;
+    padding-left: 40px; /* space for image */
+}
+.bannerImgContanier .innovative_items_span::before {
+    content: "";
+    position: absolute;
+    left: -33%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 21px;
+    height: 21px;
+    background-image: var(--icon-url);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.bannerImgContanier .innovative_items_span:hover::before {
+filter: invert(14%) sepia(100%) saturate(6000%) hue-rotate(230deg) brightness(100%) contrast(105%);
+}
 
 
 .bannerImgContanier .innovative_items_span {
@@ -57,7 +78,7 @@
 .bannerImgContanier .innovative_items_span.growth {
     bottom: 0;
     right: 0;
-    left: 12%;
+    left: 22%;
     top: -28%;
     margin: auto;
     animation: UpDown 3s ease-in-out infinite;

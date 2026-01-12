@@ -18,6 +18,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import TabSection from './TabSection/TabSection.jsx';
+import { icon } from '@fortawesome/fontawesome-svg-core';
 
 // Services includes images
 const whytosectionim1 = `${process.env.REACT_APP_API_URL}/assests/services/webdevlopment/whytosectionim1.webp`;
@@ -36,6 +37,8 @@ const designerWork = `${basePath}/set-designer-work-indoors.webp`;
 const chickenFood = `${basePath}/side-view-chicken-meatballs-with-greens-ketchup-plate.webp`;
 const webdevBg = `${basePath}/WebDevbg.webp`;
 const contactBg = `${process.env.REACT_APP_API_URL}/assests/contact/bannerbg.webp`;
+const bannerArrow = `${basePath}/bannerArrow.webp`;
+
 
 function WebDevelopment() {
 
@@ -157,26 +160,32 @@ function WebDevelopment() {
 const innovativeItems = [
     {
         title: "WordPress",
-        text: "reliability"
+        text: "reliability",
+        icon:bannerArrow
     },
     {
         title: "CSS",
-        text: "innovation"
+        text: "innovation",
+        icon:bannerArrow
     },
     {
         title: "Bootstrap",
-        text: "growth"
+        text: "growth",
+        icon:bannerArrow
     },
     {
         title: "JavaScript",
-        text: "scalability"
+        text: "scalability",
+        icon:bannerArrow
     },
     {
         title: "Webflow",
-        text: "security"
+        text: "security",
+        icon:bannerArrow
     },    {
         title: "PHP",
-        text: "dummy"
+        text: "dummy",
+        icon:bannerArrow
     }
 ];
 
@@ -195,8 +204,10 @@ const innovativeItems = [
                   <img src={webdevBg} className="responsiveSectionBannerImage" alt="Portfolio" />
                     <img src={contactBg} alt="Contact Us" className="webDevlopment_banner_bg" />
                         {innovativeItems.map((item, i) => (
-                            <span className={`innovative_items_span ${item.text}`} key={i}>  {item.title}</span>
-                                    ))}
+                            <span> 
+                              <span className={`innovative_items_span ${item.text}`} key={i}    style={{ '--icon-url': `url(${bannerArrow})` }}
+                               >{item.title}</span>
+                                </span>    ))}
                              <div className="software_banner_cols">
                                  <div className="lines-wrapper">
                                     <div className="line line-1">
@@ -292,7 +303,7 @@ const innovativeItems = [
                     <Container>
                         <Row className="align-items-center textaliginCenter">
                             <Col>
-                                <div className='padding'>
+                                <div className=''>
                                     <h1 ref={goalsRef} className='split'>What We Deliver Through Our Web Development Expertise</h1>
                                     <div>
                                         <span>
@@ -304,7 +315,7 @@ const innovativeItems = [
 
                                     </div>
                                     <div>
-                                        <div className="industry-card-wrapper section-padding">
+                                        <div className="industry-card-wrapper padding">
                                         {industriesData.map((item, index) => (
                                             <div className="industry-card" key={index}>
                                             <img src={item.imgUrl} alt={item.title} />

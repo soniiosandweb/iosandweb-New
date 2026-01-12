@@ -86,9 +86,10 @@
     .reasons_lists_item .reasons_title_text {
         font-size: 20px;
     }
-    .reasons_lists_item .reasons_item_bottom {
-        min-height: 295px;
-    }
+.reasons_lists_item .reasons_item_bottom {
+    min-height: 259px;
+    height: 380px;
+}
 }
 @media (max-width: 991px) {
     .reasons_lists_grid {

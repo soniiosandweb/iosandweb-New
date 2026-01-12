@@ -7,9 +7,13 @@ import ContactForm from "../../../components/ContactForm";
 import GetStarted from "../../../components/GetStarted";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeadphones, faPaintBrush, faImage, faBullhorn, faFileText } from "@fortawesome/free-solid-svg-icons";
+import { faHeadphones, faPaintBrush, faImage, faBullhorn, faFileText, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 import { faSearchengin } from "@fortawesome/free-brands-svg-icons";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import Banner from "./banner/banner";
+import FeaturesPointsSection from "../../../components/FeaturesPointsSection/FeaturesPointsSection";
+import AnimatedText from "../../../components/AnimatedText/AnimatedText";
+import NumbersGrid from "../../../components/NumbersGrid/NumbersGrid";
 
 // reasons to choose images
 const developMaintain = `${process.env.REACT_APP_API_URL}/assests/images/services/web-designing/develop-maintain.png`;
@@ -22,8 +26,16 @@ const ppcADS = `${process.env.REACT_APP_API_URL}/assests/images/services/web-des
 const pdfHTML = `${process.env.REACT_APP_API_URL}/assests/images/services/web-designing/pdf-html.png`;
 const graphicDesign = `${process.env.REACT_APP_API_URL}/assests/images/services/web-designing/graphic-design.png`;
 
+const Group = `${process.env.REACT_APP_API_URL}/assests/services/webDesgin/Group.webp`;
+const rating = `${process.env.REACT_APP_API_URL}/assests/services/webDesgin/rating.webp`;
+const satisfaction = `${process.env.REACT_APP_API_URL}/assests/services/webDesgin/satisfaction.webp`;
 
 function WebDesigning() {
+        const featuresPoints = [
+    "AI-Driven Web Design for Smarter Digital Experiences",
+    "Secure, Scalable Web Solutions Powered by Blockchain Technology",
+    "Exceptional Web Design for High-Performance Digital Experiences"
+]
 
     const location = useLocation();
 
@@ -38,22 +50,26 @@ function WebDesigning() {
             />
 
             {/* Web Designing Banner */}
-            <div className="web-designing-banner banner-padding text-white position-relative">
-                <Container className="z-index-1">
-                    <Row>
-                        <Col lg={8} xl={6}>
-                            <div className="heading-wrapper full-width">
-                                <h1>Web <span className="text-highlight">Designing</span> Services</h1>
-                                <div className="heading5">Being a renowned company in web designing services near me <a href="/">IosAndWeb Technologies</a> provides the best custom based web designing services. The websites designed by Iosandweb are user-friendly, SEO, highly responsive and also helps in improving the experience and conversions. Consult with our experts to get <b>web designing services.</b>
-                                    <br />
-                                    IosAndWeb Technologies provides professional <b>best</b> web designing services that help to attract more traffic to your site at the cheapest rates. These <u>professional web development services</u> will help you to retain the visitors on your website.
-                                </div>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-                <div className="banner-overlay bg-40"></div>
+           <Banner></Banner>
+
+        <FeaturesPointsSection lists={featuresPoints} />
+        <div className="padding black" >
+            <AnimatedText />
+        </div>
+
+        <div className="black padding ">   
+            <Container>
+                <Row>
+                <Col>
+                        <div className="numberGridMobileDev">
+                        <NumbersGrid />
+                        </div>
+                </Col>
+                </Row>
+            </Container>
             </div>
+
+
 
             {/* Services numbers */}
             <div className="services-numbers section-padding">

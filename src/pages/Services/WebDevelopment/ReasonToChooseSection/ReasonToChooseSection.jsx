@@ -121,7 +121,7 @@ const ReasonChooseSection = () => {
                             ))}
                         </div>
 
-                        <h1 className="heading_main textaliginCenter section-padding less-bottom-padding ">Technology Solutions Engineered for Results</h1>
+                        <h1 className="heading_main textaliginCenter section-padding less-bottom-padding split ">Technology Solutions Engineered for Results</h1>
 
                         <h1 className="FontSize18 textaliginCenter">We build what works. Period.</h1>
                     </Col>
