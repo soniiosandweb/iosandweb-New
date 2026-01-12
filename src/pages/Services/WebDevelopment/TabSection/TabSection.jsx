@@ -15,6 +15,7 @@ const SQLITE = `${basePath}/TabSection/SQLITE.webp`;
 const SWIFT = `${basePath}/TabSection/SWIFT.webp`;
 const XCODE = `${basePath}/TabSection/XCODE.webp`;
 const xml = `${basePath}/TabSection/xml.webp`;
+const java = `${basePath}/TabSection/java.webp`;
 
 
 const TabSection = () => {
@@ -24,7 +25,7 @@ const TabSection = () => {
 
    const tabSectionData = {
   Languages: [
-    { title: "Java", icon: nodejs },
+    { title: "Java", icon: java },
     { title: "JavaScript", icon: nodejs },
     { title: "XML", icon: xml },
     { title: "Objective C", icon: objC },

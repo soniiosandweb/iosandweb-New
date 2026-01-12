@@ -138,19 +138,19 @@ function WebDevelopment() {
         },
         {
             title: "Do you provide post-launch support and maintenance?",
-            text: "Custom software is designed to match your exact business processes, which means better performance, higher security, and fewer compromises. Unlike pre-built tools, it adapts to your workflows, reduces human error, automates routine tasks, and lowers long-term operating costs.",
+            text: "Yes, we offer comprehensive support and maintenance services after your website goes live. From performance monitoring and bug fixing to feature upgrades and security patches, we ensure your website remains up-to-date and efficient.",
         },
         {
             title: "How do you ensure my website is secure?",
-            text: "The development timeline varies depending on the complexity and scale of your project. On average, a fully functional custom software solution can take anywhere from 2 to 6 months. Our team ensures timely delivery while maintaining high-quality standards and performance.",
+            text: "Website security is a top priority for us. We implement SSL, firewalls, data encryption, secure coding practices, and regular updates to protect your website from threats. Our team follows industry-standard security protocols to ensure safe and reliable online experiences.",
         },
         {
             title: "How much does a custom website development project cost?",
-            text: "Absolutely! At IosAndWeb Technologies, we encourage client involvement throughout the development lifecycle. From initial planning to testing and launch, your feedback is essential in shaping a solution that truly fits your business goals.",
+            text: "The cost varies depending on your website’s features, complexity, design elements, and technology stack. We provide tailored quotes based on your requirements and offer cost-effective solutions that ensure long-term value and scalability..",
         },
         {
             title: "What platforms and frameworks do you specialize in?",
-            text: "Yes, while the initial investment might be higher than generic tools, custom software pays off in the long run. It minimizes recurring licensing fees, reduces inefficiencies, lowers support costs, and ultimately leads to improved productivity and ROI.",
+            text: "Our web development services include PHP frameworks, ASP.NET, WordPress, Magento, Shopify, Joomla, and Drupal. We choose the most suitable platform based on your project’s complexity, scalability, and customization requirements.",
         }
     ]
 
@@ -225,7 +225,7 @@ const innovativeItems = [
                          <Row className="align-items-center">
                              <Col lg={6}>
                                  <div className="heading-wrapper">
-                                     <h1 className="heading_main">Web Development That Drives Results</h1>
+                                     <h1 className="heading_main split">Web Development That Drives Results</h1>
                                      <span className="subHeading">Your vision. Our expertise. Exceptional outcomes.</span>
                                      <div className="heading5">IosAndWeb Technologies transforms ideas into high-performance web solutions. Our full-stack development team builds secure, scalable, and stunning websites that work flawlessly across all devices—from custom web applications to enterprise e-commerce platforms powered by Magento.</div>
                                  </div>
@@ -254,7 +254,7 @@ const innovativeItems = [
                                         # Software Development Company
                                     </div>
                                 <div className="heading-wrapper ">
-                                    <h1 className="heading_main">Trusted By Leading Brands Worldwide
+                                    <h1 className="heading_main split">Trusted By Leading Brands Worldwide
                                     </h1>
                                 </div>
                                 </div>
@@ -293,7 +293,7 @@ const innovativeItems = [
                         <Row className="align-items-center textaliginCenter">
                             <Col>
                                 <div className='padding'>
-                                    <h1 ref={goalsRef}>What We Deliver Through Our Web Development Expertise</h1>
+                                    <h1 ref={goalsRef} className='split'>What We Deliver Through Our Web Development Expertise</h1>
                                     <div>
                                         <span>
                                         Transforming business challenges into digital opportunities with scalable, secure web solutions that drive measurable results.</span>
@@ -358,7 +358,7 @@ const innovativeItems = [
                         <Row>
                             <Col>
                             <div className="textaliginCenter ReasonToChouseUsDiv" >
-                                <span className="heading_main " >Reasons to Choose Top Custom Software Developer</span>
+                                <span className="heading_main split" >Reasons to Choose Top Custom Software Developer</span>
                                 <span className="FontSize25">Why settle for generic when your business deserves extraordinary?</span>
 
                                     <span className="FontSize18">Custom software development creates solutions precisely tailored to your unique business needs—not one-size-fits-all templates. While many organizations hesitate due to perceived costs, the reality is different: custom software is a strategic investment that delivers exponential returns. <br/>

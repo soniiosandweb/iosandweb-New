@@ -9,6 +9,7 @@ const ELASTICSEARCH = `${basePath}/TabSection/ELASTICSEARCH.webp`;
 const IOS_SDK = `${basePath}/TabSection/IOS_SDK.webp`;
 const MENGODB = `${basePath}/TabSection/MENGODB.webp`;
 const nodejs = `${basePath}/TabSection/nodejs.webp`;
+const java = `${basePath}/TabSection/java.webp`;
 const objC = `${basePath}/TabSection/objC.webp`;
 const REALM = `${basePath}/TabSection/REALM.webp`;
 const SQLITE = `${basePath}/TabSection/SQLITE.webp`;
@@ -25,7 +26,7 @@ const TabSection = () => {
 
    const tabSectionData = {
   Languages: [
-    { title: "Java", icon: nodejs },
+    { title: "Java", icon: java },
     { title: "JavaScript", icon: nodejs },
     { title: "XML", icon: xml },
     { title: "Objective C", icon: objC },
@@ -54,7 +55,7 @@ const TabSection = () => {
             <Row>
                 <Col>
                 <div className='TabSection textaliginCenter '>
-                    <h1 className='heading_main'>Developing High-Performance Web Applications with Advanced Technologies</h1>
+                    <h1 className='heading_main split'>Developing High-Performance Web Applications with Advanced Technologies</h1>
                     <p className='FontSize18'>Our custom web application development leverages state-of-the-art technologies to deliver solutions that address today's requirements and scale for the future.</p>
 
                     <div className="tab-header less-top-padding">

@@ -98,7 +98,7 @@ function Blog(){
                     <Row className="align-items-center">
                         <Col lg={7}>
                             <div className="heading-wrapper">
-                                <h1 className="heading_main">Building digital experiences that don’t just exist—they make a difference.</h1>
+                                <h1 className="heading_main split">Building digital experiences that don’t just exist—they make a difference.</h1>
                                 <div className="heading5">Welcome to our blog — your go-to destination for expert insights, industry trends, and practical knowledge in the world of technology, design, and digital marketing. Here, we share valuable content crafted to help businesses grow, adapt, and stay ahead in an ever-evolving digital landscape.</div>
                             </div>
                         </Col>
@@ -113,7 +113,7 @@ function Blog(){
                                <Container>
                     <Row className="align-items-center">
                         <Col className="whyTofolwBlogSectionMain">
-                <h1 className="heading_main"> What You’ll Find on Our Blog</h1>
+                <h1 className="heading_main split"> What You’ll Find on Our Blog</h1>
                 <span className="subHeading">Valuable content crafted to help business grow, adapt, and stay ahead in an ever-evolving digital landscape</span>
 
                 <div className="whyToflowBlogSectionListDiv less-top-padding" >
@@ -193,7 +193,7 @@ function Blog(){
                     <Row className="align-items-center">
                         <Col lg={7}>
                             <div className="heading-wrapper">
-                                <h1 className="heading_main">Why Follow Our Blog?</h1>
+                                <h1 className="heading_main split">Why Follow Our Blog?</h1>
                                 <div className="heading5">Discover expert insights, industry trends, and actionable strategies designed to help your business grow smarter.</div>
                              <div className="WhyFollwBlog less-top-padding">                                
                                 <div className="WhyFollwBlogListDiv ">

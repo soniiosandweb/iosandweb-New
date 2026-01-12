@@ -21,6 +21,7 @@
 }
 .samllBanerImgDiv{
     display: flex;
+    gap: 22px;
 
 }
 .imgBlack,.imgWhite{
@@ -33,4 +34,35 @@ img.imgWhite {
 }
 img.imgBlack{
     top: -2rem;
+}
+
+@media (max-width:991px){
+     .samllBannerSection {
+    min-height: 570px;
+    height: 1312px;
+}
+.samllBanerImgDiv {
+    position: relative;
+    top: 150px;
+}
+}
+@media  (max-width:787px){
+    .samllBannerSection {
+    min-height: 570px;
+    height: 1158px;
+}
+}
+@media (max-width:400px){
+.samllBanerImgDiv img {
+    width: 135px;
+    height: 300px;
+}
+
+.samllBannerSection {
+    min-height: 570px;
+    height: 1072px;
+}
+}
+@media (max-width:5675px){
+
 }

@@ -35,6 +35,8 @@ const van = `${basePath}/young-courier-his-colleague-unloading-cardboard-boxes-f
 const designerWork = `${basePath}/set-designer-work-indoors.webp`;
 const chickenFood = `${basePath}/side-view-chicken-meatballs-with-greens-ketchup-plate.webp`;
 const men = `${process.env.REACT_APP_API_URL}/assests/services/MobileDevlopment/man.webp`;
+const MobiledevVd = `${process.env.REACT_APP_API_URL}/assests/services/MobileDevlopment/Mobile_App_Development_Video_SVG.mp4`;
+
 
 
 
@@ -130,19 +132,19 @@ function MobileAppDevelopment() {
         },
         {
             title: "Do you provide support and maintenance after the app is launched?",
-            text: "Custom software is designed to match your exact business processes, which means better performance, higher security, and fewer compromises. Unlike pre-built tools, it adapts to your workflows, reduces human error, automates routine tasks, and lowers long-term operating costs.",
+            text: "Yes, we offer 24/7 support and maintenance even after your app is live. Our team handles updates, performance improvements, bug fixes, and scaling as your user base grows—ensuring your app stays relevant and efficient.",
         },
         {
             title: "What is the benefit of cross-platform mobile app development?",
-            text: "The development timeline varies depending on the complexity and scale of your project. On average, a fully functional custom software solution can take anywhere from 2 to 6 months. Our team ensures timely delivery while maintaining high-quality standards and performance.",
+            text: "Cross-platform app development allows your app to run seamlessly on both Android and iOS using a single codebase. This saves time, reduces cost, and speeds up time-to-market—while maintaining high performance and native-like experience.",
         },
         {
             title: "How much does mobile app development cost at IosAndWeb Technologies?",
-            text: "Absolutely! At IosAndWeb Technologies, we encourage client involvement throughout the development lifecycle. From initial planning to testing and launch, your feedback is essential in shaping a solution that truly fits your business goals.",
+            text: "The cost depends on several factors like app complexity, features, platform(s), and timeline. We offer custom quotes based on your specific requirements. Contact us to discuss your project and receive a detailed estimate.",
         },
         {
             title: "How do you ensure the quality and performance of the mobile apps?",
-            text: "Yes, while the initial investment might be higher than generic tools, custom software pays off in the long run. It minimizes recurring licensing fees, reduces inefficiencies, lowers support costs, and ultimately leads to improved productivity and ROI.",
+            text: "Our QA team runs rigorous manual and automated tests to ensure functionality, performance, security, and user experience. We test apps on multiple devices and operating systems to guarantee smooth operation before the final launch."
         }
     ]
 
@@ -187,9 +189,15 @@ function MobileAppDevelopment() {
                 <Row>
                 <Col>
                         <div className="VideoSectionDev textaliginCenter ">
-                             <h1 className="heading_main">Your Vision, Engineered for Every Screen</h1>
+                             <h1 className="heading_main split">Your Vision, Engineered for Every Screen</h1>
                              <p className="FontSize25 bold">Leading Mobile App Development Experts – Trusted for Excellence</p>
                              <p className="subHeading">At iosAndWeb Technologies, we don’t just build apps; we architect digital experiences that captivate users and drive enterprise growth. As a premier mobile development firm, we deliver high-performance Android and iOS solutions tailored to thrive in the modern marketplace.</p>
+                             
+                             <div className="videoContiner padding">
+                        <video poster={MobiledevVd} autoPlay={true} muted={true} loop={true}>
+                            <source src={MobiledevVd} type="video/mp4"></source>
+                        </video>
+                             </div>
 
                         </div>
                 </Col>
@@ -212,7 +220,7 @@ function MobileAppDevelopment() {
                 <Row className="letsBuldTogtherdiv">
                 <Col lg="6">
                         <div className="letsBuldTogthercontent">
-                            <h1 className="heading_main">Let's Build Something Extraordinary</h1>
+                            <h1 className="heading_main split">Let's Build Something Extraordinary</h1>
                             <p className="FontSize18">Join the hundreds of businesses that have transformed their digital presence into a sustainable revenue engine.</p>
                             <Link to="/contact-us" reloadDocument className="btn-gradient-blue">See Full Overview <FontAwesomeIcon icon={faAnglesRight} /></Link>
 
@@ -230,7 +238,7 @@ function MobileAppDevelopment() {
                     <Row className="align-items-center textaliginCenter">
                         <Col>
                         <div className=''>
-                         <h1 ref={goalsRef}>What We Deliver Through Our Web Development Expertise</h1>
+                         <h1 ref={goalsRef} className="split">What We Deliver Through Our Web Development Expertise</h1>
                             <div>
                               <span>
                                 Transforming business challenges into digital opportunities with scalable, secure web solutions that drive measurable results.</span>

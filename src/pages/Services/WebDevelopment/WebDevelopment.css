@@ -1,6 +1,4 @@
-/* ============================= */
-/* Web Development Banner */
-/* ============================= */
+/* web devlopment banner  */
 .web-development-banner{
     background: url('../../../../public/assests/images/services/web-development/web-development-banner.webp');
     background-size: cover;
@@ -243,9 +241,32 @@
     flex: 1 0 50%;
     padding: 6px 0;
 }
-/* ============================= */
-/* Tablet & Mobile Banner Fix */
-/* ============================= */
+@media (min-width:1400px) {
+    
+.responsiveSectionBannerImage {
+    right: 0px;
+    width: 65%;
+    position: absolute;
+    height: 100%;
+    z-index: 1;
+}
+.webDevlopomentBannerSection{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.webDevlopment_banner_bg {
+    position: relative;
+    width: 48%;
+    height: 100%;
+    left: 36%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 29%;
+}
+
+    
+}
 @media (max-width: 991px) {
 
   .webDevlopomentBannerSection {
@@ -254,7 +275,6 @@
     padding-bottom: 0;
   }
 
-  /* TEXT COLUMN */
   .webDevlopomentBannerSection .heading-wrapper {
     position: relative;
     z-index: 5;
@@ -268,7 +288,6 @@
     width: 100%;
 }
 
-  /* MAIN IMAGE */
   .responsiveSectionBannerImage {
     position: relative;
     width: 100%;
@@ -278,7 +297,6 @@
     z-index: 2;
   }
 
-  /* BACKGROUND IMAGE */
   .webDevlopment_banner_bg {
     position: absolute;
     width: 100%;
@@ -288,7 +306,6 @@
     opacity: 0.25;
   }
 
-  /* LINES */
   .software_banner_cols .lines-wrapper {
     width: 100%;
     right: 0;
@@ -315,9 +332,6 @@
     position: absolute;
     height: 100%;
 }
-/* ============================= */
-/* Services Includes Section */
-/* ============================= */
 .services-includes-section .paragraph {
     position: unset;
     background: transparent;
@@ -347,9 +361,6 @@
     width: 50px;
 }
 
-/* ============================= */
-/* Specification Section */
-/* ============================= */
 .sepcification-section{
     background-color: #000;
 }
@@ -364,9 +375,6 @@
     margin-bottom: 20px;
 }
 
-/* ============================= */
-/* Development Process */
-/* ============================= */
 .development-process-blocks .badge {
     border-radius: 50%;
     color: #fff;
@@ -438,9 +446,6 @@
     top: 0;
 }
 
-/* ============================= */
-/* SERVICES NUMBERS (FIXED SECTION) */
-/* ============================= */
 .What_set_us_part_Content {
     display: flex;
     flex-direction: column;
@@ -522,9 +527,9 @@
     display: flex;
     justify-content: space-between;
 
-    background: rgba(128, 128, 128, 0.4); /* transparent background */
+    background: rgba(128, 128, 128, 0.4);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    -webkit-backdrop-filter: blur(10px); 
 }
 span.arrow-btn {
     background: gray;
@@ -562,9 +567,6 @@ span.arrow-btn:hover{
     flex-direction: column;
     gap: 25px;
 }
-/* ============================= */
-/* Responsive */
-/* ============================= */
 @media (max-width: 991px){
     .What_set_us_part_Content {
         margin-top: 4rem;

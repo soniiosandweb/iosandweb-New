@@ -17,10 +17,10 @@ const reasonsLists = [
     {
         icon: secure,
         title: "Website Security",
-        content1: "Systematic planning from concept to deploymentExpert",
-        content2:'Expert frontend and backend development',
-        content3:"Easy to maintain, simple to scale",
-        content4:"Future-proof design that evolves with your business",
+        content1: "Enterprise-grade protection across all layers",
+        content2:'SSL encryption, advanced firewalls, and threat detection',
+        content3:"Proactive vulnerability management and 24/7 monitoring",
+        content4:"Safeguarding your data, users, and reputation",
     },    {
         icon: routinetasks,
         title: "Smart Application Architecture",

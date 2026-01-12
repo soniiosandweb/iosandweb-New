@@ -76,7 +76,7 @@ img.letsBuldTogetherImg {
     img.letsBuldTogetherImg{
         position: relative;
         left: 20px;
-        top: 20%;
+        top: 16%;
     }
     .letsBuldTogtherdiv .col-lg-4{
 
@@ -87,6 +87,45 @@ img.letsBuldTogetherImg {
 }@media (max-width:767px){
     img.letsBuldTogetherImg{
         width: 100%; 
-    left: 0px;   }
+    left: 0px;   
+top: 18%;}
 
+}
+@media (max-width:575px){
+    img.letsBuldTogetherImg{
+        width: 100%; 
+    left: 0px;   }
+    .letsBuldTogtherdiv {
+        padding: 2rem;
+    }
+      img.letsBuldTogetherImg{
+        width: 100%; 
+        left: 0px; 
+        top:5%;  
+}
+
+
+}
+@media (min-width:1600px) {
+    img.letsBuldTogetherImg {
+
+    right: 18%;
+}
+}
+
+@media (min-width:1800px) {
+    img.letsBuldTogetherImg {
+
+    right: 28%;
+}
+}
+
+.videoContiner {
+    width: 100%;
+    overflow: hidden;
+}
+
+.videoContiner video {
+  width: 100%;
+  height: auto;
 }

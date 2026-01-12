@@ -19,7 +19,7 @@ const reasonsLists = [
     {
         icon: atom,
         title: "React Native",
-        content1: "The Gold Standard for Modern UI Google’s premier UI toolkit enables us to craft beautiful, natively compiled applications for mobile, web, and desktop from one codebase. Trusted by global giants like eBay and Alibaba, Flutter provides consistent, high-performance experiences across every industry—from eCommerce to complex enterprise solutions.",
+        content1: "Native Performance with JavaScript Efficiency Developed by Facebook, this open-source framework allows us to build native-feeling iOS and Android apps using a single JavaScript codebase. By bypassing typical HTML5 limitations, our React Native experts deliver high-speed, responsive mobile experiences in record time.",
        
     },      {
         icon: citizenship,
