@@ -17,18 +17,48 @@
 
 
 
-.subheadidngTowEsswntailFactorSectionContent{
+.TowFactorsContentHedaing{
     font-size: 30px;
     font-family: "Poppins-SemiBold";
     line-height: 40px;
 }
-.paraTowEsswntailFactorSectionContent{
+.TowFactorsContentPara {
     font-size: 20px;
     font-family: "Poppins-SemiBold";
     line-height: 25px;
-
+    margin-bottom: 3rem;
 }
-.TowEsswntailFactorSection .row{
+.TowFactorsSection .row{
     display: flex;
     gap: 20px;
+}
+.TowFactorsContentsub{
+    font-size: 25px;
+    font-family: "Poppins-SemiBold";
+    line-height: 35px;
+}
+span.TowFactorsContentSubhaeding {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.TowFactorsSectionImgGroup{
+    height: 100%;
+    width: 100%;
+}
+.TowFactorsContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (max-width:991px) {
+   .TowFactorsSection .row{
+    display: flex;
+    flex-direction: column-reverse;    
+} .TowFactorsContent {
+    margin-bottom: 4rem;
+} 
 }

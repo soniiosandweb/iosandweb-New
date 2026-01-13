@@ -68,6 +68,29 @@ function WebDesigning() {
                 </Row>
             </Container>
             </div>
+                    <div className="black padding TowFactorsSection">   
+            <Container>
+                <Row>
+                <Col lg={6}>
+                <img className="TowFactorsSectionImgGroup" src={Group} alt="" />
+
+                </Col >
+                <Col lg={5}>
+                <div className="TowFactorsContent">
+                    <h1 className="TowFactorsContentHedaing">Two essential factors play a decisive role in your business success</h1>
+                     <div>
+                        <span className="TowFactorsContentSubhaeding"> <img src={rating}alt="" /> <h2 className="TowFactorsContentsub">Customer Experience</h2> </span>
+                        <span className="TowFactorsContentSubhaeding"> <img src={satisfaction} alt="" /> <h2 className="TowFactorsContentsub">Customer Satisfaction</h2> </span>
+                        <hr className="Line" />
+                        <p className="TowFactorsContentPara">We design optimized customer experiences that drive up to 2× higher customer satisfaction</p>
+                          <Link to="/contact-us" reloadDocument className="btn-gradient-blue">See Full Overview <FontAwesomeIcon icon={faAnglesRight} /></Link>
+                     </div>
+                    
+                </div>
+                </Col>
+                </Row>
+            </Container>
+            </div>
 
 
 
