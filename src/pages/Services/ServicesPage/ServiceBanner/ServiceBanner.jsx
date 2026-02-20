@@ -29,10 +29,10 @@ const servicesBannerItem = [
 const ServiceBanner = () => {
     return(
         <div className="services_banner_main">
-            <video className="service_banner_video" poster={bannerBG} autoPlay={true} muted={true} loop={true}>
+            {/* <video className="service_banner_video" poster={bannerBG} autoPlay={true} muted={true} loop={true}>
                 <source src={bannerVideo} type="video/mp4"></source>
-            </video>
-            {/* <img src={bannerBG} alt="Your Growth Partner, Not Just Another Agency." className="services_page_bannerbg" /> */}
+            </video> */}
+            <img src={bannerBG} alt="Your Growth Partner, Not Just Another Agency." className="services_page_bannerbg" />
             <div className="services_banner_bg">
                 <Container> 
                     <Row>
