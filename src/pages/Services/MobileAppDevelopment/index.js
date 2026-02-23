@@ -221,15 +221,16 @@ function MobileAppDevelopment() {
             <Container>
                 <Row className="letsBuldTogtherdiv">
                 <Col lg="6">
-                        <div className="letsBuldTogthercontent">
-                            <h1 className="heading_main split">Let's Build Something Extraordinary</h1>
-                            <p className="FontSize18">Join the hundreds of businesses that have transformed their digital presence into a sustainable revenue engine.</p>
-                            <Link to="/contact-us" reloadDocument className="btn-gradient-blue">See Full Overview <FontAwesomeIcon icon={faAnglesRight} /></Link>
+                 <div className="letsBuldTogthercontent">
+                    <h1 className="heading_main split">Let's Build Something Extraordinary</h1>
+                    <p className="FontSize18">Join the hundreds of businesses that have transformed their digital presence into a sustainable revenue engine.</p>
+                    <Link to="/contact-us" reloadDocument className="btn-gradient-blue">See Full Overview <FontAwesomeIcon icon={faAnglesRight} /></Link>
 
-                        </div>
+                 </div>
                 </Col>
-                <Col lg="4">                <img className="letsBuldTogetherImg" src={men} alt="" /> 
-</Col>
+                <Col lg="4">                
+                <img className="letsBuldTogetherImg" src={men} alt="" /> 
+                </Col>
                 </Row>
             </Container>               
             </div>
