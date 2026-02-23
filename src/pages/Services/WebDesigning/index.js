@@ -3,7 +3,6 @@ import './style.css';
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import SEO from "../../../components/SEO";
 import NumbersCards from "../../../components/NumbersCards";
-import ContactForm from "../../../components/ContactForm";
 import GetStarted from "../../../components/GetStarted";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -108,33 +107,7 @@ function WebDesigning() {
                 </Container>
             </div>
 
-            {/* what is Software section */}
-            <div className="what-software-section section-padding text-white">
-                <Container>
-                    <Row className="align-items-center">
-                        <Col lg={7}>
-                            <div className="leadtxt">
-                                <h2>Get Web Designing Services</h2>
-                            </div>
-                            <div className="leadsubtxt">
-                                Our <u>Website designer</u> can assist you. We are experts in making attractive websites that will help you to bring visitors and convert them into your customers for your small, medium and large scale businesses.
-                                <br />
-                                Web design will be essential for all businesses of all sizes in 2023 as more customers turn to search engines to find the products and services they need.
-                                <br />
-                                However, generating results requires more than just having a physically nice website. Your website will rank highly on Google with the use of clever SEO strategies, ensuring that the right viewer understands your brand with Web designing services.
-                                <br />
-                                A IosAndWeb web design company may accurately direct you through these routes. A team of experts with expertise in fields like SEO, Content, design, and more provide you with the best advice on precisely what your business needs to thrive online.
-                            </div>
-                        </Col>
-                        <Col lg={5}>
-                            <div className="leadsubtxt mb-3 text-center">
-                                Fill the form and get quote for your project.
-                            </div>
-                            <ContactForm />
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
+    
 
             {/* Reasons to choose section */}
             <div className="reasons-to-choose framework-sections section-padding">
@@ -294,7 +267,7 @@ function WebDesigning() {
             />
 
             {/* final reflection section */}
-            <div className="final-reflection-section section-padding">
+            <div className="final-reflection-section section-padding ">
                 <Container>
                     <Row>
                         <Col>
@@ -325,6 +298,11 @@ function WebDesigning() {
                                 </div>
 
                             </div>
+                            <h2 className="heading2 section-padding no-bottom-padding ">Get Web Designing Services</h2>
+                            <div className="heading5">Our Website designer can assist you. We are experts in making attractive websites that will help you to bring visitors and convert them into your customers for your small, medium and large scale businesses.</div>                            
+                            <div className="heading5">Web design will be essential for all businesses of all sizes in 2023 as more customers turn to search engines to find the products and services they need.</div>                            
+                            <div className="heading5">However, generating results requires more than just having a physically nice website. Your website will rank highly on Google with the use of clever SEO strategies, ensuring that the right viewer understands your brand with Web designing services.</div>  <div className="heading5"> A IosAndWeb web design company may accurately direct you through these routes. A team of experts with expertise in fields like SEO, Content, design, and more provide you with the best advice on precisely what your business needs to thrive online.</div>
+                           
                         </Col>
                     </Row>
                 </Container>

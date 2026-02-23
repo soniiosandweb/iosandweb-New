@@ -31,6 +31,8 @@
     overflow: hidden;
     min-height: 260px;
     cursor: pointer;
+    align-items: center;
+    display: flex;
 }
 .reasons_lists_item:hover .reasons_item_bottom {
     background: linear-gradient(90deg, #3A1C4A 0%, #3A1C4A 100%) padding-box,

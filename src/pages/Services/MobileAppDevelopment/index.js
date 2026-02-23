@@ -18,7 +18,7 @@ import TabSection from "./TabSection/TabSection";
 import ConcludingSection from "./ConcludingSection/ConcludingSection";
 import FAQSection from "../../../components/FAQSection/FAQSection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
+import { faAnglesRight, faLongArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 
 // reasons to choose images
@@ -29,7 +29,7 @@ const locationRoad = `${basePath}/location-symbols-road-with-mountains.webp`;
 const medicalBanner = `${basePath}/medical-banner-with-doctor-holding-stethoscope.webp`;
 const cleaningWoman = `${basePath}/medium-shot-woman-cleaning-home.webp`;
 const onlineShopping = `${basePath}/online-shopping-concept.webp`;
-const rightArrow = `${basePath}/right-arrow.webp`;
+// const rightArrow = `${basePath}/right-arrow.webp`;
 const uber = `${basePath}/young-uber-driver-car-interior.webp`
 const van = `${basePath}/young-courier-his-colleague-unloading-cardboard-boxes-from-delivery-van.webp`
 const designerWork = `${basePath}/set-designer-work-indoors.webp`;
@@ -235,42 +235,47 @@ function MobileAppDevelopment() {
             </div>
 
 
-            <div className="what_set_us_part black text-white section-padding no-bottom-padding">
-                <Container>
-                    <Row className="align-items-center textaliginCenter">
-                        <Col>
-                        <div className=''>
-                         <h1 ref={goalsRef} className="split">What We Deliver Through Our Web Development Expertise</h1>
-                            <div>
-                              <span>
-                                Transforming business challenges into digital opportunities with scalable, secure web solutions that drive measurable results.</span>
+                      {/* what set us oart */}
+                        <div className="what_set_us_part black section-padding text-white ">
+                            <Container>
+                                <Row className="align-items-center textaliginCenter">
+                                    <Col>
+                                        <div className=''>
+                                            {/* <h1 ref={goalsRef} className='split'>What We Deliver Through Our Web Development Expertise</h1> */}
+                                            <div>
+                                                <span>
+                                                Transforming business challenges into digital opportunities with scalable, secure web solutions that drive measurable results.Every</span>
         
-                              <span>
-                                Every project we undertake is built on three pillars: Performance, Security, and Scalability. Whether you're launching a startup MVP or transforming enterprise operations, we deliver web solutions engineered for success across every industry
-                                </span>
+                                                <span>
+                                                   project we undertake is built on three pillars: Performance, Security, and Scalability. Whether you're launching a startup MVP or transforming enterprise operations, we deliver web solutions engineered for success across every industry
+                                                </span>
         
-                            </div>
-                        <div>
-                       <div className="industry-card-wrapper section-padding no-bottom-padding ">
-                            {industriesData.map((item, index) => (
-                             <div className="industry-card" key={index}>
-                               <img src={item.imgUrl} alt={item.title} />
+                                            </div>
+                                            <div>
+                                                <div className="industries_transform_grid padding">
+                                                {industriesData.map((item, i) => (
+                                        <Link reloadDocument to={item.link} key={i} className="industries_transform_item industries_boxes">
+                                            <img src={item.imgUrl} alt={item.imgUrl} className="industries_transform_image" />
+                                            <div className="industries_transform_contents">
+                                                <div className="industries_transform_left">
+                                                    <h3 className="industries_transform_title textalignleft">{item.message}</h3>
+                                                    <p className="industries_transform_text textalignleft">Web Development</p>
+                                                </div>
+                                                <div className="industries_transform_arrow">
+                                                    <FontAwesomeIcon icon={faLongArrowRight} />
+                                                </div>
+                                            </div>
+                                        </Link>
+                                                ))}
+                                                </div>
         
-                             <div className="industry-card-overlay">
-                            <span>
-                                    <span className="subHeading">{item.message}</span> <br/>
-                                <span>Web Development</span>
-                            </span>
-                            <span className="arrow-btn"><img src={rightArrow} alt="" /></span>
-                            </div>
-                        </div> ))}
+                                            </div>
+        
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </Container>
                         </div>
-                    </div>
-                </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
 
             <ConcludingSection />
 

@@ -2,7 +2,7 @@ import './WebDevelopment.css';
 import { Container, Row, Col } from "react-bootstrap";
 import SEO from "../../../components/SEO/index.js";
 import ReasonToChooseSection from './ReasonToChooseSection/ReasonToChooseSection.jsx';
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import FeaturesPointsSection from "../../../components/FeaturesPointsSection/FeaturesPointsSection.jsx";
 import NumbersGrid from "../../../components/NumbersGrid/NumbersGrid.jsx";
 import ServicesLists from "./ServicesLists/ServicesLists.jsx";
@@ -18,7 +18,9 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import TabSection from './TabSection/TabSection.jsx';
-import { icon } from '@fortawesome/fontawesome-svg-core';
+// import { icon } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLongArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 // Services includes images
 const whytosectionim1 = `${process.env.REACT_APP_API_URL}/assests/services/webdevlopment/whytosectionim1.webp`;
@@ -30,7 +32,7 @@ const locationRoad = `${basePath}/location-symbols-road-with-mountains.webp`;
 const medicalBanner = `${basePath}/medical-banner-with-doctor-holding-stethoscope.webp`;
 const cleaningWoman = `${basePath}/medium-shot-woman-cleaning-home.webp`;
 const onlineShopping = `${basePath}/online-shopping-concept.webp`;
-const rightArrow = `${basePath}/right-arrow.webp`;
+// const rightArrow = `${basePath}/right-arrow.webp`;
 const uber = `${basePath}/young-uber-driver-car-interior.webp`
 const van = `${basePath}/young-courier-his-colleague-unloading-cardboard-boxes-from-delivery-van.webp`
 const designerWork = `${basePath}/set-designer-work-indoors.webp`;
@@ -315,19 +317,20 @@ const innovativeItems = [
 
                                     </div>
                                     <div>
-                                        <div className="industry-card-wrapper padding">
-                                        {industriesData.map((item, index) => (
-                                            <div className="industry-card" key={index}>
-                                            <img src={item.imgUrl} alt={item.title} />
-
-                                            <div className="industry-card-overlay">
-                                                <span>
-                                                <span className="subHeading">{item.message}</span> <br/>
-                                                <span>Web Development</span>
-                                                </span>
-                                                <span className="arrow-btn"><img src={rightArrow} alt="" /></span>
-                                            </div>
-                                            </div>
+                                        <div className="industries_transform_grid padding">
+                                        {industriesData.map((item, i) => (
+                                <Link reloadDocument to={item.link} key={i} className="industries_transform_item industries_boxes">
+                                    <img src={item.imgUrl} alt={item.imgUrl} className="industries_transform_image" />
+                                    <div className="industries_transform_contents">
+                                        <div className="industries_transform_left">
+                                            <h3 className="industries_transform_title textalignleft">{item.message}</h3>
+                                            <p className="industries_transform_text textalignleft">Web Development</p>
+                                        </div>
+                                        <div className="industries_transform_arrow">
+                                            <FontAwesomeIcon icon={faLongArrowRight} />
+                                        </div>
+                                    </div>
+                                </Link>
                                         ))}
                                         </div>
 

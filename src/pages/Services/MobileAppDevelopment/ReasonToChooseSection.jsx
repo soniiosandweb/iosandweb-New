@@ -19,27 +19,27 @@ const reasonsLists = [
     {
         icon: atom,
         title: "React Native",
-        content1: "Native Performance with JavaScript Efficiency Developed by Facebook, this open-source framework allows us to build native-feeling iOS and Android apps using a single JavaScript codebase. By bypassing typical HTML5 limitations, our React Native experts deliver high-speed, responsive mobile experiences in record time.",
+        content1: "React Native is a publicly available framework, created by Facebook, enabling the construction of fluid, native-feeling iOS and Android applications from one JavaScript foundation. It assists in providing quick, snappy mobile performance while cutting down on development duration and expense.",
        
     },      {
         icon: citizenship,
         title: "Flutter",
-        content1: "The Gold Standard for Modern UI Google’s premier UI toolkit enables us to craft beautiful, natively compiled applications for mobile, web, and desktop from one codebase. Trusted by global giants like eBay and Alibaba, Flutter provides consistent, high-performance experiences across every industry—from eCommerce to complex enterprise solutions.",
+        content1: "Flutter is Google's robust UI set of tools enabling us to craft attractive, fast-performing applications for mobile, web, and desktop from just one source code . It provides fluid, uniform user interactions relied upon by major worldwide companies across various sectors.",
     },    {
         icon: ionic,
         title: "Ionic",
-        content1: "Web-Powered Mobile Excellence Ionic is a powerful open-source SDK that empowers our team to build high-quality cross-platform apps using familiar web technologies like HTML, CSS, and JavaScript. Featuring a library of mobile-optimized UI components and smooth animations, Ionic delivers visually engaging apps that feel right at home on any device",
+        content1: "Ionic is a robust, open-source toolkit enabling the creation of cross-platform mobile applications with HTML, CSS, and JavaScript. Featuring pre-built UI elements and fluid transitions, it results in visually appealing apps that function consistently across all devices.",
     },    {
         icon: cordova,
         title: "Cordova",
-        content1: "Hybrid Versatility & Rapid Deployment Formerly known as PhoneGap, Cordova allows us to wrap your web application in a native container. This provides direct access to native device features while maintaining a single codebase, making it an efficient choice for publishing across multiple platforms simultaneously.",
+        content1: "Apache Cordova (formerly PhoneGap) lets us turn your web app into a native mobile app using a single codebase. It gives access to device features while making it easy to launch on multiple platforms quickly.",
     } , {
         icon: unity,
-        content:"Beyond Gaming: Immersive 3D Experiences Unity is the world's most powerful tool for building high-fidelity 2D and 3D animations, visualizations, and cross-platform games. Beyond entertainment, we use Unity’s intuitive interface and rapid coding environment for architectural visualizations, movie previsualizations, and complex simulations. ",
+        content:"Unity is a powerful platform for creating high-quality 2D and 3D games, animations, and interactive experiences. Beyond gaming, it’s widely used for architectural visuals, film previews, and advanced simulations.",
         title: "Unity",
     }, {
         icon: xamarin,
-        content:"Enterprise-Grade Native Solutions Owned by Microsoft, Xamarin allows us to build apps for iOS, Android, and Windows with a consistent, native-like user interface. Its write once, 'run anywhere' philosophy saves significant time and cost while providing full access to native APIs for robust and highly scalable enterprise applications.",
+        content:"Xamarin, owned by Microsoft, helps us build iOS, Android, and Windows apps with a native-like experience using a single codebase. It saves time and cost while giving full access to native APIs for strong, scalable enterprise solutions",
         title: "Xamarin"
     }, 
 ]
