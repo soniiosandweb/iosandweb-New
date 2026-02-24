@@ -54,6 +54,213 @@ span.TowFactorsContentSubhaeding {
     gap: 1rem;
 }
 
+
+
+
+
+/* ddf Section */
+span.DDSImgHeadding {
+    display: flex;
+    align-items: start;
+    gap: 0px;
+    flex-direction: column;
+}
+.imgDddsHeading span.headingSection {
+    display: flex;
+    align-items: center;
+}
+
+.imgDddsHeading img {
+    height: 27px;
+    width: 27px;
+}
+span.mainText {
+    font-size: 59px;
+    padding: 0px !important;
+    font-weight: 900;
+    word-spacing: -11px;
+    margin: 0px !important;
+    line-height: 44px;
+}
+
+.ddsMainImg {
+    height: 85%;
+    width: 85%;
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(50% 50% at 50% 50%, #004EFF 0%, #27046D 100%);
+    border-radius: 442px;
+}
+span.textHeading {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+}
+span.piontList {
+    font-size: 18px !important;
+}
+span.imgDddsHeading {
+    color: black;
+    background: black;
+    padding: 11px;
+    border-radius: 37px;
+}
+span.headingSection {
+    display: flex;
+    align-items: center;
+}
+
+span.piontList {
+    height: 20px;
+    font-size: 18px !important;
+    line-height: 24px;
+    padding-top: -16px;
+}
+.ddsList .ddlPiont {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+    align-items: start;
+    margin-bottom: 20px;
+}
+span.listIcon {
+    font-size: 40px;
+    line-height: 20px;
+}
+ul.ddsList {
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+    max-width: 85%;
+    padding-left: 0px !important;
+    
+}
+
+
+
+/*  addition Servies */
+
+.AdditionalSpecialized{
+    background-color: #212121;
+    color: white;
+}
+
+.rightToLeft.col {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.leftToright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 40px;
+    padding-bottom: 6rem;
+}
+.AdditionalSectionTextDiv {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: start;
+    gap: 30px;
+}
+.ADditionalImgSection {
+    width: 50%;
+}
+
+.AdditionalSectionTextDiv h1.MianHeading {
+    font-size: 30px;
+    line-height: 40px;
+    font-family: 'Poppins-SemiBold';
+}
+
+.AdditionalSectionTextDiv span.subMainText {
+    font-size: 20px;
+    display: flex;
+    width: 80%;
+    line-height: 24px;
+    font-family: "Poppins-Medium";
+    font-weight: 500;
+    margin-top: -20px;
+}
+
+.AdditionalSectionTextDiv span.additionalSectionList {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    font-family: 'Poppins';
+    max-width: 75%;
+}
+
+
+
+.ADditionalImgSection img{
+    height: 100%;
+    width: 100%;
+}
+/* .GerySection {
+    background-image: url("./bgAdditonSection.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+} */
+
+
+.blackSection{
+    background-color: black !important;
+    padding-top: 6rem;
+}
+.BlueSection{
+    background: linear-gradient(254.09deg, #090B2A 15.15%, #0B2733 83.93%);
+    padding-top: 6rem;
+}
+
+
+.GerySection .heading_main{
+    text-align: center;
+}
+
+.GerySection .subHeading{
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 2rem;
+    max-width: 80%;
+}.additiionHeadingMean.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+span.ReadyToJionUsDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+.black.section-padding.ReadyToJionus a{
+    text-align: center;
+    margin-top: 4rem;
+}
+.margintop{
+    padding-top:4rem ;
+}
+.btnDivCenter{
+    display: flex;
+    justify-content: center;
+}
+.SetUsPart .ddsList .ddlPiont {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+    align-items: start;
+    margin-bottom: 39px;
+}
+.paddingBottm{
+    padding-bottom: 4rem;
+}
+
+
 @media (max-width:991px) {
    .TowFactorsSection .row{
     display: flex;
@@ -61,4 +268,38 @@ span.TowFactorsContentSubhaeding {
 } .TowFactorsContent {
     margin-bottom: 4rem;
 } 
+.rightToLeft.col {
+    flex-direction: column;
+}
+.AdditionalSectionTextDiv {
+    width: 100%;
+}
+.ADditionalImgSection {
+    width: 100%;
+    margin-top: 37px;
+}
+.leftToright.col {
+    flex-direction: column;
+}
+}
+
+@media (max-width: 575px) {
+
+  .leftToright,
+  .rightToLeft.col {
+    flex-direction: column !important;
+    gap: 30px;
+  }
+
+  .AdditionalSectionTextDiv,
+  .ADditionalImgSection {
+    width: 100% !important;
+  }
+
+  .AdditionalSectionTextDiv span.subMainText,
+  .AdditionalSectionTextDiv span.additionalSectionList {
+    max-width: 100%;
+    width: 100%;
+  }
+
 }

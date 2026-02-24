@@ -3,6 +3,7 @@ import './style.css';
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import SEO from "../../../components/SEO";
 import NumbersCards from "../../../components/NumbersCards";
+import BussinessGoal from "./bussinessGoal/BussinessGoal.jsx";
 import GetStarted from "../../../components/GetStarted";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,6 +14,7 @@ import Banner from "./banner/banner";
 import FeaturesPointsSection from "../../../components/FeaturesPointsSection/FeaturesPointsSection";
 import AnimatedText from "../../../components/AnimatedText/AnimatedText";
 import NumbersGrid from "../../../components/NumbersGrid/NumbersGrid";
+import ConcludingSection from "./ConcludingSection/ConcludingSection.jsx";
 
 // reasons to choose images
 const developMaintain = `${process.env.REACT_APP_API_URL}/assests/images/services/web-designing/develop-maintain.png`;
@@ -28,6 +30,14 @@ const graphicDesign = `${process.env.REACT_APP_API_URL}/assests/images/services/
 const Group = `${process.env.REACT_APP_API_URL}/assests/services/webDesgin/Group.webp`;
 const rating = `${process.env.REACT_APP_API_URL}/assests/services/webDesgin/rating.webp`;
 const satisfaction = `${process.env.REACT_APP_API_URL}/assests/services/webDesgin/satisfaction.webp`;
+const ddfMain = `${process.env.REACT_APP_API_URL}/assests/services/webDesgin/ddf.webp`;
+const menPic = `${process.env.REACT_APP_API_URL}/assests/services/webDesgin/imgddf.webp`;
+const img1 = `${process.env.REACT_APP_API_URL}/assests/services/webDesgin/img1.webp`;
+const img2 = `${process.env.REACT_APP_API_URL}/assests/services/webDesgin/img2.webp`;
+const img3 = `${process.env.REACT_APP_API_URL}/assests/services/webDesgin/img3.webp`;
+const img4 = `${process.env.REACT_APP_API_URL}/assests/services/webDesgin/img4.webp`;
+const img5 = `${process.env.REACT_APP_API_URL}/assests/services/webDesgin/img5.webp`;
+const img6 = `${process.env.REACT_APP_API_URL}/assests/services/webDesgin/img6.webp`;
 
 function WebDesigning() {
         const featuresPoints = [
@@ -67,7 +77,9 @@ function WebDesigning() {
                 </Row>
             </Container>
             </div>
-                    <div className="black padding TowFactorsSection">   
+
+
+            <div className="black section-padding TowFactorsSection">   
             <Container>
                 <Row>
                 <Col lg={6}>
@@ -92,221 +104,360 @@ function WebDesigning() {
             </div>
 
 
-
-            {/* Services numbers */}
-            <div className="services-numbers section-padding">
+            <div className="linear-dark-background section-padding DDSSection">
                 <Container>
                     <Row>
-                        <Col>
-                            <h2 className="heading2 text-center">Web Designing Company</h2>
-                            <div className="heading5 text-center">Our web designers while focusing on the appearance of the website also construct a strategy to convert the visitors into your customers. Before making any purchase 82% of the customers do online research about the products & services. So make sure that your website is well designed and attractive that can turn those researchers into your customers. </div>
+                        <Col lg={6}>
+                            <div className="TowFactorsContent">
+                            <h1 className="TowFactorsContentHedaing">Two essential factors play a decisive role in your business success</h1>
+                            <div>
+                                <span className="DDSImgHeadding">
+                                    <span className="headingSection">
+                                    <span className="imgDddsHeading">
+                                        <img src={menPic} alt="img" />
+                                        </span>
+                                    <span className="mainText"> DDS</span>
+                                    </span>
+                                    <span className="textHeading">
+                                       <span className="explanText"> ON DEMAND DELIVERY SOLUTIONS </span>
+                                    </span>
 
-                            <NumbersCards />
+                                    </span>
+                                    <span className="piontList">
+                                        <ul className="ddsList">
+                                            <li className="ddlPiont">
+                                                <span className="listIcon"> ● </span> The Challenge: To build an undisturbed, real-time tracking interface for drivers and customers across the USA and Canada.
+                                            </li>                                            
+                                            <li className="ddlPiont">
+                                               <span className="listIcon"> ● </span> Solution: We developed an optimized customer experience that led to increases in customer satisfaction as high as 2x.
+                                            </li>                                            
+                                            <li className="ddlPiont">
+                                               <span className="listIcon"> ● </span> Key Features: Real-time driver tracking, 24/7 instant support communication, and regional optimization for North American markets.
+                                            </li>
+                                        </ul>
+                                    </span>
+                                <Link to="/contact-us" reloadDocument className="btn-gradient-blue">See Full Project Overview <FontAwesomeIcon icon={faAnglesRight} /></Link>
+                            </div>
+                            
+                        </div>
+                        </Col>                        
+                        <Col lg={6}>
+                        <div className="ddsMainImg">
+                            <img src={ddfMain} alt="" />
+
+                        </div>
+
                         </Col>
                     </Row>
                 </Container>
+
             </div>
 
-    
+            <BussinessGoal></BussinessGoal>
 
-            {/* Reasons to choose section */}
-            <div className="reasons-to-choose framework-sections section-padding">
-                <Container>
-                    <Row>
-                        <Col>
-                            <h2 className="heading2 text-center">The following website services may be anticipated when dealing with a website designer like Iosandweb</h2>
-                        </Col>
-                    </Row>
-                    <div className="reasons-tab-block">
-                        <Tab.Container id="reasons-tab" defaultActiveKey="first">
-                            <div className="reasons-tab-left reasons-tab-cols">
-                                <Nav variant="pills" className="reasons-tab flex-column">
-                                    <Nav.Item>
-                                        <Nav.Link eventKey="first"><img src={developMaintain} alt="Develop and maintain" className="reasons-content-icon" />Develop and maintain an individual website</Nav.Link>
-                                    </Nav.Item>
-                                    <Nav.Item>
-                                        <Nav.Link eventKey="second"><img src={copywriting} alt="Copywriting" className="reasons-content-icon" />Content & Copywriting</Nav.Link>
-                                    </Nav.Item>
-                                    <Nav.Item>
-                                        <Nav.Link eventKey="third"><img src={optimisingSEO} alt="Optimising SEO" className="reasons-content-icon" />Optimising websites for search engines (SEO)</Nav.Link>
-                                    </Nav.Item>
-                                    <Nav.Item>
-                                        <Nav.Link eventKey="fourth"><img src={socialMediaMarketing} alt="Social Media Marketing" className="reasons-content-icon" />Social Media Marketing</Nav.Link>
-                                    </Nav.Item>
-                                    <Nav.Item>
-                                        <Nav.Link eventKey="fifth"><img src={ppcADS} alt="PPC ADS" className="reasons-content-icon" />PPC ADS</Nav.Link>
-                                    </Nav.Item>
-                                </Nav>
+            <div className="AdditionalSpecialized section-padding no-bottom-padding" >
+                <div className="GerySection">
+                          <Container>
+                        <Row>
+                            <Col className="additiionHeadingMean">
+                <h2 className="heading_main split">How Our Custom Software Solutions Support Your Business Goals</h2>
+
+                <span className="subHeading">A complete ecosystem of advanced web solutions designed to amplify performance, solidify brand identity, and fuel scalable global growth.</span>
+                            </Col>
+                            </Row>
+                    </Container>
+                    <Container>
+                        <Row>
+                            <Col className="rightToLeft">
+                            <div className="AdditionalSectionTextDiv">
+                                <h1 className="MianHeading">
+                                  High-Impact Web Design
+                                </h1>
+                                <span className="subMainText">Crafting High-Impact Digital Experiences for Modern Businesses</span>
+                             <span className="additionalSectionList">
+                                <ul>
+                                    <li>
+                                       Creating Immersive Digital Experiences for the Enterprise -Not satisfied with an out-of-the-box template? We provide tailor-engineered, visually stunning websites that prioritize high-speed performance, and intuitively guided user journeys. Our top designers work on capturing user interest in just a second and converting that interest into better quality leads. 
+                                    </li>
+                                </ul>
+
+                             </span>
+                     <Link to="/contact-us" reloadDocument className="btn-gradient-blue">See Full Project Overview <FontAwesomeIcon icon={faAnglesRight} /></Link>
+                        
+
                             </div>
-                            <div className="reasons-tab-right reasons-tab-cols">
-                                <Tab.Content>
-                                    <Tab.Pane eventKey="first">
-                                        <div className="reasons-tab-content">
-                                            <h3 className="heading3">Develop and maintain an individual website</h3>
-                                            <p className="paragraph">A website must be speedy, aesthetically pleasing, and simple to use in order to maintain visitors' interest and create leads. A web designer is knowledgeable about the various design elements required to do website designing services.
-                                                <br />
-                                                In addition to helping you create or modify the website, they'll ensure that it is mobile-optimised so that it works properly on tablets and phones.
-                                            </p>
-                                        </div>
-                                    </Tab.Pane>
-                                    <Tab.Pane eventKey="second">
-                                        <div className="reasons-tab-content">
-                                            <h3 className="heading3">Content & Copywriting</h3>
-                                            <p className="paragraph">Custom content is essential for both increasing SEO and humanising your business. Use original, captivating content in your blog posts and website pages to achieve this.
-                                                <br />
-                                                Since content must be routinely published yet not everyone is a writer or has the time to, this presents a challenge with software development.
-                                                <br />
-                                                A web design company with an in-house copywriter is even better because you'll have a competent staff to manage all of your internet demands under one roof.
-                                            </p>
-                                        </div>
-                                    </Tab.Pane>
-                                    <Tab.Pane eventKey="third">
-                                        <div className="reasons-tab-content">
-                                            <h3 className="heading3">Optimising websites for search engines (SEO)</h3>
-                                            <p className="paragraph">Search engine optimization is yet another crucial strategy to help your website rank on the first page of search results (SEO).
-                                                <br />
-                                                This is important because consumers who are searching for your services are likely to select a business that shows up in the top 10. The very least SEO does is increase website traffic when doing web designing for online store.
-                                                <br />
-                                                Planning and keyword research are necessary to push your website to the top of the search results, even if SEO traffic is reasonable compared to PPC, where you pay for each click.
-                                                <br />
-                                                A SEO expert can monitor your website and determine the best course of action to boost traffic and accomplish your objectives.
-                                            </p>
-                                        </div>
-                                    </Tab.Pane>
-                                    <Tab.Pane eventKey="fourth">
-                                        <div className="reasons-tab-content">
-                                            <h3 className="heading3">Social Media Marketing</h3>
-                                            <p className="paragraph">Utilising the immense popularity of websites like Facebook, Twitter, Pinterest, and Instagram, businesses are increasingly adopting social media as their main channel for marketing in an effort to grow their brands and customers.
-                                                <br />
-                                                Success in social media marketing requires a consistent online presence, but we are also conscious of how momentous it can be when trying to run a business by hiring a web designing agency.
-                                                <br />
-                                                A social media marketer may help with content organisation management agencies and posting articles that adhere to your business's guiding principles. The most important thing is that they will consistently post at the optimal time each day, when your accounts will see the greatest engagement.
-                                            </p>
-                                        </div>
-                                    </Tab.Pane>
-                                    <Tab.Pane eventKey="fifth">
-                                        <div className="reasons-tab-content">
-                                            <h3 className="heading3">PPC ADS</h3>
-                                            <p className="paragraph">Pay-per-click (PPC) advertising is the practice of “purchasing” clicks rather than acquiring them organically.
-                                                <br />
-                                                Instead of using SEO tactics to rank on search engines, advertisers will fight for placements on sponsored links on Google's pages.
-                                                <br />
-                                                Every time the ad is clicked, the user is taken to the website.
-                                                <br />
-                                                If you are still in doubt or have some, take a step ahead and reach IosAndWeb today for the most amazing and resourceful experience. Iosandweb is a house of experts who deals in best in class custom web designing services. All these services are highly customised according to the needs and the demands of the customers.
-                                            </p>
-                                        </div>
-                                    </Tab.Pane>
-                                </Tab.Content>
+                            <div className="ADditionalImgSection">
+                             <img src={img1} alt="" />
                             </div>
-                        </Tab.Container>
+
+                            </Col> 
+                        </Row>
+                    </Container>
+                    <div className="section-padding no-bottom-padding">
+                    <Container className="">
+                        <Row>
+                            <Col className="leftToright">
+                            <div className="AdditionalSectionTextDiv">
+                                <h1 className="MianHeading">
+                                  Creative Logo & Identity Design
+                                </h1>
+                                <span className="subMainText">Creative Logo Design That Defines Your Brand</span>
+                             <span className="additionalSectionList">
+                                <ul>
+                                    <li>
+                                       Uniquely Designed Branding Solutions, Aligning with Your Market Positioning Your logo is the foundation that ultimately defines and shapes the element of trust and recognition associated with and attributed to your brand as a whole. We provide you with fantastically designed logos that perfectly encapsulate the basic elements associated with your inherent values, thus giving way to a life-long relationship filled with exclusively loyal brands. A niche can be created through a ‘premium’ look that defines dominance in the marketplace.
+                                    </li>
+                                </ul>
+
+                             </span>
+                              <Link to="/contact-us" reloadDocument className="btn-gradient-blue">Define Your Brand <FontAwesomeIcon icon={faAnglesRight} /></Link>
+                        
+
+                            </div>
+                            <div className="ADditionalImgSection">
+                             <img src={img2} alt="" />
+                            </div>
+
+                            </Col>
+                        </Row>
+                    </Container>
                     </div>
-                </Container>
+
+                </div>
+                <div className="blackSection no-bottom-padding">
+                    <Container>
+                        <Row>
+                            <Col className="rightToLeft">
+                            <div className="AdditionalSectionTextDiv">
+                                <h1 className="MianHeading">
+                                 Advanced Search Engine Optimization
+                                </h1>
+                                <span className="subMainText">Crafting High-Impact Digital Experiences for Modern Businesses</span>
+                             <span className="additionalSectionList">
+                                <ul>
+                                    <li>
+                                       Strategic Visibility to Dominate Global Search Results Achieve #1 rankings with smart optimization strategies that attract your ideal audience and turn clicks into loyal customers. We optimize your site’s technical architecture and content to drive sustainable, high-quality organic traffic that grows with your business. 
+                                    </li>
+                                </ul>
+
+                             </span>
+                     <Link to="/contact-us" reloadDocument className="btn-gradient-blue">Claim Your Ranking <FontAwesomeIcon icon={faAnglesRight} /></Link>
+                        
+
+                            </div>
+                            <div className="ADditionalImgSection">
+                             <img src={img3} alt="" />
+                            </div>
+
+                            </Col> 
+                        </Row>
+                    </Container>
+                    <div className="section-padding no-bottom-padding">
+                    <Container >
+                        <Row>
+                            <Col className="leftToright ">
+                            <div className="AdditionalSectionTextDiv">
+                                <h1 className="MianHeading">
+                                  Full-Funnel Digital Marketing
+                                </h1>
+                                <span className="subMainText">Strategic Digital Marketing Solutions for Sustainable Business Growth</span>
+                             <span className="additionalSectionList">
+                                <ul>
+                                    <li>
+                                       Strategic Solutions for Sustainable Revenue Growth We provide performance-focused digital marketing designed to enhance brand visibility and drive measurable actions across all digital channels. From lead acquisition to customer retention, our strategies ensure your brand remains top-of-mind throughout the buyer's journey 
+                                    </li>
+                                </ul>
+
+                             </span>
+                              <Link to="/contact-us" reloadDocument className="btn-gradient-blue">Accelerate Growth <FontAwesomeIcon icon={faAnglesRight} /></Link>
+                        
+
+                            </div>
+                            <div className="ADditionalImgSection">
+                             <img src={img4} alt="" />
+                            </div>
+
+                            </Col>
+                        </Row>
+                    </Container>
+                    </div>
+
+                </div>
+                <div className="BlueSection ">
+                    <Container>
+                        <Row>
+                            <Col className="rightToLeft">
+                            <div className="AdditionalSectionTextDiv">
+                                <h1 className="MianHeading">
+                                 Expert Copywriting & Content Strategy
+                                </h1>
+                                <span className="subMainText">Expert Copywriting Services That Engage, Persuade, and Drive Results</span>
+                             <span className="additionalSectionList">
+                                <ul>
+                                    <li>
+                                      Persuasive Messaging That Engages, Persuades, and Delivers Words are your most powerful sales tool. Our expert writers craft clear, compelling copy that humanizes your brand while effectively communicating your unique value proposition. We bridge the gap between your brand and your audience through high-converting storytelling
+                                    </li>
+                                </ul>
+
+                             </span>
+                     <Link to="/contact-us" reloadDocument className="btn-gradient-blue">Craft Your Message <FontAwesomeIcon icon={faAnglesRight} /></Link>
+                        
+
+                            </div>
+                            <div className="ADditionalImgSection">
+                             <img src={img5} alt="" />
+                            </div>
+
+                            </Col> 
+                        </Row>
+                    </Container>
+                    <div className="section-padding no-bottom-padding">
+                    <Container className="">
+                        <Row>
+                            <Col className="leftToright">
+                            <div className="AdditionalSectionTextDiv">
+                                <h1 className="MianHeading">
+                                  Reliable Website Support & Maintenance
+                                </h1>
+                                <span className="subMainText">Reliable Website Support & Maintenance for Seamless Performance</span>
+                             <span className="additionalSectionList">
+                                <ul>
+                                    <li>
+                                       Compelling Communication That Delivers, Engages, and Converts Words are the best sales tool. Effective authors at our company write inspiring, transparent copy that communicates your value proposition clearly and brings humanity to your brand. We use high-converting storytelling to tie your brand with your audience. 
+                                    </li>
+                                </ul>
+
+                             </span>
+                              <Link to="/contact-us" reloadDocument className="btn-gradient-blue">Secure Your Site <FontAwesomeIcon icon={faAnglesRight} /></Link>
+                        
+
+                            </div>
+                            <div className="ADditionalImgSection">
+                             <img src={img6} alt="" />
+                            </div>
+
+                            </Col>
+                        </Row>
+                    </Container>
+                    </div>
+
+                </div>
+
             </div>
 
-            {/* Designing services section */}
-            <div className="designing-services-section section-padding">
+            <div className="black section-padding ReadyToJionus no-bottom-padding">
                 <Container>
                     <Row>
                         <Col>
-                            <h2 className="heading2 text-center">Our Other Web Designing Services</h2>
-                        </Col>
-                    </Row>
-                    <Row className="mt-5">
-                        <Col md={6} lg={4}>
-                            <div className="specification-block">
-                                <FontAwesomeIcon icon={faPaintBrush}></FontAwesomeIcon>
-                                <h4 className="heading4">Web Design</h4>
-                                <p className="paragraph">IosAndWeb Technologies will design professional, attractive and pocket-friendly websites for your business. Its our responsibility to <b>hire web designer</b> near me for you.</p>
+                            <span className="ReadyToJionUsDiv">
+                                <h1 className="heading_main split">Ready to Fuel Your Digital Transformation?</h1>
+                                <span className="subHeading FontSize25">Empowering businesses to outpace the competition with precision design and intelligent marketing.</span>
+                                <p className="FontSize18">Starting a complex digital project can be daunting, but you don't have to navigate it alone. Our growth consultants are ready to discuss your unique requirements and build a technical roadmap to your success</p>
+                            </span>
+                            <div className="btnDivCenter">
+                            <Link to="/contact-us" reloadDocument className="btn-gradient-blue ">Start Your Free Consultation <FontAwesomeIcon icon={faAnglesRight} /></Link>
                             </div>
-                        </Col>
-                        <Col md={6} lg={4}>
-                            <div className="specification-block">
-                                <FontAwesomeIcon icon={faImage}></FontAwesomeIcon>
-                                <h4 className="heading4">Logo Design</h4>
-                                <p className="paragraph">Build your business brand with IosAndWeb Technologies' logo designing services.</p>
-                            </div>
-                        </Col>
-                        <Col md={6} lg={4}>
-                            <div className="specification-block">
-                                <FontAwesomeIcon icon={faSearchengin}></FontAwesomeIcon>
-                                <h4 className="heading4">SEO</h4>
-                                <p className="paragraph">Bring your webpage on the top of the search engine results page and make people see you on the internet.</p>
-                            </div>
-                        </Col>
-                        <Col md={6} lg={4}>
-                            <div className="specification-block">
-                                <FontAwesomeIcon icon={faBullhorn}></FontAwesomeIcon>
-                                <h4 className="heading4">Digital marketing</h4>
-                                <p className="paragraph">Expert digital marketers of IosAndWeb Technologies will start and run the marketing ad campaigns of your brand over social media platforms</p>
-                            </div>
-                        </Col>
-                        <Col md={6} lg={4}>
-                            <div className="specification-block">
-                                <FontAwesomeIcon icon={faFileText}></FontAwesomeIcon>
-                                <h4 className="heading4">Copywriting</h4>
-                                <p className="paragraph">The content of the website contains equal relevance to the photos and designs of the website.</p>
-                            </div>
-                        </Col>
-                        <Col md={6} lg={4}>
-                            <div className="specification-block">
-                                <FontAwesomeIcon icon={faHeadphones}></FontAwesomeIcon>
-                                <h4 className="heading4">Website support</h4>
-                                <p className="paragraph">IosAndWeb Technologies also provides care and support to your website to make its performance better.</p>
+
+                            {/* what set as apart */}
+
+                            <div className="section-padding SetUsPart no-bottom-padding" >
+                                <h1 className="heading_main"> What Sets Us Apart?</h1>
+                                <span className="FontSize25 Bold less-bottom-padding">Unlocking Business Expansion with High-Velocity and Performance-Driven Solutions</span>
+                                <div className="heading5">We not only run the campaigns, but rather, we can engineer the growth. We do all of this on a platform of absolute clarity.</div>
+                                 <span className="piontList margintop">
+                                        <ul className="ddsList">
+                                            <li className="ddlPiont">
+                                                <span className="listIcon"> ● </span> Zero Barrier to Entry: We prove our worth the first day. That is why we have No Setup Fees to get your journey underway.
+                                            </li>                                            
+                                            <li className="ddlPiont">
+                                               <span className="listIcon"> ● </span>100% Radical Transparency: Never wonder where your budget goes. You have full transparency into everything we do through honest reporting, with no "random promises".
+                                            </li>                                            
+                                            <li className="ddlPiont">
+                                               <span className="listIcon"> ● </span> Data & analytics-driven approach: We replace guesswork with evidence. Every strategy is forged from deep-dive analytics and real-time market signals.
+                                            </li>                                            <li className="ddlPiont">
+                                               <span className="listIcon"> ● </span> Consistent Optimisation of Campaign: Your market never rests, and neither do we. We take up bi-weekly audits and provide monthly performance reports to maximize customer lifetime value to bottom-line profitability
+                                            </li>                                            <li className="ddlPiont">
+                                               <span className="listIcon"> ● </span>Strategic Market Intelligence: Gain a competitive advantage in personalized audits and overall analysis of your competition to make use of market opportunities which were overlooked by your competition
+                                            </li>                                            <li className="ddlPiont">
+                                               <span className="listIcon"> ● </span> Growth Architect: “You're not a ticket number. Enjoy your Growth Architect aligning with you every week to make sure your implementation is in perfect sync with your strategic vision.”
+                                            </li>                                            <li className="ddlPiont">
+                                               <span className="listIcon"> ● </span> Agile & Scalable Pricing: With the growing nature of your business, your activities will definitely be change-oriented. We can make our pricing flexible as per your business.
+                                            </li>                                            <li className="ddlPiont">
+                                               <span className="listIcon"> ● </span> Precision Execution: Our weekly marketing execution plan is the roadmap of scaling.
+                                            </li>
+                                        </ul>
+                                    </span>
+                               <h1 className="heading_main">Beyond Clicks: We Architect Enduring Brand Loyalty</h1>
+                                <span className="FontSize25 Bold less-bottom-padding">Pioneering Digital Services for the Modern Lifecycle</span>
+
+
+                                <h1 className="heading_main margintop">Emerging & High-Tech Solutions</h1>
+                                <span className="heading5 Bold less-bottom-padding">Stay ahead of the curve with cutting-edge engagement strategies.</span>
+                                
+                                 <span className="piontList margintop">
+                                        <ul className="ddsList">
+                                            <li className="ddlPiont">
+                                                <span className="listIcon"> ● </span>  Influencer Marketing: Humanize your brand through trusted industry voices.
+                                            </li>                                            
+                                            <li className="ddlPiont">
+                                               <span className="listIcon"> ● </span>AI-Driven Automation: Scale your operations with intelligent, automated marketing workflows.
+                                            </li>                                            
+                                            <li className="ddlPiont">
+                                               <span className="listIcon"> ● </span>  Growth Marketing: Deploy aggressive, performance-led strategies designed for rapid expansion.
+
+                                            </li>                                            <li className="ddlPiont">
+                                               <span className="listIcon"> ● </span>   Reputation Management (ORM): Proactively protect and polish your digital footprint
+                                            </li>                                           
+                                        </ul>
+                                    </span> 
+                                    
+                                 <h1 className="heading_main margintop">eCommerce-Focused Growth</h1>
+                                <span className="heading5 Bold less-bottom-padding">Transform your digital storefront into a high-conversion revenue engine.</span>
+                                
+                                 <span className="piontList margintop">
+                                        <ul className="ddsList">
+                                            <li className="ddlPiont">
+                                                <span className="listIcon"> ● </span>  Influencer Marketing: Humanize your brand through trusted industry voices.
+                                            </li>                                            
+                                            <li className="ddlPiont">
+                                               <span className="listIcon"> ● </span> AI-Driven Automation: Scale your operations with intelligent, automated marketing workflows.
+                                            </li>                                            
+                                            <li className="ddlPiont">
+                                               <span className="listIcon"> ● </span>   Growth Marketing: Deploy aggressive, performance-led strategies designed for rapid expansion.
+                                            </li>                                            
+                                            <li className="ddlPiont">
+                                               <span className="listIcon"> ● </span>    Reputation Management (ORM): Proactively protect and polish your digital footprint
+                                            </li>                                           
+                                        </ul>
+                                    </span>
+
+                                    <h1 className="heading_main margintop">Creative & Brand Strategy</h1>
+                                <span className="heading5 Bold less-bottom-padding">Design that doesn't just look good—it performs</span>
+                                
+                                 <span className="piontList margintop">
+                                        <ul className="ddsList">
+                                            <li className="ddlPiont">
+                                                <span className="listIcon"> ● </span> Brand Evolution: Comprehensive strategy development to define your market position.
+                                            </li>                                            
+                                            <li className="ddlPiont">
+                                               <span className="listIcon"> ● </span>High-Impact Creative Production: Graphic design and visual assets that capture attention instantly
+                                            </li>                                            
+                                            <li className="ddlPiont">
+                                               <span className="listIcon"> ● </span>UX/UI Optimization: Intuitive interface design focused on reducing friction and boosting engagement.
+                                            </li>                                            
+                                      
+                                        </ul>
+                                    </span>
                             </div>
                         </Col>
                     </Row>
                 </Container>
+
             </div>
 
-            {/* get started section */}
-            <GetStarted
-                title="Let's Start Building Web Solutions To Help Achieve Your Business Goals"
-                buttonText="Get Started"
-                link="/contact-us"
-            />
 
-            {/* final reflection section */}
-            <div className="final-reflection-section section-padding ">
-                <Container>
-                    <Row>
-                        <Col>
-                            <h2 className="heading2">Professional Web Designing Services by IosAndWeb Technologies</h2>
-                            <div className="heading5">A website can be built by clicking and you can get an online presence. But making this online presence attractive and professional over the internet is challenging. Here at Iosandweb Technologies, we will provide you a user-friendly, affordable and professional website that will help you to perform better than your rivals. We know the needs of the customers and the strategies that need to be used to design the websites.</div>
-                            <div className="heading5">It's 2020, a website cannot be designed by just uploading a template. A strategically developed and designed website will bring more traffic to your website that will convert them into leads & sales.</div>
-                            <div className="heading5">As a leading company of Web designing services in Birmingham, London and many areas of United Kingdom, Iosandweb Technologies provides full-time and a variety of Web designing services or <a href="/graphic-designing-services"><b>Graphic designing services</b></a> to its clients in the field of design and development. If you are not sure about your needs and requirements then consult with our experts and get answers to your every problem. The appointment will be scheduled with your comfort or you can also request us to call you at your specified time. If you're searching <u>Web designing company near me</u> then you are a right place Get quote for your project, Fill the form below.</div>
-                            <div className="heading5">Consultants of our company will call you and discuss the whole project. We are here to answer your every question and help you understand the needs and requirements of your business.</div>
-                            <div className="heading5">Starting a new website project can be enormous and frightening, that is why we are here to assist you to make the right decisions and grow your business.</div>
-
-                            <div className="services-bottom-flex">
-                                <div className="services-bottom-wrap">
-                                    <div className="services-bottom-div">
-                                        <a href="/pdf-to-html-designing-services">
-                                            <img src={pdfHTML} className="services-bottom-front-image" alt="PDF to HTML" />
-                                            <h4 className="heading4">PDF to HTML Designing Services</h4>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div className="services-bottom-wrap">
-                                    <div className="services-bottom-div">
-                                        <a href="/graphic-designing-services">
-                                            <img src={graphicDesign} className="services-bottom-front-image" alt="Graphic Design" />
-                                            <h4 className="heading4">Graphic Design</h4>
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <h2 className="heading2 section-padding no-bottom-padding ">Get Web Designing Services</h2>
-                            <div className="heading5">Our Website designer can assist you. We are experts in making attractive websites that will help you to bring visitors and convert them into your customers for your small, medium and large scale businesses.</div>                            
-                            <div className="heading5">Web design will be essential for all businesses of all sizes in 2023 as more customers turn to search engines to find the products and services they need.</div>                            
-                            <div className="heading5">However, generating results requires more than just having a physically nice website. Your website will rank highly on Google with the use of clever SEO strategies, ensuring that the right viewer understands your brand with Web designing services.</div>  <div className="heading5"> A IosAndWeb web design company may accurately direct you through these routes. A team of experts with expertise in fields like SEO, Content, design, and more provide you with the best advice on precisely what your business needs to thrive online.</div>
-                           
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
+            {/* {} */}
+            <ConcludingSection/>
 
         </>
     )

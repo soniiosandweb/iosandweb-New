@@ -17,16 +17,6 @@ const servicesLists = [
         title: "CRM Development For Healthcare Industry",
         link: "/crm-development-for-healthcare-industry",
     },
-    {
-        icon: magento,
-        title: "Magento Development Services",
-        link: "/magento-development-services",
-    },
-    {
-        icon: shopify,
-        title: "Shopify Development",
-        link: "/shopify-development-services",
-    }
 ]
 
 const ConcludingSection = () => {

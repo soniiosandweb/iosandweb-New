@@ -99,7 +99,7 @@ h1, h2, h3, h4, h5, h6{
   padding: 3rem 0;
 }
 .section-padding{
-  padding: 6rem 0;
+  padding: 8rem 0;
 }
 .no-padding{
   padding: 0;
@@ -292,11 +292,11 @@ h1, h2, h3, h4, h5, h6{
   background: var(--color-body) !important;
 }
 .FontSize18{
-  font-size: 18px;
+  font-size: 18px !important;
   font-family: "Poppins";
 }
 .FontSize25{
-  font-size: 25px;
+  font-size: 25px !important;
   font-family: "Poppins-Bold";
 }
 .z-index-1{
