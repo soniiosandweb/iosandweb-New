@@ -1,38 +1,45 @@
 import React from "react";
 import './style.css';
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import SEO from "../../../components/SEO";
-import NumbersCards from "../../../components/NumbersCards";
-import ContactForm from "../../../components/ContactForm";
-import GetStarted from "../../../components/GetStarted";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleDot } from "@fortawesome/free-solid-svg-icons";
+import { faAnglesRight,} from "@fortawesome/free-solid-svg-icons";
 
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import Banner from "./bannerSection/Banner";
+import FeaturesPointsSection from "../../../components/FeaturesPointsSection/FeaturesPointsSection";
+import AnimatedText from "../../../components/AnimatedText/AnimatedText";
+import NumbersGrid from "../../../components/NumbersGrid/NumbersGrid";
+import BussinessGoal from "./BussinessGoals/BussinessGoal";
+import BusinessGrowth from "./BusinessGrowth/BusinessGrowth";
+import SliderContent from "./Slidercontent/SliderContent";
 
-// Reasons section images
-const searchEngine = `${process.env.REACT_APP_API_URL}/assests/images/services/digital-marketing/seo.png`;
-const socialMedia = `${process.env.REACT_APP_API_URL}/assests/images/services/digital-marketing/social-media-optimization.png`;
-const reputationManagement = `${process.env.REACT_APP_API_URL}/assests/images/services/digital-marketing/reputation-management.png`;
-const ppcManagement = `${process.env.REACT_APP_API_URL}/assests/images/services/digital-marketing/ppc-management.png`;
-const advertisingCampaigns = `${process.env.REACT_APP_API_URL}/assests/images/services/digital-marketing/advertising-campaign.png`;
-const contentMarketing  = `${process.env.REACT_APP_API_URL}/assests/images/services/digital-marketing/content-marketing.png`;
-const leadGeneration = `${process.env.REACT_APP_API_URL}/assests/images/services/digital-marketing/lead-generation.png`;
-const linkBuilding = `${process.env.REACT_APP_API_URL}/assests/images/services/digital-marketing/link-building.png`;
-const conversionRate = `${process.env.REACT_APP_API_URL}/assests/images/services/digital-marketing/conversion-rate-optimizer.png`;
 
-// Final Reflection images
-const SEOIcon = `${process.env.REACT_APP_API_URL}/assests/images/services/digital-marketing/seo-icon.png`;
-const socialMediaMarketing = `${process.env.REACT_APP_API_URL}/assests/images/services/digital-marketing/social-media-marketing.png`;
-const pageSpeed = `${process.env.REACT_APP_API_URL}/assests/images/services/digital-marketing/page-speed.png`;
-const proofreading = `${process.env.REACT_APP_API_URL}/assests/images/services/digital-marketing/proofreading.png`;
-const b2b = `${process.env.REACT_APP_API_URL}/assests/images/services/digital-marketing/b2b.png`;
-const bristol = `${process.env.REACT_APP_API_URL}/assests/images/services/digital-marketing/digital-marketing.png`;
+const ddfMain = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/laptop.webp`;
+const img1 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/181959@3x 1.webp`;
+const img2 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/593369@3x 1.webp`;
+const img3 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/767972@3x 1.webp`;
+const img4 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/1623352@3x 1.webp`;
+const img5 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/audit 1.webp`;
+const img6 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/curriculum-vitae 1.webp`;
+const img7 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/no-money 1.webp`;
+const img8 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/promotion (1) 1.webp`;
+const turest3 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/turest3.webp`;
+const turest2 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/turest2.webp`;
+const turest1 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/turest1.webp`;
+const men = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/men.webp`;
+
+
 
 function DigitalMarketing(){
 
     const location = useLocation();
+        const featuresPoints = [
+    "Powerful Multi-Channel Strategy for Business Growth",
+    "Relentlessly Focused on Driving Conversions",
+    "High-Impact Mobile App Experiences Powered by Exceptional DesignFrameworks Powering Long-Term Scalable Growth"
+]
+   
 
     return(
         <>
@@ -44,253 +51,185 @@ function DigitalMarketing(){
                 canonicalUrl={`${process.env.REACT_APP_API_URL}${location.pathname}`}
             />
 
-            {/* Digital Marketing Banner */}
-            <div className="digital-marketing-banner banner-padding text-white position-relative">
-                <Container className="z-index-1">
-                    <Row>
-                        <Col lg={8} xl={6}>
-                            <div className="heading-wrapper full-width">
-                                <h1>Digital <span className="text-highlight">Marketing</span> Services</h1>
-                                <div className="heading5">Digital Marketing Services has created a new revolution in the business world today. The people's way of interacting with brands, looking for the products & services have changed a lot and the internet is influencing them at a huge level.
-                                </div>
-                                <div className="heading5">
-                                <a href="/"><b>IosAndWeb Technologies</b></a> is the best SEO company With the latest technologies and development, the business market is changing and the behavior of customers towards products & services too. 
-                                </div>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-                <div className="banner-overlay bg-60"></div>
+            <Banner></Banner>
+            <FeaturesPointsSection lists={featuresPoints} />
+            <div className="padding black" >
+            <AnimatedText />
             </div>
-
-            {/* Services numbers */}
-            <div className="services-numbers section-padding">
+            <div className="padding black">
                 <Container>
                     <Row>
                         <Col>
-                            <h2 className="heading2 text-center">Digital Marketing Company</h2>
-                            <div className="heading5 text-center">We offers customized business solutions to meet their business goals.</div>
+                         <h1 className="heading_main split textaliginCenter">Empowering Brands with Data-Driven Digital Marketing</h1>
+                         <span className="FontSize18 textaliginCenter">iosAndWeb Technologies designs customized, ROI-focused marketing strategies that accelerate growth, elevate brand visibility, and turn clicks into loyal customers</span>
+                         <div className="numberGridMobileDev textaliginCenter padding"><NumbersGrid /></div>
+                        <h1 className="heading_main  textaliginCenter">Partner with iosAndWeb Technologies to unlock intelligent, future-ready marketing powered by AI insights, precision targeting, and seamless omnichannel execution</h1>
 
-                            <NumbersCards />
                         </Col>
                     </Row>
                 </Container>
+               
+
             </div>
 
-            {/* what is Software section */}
-            <div className="what-software-section section-padding text-white">
-                <Container>
-                    <Row className="align-items-center">
-                        <Col lg={7}>
-                            <div className="leadtxt">
-                                <h2>Are you looking for a advanced Digital Marketing services?</h2>
-                            </div>
-                            <div className="leadsubtxt">
-                                Being a leading digital marketing agency, we are here to assist you with our digital marketing services. Before starting work on your project our digital marketing experts will give a thorough study to your niche and know the targeted audience for your business, find the interests of people in your products & services and then find the overall benefit. We have <u>Digital marketing expert in Birmingham</u> can help you by optimizing your website to bring new outlooks on your website and make people know more about your brand and then creating leads with them. 
-                            </div>
-                        </Col>
-                        <Col lg={5}>
-                            <div className="leadsubtxt mb-3 text-center">
-                                Fill the form and get quote for your project.
-                            </div>
-                            <ContactForm />
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
+            <div className="linear-dark-background section-padding DDSSection">
+                            <Container>
+                                <Row>
+                                    <Col lg={6}>
+                                        <div className="TowFactorsContent">
+                                        <div>
 
-            {/* Reasons to choose section */}
-            <div className="reasons-to-choose section-padding">
-                <Container>
-                    <Row>
-                        <Col>
-                            <h2 className="heading2 text-center">Result-Oriented Digital Marketing Services</h2>
-                        </Col>
-                    </Row>
-                    <div className="reasons-tab-block">
-                        <Tab.Container id="reasons-tab" defaultActiveKey="first">
-                            <div className="reasons-tab-left reasons-tab-cols">
-                                <Nav variant="pills" className="reasons-tab flex-column">
-                                    <Nav.Item>
-                                        <Nav.Link eventKey="first"><FontAwesomeIcon icon={faCircleDot} /> Search Engine Optimization (SEO)</Nav.Link>
-                                    </Nav.Item>
-                                    <Nav.Item>
-                                        <Nav.Link eventKey="second"><FontAwesomeIcon icon={faCircleDot} /> Social Media Optimization (SMO)</Nav.Link>
-                                    </Nav.Item>
-                                    <Nav.Item>
-                                        <Nav.Link eventKey="third"><FontAwesomeIcon icon={faCircleDot} /> Online Reputation Management (ORM)</Nav.Link>
-                                    </Nav.Item>
-                                    <Nav.Item>
-                                        <Nav.Link eventKey="fourth"><FontAwesomeIcon icon={faCircleDot} /> PPC Campaign Management by PPC ads expert</Nav.Link>
-                                    </Nav.Item>
-                                    <Nav.Item>
-                                        <Nav.Link eventKey="fifth"><FontAwesomeIcon icon={faCircleDot} /> Display Advertising Campaigns</Nav.Link>
-                                    </Nav.Item>
-                                    <Nav.Item>
-                                        <Nav.Link eventKey="sixth"><FontAwesomeIcon icon={faCircleDot} /> Content Marketing</Nav.Link>
-                                    </Nav.Item>
-                                    <Nav.Item>
-                                        <Nav.Link eventKey="seventh"><FontAwesomeIcon icon={faCircleDot} /> Lead Gen Campaign</Nav.Link>
-                                    </Nav.Item>
-                                    <Nav.Item>
-                                        <Nav.Link eventKey="eight"><FontAwesomeIcon icon={faCircleDot} /> Link Building</Nav.Link>
-                                    </Nav.Item>
-                                    <Nav.Item>
-                                        <Nav.Link eventKey="ninth"><FontAwesomeIcon icon={faCircleDot} /> Conversion Rate Optimization</Nav.Link>
-                                    </Nav.Item>
-                                </Nav>
-                            </div>
-                            <div className="reasons-tab-right reasons-tab-cols">
-                                <Tab.Content>
-                                    <Tab.Pane eventKey="first">
-                                        <div className="reasons-tab-content">
-                                            <img src={searchEngine} alt="Search Engine Optimization" className="reasons-content-icon" />
-                                            <h3 className="heading3">Search Engine Optimization (SEO)</h3>
-                                            <p className="paragraph">With Website SEO company make your brand one from the thousands of searches that happen every second over the search engines. Our main aim is to make a place for your brand in the top position of Google or other search engines by using legal & <a href="/seo-services">SEO Services</a> by our ethical <b>SEO specialist.</b></p>
+                                          <div className="ChatDiv">
+                                            <div className="pinkChart">
+                                                <div className="FontSize18">83%</div>
+                                                <div className="FontSize16">Increase in Traffic</div>
+                                            </div>
+                                            <div className="YellowChat">
+                                                <div className="FontSize18"># 1</div>
+                                                <div className="FontSize16">
+                                                    On the Keyword 
+                                                    “Mobile app development Company” <br/>
+                                                </div>
+                                            </div>
+                                          </div>
+                                          <div className="FontSize16">A leading global provider of information technology, consulting, and business process outsourcing solutions.</div>
+                                            <Link to="/contact-us" reloadDocument className="btn-gradient-blue">See Full Project Overview <FontAwesomeIcon icon={faAnglesRight} /></Link>
                                         </div>
-                                    </Tab.Pane>
-                                    <Tab.Pane eventKey="second">
-                                        <div className="reasons-tab-content">
-                                            <img src={socialMedia} alt="Social Media Optimization" className="reasons-content-icon" />
-                                            <h3 className="heading3">Social Media Optimization (SMO)</h3>
-                                            <p className="paragraph">Our Social media expert ensure to choose the right social media channels for your business that brings the maximum ROI. Our <b>Online ads company</b> optimize your entire social media and bring organic results in favor of your business.</p>
-                                        </div>
-                                    </Tab.Pane>
-                                    <Tab.Pane eventKey="third">
-                                        <div className="reasons-tab-content">
-                                            <img src={reputationManagement} alt="Reputation Management" className="reasons-content-icon" />
-                                            <h3 className="heading3">Online Reputation Management (ORM)</h3>
-                                            <p className="paragraph">A reputation of a business is a key to success. We provide online reputation management services that enhance your business reputation online or repair your negative image at online platforms. We help you to build a brand image of your business.</p>
-                                        </div>
-                                    </Tab.Pane>
-                                    <Tab.Pane eventKey="fourth">
-                                        <div className="reasons-tab-content">
-                                            <img src={ppcManagement} alt="PPC Campaign Management" className="reasons-content-icon" />
-                                            <h3 className="heading3">PPC Campaign Management by PPC ads expert</h3>
-                                            <p className="paragraph">We are <u>Digital marketing specialist</u> help you to create a profitable campaign for your business which can bring the most value to your business. <b>Google adwords</b> ads is one another best way of business growth.</p>
-                                        </div>
-                                    </Tab.Pane>
-                                    <Tab.Pane eventKey="fifth">
-                                        <div className="reasons-tab-content">
-                                            <img src={advertisingCampaigns} alt="Advertising Campaigns" className="reasons-content-icon" />
-                                            <h3 className="heading3">Display Advertising Campaigns</h3>
-                                            <p className="paragraph">Display advertisement works where you need to create awareness about your brand or product. This advertising campaign works proficiently when <a href="/social-media-marketing-services"><b>Social media campaign expert</b></a> handle all these marketing campaigns.</p>
-                                        </div>
-                                    </Tab.Pane>
-                                    <Tab.Pane eventKey="sixth">
-                                        <div className="reasons-tab-content">
-                                            <img src={contentMarketing} alt="Content Marketing" className="reasons-content-icon" />
-                                            <h3 className="heading3">Content Marketing</h3>
-                                            <p className="paragraph">All the products & services can work well if their message is delivered in an impressive way. Our content marketing services provide the content for your products & services that put an impact on your targeted audience.</p>
-                                        </div>
-                                    </Tab.Pane>
-                                    <Tab.Pane eventKey="seventh">
-                                        <div className="reasons-tab-content">
-                                            <img src={leadGeneration} alt="Lead Generation" className="reasons-content-icon" />
-                                            <h3 className="heading3">Lead Gen Campaign</h3>
-                                            <p className="paragraph">Our <a href="/b2b-lead-generation-campaign-services">Lead generation campaign</a> is beneficial for both B2B and B2C industries. This lead generation campaign works best where the sale of the product or service starts from capturing the audience's attention, feeding them with great offers and managing the leads by <u>Digital marketing company</u>.</p>
-                                        </div>
-                                    </Tab.Pane>
-                                    <Tab.Pane eventKey="eight">
-                                        <div className="reasons-tab-content">
-                                            <img src={linkBuilding} alt="Link Building" className="reasons-content-icon" />
-                                            <h3 className="heading3">Link Building</h3>
-                                            <p className="paragraph">Google search engine ranking is by far the best element to get higher ROI. Our SEO expert will work on your website and make sure that your website doesn't lack quality backlinks.</p>
-                                        </div>
-                                    </Tab.Pane>
-                                    <Tab.Pane eventKey="ninth">
-                                        <div className="reasons-tab-content">
-                                            <img src={conversionRate} alt="Conversion Rate Optimization" className="reasons-content-icon" />
-                                            <h3 className="heading3">Conversion Rate Optimization</h3>
-                                            <p className="paragraph">Bringing audience traffic to a website is challenging and time-consuming. But what is important is the conversion of the traffic into potential customers. Optimize the conversion rate of your website with IosAndWeb.</p>
-                                        </div>
-                                    </Tab.Pane>
-                                </Tab.Content>
-                            </div>
-                        </Tab.Container>
-                    </div>
-                </Container>
-            </div>
+                                        
+                                    </div>
+                                    </Col>                        
+                                    <Col lg={6}>
+                                    <div className="ddsMainImg">
+                                        <img src={ddfMain} alt="" />
+            
+                                    </div>
+            
+                                    </Col>
+                                </Row>
+                            </Container>
+            
+                        </div>
 
-            {/* get started section */}
-            <GetStarted 
-                title="Let's Start Building Web Solutions To Help Achieve Your Business Goals"
-                buttonText="Get Started"
-                link="/contact-us"
-            />
+                <BussinessGoal/>
 
-            {/* final reflection section */}
-            <div className="final-reflection-section section-padding">
+
+
+                {/*why to parthner with us Section  */}
+                <div className="WhyToParthnerSection padding black">
+                    <Container>
+                        <Row>
+                            <Col>
+                             <h1 className="heading_main split textaliginCenter">Why Partner With Us?</h1>
+                             <p className='fontSize18 lessPadding  textaliginCenter'>Engineering Market Leaders Through Strategy, Not Guesswork</p>
+
+                             <div className='whytochossUsDiv'>
+                                <div className='SingleSection'>
+                                    <span> 
+                                        <img src={img7} alt=""></img> <h3 className="FontSize25">No Set-Up Fee Required</h3>
+                                    </span>
+                                                                        <span> 
+                                        <img src={img5} alt=""></img> <h3 className="FontSize25">Data & Analytics Driven Approach</h3>
+                                    </span>
+                                                                        <span> 
+                                        <img src={img6} alt=""></img> <h3 className="FontSize25">Personal Audit & Competitor Analysis</h3>
+                                    </span>
+                                                                        <span> 
+                                        <img src={img8} alt=""></img> <h3 className="FontSize25">Monthly Marketing Roadmaps</h3>
+                                    </span>
+                                </div>
+                                    <div className='GridSection'>
+                                    <div className='GridSectionOuterDiv btn-gradient-border'>
+                                    <div className="imgDiWHyToChoose"><img src={img2} alt=""></img></div>
+                                    <div className="contentDiv">
+                                        <h1 className="FontSize25">
+                                        100% <br/> Transparency 
+                                        </h1>
+                                        <p className='FontSize18'>Get to see what you are paying for, as we ensure a complete transparent process with no random promises.</p>
+                                        </div>
+                                    </div> <div className='GridSectionOuterDiv uno btn-gradient-border'>
+                                    <div className="imgDiWHyToChoose"><img src={img4} alt=""></img></div>
+                                    <div className="contentDiv">
+                                        <h1 className="FontSize25">
+                                        Campaign Optimization
+                                        </h1>
+                                        <p className='FontSize18'>Fine-tune your campaigns with biweekly audits & monthly reports to improve customer lifetime value and profitability.</p>
+                                        </div>
+                                    </div> <div className='GridSectionOuterDiv uno  btn-gradient-border'>
+                                    <div className="imgDiWHyToChoose"><img src={img3} alt=""></img></div>
+                                    <div className="contentDiv">
+                                        <h1 className="FontSize25">
+                                        Get A Dedicated Manager
+                                        </h1>
+                                        <p className='FontSize18'>Benefit from personal attention through weekly call with your account manager to keep you up with the strategy & implementation.</p>
+                                        </div>
+                                    </div> <div className='GridSectionOuterDiv  btn-gradient-border'>
+                                    <div className="imgDiWHyToChoose"><img src={img1} alt=""></img></div>
+                                    <div className="contentDiv">
+                                        <h1 className="FontSize25">
+                                        Flexible Pricing
+                                        </h1>
+                                        <p className='FontSize18'>One glove doesn’t fit all nor does the same package or strategy. Get the flexibility to choose packages as per your business needs.</p>
+                                        </div>
+                                    </div>
+                                    </div>
+                             </div>
+                            </Col>
+                        </Row>
+                    </Container>
+                </div>
+
+                {/*  */}
+                <div className="turstedBySection padding black">
+                    <Container>
+                        <Row>
+                            <Col>
+                              <div className="TrustedDiv">
+                                <span className="btn-gradient-blue btnTrustBtn btn-gradient-border">
+                                    <h1 className="FontSize25">We are a Trusted:</h1>
+                                </span>
+                                 <img src={turest1} alt=""/>
+                                 <img src={turest2} alt=""/>
+                                 <img src={turest3} alt=""/>
+
+                              </div>
+                            
+                            </Col>
+                        </Row>
+                    </Container>
+                </div>
+            {/* <BusinessGrowth /> */}
+
+            <div className="beyoundClick padding linear-dark-background">
                 <Container>
                     <Row>
                         <Col>
-                            <h2 className="heading2">Our Path of Digital Marketing Success</h2>
-                            <div className="heading5">Initially, our <b>Digital marketing experts</b> maintain intimate relationships with you so that we can understand your business requirements and accordingly formulate digital marketing strategies and plans. There will be equal participation by you and our experts will collaborate with you on the project. Everything will be discussed related to project like goals, newly established strategies, timeframe and the key performing indicators (KPIs). We will provide regular updates and reports while working on the project so that you can track the progress and the success rate.</div>
-                            <div className="heading5">We will bring organic traffic to your website and helps you to get the maximum benefit from that traffic as well paid traffic by <a href="/ppc-services"><b>PPC Specialist</b></a>.</div>
-                            <div className="heading5">Various Digital Marketing Campaigns will be set up to establish your business online and several proven strategies will be implemented to increase the visibility of your business online and you can make the most out of Digital Marketing of your business.</div>
-                            <div className="heading5">Our way of working might be different but our aim is to bring profit for your business for the long-term. Initially, we may use techniques like PPC to get faster results. But slowly we will change and formulate different strategies in which we will use inbound marketing techniques to bring organic success. We aim to give you the best results on each & every penny that you've invested. Meet your business objectives with IosAndWeb Technologies and climb the ladder of success. Advertisement company near me.</div>
+                        <div className="beyoundClickDiv">
+                          <h1 className="heading_main textaliginCenter">Beyond Clicks: We Forge Enduring Customer Lifecycles</h1>
+                          <p className="FontSize18 textaliginCenter">Pioneering Digital Services for Long-Term Growth</p>
+                          <div className="beyoundClickSlider">
+                            <SliderContent></SliderContent>
+                          </div>
+                          </div>
 
-                            <div className="services-bottom-flex">
-                                <div className="services-bottom-wrap">
-                                    <div className="services-bottom-div">
-                                        <a href="/seo-services">
-                                            <img src={SEOIcon} className="services-bottom-front-image" alt="SEO Services" />
-                                            <h4 className="heading4">SEO Services</h4>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div className="services-bottom-wrap">
-                                    <div className="services-bottom-div">
-                                        <a href="/social-media-marketing-services">
-                                            <img src={socialMediaMarketing} className="services-bottom-front-image" alt="Social Media Marketing" />
-                                            <h4 className="heading4">Social Media Marketing</h4>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div className="services-bottom-wrap">
-                                    <div className="services-bottom-div">
-                                        <a href="/seo-page-speed-optimization-services">
-                                            <img src={pageSpeed} className="services-bottom-front-image" alt="SEO Page Speed" />
-                                            <h4 className="heading4">SEO Page Speed Optimization</h4>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div className="services-bottom-wrap">
-                                    <div className="services-bottom-div">
-                                        <a href="/english-copywriting-and-proofreading-services">    
-                                            <img src={proofreading} className="services-bottom-front-image" alt="Proofreading" />
-                                            <h4 className="heading4">English Copywriting & Proofreading Services</h4>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div className="services-bottom-wrap">
-                                    <div className="services-bottom-div">
-                                        <a href="/b2b-lead-generation-campaign-services">    
-                                            <img src={b2b} className="services-bottom-front-image" alt="B2B" />
-                                            <h4 className="heading4">B2B Lead Generation Campaign Services</h4>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div className="services-bottom-wrap">
-                                    <div className="services-bottom-div">
-                                        <a href="/digital-marketing-services-in-bristol">    
-                                            <img src={bristol} className="services-bottom-front-image" alt="Bristol" />
-                                            <h4 className="heading4">Digital Marketing Services in Bristol</h4>
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
                         </Col>
                     </Row>
                 </Container>
             </div>
-
+                        <div className="letsBuldTogtherSection  letsPowerBussince black section-padding ">
+                        <Container>
+                            <Row className="letsBuldTogtherdiv">
+                            <Col lg="6">
+                             <div className="letsBuldTogthercontent">
+                                <h1 className="heading_main split">Let's Empower Your Business to Achieve Peak Success Through Strategic Marketing</h1>
+                                <p className="FontSize18">Partner With IosAndWeb Technologies - India's Leading Mobile App Experts Turning Your Ideas Into Reality.</p>
+                                <Link to="/contact-us" reloadDocument className="btn-gradient-blue">Let's Build Together <FontAwesomeIcon icon={faAnglesRight} /></Link>
+            
+                             </div>             
+                            <img className="ImgSectionDiv" src={men} alt="" /> 
+                            </Col>
+                            </Row>
+                        </Container>               
+                        </div>
         </>
     )
 }

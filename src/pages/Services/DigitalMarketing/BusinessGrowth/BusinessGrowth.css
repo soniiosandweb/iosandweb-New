@@ -1,0 +1,125 @@
+/* ==============================
+   BUSINESS GROWTH SECTION
+============================== */
+
+.BussinessGrwothDiv {
+    width: 100%;
+    background-image: url("./businessGrowth.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 40px;
+    border-radius: 20px;
+}
+
+/* Heading */
+
+.HeadingDev {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Points Layout */
+
+.PinotDiv {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+/* Each Point */
+
+.topPotint1,
+.middlePotint2,
+.endPiont3,
+.Toppiont4,
+.MiddlePiont5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+span.NoOFDiv {
+    font-size: 48px;
+    font-weight: 800;
+    color: #353535;
+    margin-bottom: 10px;
+}
+
+span.textOfDiv {
+    font-size: 18px;
+    font-weight: 500;
+    max-width: 150px;
+}
+
+/* Center 10X Section */
+
+.imgDivScetion {
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ImageText10 {
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.revenuSection {
+    transform: rotate(-90deg);
+    margin-top: 20px;
+}
+/* ==============================
+   TABLET
+============================== */
+
+@media (max-width: 991px) {
+
+    .PinotDiv {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .imgDivScetion {
+        grid-column: span 3;
+        margin-top: 30px;
+    }
+
+}
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 767px) {
+
+    .BussinessGrwothDiv {
+        padding: 40px 20px;
+        background-color: #111111;
+        background-image: none;
+
+    }
+
+    .PinotDiv {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    
+    .imgDivScetion {
+        grid-column: auto;
+        margin-top: 30px;
+    }
+
+    .revenuSection {
+        transform: rotate(0deg);
+    }
+ 
+    .ddsMainImg img {
+    width: 100%;
+}
+}

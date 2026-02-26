@@ -1,31 +1,18 @@
 import React from "react";
 import './style.css';
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import { Container, Row, Col, } from "react-bootstrap";
 import SEO from "../../../components/SEO";
-import NumbersCards from "../../../components/NumbersCards";
 import BussinessGoal from "./bussinessGoal/BussinessGoal.jsx";
-import GetStarted from "../../../components/GetStarted";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeadphones, faPaintBrush, faImage, faBullhorn, faFileText, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
-import { faSearchengin } from "@fortawesome/free-brands-svg-icons";
+import {  faAnglesRight } from "@fortawesome/free-solid-svg-icons";
+
 import { Link, useLocation } from "react-router-dom";
 import Banner from "./banner/banner";
 import FeaturesPointsSection from "../../../components/FeaturesPointsSection/FeaturesPointsSection";
 import AnimatedText from "../../../components/AnimatedText/AnimatedText";
 import NumbersGrid from "../../../components/NumbersGrid/NumbersGrid";
 import ConcludingSection from "./ConcludingSection/ConcludingSection.jsx";
-
-// reasons to choose images
-const developMaintain = `${process.env.REACT_APP_API_URL}/assests/images/services/web-designing/develop-maintain.png`;
-const copywriting = `${process.env.REACT_APP_API_URL}/assests/images/services/web-designing/copywriting.png`;
-const optimisingSEO = `${process.env.REACT_APP_API_URL}/assests/images/services/web-designing/optimising-seo.png`;
-const socialMediaMarketing = `${process.env.REACT_APP_API_URL}/assests/images/services/web-designing/social-media-marketing.png`;
-const ppcADS = `${process.env.REACT_APP_API_URL}/assests/images/services/web-designing/ppc-ads.png`;
-
-// final reflection images
-const pdfHTML = `${process.env.REACT_APP_API_URL}/assests/images/services/web-designing/pdf-html.png`;
-const graphicDesign = `${process.env.REACT_APP_API_URL}/assests/images/services/web-designing/graphic-design.png`;
 
 const Group = `${process.env.REACT_APP_API_URL}/assests/services/webDesgin/Group.webp`;
 const rating = `${process.env.REACT_APP_API_URL}/assests/services/webDesgin/rating.webp`;
