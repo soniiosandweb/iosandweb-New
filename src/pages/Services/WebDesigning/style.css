@@ -93,6 +93,7 @@ span.mainText {
     background: radial-gradient(50% 50% at 50% 50%, #004EFF 0%, #27046D 100%);
     border-radius: 442px;
 }
+
 span.textHeading {
     display: flex;
     flex-direction: column;

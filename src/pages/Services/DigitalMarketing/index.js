@@ -72,7 +72,7 @@ function DigitalMarketing(){
 
             </div>
 
-            <div className="linear-dark-background section-padding DDSSection">
+            <div className="linear-dark-background section-padding DDSSection ChatSection">
                             <Container>
                                 <Row>
                                     <Col lg={6}>
@@ -197,7 +197,7 @@ function DigitalMarketing(){
                         </Row>
                     </Container>
                 </div>
-            {/* <BusinessGrowth /> */}
+            <BusinessGrowth />
 
             <div className="beyoundClick padding linear-dark-background">
                 <Container>

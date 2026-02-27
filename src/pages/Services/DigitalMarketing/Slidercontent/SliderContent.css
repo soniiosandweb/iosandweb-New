@@ -1,5 +1,6 @@
+
+
 .slider-section {
-  /* background: linear-gradient(135deg, #021b2f, #0a0f2c); */
   padding: 80px 40px;
 }
 
@@ -7,61 +8,94 @@
   max-width: 1200px;
   margin: auto;
 }
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  height: auto !important;
+  display: flex !important;
+}
+
+.slick-slide > div {
+  display: flex;
+  width: 100%;
+}
+
+.slick-list {
+  height: auto !important;
+}
+
 
 .card-wrapper {
   padding: 15px;
+  display: flex;
+  width: 100%;
 }
 
+
 .service-card {
-    background: #1c1c1c;
-    color: #fff;
-    padding: 35px 25px;
-    border-radius: 12px;
-    min-height: 630px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: all 0.3s ease;
-    border: 1px solid transparent;
+  background: #1c1c1c;
+  color: #fff;
+  padding: 35px 25px;
+  border-radius: 12px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+
+  min-height: 620px;   /* Desktop height */
 }
 
 .service-card:hover {
   transform: translateY(-8px);
+}
 
-}
+
 .serviesCardHeading {
-    display: flex;
-    align-items: start;
-    gap: 20px;
-    border-bottom: 1px solid;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 20px;
 }
+
+.serviesCardHeading img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
 .service-title {
-    font-size: 24px;
-    margin-bottom: 33px;
-    font-weight: 600;
-    /* text-decoration: underline; */
-    /* margin-bottom: 0px; */
-    /* padding-bottom: 2rem; */
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
 }
+
+
 .service-list {
-  margin-top:2rem ;
+  margin-top: 2rem;
   list-style: none;
   padding: 0;
 }
 
 .service-list li {
-    margin-bottom: 14px;
-    font-size: 18px;
-    position: relative;
-    padding-left: 20px;
-    line-height: 1.6;
+  margin-bottom: 14px;
+  font-size: 18px;
+  position: relative;
+  padding-left: 20px;
+  line-height: 1.6;
 }
 
 .service-list li::before {
   content: "•";
   position: absolute;
   left: 0;
-  color: white;
+  color: #b4f000;
   font-size: 18px;
 }
 
@@ -73,17 +107,51 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-top: 20px;
 }
 
 .consult-btn:hover {
   background: #9fd800;
 }
 
-/* Slick Dots Custom */
+
 .slick-dots li button:before {
   color: #fff;
 }
 
 .slick-dots li.slick-active button:before {
   color: #b4f000;
+}
+
+
+@media (max-width: 1199px) {
+  .service-card {
+    min-height: 580px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .slider-section {
+    padding: 50px 20px;
+  }
+
+  .service-card {
+    padding: 25px 18px;
+    min-height: 520px;
+  }
+
+  .service-title {
+    font-size: 20px;
+  }
+
+  .service-list li {
+    font-size: 15px;
+  }
+
+  .consult-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
 }

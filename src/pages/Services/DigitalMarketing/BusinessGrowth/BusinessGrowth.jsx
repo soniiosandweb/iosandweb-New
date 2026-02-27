@@ -16,6 +16,7 @@ const BusinessGrowth = () => {
                             <h1 className='FontSize25'>Focused on Your Business & Your Audience</h1>
                             <p className='FontSize18'>Driving Results by Understanding Your Business and Its Audience</p>
                         </div>
+                        <div className='LayoutSection'>
                         <div className='PinotDiv'>
                             <div className='topPotint1'>
                                 <span className='NoOFDiv'>1</span>
@@ -34,7 +35,9 @@ const BusinessGrowth = () => {
                                 <span className='NoOFDiv'>5</span>
                                 <span className='textOfDiv'>Optimize & improve Result</span></div>
 
-                            <div className='imgDivScetion'>
+                           
+                        </div>
+                         <div className='imgDivScetion'>
                                 <div className='Section10X'>
                                     <h1 className="ImageText10">10X</h1>
                                 </div>
@@ -42,7 +45,7 @@ const BusinessGrowth = () => {
                                     <h1 className="ImageText10">Revenue</h1>
                                 </div>
                             </div>
-                        </div>
+                            </div>
                        </div>
                     </Col>
                 </Row>

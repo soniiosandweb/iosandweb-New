@@ -38,3 +38,161 @@
       flex-direction: column-reverse;
     }
 }
+
+
+.bulid_you_coreer_Piont_div {
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+    gap: 20px;
+}
+.bulid_you_coreer_Piont_div .Build_whats_next {
+    padding: 50px;
+    /* border: 0.5px solid; */
+        background-color: #040812;
+        height: 320px;
+
+
+}
+.bulid_you_coreer_Piont_div .Heading {
+    font-size: 20px;
+    font-family: 'Poppins';
+    font-weight: 700;
+    padding-bottom: 2rem;
+    line-height: 20px;
+    
+}.bulid_you_coreer_Piont_div .para {
+    font-family: 'Poppins-Medium';
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}
+.investInYou .Build_whats_next {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 51px !important;
+    height: 304px;
+}
+.investInYou .FontSize18{
+    max-width: 80%;
+    text-align: center;
+    display: flex;
+
+}
+.build_you_carer_Section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.MoreThenWorkSpace{
+    background-color: #0C0707;
+    color: #ffffff;
+}
+
+.ContentSection .para {
+    font-family: 'Poppins-Medium';
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.ContentSection .Heading {
+    font-size: 20px;
+    font-family: 'Poppins';
+    font-weight: 700;
+    padding-bottom: 2rem;
+    line-height: 20px;
+    
+}
+.collabertionSection {
+    display: flex;
+    gap: 30px;
+}
+.ContentSection {
+    width: 50%;
+}
+.unoFlex{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.CareerSection {
+  background: #000;
+  color: #fff;
+}
+
+.CareerMainDiv {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.career-subtext {
+  margin-bottom: 50px;
+  color: #aaa;
+}
+
+/* Job List */
+.JobListSection {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Job Card */
+.JobCard {
+  background: #0e0e0e;
+  padding: 18px 25px;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  transition: 0.3s ease;
+}
+
+.JobCard:hover {
+  background: #151515;
+  transform: translateY(-4px);
+}
+
+.JobTitle {
+  flex: 1;
+  text-align: left;
+  font-size: 16px;
+}
+
+.JobExp {
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  color: #bbb;
+}
+
+.ApplyBtn {
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.ApplyBtn:hover {
+  color: #b4f000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .JobCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .JobExp {
+    text-align: left;
+  }
+
+  .ApplyBtn {
+    align-self: flex-end;
+  }
+}
