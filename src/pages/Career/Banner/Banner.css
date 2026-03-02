@@ -60,6 +60,10 @@ color: white;
 .transpernt_btn{
     background: transparent !important;
 }
-.HowWeWork_banner_flexs .FontSize25 {
-    font-family: 'Poppins';
+@media (max-width:767px) {
+.btnBannerDiv {
+    flex-direction: column;
+    align-items: start;
+}
+    
 }

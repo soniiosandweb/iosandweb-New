@@ -1,190 +1,363 @@
+import React from "react";
 import './style.css';
 import { Container, Row, Col } from "react-bootstrap";
 import SEO from "../../components/SEO";
-import { useLocation } from "react-router-dom";
-import Banner from "./Banner/Banner.jsx";
-const img1 = `${process.env.REACT_APP_API_URL}/assests/images/how_we_work/howWeWorkimg1.webp`;
-const img2 = `${process.env.REACT_APP_API_URL}/assests/images/how_we_work/howWeWorkimg2.webp`;
+import JoinOurTeam from "../../components/JoinOurTeam";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBarChart, faChevronRight, faCode, faCogs, faDesktop, faFileAlt, faLongArrowRight, faPaintBrush, faShoppingCart, faUserCog, faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faReact } from "@fortawesome/free-brands-svg-icons";
+import { Link, useLocation } from "react-router-dom";
+import Banner from './Banner/Banner.jsx'
+import TabSection from './TabSection.jsx'
+// import IndustriesWeTransform from './IndustriesWeTransform/IndustriesWeTransform'
 
-function HowWeWork(){
 
+// its iamges are in Carwwe page 
+const careerBanner = `${process.env.REACT_APP_API_URL}/assests/images/career/career-banner-image.webp`;
+
+// Reasons to join images
+
+const basePath = `${process.env.REACT_APP_API_URL}/assests/services/webdevlopment`;
+const shoppingCart = `${basePath}/close-up-view-shopping-cart-overloaded-with-food-while-background-female-person-choosing-products.webp`;
+const locationRoad = `${basePath}/location-symbols-road-with-mountains.webp`;
+const medicalBanner = `${basePath}/medical-banner-with-doctor-holding-stethoscope.webp`;
+const cleaningWoman = `${basePath}/medium-shot-woman-cleaning-home.webp`;
+const onlineShopping = `${basePath}/online-shopping-concept.webp`;
+// const rightArrow = `${basePath}/right-arrow.webp`;
+const uber = `${basePath}/young-uber-driver-car-interior.webp`
+const van = `${basePath}/young-courier-his-colleague-unloading-cardboard-boxes-from-delivery-van.webp`
+const designerWork = `${basePath}/set-designer-work-indoors.webp`;
+const chickenFood = `${basePath}/side-view-chicken-meatballs-with-greens-ketchup-plate.webp`;
+
+const careerImage = `${process.env.REACT_APP_API_URL}/assests/images/career/career-image.webp`;
+const checkBlue = `${process.env.REACT_APP_API_URL}/assests/images/career/checkBlue.webp`;
+const checkPink = `${process.env.REACT_APP_API_URL}/assests/images/career/checkPink.webp`;
+const point1 = `${process.env.REACT_APP_API_URL}/assests/images/career/point1.webp`;
+const point2 = `${process.env.REACT_APP_API_URL}/assests/images/career/point2.webp`;
+const point3 = `${process.env.REACT_APP_API_URL}/assests/images/career/point3.webp`;
+const point4 = `${process.env.REACT_APP_API_URL}/assests/images/career/point4.webp`;
+const point5 = `${process.env.REACT_APP_API_URL}/assests/images/career/point5.webp`;
+
+const supportAdvisor = `${process.env.REACT_APP_API_URL}/assests/images/career/support-advisor.webp`;
+const advisor = `${process.env.REACT_APP_API_URL}/assests/images/career/advisor.png`;
+const experts = `${process.env.REACT_APP_API_URL}/assests/images/career/experts.png`;
+const wellness = `${process.env.REACT_APP_API_URL}/assests/images/career/wellness.png`;
+
+const life = `${process.env.REACT_APP_API_URL}/assests/images/career/life.webp`;
+const experience = `${process.env.REACT_APP_API_URL}/assests/images/career/experience.png`;
+const diversity = `${process.env.REACT_APP_API_URL}/assests/images/career/diversity.png`;
+const foundation = `${process.env.REACT_APP_API_URL}/assests/images/career/society.png`;
+
+function Career(){
 
     const location = useLocation();
-
-    return (
+    const industriesData = [
+        {
+            imgUrl: chickenFood,
+            message: "Food & Restaurant",
+        },
+        {
+            imgUrl: shoppingCart,
+            message: "ON Demand",
+        },
+        {
+            imgUrl: medicalBanner,
+            message: "Healthcare",
+        },
+        {
+            imgUrl:onlineShopping ,
+            message: "eCommerce",
+        },
+        {
+            imgUrl: designerWork,
+            message: "Real Estate",
+        },
+        {
+            imgUrl: cleaningWoman,
+            message: "Home Service",
+        },
+        {
+            imgUrl: van,
+            message: "Delivery Logistic",
+        },
+        {
+            imgUrl: uber,
+            message: "Taxi & Transportation",
+        },
+        {
+            imgUrl: locationRoad,
+            message: "Route Map",
+        },
+        ];
+    
+    return(
         <>
-
             <SEO
-                title={"How We Work - IosAndWeb Technologies"}
-                name={"IosAndWeb Technologies"}
+                title={"Boost Your Career in Web Development and Digital Marketing Jobs"}
+                description={"IAW - Apply for Web Development and Digital Marketing Jobs and enhance your skills with IosAndWeb Technologies. Consult our HR department."}
                 canonicalUrl={`${process.env.REACT_APP_API_URL}${location.pathname}`}
             />
-   
-             <Banner/>
-
-
-             <div className="bulid_you_coreer section-padding black no-bottom-padding">
+            <Banner></Banner>
+            {/* Our Core Values */}
+            <div className="how-we-work-Values  section-padding black">
                <Container>
-                 <Row>
-                    <Col>
-                      <div className="build_you_carer_Section">
-                         <h1 className="heading-mean textaliginCenter">Build Your Career, Your Way</h1>
-                         <p className='FontSize18  textaliginCenter'>Where individual growth meets collective success</p>
-
-                         <div className="bulid_you_coreer_Piont_div padding ">
-                            <div className="Build_whats_next">
-                                <h1 className="Heading">Cutting-Edge Tech Stack</h1>
-                                <div className="para">Work with the tools shaping tomorrow,
-                                   AI/ML, cloud-native architecture, modern frameworks. Stay ahead, stay relevant, stay excited
-                                </div>
-                            </div>                            
-                            <div className="Build_whats_next">
-                                <h1 className="Heading">Build What's Next</h1>
-                                <div className="para">Technical expert? Team leader? Product
-                                    innovator? We build your career path around your aspirations, not a rigid
-                                    corporate ladder. We​‍​‌‍​‍‌​‍​‌‍​‍‌ build your career path around your aspirations, not a rigid corporate ​‍​‌‍​‍‌​‍​‌‍​‍‌ladder.
-                                </div>
-                            </div>                            
-                            <div className="Build_whats_next">
-                                <h1 className="Heading">Build What's Next</h1>
-                                <div className="para">Create technology solutions that scale
-                                    globally. Your work impacts real users, solves real problems, and shapes the
-                                    future of digital experiences.
-                                </div>
-                            </div>
-                         </div>
-                      </div>
-
-                    </Col>
-                 </Row>
-               </Container> 
-
-             </div>  
-             <div className="investInYou section-padding black less-bottom-padding">
-               <Container>
-                 <Row>
-                    <Col>
-                      <div className="build_you_carer_Section">
-                         <h1 className="heading-mean textaliginCenter">Invest in Yourself, We'll Invest in You</h1>
-                         <p className='FontSize18  textaliginCenter'>Comprehensive programs and resources designed to accelerate your growth and well-being at every stage of your journey.</p>
-
-                         <div className="bulid_you_coreer_Piont_div padding ">
-                            <div className="Build_whats_next">
-                                <h1 className="Heading">IosAndWeb Desk</h1>
-                                <div className="para">Your workspace, your way. MacBook Pro or custom PC builds, Herman Miller chairs, dual 4K monitors, and collaborative spaces designed for focus and creativity.
-                                </div>
-                            </div>                            
-                            <div className="Build_whats_next">
-                                <h1 className="Heading">IosAndWeb Academy </h1>
-                                <div className="para">Annual​‍​‌‍​‍‌​‍​‌‍​‍‌ Learning budget of $5,000 per employee. Take advantage of Udemy for Business, go to industry conferences, get certifications, and join weekly tech talks and ​‍​‌‍​‍‌​‍​‌‍​‍‌lunch-and-learns
-                                </div>
-                            </div>                            
-                            <div className="Build_whats_next">
-                                <h1 className="Heading">Career Built Around You</h1>
-                                <div className="para">Quarterly career development conversations, clear IC and management tracks, internal mobility opportunities, and transparent leveling criteria so you always know where you stand.
-                                </div>
-                            </div><div className="Build_whats_next">
-                                <h1 className="Heading">IosAndWeb Advisor</h1>
-                                <div className="para">-on-1 mentorship matching you with senior engineers and leaders. Monthly sessions focused on your goals, plus ad-hoc guidance whenever challenges arise.
-                                </div>
-                            </div><div className="Build_whats_next">
-                                <h1 className="Heading">IosAndWeb Expert</h1>
-                                <div className="para">On-demand access to our internal network of domain specialists. Get architectural reviews, security audits, performance optimization help, and expert guidance when you need it most
-                                </div>
-                            </div><div className="Build_whats_next">
-                                <h1 className="Heading">IosAndWeb Wellness</h1>
-                                <div className="para">Comprehensive health insurance, mental health days, gym memberships, meditation app subscriptions, flexible hours, and wellness stipends to support your whole self.
-                                </div>
-                            </div>
-                         </div>
-                      </div>
-
-                    </Col>
-                 </Row>
-               </Container> 
-
-             </div>
-
-            <div className="MoreThenWorkSpace section-padding  less-bottom-padding">
-                <Container>
-                    <Row>
-                        <Col>
-                           <div className="MorethenWorkDiv">
-                         <h1 className="heading-mean textaliginCenter">More​‍​‌‍​‍‌​‍​‌‍​‍‌ Than a Workplace</h1>
-                         <p className='FontSize18  textaliginCenter'>A community where you belong</p>
-                            
-                            <div>
-                                <div className="collabertionSection padding">
-                                  <img className="ImgSection" src={img1} alt="" />
-                                  <div className="ContentSection">
-                                    <h1 className="Heading">Collaborative & Open</h1>
-                                    <div className="para">No one is locked out. No one is left behind. Our working environment encourages both planned and on-the-spot collaboration as well as deep work. You get the best of both worlds - bright, trendy office space or home - as you decide and our promise is flexibility, well-stocked offices, and communication tools for everyone
-                                    </div>
-                                  </div>
-                                </div>
-                                <div className="collabertionSection unoFlex padding">
-                                  <img className="ImgSection" src={img2} alt="" />
-                                  <div className="ContentSection">
-                                    <h1 className="Heading">Collaborative & Open</h1>
-                                    <div className="para">No one is locked out. No one is left behind. Our working environment encourages both planned and on-the-spot collaboration as well as deep work. You get the best of both worlds - bright, trendy office space or home - as you decide and our promise is flexibility, well-stocked offices, and communication tools for everyone
-                                    </div>
-                                  </div>
-                                </div>
-                            </div>
-                           </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
-             <div className="CareerSection section-padding ">
-            <Container>
                 <Row>
-                <Col>
-                    <div className="CareerMainDiv">
-
-                    <h1 className="heading-mean textaliginCenter">
-                        Your Next Career Move Starts Here
-                    </h1>
-
-                    <p className="FontSize18 textaliginCenter career-subtext">
-                        Explore open positions across development, design, business, and more.
-                        Find the role that fits your expertise and ambitions
-                    </p>
-
-                    {/** ===== JOB ARRAY ===== */}
-                    {(() => {
-                        const jobs = [
-                        { title: "PHP Developer (WordPress)", exp: "2-4 Years Exp." },
-                        { title: "Quality Analyst", exp: "3+ Year Exp." },
-                        { title: "UI/UX Designer", exp: "3+ Year Exp." },
-                        { title: "Magento Developer", exp: "2-5 Years Exp." },
-                        { title: "Business Analyst", exp: "3-6 Years Exp." },
-                        { title: "Business Dev. Manager (BDM)", exp: "5+ Years Exp." },
-                        { title: "Frontend Developer", exp: "2-4 Years Exp." },
-                        ];
-
-                        return (
-                        <div className="JobListSection">
-                            {jobs.map((job, index) => (
-                            <div className="JobCard" key={index}>
-                                <div className="JobTitle">{job.title}</div>
-                                <div className="JobExp">{job.exp}</div>
-                                <div className="ApplyBtn">Apply</div>
+                    <Col>
+                    <div className="How_we_work_Values_section ">
+                        <div className="TopSectionHowWeWorkSection">
+                            <div className="topSectionDiv">
+                                <img src={checkBlue} alt="" />
+                                <p className="FontSize18">Client-First, Transparent Work Culture </p>
+                            </div>                            
+                            <div className="topSectionDiv">
+                                <img src={checkBlue} alt="" />
+                                <p className="FontSize18">Experienced Developers & designers </p>
+                            </div>                            
+                            <div className="topSectionDiv">
+                                <img src={checkBlue} alt="" />
+                                <p className="FontSize18">Agile, result-oriented delivery model </p>
+                            </div>                            
+                            <div className="topSectionDiv">
+                                <img src={checkBlue} alt="" />
+                                <p className="FontSize18">On-time project completion </p>
                             </div>
-                            ))}
                         </div>
-                        );
-                    })()}
+                        <h1 className="heading_main textaliginCenter">Our Core Values</h1>
+                        <p className="heading_main textaliginCenter">Driven by Innovation. Powered by Trust.</p>
+
+                        <div className="DownsectionHowWeWork">
+                            <div className="BottomSecitionDiv">
+                                <p className="FontSize18 bold">Innovation</p>
+                                <p className="FontSize14">Adopting Modern technologies to build future-ready solutions.</p>
+                            </div>
+                            <div className="BottomSecitionDiv">
+                                <p className="FontSize18 bold">Transparency</p>
+                                <p className="FontSize14">Clear Communication at every stage of Development</p>
+                            </div>
+                            <div className="BottomSecitionDiv">
+                                <p className="FontSize18 bold">Quality</p>
+                                <p className="FontSize14">Strict Coding Standards and Multi-level testing.</p>
+                            </div>
+                            <div className="BottomSecitionDiv">
+                                <p className="FontSize18 bold">Commitmentx</p>
+                                <p className="FontSize14">Long-term partnership, not just project delivery.</p>
+                            </div>
+                        </div>
+                        
 
                     </div>
-                </Col>
+                    </Col>
                 </Row>
-            </Container>
+               </Container>
             </div>
 
+                                   <div className="what_set_us_part black section-padding no-top-padding text-white ">
+                                       <Container>
+                                           <Row className="align-items-center textaliginCenter">
+                                               <Col>
+                                                   <div className=''>
+                                                       <h1  className='split padding'>Tailored Digital Solutions  
+                                                           <span className="text-highlight split"> Across Industries</span> </h1>
+                                                       <div>
+                   
+                                                           <span>
+                                                             We Deliver Custom Web and Mobile Solutions For Businesses across diverse domains, ensuring specific industry needs are met with precisions.
+                                                           </span>
+                   
+                                                       </div>
+                                                       <div>
+                                                           <div className="industries_transform_grid padding">
+                                                           {industriesData.map((item, i) => (
+                                                   <Link reloadDocument to={item.link} key={i} className="industries_transform_item industries_boxes">
+                                                       <img src={item.imgUrl} alt={item.imgUrl} className="industries_transform_image" />
+                                                       <div className="industries_transform_contents">
+                                                           <div className="industries_transform_left">
+                                                               <h3 className="industries_transform_title textalignleft">{item.message}</h3>
+                                                               <p className="industries_transform_text textalignleft">Web Development</p>
+                                                           </div>
+                                                           <div className="industries_transform_arrow">
+                                                               <FontAwesomeIcon icon={faLongArrowRight} />
+                                                           </div>
+                                                       </div>
+                                                   </Link>
+                                                           ))}
+                                                           </div>
+                   
+                                                       </div>
+                   
+                                                   </div>
+                                               </Col>
+                                           </Row>
+                                       </Container>
+                                   </div>
+                        <TabSection></TabSection>
+                        
+                        <div className='howWEWorkProcess black section-padding no-top-padding textaliginCenter'>
+                            <Container >
+                                <Row>
+                                    <Col>
+                                        <div className="Process1HowWeWork">
+                                           <div className="processStepHowWeWrok">
+                                            <h1 className="noOfPoint">01</h1>
+                                            <h1 className="FontSize25 ">Discovery & Briefing</h1>
+                                            <div className='FontSize18 bold' >Understanding Your Business Vision</div>
+                                            <p className="FontSize14 textalignleft">We Begin by thoroughly analyzing your business ideas, goals, and requirements to propose the most effective digital solutions tailored to your brand.</p>
+
+                                            <div className="PointListProcess">
+                                                <span className='listPiont'>
+                                                    <img src={checkBlue} alt="" />
+                                                    <p className="FontSize14 bold">One-on-one consultation with industry experts</p>
+                                                </span>
+                                                <span className='listPiont'>
+                                                    <img src={checkBlue} alt="" />
+                                                    <p className="FontSize14 bold">Strategic Planning and accurate Project estimation</p>
+                                                </span>
+                                                <span className='listPiont'>
+                                                    <img src={checkBlue} alt="" />
+                                                    <p className="FontSize14 bold">In-Depth market and competitor research to keep you ahead</p>
+                                                </span>
+                                            </div>
+                                            </div> 
+                                           <img className='ProcessHowWeWorkImg' src={point1} alt="" />
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </Container>
+                        </div>
+                        <div className='howWEWorkProcess black section-padding no-top-padding textaliginCenter'>
+                            <Container >
+                                <Row>
+                                    <Col>
+                                        <div className="Process1HowWeWork PINKUNO">
+                                        <img className='ProcessHowWeWorkImg' src={point2} alt="" />
+                                           <div className="processStepHowWeWrok">
+                                            <h1 className="noOfPoint">02</h1>
+                                            <h1 className="FontSize25 blue ">Research & Architecture</h1>
+                                            <div className='FontSize18 bold' >Building a strong & technical foundation</div>
+                                            <p className="FontSize14 textalignleft">Our team explore the latest technologies and framework to design a robust, scalable, and customized architecture for your business needs.</p>
+
+                                            <div className="PointListProcess">
+                                                <span className='listPiont'>
+                                                    <img src={checkPink} alt="" />
+                                                    <p className="FontSize14 bold">Selection of the right tech stack</p>
+                                                </span>
+                                                <span className='listPiont'>
+                                                    <img src={checkPink} alt="" />
+                                                    <p className="FontSize14 bold">Fully Customized Solution architecture</p>
+                                                </span>
+                                                <span className='listPiont'>
+                                                    <img src={checkPink} alt="" />
+                                                    <p className="FontSize14 bold">User-Centric UI/UX design for superior customer experience</p>
+                                                </span>
+                                            </div>
+                                            </div> 
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </Container>
+                        </div>
+                        <div className='howWEWorkProcess black section-padding no-top-padding textaliginCenter'>
+                            <Container >
+                                <Row>
+                                    <Col>
+                                        <div className="Process1HowWeWork">
+                                           <div className="processStepHowWeWrok">
+                                            <h1 className="noOfPoint">03</h1>
+                                            <h1 className="FontSize25 ">Design & Development</h1>
+                                            <div className='FontSize18 bold' >Transforming Ideas into roducts</div>
+                                            <p className="FontSize14 textalignleft">We Convert approves Designs into Secure, Clean, and High-Performance code while integrating advanced feature and seamless functionality.</p>
+
+                                            <div className="PointListProcess">
+                                                <span className='listPiont'>
+                                                    <img src={checkBlue} alt="" />
+                                                    <p className="FontSize14 bold">Intuitive and visually appealing interface design </p>
+                                                </span>
+                                                <span className='listPiont'>
+                                                    <img src={checkBlue} alt="" />
+                                                    <p className="FontSize14 bold">Core Functionality Development with modern Frameworks</p>
+                                                </span>
+                                                <span className='listPiont'>
+                                                    <img src={checkBlue} alt="" />
+                                                    <p className="FontSize14 bold">Performance-optimized and future-ready development</p>
+                                                </span>
+                                            </div>
+                                            </div> 
+                                           <img className='ProcessHowWeWorkImg' src={point3} alt="" />
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </Container>
+                        </div>
+                         <div className='howWEWorkProcess black section-padding no-top-padding textaliginCenter'>
+                            <Container >
+                                <Row>
+                                    <Col>
+                                        <div className="Process1HowWeWork PINKUNO">
+                                        <img className='ProcessHowWeWorkImg' src={point4} alt="" />
+                                           <div className="processStepHowWeWrok">
+                                            <h1 className="noOfPoint">04</h1>
+                                            <h1 className="FontSize25 blue ">Testing & QA</h1>
+                                            <div className='FontSize18 bold' >Delivering Bug-Free Solutions</div>
+                                            <p className="FontSize14 textalignleft">Our team explore the latest technologies and framework to design a robust, scalable, and customized architecture for your business needs.</p>
+
+                                            <div className="PointListProcess">
+                                                <span className='listPiont'>
+                                                    <img src={checkPink} alt="" />
+                                                    <p className="FontSize14 bold">Selection of the right tech stack</p>
+                                                </span>
+                                                <span className='listPiont'>
+                                                    <img src={checkPink} alt="" />
+                                                    <p className="FontSize14 bold">Fully Customized Solution architecture</p>
+                                                </span>
+                                                <span className='listPiont'>
+                                                    <img src={checkPink} alt="" />
+                                                    <p className="FontSize14 bold">User-Centric UI/UX design for superior customer experience</p>
+                                                </span>
+                                            </div>
+                                            </div> 
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </Container>
+                        </div>
+                         <div className='howWEWorkProcess black section-padding no-top-padding textaliginCenter'>
+                            <Container >
+                                <Row>
+                                    <Col>
+                                        <div className="Process1HowWeWork">
+                                        
+                                           <div className="processStepHowWeWrok">
+                                            <h1 className="noOfPoint">05</h1>
+                                            <h1 className="FontSize25 ">Launch & Growth</h1>
+                                            <div className='FontSize18 bold' >Wrapping Up for Success</div>
+                                            <p className="FontSize14 textalignleft">We ensure a smooth and successful product launch while supporting your business with result-oriented strategies for sustained growth.</p>
+
+                                            <div className="PointListProcess">
+                                                <span className='listPiont'>
+                                                    <img src={checkBlue} alt="" />
+                                                    <p className="FontSize14 bold">Hassle-Free deployment with </p>
+                                                </span>
+                                                <span className='listPiont'>
+                                                    <img src={checkBlue} alt="" />
+                                                    <p className="FontSize14 bold">Ongoing Performance Monitoring </p>
+                                                </span>
+                                                <span className='listPiont'>
+                                                    <img src={checkBlue} alt="" />
+                                                    <p className="FontSize14 bold">Strategic Promotion to maximize reach and ROI</p>
+                                                </span>
+                                            </div>
+                                            </div> 
+                                            <img className='ProcessHowWeWorkImg' src={point5} alt="" />
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </Container>
+                        </div>
+                        
             
+
         </>
     )
 }
 
-export default HowWeWork;
+export default Career;

@@ -16,12 +16,11 @@ const Banner = () => {
                     <Col lg='7' >
                         <div className="HowWeWork_banner_flexs   no-bottom-padding">
                             <div className="weWork_banner_cols contents_block">
-                                <p className="FontSize25">HOW WE WORK</p>
-                                <h1 className="heading_main ">Smart Web & Mobile Solution <div className="text-highlight split" >That Elevate Your Brand</div></h1>
-                                <p className="paragraph_content">Accelerate Business growth with Our end-to-end Digital Development Process, Design to Deliver Scalable, Secure, and high- performing Solutions.</p>
+                                <h1 className="heading_main split">Your Next Career Move Starts at IosAndWeb Technologies</h1>
+                                <p className="paragraph_content">Work on transformative technology projects that shape industries in a team where they appreciate your skills, they support your goals, and they don't put a limit on your potential.</p>
                             <div className="btnBannerDiv">
-                            <Link to="/contact-us" reloadDocument className="btn-gradient-blue">View Open Positions <FontAwesomeIcon icon={faAnglesRight} /></Link>
-
+                            <Link to="/contact-us" reloadDocument className="btn-gradient-blue">View Open Positions <FontAwesomeIcon icon={faAnglesRight} /></Link> 
+                            <Link to="/contact-us" reloadDocument className="btn-gradient-border transpernt_btn">Learn Our Story <FontAwesomeIcon icon={faAnglesRight} /></Link>
                             </div>
                             </div>
                         </div>

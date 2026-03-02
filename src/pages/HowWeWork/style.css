@@ -1,198 +1,178 @@
-/* how we work page */
-.how-we-work-banner{
-    background-color: #000;
+/* Career page */
+.career-banner{
+    background-color: #0d3577;
 }
-.subheading {
-    text-transform: uppercase;
-    font-size: 20px;
-}
-  
-/* Briefing section */
-.section-less-padding{
-    padding: 60px 0;
-}
-.how-we-work-lists {
-    list-style: none;
-    padding: 0;
-}
-.how-we-work-lists li {
-    position: relative;
-    padding-left: 24px;
+/* reasons to join */
+.reasons-join-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
     margin-bottom: 20px;
 }
-.how-we-work-lists li::before {
-    width: 15px;
-    height: 15px;
-    content: "";
-    position: absolute;
-    border: solid 3px #212529;
-    background-color: transparent;
-    border-radius: 50%;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+.reasons-join-item img.responsive-img {
+    width: 60px;
 }
-@media (max-width: 991px){
-    .row-reverse-mobile{
-      flex-direction: column-reverse;
+.reasons-join-item-content .paragraph {
+    margin: 0;
+}
+@media (max-width: 767px) {
+    .reasons-to-join .heading3,
+    .reasons-to-join .heading5{
+        text-align: center;
     }
 }
-
-
-.bulid_you_coreer_Piont_div {
-    display: grid;
-    grid-template-columns: repeat(3 ,1fr);
+/* Job Positions */
+.job-positions-flex {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+.job-positions-flex .job-positions-item {
+    display: flex;
     gap: 20px;
+    flex: 1 0 30%;
 }
-.bulid_you_coreer_Piont_div .Build_whats_next {
-    padding: 50px;
-    /* border: 0.5px solid; */
-        background-color: #040812;
-        height: 320px;
+.job-position-content p {
+    margin: 0;
+}
+.job-positions-flex .job-positions-item svg {
+    font-size: 40px;
+    width: 50px;
+}
 
 
+.TopSectionHowWeWorkSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 4rem;
 }
-.bulid_you_coreer_Piont_div .Heading {
-    font-size: 20px;
-    font-family: 'Poppins';
-    font-weight: 700;
-    padding-bottom: 2rem;
-    line-height: 20px;
-    
-}.bulid_you_coreer_Piont_div .para {
-    font-family: 'Poppins-Medium';
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 500;
+
+.TopSectionHowWeWorkSection .topSectionDiv {
+    display: flex;
+    align-items: start;
+    gap: 12px;
+    width: 275px;
+    height: 130px;
+background: linear-gradient(151.1deg, rgba(184, 184, 184, 0.08) 6.8%, rgba(154, 154, 154, 0.08) 99.93%);
+    padding: 22px 30px;
+    /* border: 1px solid #FFFFFF; */
+    border-radius: 15px;
 }
-.investInYou .Build_whats_next {
+.DownsectionHowWeWork {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+.BottomSecitionDiv {
+    width: 272px;
+    height: 245px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+background: linear-gradient(151.1deg, rgba(184, 184, 184, 0.08) 6.8%, rgba(154, 154, 154, 0.08) 99.93%);
+    padding: 37px;
+}
+.processStepHowWeWrok {
     display: flex;
     flex-direction: column;
     align-items: start;
-    justify-content: center;
-    padding: 51px !important;
-    height: 304px;
+    gap: 22px;
 }
-.investInYou .FontSize18{
-    max-width: 80%;
-    text-align: center;
-    display: flex;
-
-}
-.build_you_carer_Section {
+img.ProcessHowWeWorkImg {
+    height: 100%;
+    width: 50%;
+}.processStepHowWeWrok {
     display: flex;
     flex-direction: column;
+    align-items: start;
+    gap: 22px;
+}   
+
+.Process1HowWeWork {
+    display: flex;
+    gap: 50px;
     align-items: center;
+    padding: 44px;
+    background: #181818;
+    border-radius: 9px;
+}
+h1.noOfPoint {
+    line-height: 20px;
+    font-size: 55px;
+    font-weight: 900;
+    color: #5D5959;
+    position: relative;
+    top: 18px;
 }
 
-.MoreThenWorkSpace{
-    background-color: #0C0707;
-    color: #ffffff;
+.processStepHowWeWrok .FontSize25 {
+    font-size: 25px !important;
+    font-family: "Poppins-Bold";
+    color: #FF00FB;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
 }
-
-.ContentSection .para {
-    font-family: 'Poppins-Medium';
+.Process1HowWeWork .FontSize14 {
     font-size: 14px;
-    line-height: 20px;
-    font-weight: 500;
+    color: #8C8C8C;
 }
-
-.ContentSection .Heading {
-    font-size: 20px;
-    font-family: 'Poppins';
-    font-weight: 700;
-    padding-bottom: 2rem;
-    line-height: 20px;
+img.ProcessHowWeWorkImg {
+    height: 100%;
+    width: 55%;
+}
+span.listPiont {
+    display: flex;
+    align-items: start;
+    gap: 16px;
+    text-align: left;
+}
+.blue{
+    color: #387DFF !important;
+}
+@media (max-width:1199px) {
+    .job-positions-flex {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+.DownsectionHowWeWork {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
     
 }
-.collabertionSection {
-    display: flex;
-    gap: 30px;
-}
-.ContentSection {
-    width: 50%;
-}
-.unoFlex{
-    display: flex;
-    flex-direction: row-reverse;
-}
-.CareerSection {
-  background: #000;
-  color: #fff;
-}
 
-.CareerMainDiv {
-  max-width: 1000px;
-  margin: auto;
-}
-
-.career-subtext {
-  margin-bottom: 50px;
-  color: #aaa;
-}
-
-/* Job List */
-.JobListSection {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-/* Job Card */
-.JobCard {
-  background: #0e0e0e;
-  padding: 18px 25px;
-  border-radius: 8px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  transition: 0.3s ease;
-}
-
-.JobCard:hover {
-  background: #151515;
-  transform: translateY(-4px);
-}
-
-.JobTitle {
-  flex: 1;
-  text-align: left;
-  font-size: 16px;
-}
-
-.JobExp {
-  flex: 1;
-  text-align: center;
-  font-size: 14px;
-  color: #bbb;
-}
-
-.ApplyBtn {
-  cursor: pointer;
-  font-size: 14px;
-  transition: 0.3s ease;
-}
-
-.ApplyBtn:hover {
-  color: #b4f000;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .JobCard {
+@media (max-width:991px) {
+    .Process1HowWeWork {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-  .JobExp {
-    text-align: left;
-  }
-
-  .ApplyBtn {
-    align-self: flex-end;
-  }
+}
+img.ProcessHowWeWorkImg {
+    height: 100%;
+    width: 100%;
+}.Process1HowWeWork.PINKUNO {
+    flex-direction: column-reverse;
+}
+}
+@media (max-width:767px) {
+    .TopSectionHowWeWorkSection {
+    justify-content: center;
+}
+.DownsectionHowWeWork {
+    justify-content: center;
+}
+    
 }

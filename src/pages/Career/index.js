@@ -1,269 +1,192 @@
-import React from "react";
 import './style.css';
 import { Container, Row, Col } from "react-bootstrap";
-import SEO from "../../components/SEO";
-import JoinOurTeam from "../../components/JoinOurTeam";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBarChart, faChevronRight, faCode, faCogs, faDesktop, faFileAlt, faPaintBrush, faShoppingCart, faUserCog, faUsers } from "@fortawesome/free-solid-svg-icons";
-import { faReact } from "@fortawesome/free-brands-svg-icons";
+import SEO from "../../components/SEO/index.js";
 import { useLocation } from "react-router-dom";
+import Banner from "./Banner/Banner.jsx";
+const img1 = `${process.env.REACT_APP_API_URL}/assests/images/how_we_work/howWeWorkimg1.webp`;
+const img2 = `${process.env.REACT_APP_API_URL}/assests/images/how_we_work/howWeWorkimg2.webp`;
 
-const careerBanner = `${process.env.REACT_APP_API_URL}/assests/images/career/career-banner-image.webp`;
+function HowWeWork(){
 
-// Reasons to join images
-const careerImage = `${process.env.REACT_APP_API_URL}/assests/images/career/career-image.webp`;
-const desk = `${process.env.REACT_APP_API_URL}/assests/images/career/desk.png`;
-const academy = `${process.env.REACT_APP_API_URL}/assests/images/career/academy.png`;
-const innovation = `${process.env.REACT_APP_API_URL}/assests/images/career/innovation.png`;
-
-const supportAdvisor = `${process.env.REACT_APP_API_URL}/assests/images/career/support-advisor.webp`;
-const advisor = `${process.env.REACT_APP_API_URL}/assests/images/career/advisor.png`;
-const experts = `${process.env.REACT_APP_API_URL}/assests/images/career/experts.png`;
-const wellness = `${process.env.REACT_APP_API_URL}/assests/images/career/wellness.png`;
-
-const life = `${process.env.REACT_APP_API_URL}/assests/images/career/life.webp`;
-const experience = `${process.env.REACT_APP_API_URL}/assests/images/career/experience.png`;
-const diversity = `${process.env.REACT_APP_API_URL}/assests/images/career/diversity.png`;
-const foundation = `${process.env.REACT_APP_API_URL}/assests/images/career/society.png`;
-
-function Career(){
 
     const location = useLocation();
-    
-    return(
+
+    return (
         <>
+
             <SEO
-                title={"Boost Your Career in Web Development and Digital Marketing Jobs"}
-                description={"IAW - Apply for Web Development and Digital Marketing Jobs and enhance your skills with IosAndWeb Technologies. Consult our HR department."}
+                title={"How We Work - IosAndWeb Technologies"}
+                name={"IosAndWeb Technologies"}
                 canonicalUrl={`${process.env.REACT_APP_API_URL}${location.pathname}`}
             />
+   
+             <Banner/>
 
-            {/* Banner section */}
-            <div className="career-banner banner-padding text-white">
-                <Container>
-                    <Row className="align-items-center">
-                        <Col lg={6}>
-                            <div className="heading-wrapper">
-                                <h1><span className="text-highlight">Career</span> at IosAndWeb Technologies</h1>
-                                <div className="heading5">We are a global technology company that offers team members great potential for professional growth. Would you like to become part of our team? Then we look forward to getting to know you personally. We provide a supportive and inclusive environment with some perks.</div>
-                                <button onClick={() => document.getElementById('JoinForm')?.scrollIntoView()} className="btn btn-white-border">Apply Now <FontAwesomeIcon icon={faChevronRight} /></button>
+
+             <div className="bulid_you_coreer section-padding black no-bottom-padding">
+               <Container>
+                 <Row>
+                    <Col>
+                      <div className="build_you_carer_Section">
+                         <h1 className="heading-mean textaliginCenter">Build Your Career, Your Way</h1>
+                         <p className='FontSize18  textaliginCenter'>Where individual growth meets collective success</p>
+
+                         <div className="bulid_you_coreer_Piont_div padding ">
+                            <div className="Build_whats_next">
+                                <h1 className="Heading">Cutting-Edge Tech Stack</h1>
+                                <div className="para">Work with the tools shaping tomorrow,
+                                   AI/ML, cloud-native architecture, modern frameworks. Stay ahead, stay relevant, stay excited
+                                </div>
+                            </div>                            
+                            <div className="Build_whats_next">
+                                <h1 className="Heading">Build What's Next</h1>
+                                <div className="para">Technical expert? Team leader? Product
+                                    innovator? We build your career path around your aspirations, not a rigid
+                                    corporate ladder. We​‍​‌‍​‍‌​‍​‌‍​‍‌ build your career path around your aspirations, not a rigid corporate ​‍​‌‍​‍‌​‍​‌‍​‍‌ladder.
+                                </div>
+                            </div>                            
+                            <div className="Build_whats_next">
+                                <h1 className="Heading">Build What's Next</h1>
+                                <div className="para">Create technology solutions that scale
+                                    globally. Your work impacts real users, solves real problems, and shapes the
+                                    future of digital experiences.
+                                </div>
                             </div>
-                        </Col>
-                        <Col lg={6}>
-                            <img src={careerBanner} className="responsive-img" alt="Career" />
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
+                         </div>
+                      </div>
 
-            {/* Reasons to join section */}
-            <div className="how-we-work-process reasons-to-join section-padding">
+                    </Col>
+                 </Row>
+               </Container> 
+
+               
+
+             </div>  
+             <div className="investInYou section-padding black less-bottom-padding">
+               <Container>
+                 <Row>
+                    <Col>
+                      <div className="build_you_carer_Section">
+                         <h1 className="heading-mean textaliginCenter">Invest in Yourself, We'll Invest in You</h1>
+                         <p className='FontSize18  textaliginCenter'>Comprehensive programs and resources designed to accelerate your growth and well-being at every stage of your journey.</p>
+
+                         <div className="bulid_you_coreer_Piont_div padding ">
+                            <div className="Build_whats_next">
+                                <h1 className="Heading">IosAndWeb Desk</h1>
+                                <div className="para">Your workspace, your way. MacBook Pro or custom PC builds, Herman Miller chairs, dual 4K monitors, and collaborative spaces designed for focus and creativity.
+                                </div>
+                            </div>                            
+                            <div className="Build_whats_next">
+                                <h1 className="Heading">IosAndWeb Academy </h1>
+                                <div className="para">Annual​‍​‌‍​‍‌​‍​‌‍​‍‌ Learning budget of $5,000 per employee. Take advantage of Udemy for Business, go to industry conferences, get certifications, and join weekly tech talks and ​‍​‌‍​‍‌​‍​‌‍​‍‌lunch-and-learns
+                                </div>
+                            </div>                            
+                            <div className="Build_whats_next">
+                                <h1 className="Heading">Career Built Around You</h1>
+                                <div className="para">Quarterly career development conversations, clear IC and management tracks, internal mobility opportunities, and transparent leveling criteria so you always know where you stand.
+                                </div>
+                            </div><div className="Build_whats_next">
+                                <h1 className="Heading">IosAndWeb Advisor</h1>
+                                <div className="para">-on-1 mentorship matching you with senior engineers and leaders. Monthly sessions focused on your goals, plus ad-hoc guidance whenever challenges arise.
+                                </div>
+                            </div><div className="Build_whats_next">
+                                <h1 className="Heading">IosAndWeb Expert</h1>
+                                <div className="para">On-demand access to our internal network of domain specialists. Get architectural reviews, security audits, performance optimization help, and expert guidance when you need it most
+                                </div>
+                            </div><div className="Build_whats_next">
+                                <h1 className="Heading">IosAndWeb Wellness</h1>
+                                <div className="para">Comprehensive health insurance, mental health days, gym memberships, meditation app subscriptions, flexible hours, and wellness stipends to support your whole self.
+                                </div>
+                            </div>
+                         </div>
+                      </div>
+
+                    </Col>
+                 </Row>
+               </Container> 
+
+             </div>
+
+            <div className="MoreThenWorkSpace section-padding  less-bottom-padding">
                 <Container>
                     <Row>
                         <Col>
-                            <h2 className="heading2 text-center">Reasons to Join & Stay with Us</h2>
-                        </Col>
-                    </Row>
-
-                    <Row className="align-items-center row-reverse-mobile mt-5">
-                        <Col lg={6}>
-                            <img src={careerImage} alt="Career" className="responsive-img" />
-                        </Col>
-                        <Col lg={6}>
-                            <h2 className="heading3 text-highlight text-uppercase"><b>Career</b></h2>
-                            <div className="heading5">Be the YOU, You want to be</div>
-                            <div className="reasons-join-grid">
-                                <div className="reasons-join-item">
-                                    <img src={desk} alt="IosAndWeb Desk" className="responsive-img" />
-                                    <div className="reasons-join-item-content">
-                                        <p className="paragraph"><b>IosAndWeb Desk</b></p>
-                                        <p className="paragraph">Your career ambitions come true while we empower talent to explore, learn and deliver.</p>
+                           <div className="MorethenWorkDiv">
+                         <h1 className="heading-mean textaliginCenter">More​‍​‌‍​‍‌​‍​‌‍​‍‌ Than a Workplace</h1>
+                         <p className='FontSize18  textaliginCenter'>A community where you belong</p>
+                            
+                            <div>
+                                <div className="collabertionSection padding">
+                                  <img className="ImgSection" src={img1} alt="" />
+                                  <div className="ContentSection">
+                                    <h1 className="Heading">Collaborative & Open</h1>
+                                    <div className="para">No one is locked out. No one is left behind. Our working environment encourages both planned and on-the-spot collaboration as well as deep work. You get the best of both worlds - bright, trendy office space or home - as you decide and our promise is flexibility, well-stocked offices, and communication tools for everyone
                                     </div>
+                                  </div>
                                 </div>
-                                <div className="reasons-join-item">
-                                    <img src={academy} alt="IosAndWeb Academy" className="responsive-img" />
-                                    <div className="reasons-join-item-content">
-                                        <p className="paragraph"><b>IosAndWeb Academy</b></p>
-                                        <p className="paragraph">Learn and work on new technologies while they're new.</p>
+                                <div className="collabertionSection unoFlex padding">
+                                  <img className="ImgSection" src={img2} alt="" />
+                                  <div className="ContentSection">
+                                    <h1 className="Heading">Collaborative & Open</h1>
+                                    <div className="para">No one is locked out. No one is left behind. Our working environment encourages both planned and on-the-spot collaboration as well as deep work. You get the best of both worlds - bright, trendy office space or home - as you decide and our promise is flexibility, well-stocked offices, and communication tools for everyone
                                     </div>
-                                </div>
-                                <div className="reasons-join-item">
-                                    <img src={innovation} alt="IosAndWeb Innovation" className="responsive-img" />
-                                    <div className="reasons-join-item-content">
-                                        <p className="paragraph"><b>IosAndWeb Innovation</b></p>
-                                        <p className="paragraph">Experiment! We give the right platform to fuel your innovative ideas.</p>
-                                    </div>
+                                  </div>
                                 </div>
                             </div>
-                        </Col>
-                    </Row>
-
-                    <Row className="align-items-center mt-5">
-                        <Col lg={6}>
-                            <h2 className="heading3 text-highlight text-uppercase"><b>Support</b></h2>
-                            <div className="heading5">A hand to hold you Tight and Strong</div>
-                            <div className="reasons-join-grid">
-                                <div className="reasons-join-item">
-                                    <img src={advisor} alt="IosAndWeb Advisor" className="responsive-img" />
-                                    <div className="reasons-join-item-content">
-                                        <p className="paragraph"><b>IosAndWeb Advisor</b></p>
-                                        <p className="paragraph">We help you with advisory support when you need is the most.</p>
-                                    </div>
-                                </div>
-                                <div className="reasons-join-item">
-                                    <img src={experts} alt="IosAndWeb Experts" className="responsive-img" />
-                                    <div className="reasons-join-item-content">
-                                        <p className="paragraph"><b>IosAndWeb Experts</b></p>
-                                        <p className="paragraph">Speak with our experts to ace a perfect and rewarding career.</p>
-                                    </div>
-                                </div>
-                                <div className="reasons-join-item">
-                                    <img src={wellness} alt="IosAndWeb Wellness" className="responsive-img" />
-                                    <div className="reasons-join-item-content">
-                                        <p className="paragraph"><b>IosAndWeb Wellness</b></p>
-                                        <p className="paragraph">Nurture your soul, mind and body with our wellness programs.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col lg={6}>
-                            <img src={supportAdvisor} alt="Support" className="responsive-img"/>
-                        </Col>
-                    </Row>
-
-                    <Row className="align-items-center row-reverse-mobile mt-5">
-                        <Col lg={6}>
-                            <img src={life} alt="Life" className="responsive-img" />
-                        </Col>
-                        <Col lg={6}>
-                            <h2 className="heading3 text-highlight text-uppercase"><b>Life</b></h2>
-                            <div className="heading5">Celebrate Work as you Ladder Up</div>
-                            <div className="reasons-join-grid">
-                                <div className="reasons-join-item">
-                                    <img src={experience} alt="IosAndWeb Experience" className="responsive-img" />
-                                    <div className="reasons-join-item-content">
-                                        <p className="paragraph"><b>IosAndWeb Experience</b></p>
-                                        <p className="paragraph">Work in an ambience which is comfortable, healthy and amidst the green nature.</p>
-                                    </div>
-                                </div>
-                                <div className="reasons-join-item">
-                                    <img src={diversity} alt="IosAndWeb Diversity" className="responsive-img" />
-                                    <div className="reasons-join-item-content">
-                                        <p className="paragraph"><b>IosAndWeb Diversity</b></p>
-                                        <p className="paragraph">We encourage diversity and welcome talent from different backgrounds and walks of life.</p>
-                                    </div>
-                                </div>
-                                <div className="reasons-join-item">
-                                    <img src={foundation} alt="IosAndWeb Foundation" className="responsive-img" />
-                                    <div className="reasons-join-item-content">
-                                        <p className="paragraph"><b>IosAndWeb Foundation</b></p>
-                                        <p className="paragraph">Giving back to the society, is a crucial part of our ecosystem!</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </Col>
-                    </Row>
-
-                </Container>
-            </div>
-
-            {/* get started section */}
-            <div className="what-software-section section-padding text-white">
-                <Container>
-                    <Row className="align-items-center">
-                        <Col>
-                            <div className="leadtxt max-width-70">
-                                <h2>Grow With IosAndWeb Technologies!</h2>
-                            </div>
-                            <div className="leadsubtxt max-width-70">
-                                IosAndWeb Technologies looks for the best and the brightest that our fine education system offers. Fresh talent gets an opportunity learn trending technologies and work on live projects. Explore opportunities with us.
-                            </div>
-                            <p className="paragraph max-width-70">The following positions are currently opened:</p>
-                            <ul className="job-positions-flex">
-                                <li className="job-positions-item">
-                                    <FontAwesomeIcon icon={faCode} />
-                                    <div className="job-position-content">
-                                        <p className="paragraph">PHP Developer (WordPress)</p>
-                                        <p className="paragraph">2 to 6 years</p>
-                                    </div>
-                                </li>
-                                <li className="job-positions-item">
-                                    <FontAwesomeIcon icon={faCogs} />
-                                    <div className="job-position-content">
-                                        <p className="paragraph">Quality Analyst</p>
-                                        <p className="paragraph">1 to 3 years</p>
-                                    </div>
-                                </li>
-                                <li className="job-positions-item">
-                                    <FontAwesomeIcon icon={faPaintBrush} />
-                                    <div className="job-position-content">
-                                        <p className="paragraph">UI/UX Designer</p>
-                                        <p className="paragraph">2 to 5 years</p>
-                                    </div>
-                                </li>
-                                <li className="job-positions-item">
-                                    <FontAwesomeIcon icon={faShoppingCart} />
-                                    <div className="job-position-content">
-                                        <p className="paragraph">Magento Developer</p>
-                                        <p className="paragraph">1 to 5 years</p>
-                                    </div>
-                                </li>
-                                <li className="job-positions-item">
-                                    <FontAwesomeIcon icon={faBarChart} />
-                                    <div className="job-position-content">
-                                        <p className="paragraph">Business Analyst</p>
-                                        <p className="paragraph">1 to 3 years</p>
-                                    </div>
-                                </li>
-                                <li className="job-positions-item">
-                                    <FontAwesomeIcon icon={faUserCog} />
-                                    <div className="job-position-content">
-                                        <p className="paragraph">BDM</p>
-                                        <p className="paragraph">5 to 8 years</p>
-                                    </div>
-                                </li>
-                                <li className="job-positions-item">
-                                    <FontAwesomeIcon icon={faUsers} />
-                                    <div className="job-position-content">
-                                        <p className="paragraph">BDE</p>
-                                        <p className="paragraph">6 months to 2 years</p>
-                                    </div>
-                                </li>
-                                <li className="job-positions-item">
-                                    <FontAwesomeIcon icon={faDesktop} />
-                                    <div className="job-position-content">
-                                        <p className="paragraph">Frontend Developer</p>
-                                        <p className="paragraph">3 to 5 years</p>
-                                    </div>
-                                </li>
-                                <li className="job-positions-item">
-                                    <FontAwesomeIcon icon={faReact} />
-                                    <div className="job-position-content">
-                                        <p className="paragraph">MEAN Stack Developer</p>
-                                        <p className="paragraph">3 to 5 years</p>
-                                    </div>
-                                </li>
-                                <li className="job-positions-item">
-                                    <FontAwesomeIcon icon={faFileAlt} />
-                                    <div className="job-position-content">
-                                        <p className="paragraph">Content Writer</p>
-                                        <p className="paragraph">2 to 5 years</p>
-                                    </div>
-                                </li>
-                            </ul>
-                            <button onClick={() => document.getElementById('JoinForm')?.scrollIntoView()} className="btn btn-white-border">Apply Now <FontAwesomeIcon icon={faChevronRight} /></button>
+                           </div>
                         </Col>
                     </Row>
                 </Container>
             </div>
+             <div className="CareerSection section-padding ">
+            <Container>
+                <Row>
+                <Col>
+                    <div className="CareerMainDiv">
 
-            {/* Join Our Team */}
-            <div id="JoinForm">
-                <JoinOurTeam />
+                    <h1 className="heading-mean textaliginCenter">
+                        Your Next Career Move Starts Here
+                    </h1>
+
+                    <p className="FontSize18 textaliginCenter career-subtext">
+                        Explore open positions across development, design, business, and more.
+                        Find the role that fits your expertise and ambitions
+                    </p>
+
+                    {/** ===== JOB ARRAY ===== */}
+                    {(() => {
+                        const jobs = [
+                        { title: "PHP Developer (WordPress)", exp: "2-4 Years Exp." },
+                        { title: "Quality Analyst", exp: "3+ Year Exp." },
+                        { title: "UI/UX Designer", exp: "3+ Year Exp." },
+                        { title: "Magento Developer", exp: "2-5 Years Exp." },
+                        { title: "Business Analyst", exp: "3-6 Years Exp." },
+                        { title: "Business Dev. Manager (BDM)", exp: "5+ Years Exp." },
+                        { title: "Frontend Developer", exp: "2-4 Years Exp." },
+                        ];
+
+                        return (
+                        <div className="JobListSection">
+                            {jobs.map((job, index) => (
+                            <div className="JobCard" key={index}>
+                                <div className="JobTitle">{job.title}</div>
+                                <div className="JobExp">{job.exp}</div>
+                                <div className="ApplyBtn">Apply</div>
+                            </div>
+                            ))}
+                        </div>
+                        );
+                    })()}
+
+                    </div>
+                </Col>
+                </Row>
+            </Container>
             </div>
 
+            
         </>
     )
 }
 
-export default Career;
+export default HowWeWork;
