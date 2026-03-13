@@ -1,14 +1,140 @@
-/* Join our team form */
-.join-our-team-form .form-col {
-    padding: 8px 12px;
+.career-form-wrapper {
+    padding: 40px;
+    border-radius: 24px;
+    width: 100%;
+    /* box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05); */
+    background: linear-gradient(151.1deg, rgba(184, 184, 184, 0.22) 6.8%, rgba(154, 154, 154, 0.22) 99.93%);
+    border: 1px solid #ffffff5c;
+    backdrop-filter: blur(0px);
 }
-.join-our-team-form .form-group .form-control {
-    padding: 0.7rem;
-    border: 1px solid #797d7e;
-    outline: none !important;
-    box-shadow: none !important;
+.career-form-wrapper h3 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
 }
-.join-our-team-form .form-submit-group {
-    text-align: center;
-    margin-top: 30px;
+
+.career-form-wrapper p {
+    font-size: 14px;
+    color: #cfd8ff;
+    margin-bottom: 30px;
+}
+
+/* Form Groups */
+.career-form-wrapper .form-group {
+    margin-bottom: 18px;
+}
+
+/* Inputs */
+.career-form-wrapper .form-control,
+.career-form-wrapper .PhoneInputInput,
+.career-form-wrapper select {
+    width: 100%;
+    height: 52px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    color: #fff;
+    padding: 0 14px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Textarea */
+.career-form-wrapper textarea.form-control {
+    height: 110px;
+    padding-top: 12px;
+    resize: none;
+}
+
+/* Placeholder */
+.career-form-wrapper ::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Focus Effect */
+.career-form-wrapper .form-control:focus,
+.career-form-wrapper .PhoneInputInput:focus,
+.career-form-wrapper select:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 0 2px rgba(108, 99, 255, 0.25);
+}
+
+/* Phone Input Wrapper Fix */
+.career-form-wrapper .PhoneInput {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding-left: 10px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+}
+
+/* File Upload */
+.career-form-wrapper input[type="file"] {
+    width: 100%;
+    height: 52px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Submit Button */
+.career-submit-btn {
+    width: 140px;
+    height: 48px;
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(90deg, #4a6cf7, #9c4dff);
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: 0.3s ease;
+}
+
+.career-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(108, 99, 255, 0.35);
+}
+
+/* Error text */
+.career-form-wrapper .text-danger {
+    font-size: 12px;
+    margin-top: 5px;
+}
+.form-group option {
+    background: #0000ff9e;
+}
+/* Responsive */
+@media (max-width: 991px) {
+    .career-form-wrapper {
+        margin-top: 40px;
+    }
+}
+input.PhoneInputInput {
+    background: none !important;
+    border: none !important;
+}
+
+/* Remove default button styling */
+input[type="file"]::-webkit-file-upload-button {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+    background: transparent !important;
+    color: #ffffff !important;
 }

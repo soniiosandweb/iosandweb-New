@@ -139,7 +139,7 @@ function ContactForm(){
                             defaultCountry="IN" 
                             value={phoneValue} 
                             onChange={setPhoneValue}
-                            className="form-control"
+                             className="form-control"
                         />
 
                         {formerrors.phoneValue && (

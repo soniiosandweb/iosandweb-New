@@ -1,36 +1,90 @@
-/* contact form */
-.contact-form {
-    padding: 30px;
+/* ===============================
+   CAREER FORM (DARK VERSION)
+================================ */
+
+.career-form {
+    padding: 35px;
     border-radius: 20px;
-    background: #fff;
-    color: #000;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(20px);
+    color: #fff;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.35);
 }
-.contact-form .form-group {
-    padding-bottom: 10px;
+
+/* form group spacing */
+.career-form .form-group {
+    padding-bottom: 15px;
 }
-.contact-form .form-group .form-control {
-    padding: 0.8rem;
-    border: none;
-    border-bottom: 1px solid #797d7e;
-    border-radius: unset;
-    outline: none !important;
-    box-shadow: none !important;
+
+/* input style */
+.career-form .form-group .form-control {
+    padding: 0.7rem;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.08);
+    color: #fff;
 }
-.contact-form .form-group.form-submit-group {
-    padding: 10px 0;
+
+/* focus */
+.career-form .form-group .form-control:focus {
+    border-color: #6c63ff;
+    background: rgba(255,255,255,0.12);
+    box-shadow: 0 0 0 2px rgba(108,99,255,0.2);
+    color: #fff;
 }
-.form-submit-btn {
-    font-size: 16px;
+
+/* labels */
+.career-form .form-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 6px;
 }
-.form-control.PhoneInput .PhoneInputInput {
+
+/* phone input */
+.career-form .PhoneInput {
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.08);
+    padding: 6px 10px;
+}
+
+.career-form .PhoneInput input {
+    background: transparent !important;
     border: none !important;
-    outline: none !important;
+    color: #fff !important;
 }
-.contact-form .form-group .message {
-    padding-top: 10px;
+
+/* submit button */
+.career-form .form-submit-btn {
+    background: linear-gradient(90deg,#4f8cff,#a855f7);
+    border: none;
+    border-radius: 25px;
+    padding: 10px 28px;
+    font-size: 15px;
+    color: #fff;
+    transition: 0.3s ease;
 }
+
+.career-form .form-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* file input */
+.career-form input[type="file"] {
+    background: transparent;
+    color: #fff;
+}
+
+/* error */
+.career-form .text-danger {
+    font-size: 12px;
+}
+
+/* responsive */
 @media (max-width: 991px) {
-    .contact-form {
-      margin-top: 50px;
+    .career-form {
+        margin-top: 40px;
     }
 }
