@@ -5,15 +5,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 
 const checkIcon = `${process.env.REACT_APP_API_URL}/assests/checkmark.svg`;
-const img1 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/img1.webp`;
-const img2 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/img2.webp`;
-const img3 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/img3.webp`;
-const img4 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/img4.webp`;
-const img5 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/img5.webp`;
-const img6 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/img6.webp`;
-const img7 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/img7.webp`;
-const img8 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/img8.webp`;
-const img9 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/img9.webp`;
+const img1 = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/img1.webp`;
+const img2 = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/img2.webp`;
+const img3 = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/img3.webp`;
+const img4 = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/img4.webp`;
+const img5 = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/img5.webp`;
+const img6 = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/img6.webp`;
+const img7 = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/img7.webp`;
+const img8 = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/img8.webp`;
+const img9 = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/img9.webp`;
 
 
 const goalsLists = [

@@ -3,8 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import SEO from "../../components/SEO/index.js";
 import { useLocation } from "react-router-dom";
 import Banner from "./Banner/Banner.jsx";
-const img1 = `${process.env.REACT_APP_API_URL}/assests/images/how_we_work/howWeWorkimg1.webp`;
-const img2 = `${process.env.REACT_APP_API_URL}/assests/images/how_we_work/howWeWorkimg2.webp`;
+const img1 = `${process.env.REACT_APP_API_URL}/assests/images/how-we-work/howWeWorkimg1.webp`;
+const img2 = `${process.env.REACT_APP_API_URL}/assests/images/how-we-work/howWeWorkimg2.webp`;
 
 function HowWeWork(){
 

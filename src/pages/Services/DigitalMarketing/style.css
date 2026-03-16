@@ -27,6 +27,7 @@
 .pinkChart {
     background: #DFA3FF;
     color: black;
+    height: 99px !important;
 }
 
 .YellowChat {

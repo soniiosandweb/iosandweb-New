@@ -16,18 +16,18 @@ import SliderContent from "./Slidercontent/SliderContent";
 
 
 const ddfMain = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/laptop.webp`;
-const img1 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/181959@3x 1.webp`;
-const img2 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/593369@3x 1.webp`;
-const img3 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/767972@3x 1.webp`;
-const img4 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/1623352@3x 1.webp`;
-const img5 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/audit 1.webp`;
-const img6 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/curriculum-vitae 1.webp`;
-const img7 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/no-money 1.webp`;
-const img8 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/promotion (1) 1.webp`;
-const turest3 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/turest3.webp`;
-const turest2 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/turest2.webp`;
-const turest1 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/turest1.webp`;
-const men = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/men.webp`;
+const img1 = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/181959@3x 1.webp`;
+const img2 = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/593369@3x 1.webp`;
+const img3 = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/767972@3x 1.webp`;
+const img4 = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/1623352@3x 1.webp`;
+const img5 = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/audit 1.webp`;
+const img6 = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/curriculum-vitae 1.webp`;
+const img7 = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/no-money 1.webp`;
+const img8 = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/promotion (1) 1.webp`;
+const turest3 = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/turest3.webp`;
+const turest2 = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/turest2.webp`;
+const turest1 = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/turest1.webp`;
+const men = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/men.webp`;
 
 
 

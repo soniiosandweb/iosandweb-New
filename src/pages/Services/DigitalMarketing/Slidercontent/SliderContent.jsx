@@ -5,12 +5,12 @@ import "slick-carousel/slick/slick-theme.css";
 import "./SliderContent.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
-const img1 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/technology (4) 1.webp`;
-const img2 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/consumer-research 1.webp`;
-const img3 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/brand 1.webp`;
-const img4 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/social-media (6) 1.webp`;
-const img5 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/digital-ad 1.webp`;
-const img6 = `${process.env.REACT_APP_API_URL}/assests/services/DigitalMarketing/global 1.webp`;
+const img1 = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/technology (4) 1.webp`;
+const img2 = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/consumer-research 1.webp`;
+const img3 = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/brand 1.webp`;
+const img4 = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/social-media (6) 1.webp`;
+const img5 = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/digital-ad 1.webp`;
+const img6 = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/global 1.webp`;
 
 const SliderContent = () => {
   const settings = {
