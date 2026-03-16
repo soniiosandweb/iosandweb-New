@@ -21,37 +21,42 @@ function Layout(){
     const isNonContact = NON_FIXED_ROUTES.includes(locationValue[1]);
 
 
-    useEffect(() => {
-        const ctx = gsap.context(() => {
-            gsap.utils.toArray(".split").forEach((heading) => {
-                const split = new SplitText(heading, {
-                    type: "words",
-                    wordsClass: "split-word",
-                });
-        
-                gsap.fromTo(
-                    split.words,
-                    {
-                        scaleX: 0,
-                        transformOrigin: "left center",
-                    },
-                    {
-                        scaleX: 1,
-                        duration: 0.5,
-                        ease: "power2.out",
-                        stagger: 0.12,
-                        scrollTrigger: {
-                            trigger: heading,
-                            start: "top 85%",
-                            toggleActions: "play reverse play reverse",
-                        },
-                    }
-                );
+  useEffect(() => {
+
+    const ctx = gsap.context(() => {
+
+        gsap.utils.toArray(".split").forEach((heading) => {
+
+            const split = new SplitText(heading, {
+                type: "words",
+                wordsClass: "split-word",
             });
+
+            gsap.fromTo(
+                split.words,
+                { scaleX: 0, transformOrigin: "left center" },
+                {
+                    scaleX: 1,
+                    duration: 0.5,
+                    ease: "power2.out",
+                    stagger: 0.12,
+                    scrollTrigger: {
+                        trigger: heading,
+                        start: "top 85%",
+                        toggleActions: "play reverse play reverse",
+                    },
+                }
+            );
+
         });
-    
-        return () => ctx.revert();
-    }, []);
+
+        ScrollTrigger.refresh();
+
+    });
+
+    return () => ctx.revert();
+
+}, [location.pathname]);
 
     return (
         <>

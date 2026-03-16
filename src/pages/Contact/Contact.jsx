@@ -5,6 +5,7 @@ import FeaturesPointsSection from "../../components/FeaturesPointsSection/Featur
 import TalkGrowth from "./TalkGrowth/TalkGrowth";
 import SeeBusinessSection from "./SeeBusinessSection/SeeBusinessSection";
 import ContactFormSection from "./ContactFormSection/ContactFormSection";
+import { Col, Container, Row } from "react-bootstrap";
 
 const featuresPoints = [
     {
@@ -38,11 +39,20 @@ const Contact = () => {
             <BannerSection />
 
             {/* Features Points */}
-            <FeaturesPointsSection lists={featuresPoints} />
+            {/* <FeaturesPointsSection lists={featuresPoints} /> */}
 
             {/* Contact Form Section */}
-            <ContactFormSection />
-
+            <div className="contactusPageForm">
+                <Container>
+                    <Row>
+                        <Col>
+                        <div className=" postionChangeUp">                        
+                            <ContactFormSection />
+                        </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
             {/* Talk Growth */}
             <TalkGrowth />
 

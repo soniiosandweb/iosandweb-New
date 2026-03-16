@@ -5,8 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 
 
-
-const bannerImage = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/digitalMArketingBg.webp`;
+const bannerImage = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/DigitalMarketing.webp`;
 
 const Banner = () => {
     return(

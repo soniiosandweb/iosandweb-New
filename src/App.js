@@ -1,4 +1,3 @@
-import './App.css';
 import Layout from './layout/Layout';
 import { BrowserRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import About from './pages/About/About';
@@ -41,6 +40,7 @@ import DigitalMarketingBristol from './pages/Services/DigitalMarketing/DigitalMa
 import { useEffect } from 'react';
 import Home from './pages/Home/Home';
 import ServicesPage from './pages/Services/ServicesPage/ServicesPage';
+import './App.css';
 
 const useRedirect = (targetUrl) => {
   const navigate = useNavigate();

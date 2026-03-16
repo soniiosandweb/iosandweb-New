@@ -73,7 +73,9 @@ function Ecommerce(){
     return (
         <>
             <SEO
-                title={"eCommerce App Development - IosAndWeb Technologies"}
+                title={"Ecommerce App Development Services | IosAndWeb Technologies"}
+                description={"Get powerful ecommerce app development services from IosAndWeb Technologies. Build scalable mobile shopping apps with secure payments and seamless user experience."}
+                name={"IosAndWeb Technologies"}
                 canonicalUrl={`${process.env.REACT_APP_API_URL}${location.pathname}`}
             />
 

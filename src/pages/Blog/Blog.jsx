@@ -69,7 +69,8 @@ function Blog(){
     ]
     useEffect(() => {
 
-        axios.get(`${process.env.REACT_APP_API_URL}/api/blog.php`)
+       //axios.get(`${process.env.REACT_APP_API_URL}/api/blog.php`)
+         axios.get(`https://iosandweb.net/api/blog.php`)
         .then(res => {
             setData(res.data);
             setFilterData(
@@ -89,8 +90,8 @@ function Blog(){
     return(
         <>
             <SEO
-                title={"Latest technologies blogs - Learn More"}
-                description={"IAW technologies provide latest technologies blogs. Subscribe IAW Tech blogs for more latest updates. Visit now Iosandweb.net."}
+                title={"IosAndWeb Technologies Blog | Web Development, App Development & Digital Marketing Insights"}
+                description={"Explore the IosAndWeb Technologies Blog for expert insights on web development, mobile app development, SEO, and digital marketing trends to grow your business online."}
                 name={"IosAndWeb Technologies"}
                 canonicalUrl={`${process.env.REACT_APP_API_URL}${location.pathname}`}
             />

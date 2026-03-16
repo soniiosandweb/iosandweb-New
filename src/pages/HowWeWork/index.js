@@ -93,8 +93,8 @@ function Career(){
     return(
         <>
             <SEO
-                title={"Boost Your Career in Web Development and Digital Marketing Jobs"}
-                description={"IAW - Apply for Web Development and Digital Marketing Jobs and enhance your skills with IosAndWeb Technologies. Consult our HR department."}
+                title={"How We Work | IosAndWeb Technologies Development Process"}
+                description={"Discover how IosAndWeb Technologies works with a structured process for web development, mobile apps, and digital marketing to deliver reliable and scalable solutions."}
                 canonicalUrl={`${process.env.REACT_APP_API_URL}${location.pathname}`}
             />
             <Banner></Banner>

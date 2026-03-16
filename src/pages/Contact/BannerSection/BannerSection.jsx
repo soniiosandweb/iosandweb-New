@@ -12,15 +12,10 @@ const BannerSection = () => {
                 <Row>
                     <Col>
                         <div className="contactus_banner_flex section-padding">
-                            <div className="contactus_left_cols">
+                            <div className="contactus_center">
                                 <h1 className="heading_main split">Let's Start Something Great</h1>
-                                <p className="paragraph_content">Whether you have a detailed project brief or just an idea, we're here to help turn your vision into reality. Reach out today and let's discuss how we can drive your digital growth</p>
-                                <p className="paragraph_content">From small startups to established enterprises, we work with businesses of all sizes. Tell us about your project, and we'll show you what's possible.</p>
+                             </div>
                             </div>
-                            <div className="contactus_right_cols">
-                                <img src={contactGif} alt="Let's Start Something Great" className="contactus_gif_image" />
-                            </div>
-                        </div>
                     </Col>
                 </Row>
             </Container>

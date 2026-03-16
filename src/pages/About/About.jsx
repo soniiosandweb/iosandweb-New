@@ -16,8 +16,8 @@ const About = () => {
     return(
         <>
             <SEO
-                title={"IosAndWeb Technologies - We approach with a purpose. Visit Now"}
-                description={"Team of IosAndWeb Technologies - We approach with a purpose. Effective Team Communication and collaboration. Visit Now Know About Us."}
+                title={"About IosAndWeb Technologies | App, Web & Digital Experts"}
+                description={"Learn about IosAndWeb Technologies, a trusted company offering expert web development, mobile app development, and digital marketing services to grow your business online."}
                 name={"IosAndWeb Technologies"}
                 canonicalUrl={`${process.env.REACT_APP_API_URL}${location.pathname}`}
             />

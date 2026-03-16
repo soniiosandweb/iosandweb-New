@@ -92,16 +92,20 @@ function Footer(){
     const [ukMin, setukMin] = useState(ukDate.getMinutes());
     const [ukSec, setukSec] = useState(ukDate.getSeconds());
     
-    setInterval(() => {
-        const ukTime = new Date().toLocaleString("en-US", {
-          timeZone: "Europe/London",
-        });
-        const ukDate = new Date(ukTime);
-        setukHours(ukDate.getHours());
-        setukMin(ukDate.getMinutes());
-        setukSec(ukDate.getSeconds());
-    }, 1000);
-    
+useEffect(() => {
+  const interval = setInterval(() => {
+    const ukTime = new Date().toLocaleString("en-US", {
+      timeZone: "Europe/London",
+    });
+    const ukDate = new Date(ukTime);
+
+    setukHours(ukDate.getHours());
+    setukMin(ukDate.getMinutes());
+    setukSec(ukDate.getSeconds());
+  }, 1000);
+
+  return () => clearInterval(interval);
+}, []);
     let ukOptions = {
         width: clockWidth,
         heigth: clockHeight,
@@ -162,46 +166,48 @@ function Footer(){
         let ctx;
     
         const initAnimation = () => {
-            ctx = gsap.context(() => {
-                gsap.fromTo(
-                    ".clock_boxes",
-                    { y: 60, opacity: 0 },
-                    {
-                        y: 0,
-                        opacity: 1,
-                        duration: 0.6,
-                        ease: "power3.out",
-                        stagger: 0.2,
-                        scrollTrigger: {
-                            trigger: clocksRef.current,
-                            start: "top 75%",
-                            toggleActions: "play reverse play reverse",
-                        }
-                    }
-                );
-            }, clocksRef);
+           const ctx1 = gsap.context(() => {
+  gsap.fromTo(
+    ".clock_boxes",
+    { y: 60, opacity: 0 },
+    {
+      y: 0,
+      opacity: 1,
+      duration: 0.6,
+      ease: "power3.out",
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: clocksRef.current,
+        start: "top 75%",
+      }
+    }
+  );
+}, clocksRef);
 
-            ctx = gsap.context(() => {
-                gsap.fromTo(
-                    ".footer_boxes",
-                    { y: 60, opacity: 0 },
-                    {
-                        y: 0,
-                        opacity: 1,
-                        duration: 0.6,
-                        ease: "power3.out",
-                        stagger: 0.2,
-                        scrollTrigger: {
-                            trigger: footerColsRef.current,
-                            start: "top 75%",
-                            toggleActions: "play reverse play reverse",
-                        }
-                    }
-                );
-            }, footerColsRef);
+const ctx2 = gsap.context(() => {
+  gsap.fromTo(
+    ".footer_boxes",
+    { y: 60, opacity: 0 },
+    {
+      y: 0,
+      opacity: 1,
+      duration: 0.6,
+      ease: "power3.out",
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: footerColsRef.current,
+        start: "top 75%",
+      }
+    }
+  );
+}, footerColsRef);
+
+return () => {
+  ctx1.revert();
+  ctx2.revert();
+};
     
-            ScrollTrigger.refresh();
-        };
+ };
     
         const timeout = setTimeout(initAnimation, 150);
     

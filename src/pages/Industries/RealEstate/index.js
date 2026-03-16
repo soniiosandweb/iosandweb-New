@@ -90,7 +90,8 @@ function RealEstate(){
     return (
         <>
             <SEO
-                title={"Real Estate App Development - IosAndWeb Technologies"}
+                title={"Real Estate App Development Services | IosAndWeb Technologies"}
+                description={"IosAndWeb Technologies offers custom real estate app development solutions with property listings, advanced search, maps integration, and seamless user experience."}
                 canonicalUrl={`${process.env.REACT_APP_API_URL}${location.pathname}`}
             />
 

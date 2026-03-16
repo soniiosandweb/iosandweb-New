@@ -5,7 +5,7 @@ const lock = `${process.env.REACT_APP_API_URL}/assests/contact/lock.svg`;
 
 const TalkGrowth = () => {
     return(
-        <div className="contact_talk_growth_section section-padding less-bottom-padding body-background">
+        <div className="contact_talk_growth_section  body-background">
             <Container>
                 <Row>
                     <Col>
