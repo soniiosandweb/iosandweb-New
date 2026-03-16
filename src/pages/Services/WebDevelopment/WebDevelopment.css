@@ -472,6 +472,13 @@ filter: invert(14%) sepia(100%) saturate(6000%) hue-rotate(230deg) brightness(10
     flex-direction: column;
     margin-top: 7rem;
 }
+.portfolio_banner_section .services_banner_subheading {
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: blue;
+}
 
 .What_set_us_part_content_rightSide {
     display: flex;

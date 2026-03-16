@@ -13,6 +13,12 @@ color: white;
     display: flex;
     align-items: center;
 }
+.MobileWeb_banner_section .services_banner_subheading {
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
 .MobileWeb_banner_flexs {
     display: flex;
     gap: 2rem;

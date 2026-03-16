@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import "./CaseStudiesSection.css";
 import { Col, Container, Row } from "react-bootstrap"
 import axios from "axios";
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesRight, faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import ReactPaginate from "react-paginate";
@@ -61,9 +60,9 @@ const CaseStudiesSection = () => {
                             <div className="portfolio_casestudies_grid less-top-padding">
                                 {filterData && filterData.length >= 1 && filterData.map((item, i) => (
                                     <div className="portfolio_casestudies_item" key={i}>
-                                        <Link href={item.url} rel="noreferrer" target="_blank" className="portfolio_casestudies_link">
+                                        <a href={item.url} rel="noreferrer" target="_blank" className="portfolio_casestudies_link">
                                             <img src={item.image} alt={item.title} className="portfolio_casestudies_image" />
-                                        </Link>
+                                        </a>
                                         <div className="portfolio_casestudies_content">
                                             <h3 className="portfolio_casestudies_title">{item.title}</h3>
                                             <p className="portfolio_casestudies_text">{item.description}</p>
@@ -79,7 +78,7 @@ const CaseStudiesSection = () => {
                                                 </div>
                                             </div>
 
-                                            <Link to="/contact-us" target="_blank" className="btn-gradient-blue">View Case study <FontAwesomeIcon icon={faAnglesRight} /></Link>
+                                            <a href={item.url} rel="noreferrer" target="_blank" className="btn-gradient-blue">View Case study <FontAwesomeIcon icon={faAnglesRight} /></a>
                                         </div>
                                     </div>
                                 ))}

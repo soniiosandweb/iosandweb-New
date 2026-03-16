@@ -103,6 +103,17 @@ function Blog(){
                     <Row className="align-items-center">
                         <Col lg={7}>
                             <div className="heading-wrapper">
+                            <h1 style={{
+                                    fontSize: "40px",
+                                    background: "linear-gradient( to right ,#024BFE, #7535FF)",
+                                    WebkitBackgroundClip: "text",
+                                    WebkitTextFillColor: "transparent",
+                                    WebkitTextStroke:"0.3px #c6c2c2"
+
+                                }}
+                                >
+                                We Write So You Do Not Have to Google Everything
+                                </h1> <br></br>
                                 <h1 className="heading_main split">Building digital experiences that don’t just exist—they make a difference.</h1>
                                 <div className="heading5">Welcome to our blog — your go-to destination for expert insights, industry trends, and practical knowledge in the world of technology, design, and digital marketing. Here, we share valuable content crafted to help businesses grow, adapt, and stay ahead in an ever-evolving digital landscape.</div>
                             </div>

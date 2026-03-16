@@ -42,13 +42,15 @@
     flex: 1;
     position: relative;
     display: flex;
-    align-items: end;
+    align-items: center;
     justify-content: end;
 }
 .services_banner_contents .services_banner_subheading {
-    font-size: 14px;
+    font-size: 40px;
+    font-weight: 900;
     margin-bottom: 20px;
     text-transform: uppercase;
+    color: blue;
 }
 /* .heading_main span {
     background: radial-gradient(50% 50% at 50% 50%, #0011FF 0%, #A600FF 100%);
@@ -71,7 +73,7 @@
 }
 .services_banner_right .services_banner_box {
     width: 370px;
-    height: 370px;
+    height: 275px;
     background-color: #2625254D;
     backdrop-filter: blur(14px);
     border-radius: 15px;

@@ -38,8 +38,8 @@ const contactLists = [
     },
     {
         icon: faPhoneVolume,
-        text: "+91 9915841204",
-        link: "tel:+919915841204",
+        text: "+91 7717689799",
+        link: "tel:+917717689799",
     }
 ];
 

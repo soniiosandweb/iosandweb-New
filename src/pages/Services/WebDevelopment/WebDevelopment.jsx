@@ -211,7 +211,7 @@ const innovativeItems = [
                                >{item.title}</span>
                                 </span>    ))}
                              <div className="software_banner_cols">
-                                 <div className="lines-wrapper">
+                                 {/* <div className="lines-wrapper">
                                     <div className="line line-1">
                                         <span className="gradient-block delay-1" />
                                     </div>
@@ -231,13 +231,14 @@ const innovativeItems = [
                                     <div className="line line-5">
                                         <span className="gradient-block delay-5" />
                                     </div>
-                                </div>
+                                </div> */}
              </div>
                             </div>
                      <Container>
                          <Row className="align-items-center">
                              <Col lg={6}>
                                  <div className="heading-wrapper">
+                                    <p className="services_banner_subheading">Web Development services</p>
                                      <h1 className="heading_main split">Web Development That Drives Results</h1>
                                      <span className="subHeading">Your vision. Our expertise. Exceptional outcomes.</span>
                                      <div className="heading5">IosAndWeb Technologies transforms ideas into high-performance web solutions. Our full-stack development team builds secure, scalable, and stunning websites that work flawlessly across all devices—from custom web applications to enterprise e-commerce platforms powered by Magento.</div>

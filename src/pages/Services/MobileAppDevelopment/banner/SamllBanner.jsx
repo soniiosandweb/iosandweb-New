@@ -7,8 +7,8 @@ import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 
 
 const bannerImage = `${process.env.REACT_APP_API_URL}/assests/services/MobileDevlopment/Mbg.webp`;
-const sbWhite = `${process.env.REACT_APP_API_URL}/assests/services/MobileDevlopment/SBWhite.webp`;
-const sbBlack = `${process.env.REACT_APP_API_URL}/assests/services/MobileDevlopment/SBBlack.webp`;
+const sbWhite = `${process.env.REACT_APP_API_URL}/assests/services/MobileDevlopment/sbWhite.webp`;
+const sbBlack = `${process.env.REACT_APP_API_URL}/assests/services/MobileDevlopment/sbBlack.webp`;
 
 const SamllBanner = () => {
     return(

@@ -19,6 +19,13 @@ color: white;
     align-items: stretch;
     min-height: 735px;
 }
+.MobileWeb_banner_section .services_banner_subheading {
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: blue;
+}
 .Mobile_banner_images {
     position: inherit;
     text-align: center;

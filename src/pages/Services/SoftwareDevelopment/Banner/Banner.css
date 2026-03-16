@@ -19,6 +19,13 @@
     align-items: stretch;
     min-height: 735px;
 }
+.software_banner_section .services_banner_subheading {
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: blue;
+}
 .software_banner_flexs .software_banner_cols {
     flex: 1;
 }
