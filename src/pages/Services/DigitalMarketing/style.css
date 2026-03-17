@@ -115,6 +115,20 @@ img.ImgSectionDiv {
     top: 10%;
     right: 10%;
 }
+@media (max-width:1400px) {
+img.ImgSectionDiv {
+    position: absolute;
+    top: 17%;
+    right: 8%;
+}    
+}
+@media (max-width:1199px) {
+img.ImgSectionDiv {
+    position: absolute;
+    top: 22%;
+    right: 8%;
+}    
+}
 
 
 @media (max-width: 991px) {
@@ -125,8 +139,9 @@ img.ImgSectionDiv {
 img.ImgSectionDiv {
     position: relative;
     margin-top: 4rem;
-    right: 10%;
+    right: 0px;
     width: 100%;
+    top: 81px;
 }
     .SingleSection,
     .GridSection {
@@ -151,6 +166,7 @@ img.ImgSectionDiv {
         width: 50%;
     }
 
+
     .TrustedDiv {
         justify-content: center;
         text-align: center;
@@ -158,5 +174,20 @@ img.ImgSectionDiv {
     .ChatSection .ddsMainImg img{
     width: 100%;
 }
+img.ImgSectionDiv {
+    top: 80px;
+    right: -13px;
+    margin-top: 0px;
+}
 
+}
+@media (max-width:575px) {
+        .pinkChart {
+    min-height: 125px;
+    min-width: 100px !important;
+}
+img.ImgSectionDiv {
+    top: 32px;
+    left: 23px;
+}
 }

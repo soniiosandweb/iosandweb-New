@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 
-const elevateImg = `${process.env.REACT_APP_API_URL}/assests/home/elivate_success.gif`;
+const elevateImg = `${process.env.REACT_APP_API_URL}/assests/home/elivate_success.webp`;
 
 const ElevateSuccess = () => {
     return(
