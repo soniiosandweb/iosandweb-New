@@ -1,6 +1,9 @@
 .services_expertise_section {
     padding-top: 200px;
 }
+.services_expertise_section.section-padding.no-bottom-padding.body-background {
+    margin-top: 4rem;
+}
 .services_expertise_grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
