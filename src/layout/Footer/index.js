@@ -16,12 +16,12 @@ const hqUk = `${process.env.REACT_APP_API_URL}/assests/hq-uk.png`;
 const hqUs = `${process.env.REACT_APP_API_URL}/assests/hq-us.svg`;
 
 const facebook = `${process.env.REACT_APP_API_URL}/assests/facebook.png`;
-const twitter = `${process.env.REACT_APP_API_URL}/assests/twitter.png`;
+const twitter = `${process.env.REACT_APP_API_URL}/assests/xWhite.png`;
 const instagram = `${process.env.REACT_APP_API_URL}/assests/instagram.png`;
 const linkedin = `${process.env.REACT_APP_API_URL}/assests/linkedin.png`;
 const whatsapp = `${process.env.REACT_APP_API_URL}/assests/whatsapp.png`;
 const facebookWhite = `${process.env.REACT_APP_API_URL}/assests/facebook-white.png`;
-const twitterWhite = `${process.env.REACT_APP_API_URL}/assests/twitter-white.png`;
+const twitterWhite = `${process.env.REACT_APP_API_URL}/assests/x.webp`;
 const instagramWhite = `${process.env.REACT_APP_API_URL}/assests/instagram-white.png`;
 const linkedinWhite = `${process.env.REACT_APP_API_URL}/assests/linkedin-white.png`;
 const whatsappWhite = `${process.env.REACT_APP_API_URL}/assests/whatsapp-white.png`;
@@ -35,7 +35,7 @@ const socialLinks = [
     },
     {
         title: "Twitter",
-        link: "https://https://twitter.com/Iosandwebtech.com/Iosandwebtech",
+        link: "https://x.com/",
         icon: twitter,
         white: twitterWhite,
     },
@@ -47,7 +47,7 @@ const socialLinks = [
     },
     {
         title: "Linkedin",
-        link: "https://www.linkedin.com/company/iosandweb-technologies",
+        link: "https://in.linkedin.com/company/iosandweb-technologies",
         icon: linkedin,
         white: linkedinWhite,
     },

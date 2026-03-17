@@ -194,7 +194,7 @@ function CareerForm() {
                 <Form.Group className="form-group">
                     <Form.Control
                         type="text"
-                        placeholder="Location"
+                        kjplaceholder="Location"
                         name="location"
                         value={values.location}
                         onChange={handleChange}
@@ -206,8 +206,7 @@ function CareerForm() {
                     <Form.Select
                         name="applyingFor"
                         value={values.applyingFor}
-                        onChange={handleChange}
-                    >
+                        onChange={handleChange}>
                         <option value="">Applying For</option>
                         <option value="Web Designer">Web Designer</option>
                         <option value="Graphic Designer">Graphic Designer</option>

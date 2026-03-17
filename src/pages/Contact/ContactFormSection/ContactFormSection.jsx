@@ -113,7 +113,7 @@ const ContactFormSection = () => {
                                 <h3 className="heading_main small split FontSize_25">Reach Out & Let's Build Something Exceptional Together</h3>
                                 <div className="contactpage_form_block">
                                     <div className="contactpage_form_block_content">
-                                        <h4 className="contactpage_form_heading">Share Details & Begin</h4>
+                                        <h4 className="contactpage_form_heading">Connect With Our Team</h4>
                                         <SubHeading text={"Our Presence"} />
                                         <ul className="presence_lists">
                                             {presenceLists.map((item,i) => (
