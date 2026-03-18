@@ -40,7 +40,7 @@ const SoftwareDevelopment = () => {
         },
         {
             title: "Can I be involved in the software development process?",
-            text: "Absolutely! At IosAndWeb Technologies, we encourage client involvement throughout the development lifecycle. From initial planning to testing and launch, your feedback is essential in shaping a solution that truly fits your business goals.",
+            text: "Absolutely! At <a href='./' >IosAndWeb Technologies</a>, we encourage client involvement throughout the development lifecycle. From initial planning to testing and launch, your feedback is essential in shaping a solution that truly fits your business goals.",
         },
         {
             title: "Is custom software development cost-effective in the long run?",

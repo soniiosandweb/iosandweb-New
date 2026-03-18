@@ -61,9 +61,9 @@ function DigitalMarketing(){
                     <Row>
                         <Col>
                          <h1 className="heading_main split textaliginCenter">Empowering Brands with Data-Driven Digital Marketing</h1>
-                         <span className="FontSize18 textaliginCenter">iosAndWeb Technologies designs customized, ROI-focused marketing strategies that accelerate growth, elevate brand visibility, and turn clicks into loyal customers</span>
+                         <span className="FontSize18 textaliginCenter">IosAndWeb Technologies designs customized, ROI-focused marketing strategies that accelerate growth, elevate brand visibility, and turn clicks into loyal customers</span>
                          <div className="numberGridMobileDev textaliginCenter padding"><NumbersGrid /></div>
-                        <h1 className="heading_main  textaliginCenter">Partner with iosAndWeb Technologies to unlock intelligent, future-ready marketing powered by AI insights, precision targeting, and seamless omnichannel execution</h1>
+                        <h1 className="heading_main  textaliginCenter">Partner with IosAndWeb Technologies to unlock intelligent, future-ready marketing powered by AI insights, precision targeting, and seamless omnichannel execution</h1>
 
                         </Col>
                     </Row>

@@ -155,7 +155,7 @@ function WebDevelopment() {
         },
         {
             title: "What platforms and frameworks do you specialize in?",
-            text: "Our web development services include PHP frameworks, ASP.NET, WordPress, Magento, Shopify, Joomla, and Drupal. We choose the most suitable platform based on your project’s complexity, scalability, and customization requirements.",
+            text: "Our web development services include PHP frameworks, ASP.NET, WordPress, <a href='/magento-development-services'>Magento</a>, Shopify, Joomla, and Drupal. We choose the most suitable platform based on your project’s complexity, scalability, and customization requirements.",
         }
     ]
 
@@ -373,12 +373,12 @@ const innovativeItems = [
                         <Row>
                             <Col>
                             <div className="textaliginCenter ReasonToChouseUsDiv" >
-                                <span className="heading_main split" >Reasons to Choose Top Custom Software Developer</span>
+                                <span className="heading_main split" >Reasons to Choose Top Web Development Company</span>
                                 <span className="FontSize25">Why settle for generic when your business deserves extraordinary?</span>
 
-                                    <span className="FontSize18">Custom software development creates solutions precisely tailored to your unique business needs—not one-size-fits-all templates. While many organizations hesitate due to perceived costs, the reality is different: custom software is a strategic investment that delivers exponential returns. <br/>
+                                    <span className="FontSize18">Web Development Company creates solutions precisely tailored to your unique business needs—not one-size-fits-all templates. While many organizations hesitate due to perceived costs, the reality is different: custom software is a strategic investment that delivers exponential returns. <br/>
                                     Off-the-shelf solutions force your business to adapt to their limitations. Custom development does the opposite—it adapts to you. When software aligns perfectly with your workflows, processes, and goals, performance skyrockets, efficiency multiplies, and you gain a competitive advantage that generic solutions simply cannot provide. <br/>
-                                    The numbers tell the story: Businesses with custom software solutions report up to 60% faster operations, 40% cost reduction over time, and market differentiation that drives growth. The initial investment pays for itself many times over through increased productivity, reduced manual work, and capabilities your competitors can't match.
+                                    The numbers tell the story: Businesses with Web Development solutions report up to 60% faster operations, 40% cost reduction over time, and market differentiation that drives growth. The initial investment pays for itself many times over through increased productivity, reduced manual work, and capabilities your competitors can't match.
                                     </span>
 
                             </div>

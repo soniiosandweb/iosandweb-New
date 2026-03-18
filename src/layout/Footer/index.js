@@ -217,6 +217,8 @@ return () => {
         };
     }, []);
 
+
+
     return(
         <>
             <div className="footer_main">

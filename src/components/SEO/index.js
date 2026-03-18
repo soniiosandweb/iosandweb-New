@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-function SEO({title, description, name, keywords, canonicalUrl, localSchema, organisationalSchema, faqSchema}){
+function SEO({title, description, name, keywords, canonicalUrl, localSchema, organisationalSchema, faqSchema, serviceSchema}){
     return(
         <>
             <Helmet>
@@ -42,6 +42,11 @@ function SEO({title, description, name, keywords, canonicalUrl, localSchema, org
                         {JSON.stringify(faqSchema)}
                     </script>
                 }
+                {serviceSchema && (   
+                <script type="application/ld+json">
+                    {JSON.stringify(serviceSchema)}
+                </script>
+                )}
 
             </Helmet>
         </>

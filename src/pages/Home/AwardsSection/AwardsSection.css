@@ -19,6 +19,13 @@
 .marquee-container.left-right .marquee {
     animation-direction: reverse;
 }
+
+@media (max-width:767px) {
+    .awards_section {
+    margin-top: 0px;
+}
+    
+}
 @media (max-width: 575px) {
     .awards_section {
         padding: 2rem 1rem;

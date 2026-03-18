@@ -21,7 +21,7 @@ const ReadyBuildSection = () => {
                                 </div>
                                 <div className="ready_build_content">
                                     <h2 className="heading_main split">Still Using Software That Wasn't Built for You?</h2>
-                                    <p className="paragraph_content bold">Skip generic solutions—choose custom software development built uniquely for your business.</p>
+                                    <p className="paragraph_content bold">Skip generic solutions—choose <a href="./custom-software-development-company">custom software development</a>  built uniquely for your business.</p>
                                     <p className="paragraph_content">Imagine technology that adapts to you, not the other way around. That's the power of custom development</p>
                                     <Link to="/contact-us" reloadDocument className="btn-gradient-blue">Build Your Website Today  <FontAwesomeIcon icon={faAnglesRight} /></Link>
                                 </div>

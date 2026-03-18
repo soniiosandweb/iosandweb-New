@@ -7,6 +7,10 @@ import OwlCarousel from "react-owl-carousel";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleDot, faChevronRight, faCheckDouble, faFilter, faMapMarkerAlt, faVrCardboard, faHome, faSearch, faBrain, faCalculator, faStar, faHouseMedical, faListCheck, faLineChart, faCode, faFileAlt, faPaintBrush, faRocket, faCog, faCircle } from "@fortawesome/free-solid-svg-icons";
 import { useLocation } from "react-router-dom";
+import Banner from "./Banner/Banner";
+import BusinessGoals from "./BusinessGoals";
+import NumbersGrid from "../../../components/NumbersGrid/NumbersGrid";
+import ServicesLists from "./ServicesLists/ServicesLists";
 
 const realEstateBanner = `${process.env.REACT_APP_API_URL}/assests/images/industries/real-estate/real-estate-banner-new.webp`;
 
@@ -96,26 +100,22 @@ function RealEstate(){
             />
 
             {/* Banner section */}
-            <div className="industries-banner banner-padding">
-                <Container>
-                    <Row className="align-items-center">
-                        <Col>
-                            <div className="heading-wrapper industries-header text-center">
-                                <h1 className="text-black"><span className="text-highlight">Real Estate</span> App Development Company</h1>
-                                <div className="heading5">Constructing the future of real estate in their hands through cutting-edge technology-powered personalized apps</div>
+            <Banner></Banner>
+            
+            <BusinessGoals></BusinessGoals>
 
-                                <div className="btn-section">
-                                    <a href="/contact-us" className="btn btn-white-border">Consult Our Experts <FontAwesomeIcon icon={faChevronRight} /></a>
-                                </div>
-                                
+             <div className="padding black">
+                            <Container>
+                                <Row>
+                                    <Col>
+                                     <h1 className="heading_main split textaliginCenter">A Proven Foundation for Your Real Estate Vision</h1>
+                                     <div className="numberGridMobileDev textaliginCenter padding"><NumbersGrid /></div>
+            
+                                    </Col>
+                                </Row>
+                            </Container>
                             </div>
-                            <div className="industries-banner-image">
-                                <img className="responsive-img" src={realEstateBanner} alt="Real Estate" />
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
+                    <ServicesLists/>
 
             {/* Reasons to choose section */}
             <div className="reasons-to-choose industries-reasons-tab section-padding no-bottom-padding">

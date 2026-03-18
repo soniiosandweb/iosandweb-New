@@ -145,6 +145,10 @@
     .software_banner_cols .lines-wrapper .line.line-4 {
         display: none;
     }
+    .software_banner_flexs .software_banner_cols {
+    position: relative;
+    flex: 1 1;
+}
     .software_banner_images .software_bannerImage {
         max-width: 350px;
     }

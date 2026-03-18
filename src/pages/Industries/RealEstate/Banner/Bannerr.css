@@ -1,0 +1,62 @@
+.HowWeWork_banner_section .weWork_banner_images .weWork_bannerImage {
+    max-width: 478px;
+    width: 100%;
+    position: absolute;
+    bottom: -23px;
+}
+.HowWeWork_banner_section{
+background: linear-gradient(321.36deg, #090B2A 52.92%, #0B2733 92.21%);
+color: white;
+}
+.HowWeWork_banner_section .HowWeWork_banner_flexs{
+
+    display: flex;
+    align-items: center;
+}
+.btnBannerDiv {
+    display: flex;
+    gap: 20px;
+}
+.HowWeWork_banner_flexs {
+    display: flex;
+    gap: 2rem;
+    align-items: stretch;
+    min-height: 735px;
+}
+.how-we_work_image {
+    position: inherit;
+    text-align: center;
+    bottom: 0;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+.how-we_work_image >img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+@media (max-width: 991px) {
+    .HowWeWork_banner_flexs .weWork_banner_cols {
+        position: inherit;
+        inset: 0;
+        z-index: 1;
+    }
+    .HowWeWork_banner_flexs {
+    display: flex;
+    gap: 2rem;
+    align-items: stretch;
+    min-height: 0px;
+    margin-top: 8rem;
+}.how-we_work_image {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+}
+
+.transpernt_btn{
+    background: transparent !important;
+}

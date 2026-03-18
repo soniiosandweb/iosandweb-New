@@ -17,6 +17,9 @@
     -webkit-animation: mover 1s infinite  alternate;
     animation: mover 1s infinite  alternate;
 }
+.contactusPageForm {
+    height: 700px;
+}
 .contactpage_form_section .container {
     position: relative;
 }
@@ -159,5 +162,9 @@
         gap: 3rem;
         flex-direction: column-reverse;
     }
+    .contactusPageForm {
+    
+    height: max-content !important;
+}
 
 }

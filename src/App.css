@@ -247,7 +247,8 @@ h1, h2, h3, h4, h5, h6{
   background: #d6ffdf !important;
 }
 .bg-gray{
-  background: #bce3ff !important;
+  background: #171717 !important;
+  color: white !important;
 }
 .bg-yellow{
   background: #feffdf !important;
