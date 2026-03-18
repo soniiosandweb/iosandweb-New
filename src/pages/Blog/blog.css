@@ -22,7 +22,7 @@
     border-radius: 5px 5px 0 0;
 }
 .blog-list-item  p {
-    color: white;
+    color: black;
     font-size: 16px;
     font-weight: 400;
     padding-top: 12px;
@@ -32,7 +32,6 @@
     margin-bottom: 8px;
 }
 .blog-list-item h4 {
-    color: white;
     font-size: 28px;
     margin-bottom: 0;
 }
