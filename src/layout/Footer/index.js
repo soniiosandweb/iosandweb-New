@@ -35,7 +35,7 @@ const socialLinks = [
     },
     {
         title: "Twitter",
-        link: "https://x.com/",
+        link: "https://x.com/Iosandwebtech",
         icon: twitter,
         white: twitterWhite,
     },
