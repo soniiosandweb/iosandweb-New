@@ -201,7 +201,7 @@ const Home = () => {
         <>
           <SEO
             title={"IosAndWeb Technologies | Expert App, Web Development & Marketing Services"}
-            description={"Transform your business with IosAndWeb Technologies."}
+            description={"Build powerful apps and websites with IosAndWeb Technologies. Expert development, design, and digital marketing solutions to grow your business online."}
             canonicalUrl={process.env.REACT_APP_API_URL}
             localSchema={localSchema}
             organisationalSchema={organisationalSchema}
