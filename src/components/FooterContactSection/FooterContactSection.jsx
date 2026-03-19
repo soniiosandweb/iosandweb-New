@@ -16,12 +16,12 @@ const presenceLists = [
     {
         image: indiaFlag,
         text: "India",
-        para:"SCO 30, First Floor, Near Devaji Plaza, VIP Road, Zirakpur, PB (India)"
+        para:"India- Vip shopping complex ,VIP Road, Zirakpur - Chandigarh"
     },
     {
         image: USFlag,
         text: "United States",
-        para:"Suite #304, 11200 Manchaca, Austin, Texas, United States, 78748"
+        para:"USA address- 237 Warrick Road, Putnam Station, NY 12861 US"
     },
     {
         image: UKFlag,
