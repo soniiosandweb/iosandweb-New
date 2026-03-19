@@ -165,7 +165,7 @@
 
 .JobExp {
   flex: 1;
-  text-align: center;
+  text-align: end;
   font-size: 14px;
   color: #bbb;
 }

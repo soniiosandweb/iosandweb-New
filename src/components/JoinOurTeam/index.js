@@ -189,7 +189,7 @@ function CareerForm() {
                     />
                     {formerrors.phoneValue && <p className="text-danger">{formerrors.phoneValue}</p>}
                 </Form.Group>
-                <p className="FontSiz18 bold">Applying Forp</p>
+                <p className="FontSiz18 bold">Applying For</p>
 
                 <Form.Group className="form-group">
                     <Form.Control

@@ -188,7 +188,11 @@ function Team(){
             />
 
             {/* Join Our Team */}
-            <JoinOurTeam />
+            {/* <div className="black section-padding">
+                <Container> <Row><Col>
+                <JoinOurTeam />          
+                </Col></Row></Container>
+            </div> */}
 
         </>
     )

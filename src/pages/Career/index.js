@@ -171,7 +171,7 @@ function HowWeWork(){
                             <div className="JobCard" key={index}>
                                 <div className="JobTitle">{job.title}</div>
                                 <div className="JobExp">{job.exp}</div>
-                                <div className="ApplyBtn">Apply</div>
+                               {/* <a href='./iaw-team'> <div className="ApplyBtn">Apply</div></a> */}
                             </div>
                             ))}
                         </div>
