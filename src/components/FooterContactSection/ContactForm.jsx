@@ -30,14 +30,14 @@ const ContactForm = ({title}) => {
     const validate = () => {
     
         let errors = {};
-    
-        //name field
-        if (!values.yourName) {
-          errors.yourName = "First Name is required";
+        const isEmpty = (val) => !val || val.trim() === "";
+
+        if (!values.yourName || values.yourName.trim() === "" ) {
+            errors.yourName = "First name is required";
         }
 
-        if(!values.lastName) {
-            errors.lastName = "Last Name is required";
+        if (!values.lastName || values.lastName.trim() === "") {
+            errors.lastName = "Last name is required";
         }
     
         //email field
@@ -53,7 +53,11 @@ const ContactForm = ({title}) => {
         } else if (!/^[6-9]\d{9}$/.test(phoneValue)) {
             errors.phoneValue = "Invalid Phone number";
         }
-    
+           if (isEmpty(values.yourMessage)) {
+                errors.yourMessage = "Message is required";
+            } else if (values.yourMessage.trim().length < 10) {
+                errors.yourMessage = "Message must be at least 10 characters";
+            }
         setFormErrors(errors);
     
         if (Object.keys(errors).length === 0) {
@@ -155,7 +159,17 @@ const ContactForm = ({title}) => {
                     </Form.Group>
 
                     <Form.Group controlId="yourMessage" className="form-group">
-                        <Form.Control as="textarea" rows={6} name="yourMessage" placeholder="Message" value={values.yourMessage} onChange={handleChange} />
+                    <Form.Control
+                        as="textarea"
+                        rows={4}
+                        name="yourMessage"
+                        placeholder="Message"
+                        value={values.yourMessage}
+                        onChange={handleChange}
+                    />
+                    {formerrors.yourMessage && (
+                        <p className="text-danger visible">{formerrors.yourMessage}</p>
+                    )}
                     </Form.Group>
 
                     <Form.Group className="form-group form-submit-group">

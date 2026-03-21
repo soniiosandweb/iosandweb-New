@@ -13,6 +13,7 @@ import NumbersGrid from "../../../components/NumbersGrid/NumbersGrid";
 import BussinessGoal from "./BussinessGoals/BussinessGoal";
 import BusinessGrowth from "./BusinessGrowth/BusinessGrowth";
 import SliderContent from "./Slidercontent/SliderContent";
+import FAQSection from "../../../components/FAQSection/FAQSection";
 
 
 const ddfMain = `${process.env.REACT_APP_API_URL}/assests/services/digitalMarketing/laptop.webp`;
@@ -39,6 +40,48 @@ function DigitalMarketing(){
     "Relentlessly Focused on Driving Conversions",
     "High-Impact Mobile App Experiences Powered by Exceptional DesignFrameworks Powering Long-Term Scalable Growth"
 ]
+const faqLists = [
+  {
+    title: "What kinds of digital marketing help does IosAndWeb Technologies provide?",
+    text: "We offer a full range of digital marketing services at IosAndWeb Technologies. These include <a href='https://iosandweb.net/seo-services'> SEO (Search Engine Optimization)</a>, social media marketing, Google Ads, PPC campaigns, content marketing, and online branding. We want to help businesses get more customers and leads online."
+  },
+  {
+    title: "How can digital marketing help my business get bigger?",
+    text: "Digital marketing can help your business reach the right people online, get more people to visit your website, and make more sales. You can build brand awareness and keep your business growing with the right plan from <a href='/' >IosAndWeb Technologies.</a>"
+  },
+  {
+    title: "Does IosAndWeb Technologies offer SEO services?",
+    text: "Yes, IosAndWeb Technologies is an expert in SEO services, such as on-page SEO, off-page SEO, technical SEO, and keyword optimization. Our main goal is to help your website rank higher in search engines like Google."
+  },
+  {
+    title: "Do you do marketing on social media?",
+    text: "Yes, we handle social media sites like Facebook, Instagram, and LinkedIn at IosAndWeb Technologies. We write interesting content, run ads, and help you reach your target audience in the best way possible."
+  },
+  {
+    title: "How long does it take for digital marketing to work?",
+    text: "The length of time depends on the service. Paid ads and <a href='https://iosandweb.net/blog/the-power-of-social-media-advertising-for-modern-businesses'>social media campaigns</a>   can get results faster than SEO, which can take a few months to show strong results. IosAndWeb Technologies always thinks about how to grow in the short and long term."
+  },
+  {
+    title: "Can IosAndWeb Technologies handle Google Ads and pay-per-click (PPC) campaigns?",
+    text: "Yes, we set up and run Google Ads and PPC campaigns for you to get traffic and leads right away. Our team makes sure that your budget is used in the best way to get the most return on investment."
+  },
+  {
+    title: "Do you offer personalized digital marketing plans?",
+    text: "For sure. To get the best results, IosAndWeb Technologies makes custom digital marketing plans based on your business goals, industry, and target audience."
+  },
+  {
+    title: "Is digital marketing a good idea for small businesses?",
+    text: "Yes, digital marketing works very well for small businesses. By using cheap marketing strategies, IosAndWeb Technologies helps small businesses compete with bigger brands."
+  },
+  {
+    title: "Do you send out regular reports and updates?",
+    text: "Yes, we send you regular performance reports so you can see how your campaign is doing. At IosAndWeb Technologies, being open and honest with each other is very important to us."
+  },
+  {
+    title: "What do I need to do to start using IosAndWeb Technologies' digital marketing services?",
+    text: "You can get in touch with IosAndWeb Technologies through their website or by phone to get started. Our team will figure out what you need and come up with a plan that works for your business."
+  }
+];
    
 
     return(
@@ -221,7 +264,7 @@ function DigitalMarketing(){
                             <Col lg="6">
                              <div className="letsBuldTogthercontent">
                                 <h1 className="heading_main split">Let's Empower Your Business to Achieve Peak Success Through Strategic Marketing</h1>
-                                <p className="FontSize18">Partner With IosAndWeb Technologies - India's Leading Mobile App Experts Turning Your Ideas Into Reality.</p>
+                                <p className="FontSize18">Partner With IosAndWeb Technologies - India's Leading <a href="mobile-app-development-services"> Mobile App </a> Experts Turning Your Ideas Into Reality.</p>
                                 <Link to="/contact-us" reloadDocument className="btn-gradient-blue">Let's Build Together <FontAwesomeIcon icon={faAnglesRight} /></Link>
             
                              </div>             
@@ -230,6 +273,13 @@ function DigitalMarketing(){
                             </Row>
                         </Container>               
                         </div>
+                                    {/*FAQSection  */}
+                                        <FAQSection 
+                                            subheading={"Insights"}
+                                            heading={"Frequently Asked Questions"}
+                                            lists={faqLists}
+                                            fullwidth={true}
+                                        />
         </>
     )
 }

@@ -70,6 +70,10 @@
     .business_goals_item {
         padding: 20px;
     }
+       .business_goals_section  .heading_main {
+ 
+    line-height: 44px;
+}
     .business_goals_header .goals_item_icon {
         width: 40px;
         height: 40px;

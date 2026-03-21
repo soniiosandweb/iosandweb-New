@@ -77,6 +77,10 @@
         width: 40px;
         height: 40px;
     }
+       .business_goals_section  .heading_main {
+ 
+    line-height: 44px;
+}
     .business_goals_item .business_goals_content {
         gap: 2rem;
     }

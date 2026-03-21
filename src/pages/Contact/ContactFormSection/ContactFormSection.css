@@ -167,4 +167,10 @@
     height: max-content !important;
 }
 
+
+}
+@media (max-width: 425px) {
+    .contactpage_form_flexs {
+        padding: 0px !important;
+    }
 }

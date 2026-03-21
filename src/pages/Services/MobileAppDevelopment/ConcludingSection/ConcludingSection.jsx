@@ -10,7 +10,7 @@ const servicesLists = [
     {
         icon: appDevelopment,
         title: "Software Development Services",
-        link: "/web-development-services",
+        link: "/custom-software-development-company",
     },
     {
         icon: crmDevelopment,

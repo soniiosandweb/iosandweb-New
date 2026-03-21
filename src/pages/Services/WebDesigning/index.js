@@ -13,6 +13,7 @@ import FeaturesPointsSection from "../../../components/FeaturesPointsSection/Fea
 import AnimatedText from "../../../components/AnimatedText/AnimatedText";
 import NumbersGrid from "../../../components/NumbersGrid/NumbersGrid";
 import ConcludingSection from "./ConcludingSection/ConcludingSection.jsx";
+import FAQSection from "../../../components/FAQSection/FAQSection.jsx";
 
 const Group = `${process.env.REACT_APP_API_URL}/assests/services/webDesgin/Group.webp`;
 const rating = `${process.env.REACT_APP_API_URL}/assests/services/webDesgin/rating.webp`;
@@ -32,6 +33,48 @@ function WebDesigning() {
     "Secure, Scalable Web Solutions Powered by Blockchain Technology",
     "Exceptional Web Design for High-Performance Digital Experiences"
 ]
+const faqLists = [
+  {
+    title: "What are services for web design and graphic design?",
+    text: "Web design and graphic design services include making websites, logos, branding materials, <a href='https://iosandweb.net/blog/why-full-stack-ui-ux-designers-are-in-high-demand-today'> UI/UX layouts</a>, and marketing materials that look good. These services help businesses get more customers and make their online presence stronger."
+  },
+  {
+    title: "Why is it important for my business to have a professionally designed website?",
+    text: "A professional web design will make your site look modern, trustworthy, and easy to use. A website that is well-designed makes it easier for people to use, keeps them interested, and makes it more likely that they will become customers."
+  },
+  {
+    title: "Do you offer custom branding and website design services?",
+    text: "Yes, we can design and brand a website just for your business. Everything is made to fit your vision, from custom website layouts to logo and brand identity design."
+  },
+  {
+    title: "How does graphic design make my website work better?",
+    text: "Good <a href='https://iosandweb.net/graphic-designing-services'> graphic design</a> makes your website look and feel better overall. It makes things easier to read, more interesting to use, and more appealing to the eye. This can help keep users on your site longer and get more people to buy something."
+  },
+  {
+    title: "Do you make websites that work well on mobile devices and are responsive?",
+    text: "Yes, all of our websites work well on mobile devices and are fully responsive. This makes sure that your website works well on desktops, tablets, and smartphones, which is also good for SEO rankings."
+  },
+  {
+    title: "Can you change the design of my current website and graphics?",
+    text: "Yes, we can help you redesign your website and improve your graphics. We update your current design to make it more modern, faster, and in line with what people want right now."
+  },
+  {
+    title: "Do you design logos and build full brand identities?",
+    text: "Yes, we can help your business keep a professional and consistent look across all platforms by designing your logo, creating your brand identity, and designing your marketing materials."
+  },
+  {
+    title: "How long does it take to finish a web design project?",
+    text: "The amount of time it takes depends on the size and needs of the project. It could take 1 to 2 weeks to make a simple website, but it could take a few weeks to make a more complicated web design and branding project."
+  },
+  {
+    title: "Do you make graphics and ads for social media?",
+    text: "Yes, we make social media posts, banners, ads, and other promotional materials that help you get more attention and interaction online."
+  },
+  {
+    title: "What should I look for in a web design company for my business?",
+    text: "Find a company that has worked with businesses like yours before, has a strong portfolio, and knows what your business needs. A good web design company will give you personalized solutions, clear prices, and help whenever you need it."
+  }
+];
 
     const location = useLocation();
 
@@ -445,6 +488,13 @@ function WebDesigning() {
 
             {/* {} */}
             <ConcludingSection/>
+                        {/*FAQSection  */}
+                            <FAQSection 
+                                subheading={"Insights"}
+                                heading={"Frequently Asked Questions"}
+                                lists={faqLists}
+                                fullwidth={true}
+                            />
 
         </>
     )

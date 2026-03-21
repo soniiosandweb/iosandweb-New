@@ -38,11 +38,11 @@ function CareerForm() {
 
         let errors = {};
 
-        if (!values.firstName) {
+        if (!values.firstName || values.firstName.trim() === "" ) {
             errors.firstName = "First name is required";
         }
 
-        if (!values.lastName) {
+        if (!values.lastName || values.lastName.trim() === "") {
             errors.lastName = "Last name is required";
         }
 
@@ -191,7 +191,7 @@ function CareerForm() {
                 </Form.Group>
                 <p className="FontSiz18 bold">Applying For</p>
 
-                <Form.Group className="form-group">
+                {/* <Form.Group className="form-group">
                     <Form.Control
                         type="text"
                         kjplaceholder="Location"
@@ -200,7 +200,7 @@ function CareerForm() {
                         onChange={handleChange}
                     />
                     {formerrors.location && <p className="text-danger">{formerrors.location}</p>}
-                </Form.Group>
+                </Form.Group> */}
 
                 <Form.Group className="form-group">
                     <Form.Select

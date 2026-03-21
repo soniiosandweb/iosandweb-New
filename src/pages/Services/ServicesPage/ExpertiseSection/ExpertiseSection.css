@@ -61,6 +61,12 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
+@media (max-width:767px) {
+    .services_expertise_section.section-padding.no-bottom-padding.body-background {
+    margin-top: 6rem;
+}
+    
+}
 @media (max-width: 525px) {
     .services_expertise_grid {
         grid-template-columns: repeat(1, 290px);

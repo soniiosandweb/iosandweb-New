@@ -193,7 +193,5 @@
     .software_banner_flexs {
         padding-top: 120px;
     }
-    .software_banner_flexs .software_banner_cols {
-        display: none !important;
-    }
+
 }

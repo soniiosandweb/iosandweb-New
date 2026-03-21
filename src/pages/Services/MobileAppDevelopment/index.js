@@ -128,7 +128,7 @@ function MobileAppDevelopment() {
     const faqLists = [
         {
             title: "What types of mobile apps do you develop—native, hybrid, or cross-platform?",
-            text: "At IosAndWeb Technologies, we develop all three types—native apps (for Android and iOS), hybrid apps, and cross-platform apps using frameworks like Flutter, React Native, and Xamarin. We recommend the best approach based on your budget, timeline, and scalability needs.",
+            text: "At IosAndWeb Technologies, we develop all three types—native apps (for Android and iOS), hybrid apps, and cross-platform apps using frameworks like Flutter,<a href='https://iosandweb.net/blog/top-10-react-native-app-development-trends-in-2025'> React Native</a>, and Xamarin. We recommend the best approach based on your budget, timeline, and scalability needs.",
         },
         {
             title: "Do you provide support and maintenance after the app is launched?",

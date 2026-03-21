@@ -25,38 +25,36 @@ function ContactPageForm(){
         }));
     };
 
-    const validate = () => {
-    
-        let errors = {};
-    
-        //name field
-        if (!values.yourName) {
-          errors.yourName = "Name is required";
-        }
-    
-        //email field
-        if (!values.emailAddress) {
-          errors.emailAddress = "Email address is required";
-        } else if (!/\S+@\S+\.\S+/.test(values.emailAddress)) {
-          errors.emailAddress = "Email address is invalid";
-        }
+   const validate = () => {
+    let errors = {};
+    const isEmpty = (val) => !val || val.trim() === "";
+    // name field
+    if (!values.yourName || values.yourName.trim() === "") {
+        errors.yourName = "Name is required";
+    }
 
-        //Phone number field
-        if (!phoneValue) {
-            errors.phoneValue = "Phone number is required";
-        } else if (isPossiblePhoneNumber(phoneValue) === false) {
-            errors.phoneValue = "Phone number is invalid";
-        }
-    
-        setFormErrors(errors);
-    
-        if (Object.keys(errors).length === 0) {
-          return true;
-        } else {
-          return false;
-        }
-    };
+    // email field
+    if (!values.emailAddress || values.emailAddress.trim() === "") {
+        errors.emailAddress = "Email address is required";
+    } else if (!/\S+@\S+\.\S+/.test(values.emailAddress.trim())) {
+        errors.emailAddress = "Email address is invalid";
+    }
 
+    // Phone number field
+    if (!phoneValue || phoneValue.trim() === "") {
+        errors.phoneValue = "Phone number is required";
+    } else if (isPossiblePhoneNumber(phoneValue) === false) {
+        errors.phoneValue = "Phone number is invalid";
+    }
+    if (isEmpty(values.yourMessage)) {
+        errors.yourMessage = "Message is required";
+    } else if (values.yourMessage.trim().length < 10) {
+        errors.yourMessage = "Message must be at least 10 characters";
+    }
+    setFormErrors(errors);
+
+    return Object.keys(errors).length === 0;
+};
     const resetForm = () =>{
         setValues({
             yourName: "",
@@ -140,9 +138,19 @@ function ContactPageForm(){
                         <p className={`text-danger ${formerrors.phoneValue && "visible"}`}>{formerrors.phoneValue ? formerrors.phoneValue : "Phone Number is required"}</p>
                     </Form.Group>
 
-                    <Form.Group controlId="yourMessage" className="form-group">
-                        <Form.Control as="textarea" rows={4} name="yourMessage" placeholder="Message" value={values.yourMessage} onChange={handleChange} />
-                    </Form.Group>
+               <Form.Group controlId="yourMessage" className="form-group">
+                <Form.Control
+                    as="textarea"
+                    rows={4}
+                    name="yourMessage"
+                    placeholder="Message"
+                    value={values.yourMessage}
+                    onChange={handleChange}
+                />
+                <p className={`text-danger ${formerrors.yourMessage && "visible"}`}>
+                    {formerrors.yourMessage ? formerrors.yourMessage : "Message is required"}
+                </p>
+            </Form.Group>
 
                     <Form.Group className="form-group form-submit-group">
                         <Button type="submit" className={`form-submit-btn ${loading ? 'disabled' : null }`}> 

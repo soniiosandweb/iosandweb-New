@@ -26,7 +26,7 @@
 }
 .imgBlack,.imgWhite{
     position: relative;
-    width: 50%;
+    width: 48%;
     object-fit: contain;
 }
 img.imgWhite {
@@ -56,9 +56,10 @@ img.imgBlack{
 }
 }
 @media  (max-width:787px){
-    .samllBannerSection {
+.samllBannerSection {
     min-height: 570px;
-    height: 1208px;
+    height: 958px;
+    padding-top: 4rem;
 }
 }
 @media (max-width:400px){
@@ -68,8 +69,9 @@ img.imgBlack{
 }
 
 .samllBannerSection {
-    min-height: 570px;
-    height: 1112px;
+    min-height: 250px;
+    height: 823px;
+    padding-top: 4rem;
 }
 }
 @media (max-width:5675px){

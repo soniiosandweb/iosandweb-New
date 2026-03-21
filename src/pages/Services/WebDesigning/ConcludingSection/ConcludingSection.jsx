@@ -8,12 +8,12 @@ const servicesLists = [
     {
         icon: appDevelopment,
         title: "PDF to HTML Designing Services",
-        link: "/web-development-services",
+        link: "https://iosandweb.net/pdf-to-html-designing-services",
     },
     {
         icon: crmDevelopment,
         title: "Graphic Design",
-        link: "/crm-development-for-healthcare-industry",
+        link: "/web-designing-services"
     },
 ]
 
