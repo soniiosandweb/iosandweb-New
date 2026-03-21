@@ -35,7 +35,7 @@ const locations = [
     {
         icon: indiaIcon,
         title: "India (HQ)",
-        address: "SCO 30, First Floor, <br/>Near Devaji Plaza, VIP Road, <br/>Zirakpur, PB (India)"
+        address: "India- Vip shopping <br> complex ,VIP Road, <br> Zirakpur - Chandigarh"
     },
     {
         icon: ukIcon,
@@ -45,7 +45,7 @@ const locations = [
     {
         icon: usaIcon,
         title: "United States",
-        address: "Suite #304, 11200 <br/>Manchaca, <br/>Austin, Texas, <br/>United States, 78748"
+        address: "Sheffield City <br/> Centre, Sheffield, <br/> S1 1AA, United Kingdom"
     }
 ]
 

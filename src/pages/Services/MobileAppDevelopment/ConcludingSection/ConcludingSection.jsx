@@ -31,7 +31,7 @@ const servicesLists = [
 
 const ConcludingSection = () => {
     return(
-        <div className="concluding_section section-padding  no-bottom-padding body-background">
+        <div className="concluding_section   no-bottom-padding body-background">
             <Container>
                 <Row>
                     <Col>

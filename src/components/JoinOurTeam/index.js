@@ -191,16 +191,17 @@ function CareerForm() {
                 </Form.Group>
                 <p className="FontSiz18 bold">Applying For</p>
 
-                {/* <Form.Group className="form-group">
+                <Form.Group className="form-group">
                     <Form.Control
                         type="text"
                         kjplaceholder="Location"
                         name="location"
+                        placeholder="your location"
                         value={values.location}
                         onChange={handleChange}
                     />
                     {formerrors.location && <p className="text-danger">{formerrors.location}</p>}
-                </Form.Group> */}
+                </Form.Group>
 
                 <Form.Group className="form-group">
                     <Form.Select

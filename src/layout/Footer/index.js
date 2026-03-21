@@ -241,7 +241,7 @@ return () => {
                                 <div className="location-div clock_boxes">
                                     <img src={india} alt="India" className="location-image" />
                                     <div className="location-heading">HQ India</div>
-                                    <p className="location-text">SCO 30, First Floor, <br/>Near Devaji Plaza, VIP Road, <br/>Zirakpur, PB (India)</p>
+                                    <p className="location-text">India- Vip shopping <br/>complex ,VIP Road, <br/>Zirakpur - Chandigarh</p>
                                     <div className="footer-clock">
                                         <AnalogClock {...options} />
                                     </div>
@@ -261,7 +261,7 @@ return () => {
                                 <div className="location-div clock_boxes">
                                     <img src={hqUs} alt="United States" className="location-image" />
                                     <div className="location-heading">United States</div>
-                                    <p className="location-text">Suite #304, 11200 Manchaca, <br/>Austin, Texas, <br/>United States, 78748</p>
+                                    <p className="location-text">Sheffield City <br/>Centre, Sheffield, <br/>S1 1AA, United Kingdom</p>
                                     <div className="footer-clock">
                                         <AnalogClock {...usOptions} />
                                     </div>
