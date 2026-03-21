@@ -9,7 +9,6 @@ const serviceLayer = `${process.env.REACT_APP_API_URL}/assests/services/services
 const upIcon = `${process.env.REACT_APP_API_URL}/assests/services/services-page/upIcon.svg`;
 const groupIcon = `${process.env.REACT_APP_API_URL}/assests/services/services-page/groupIcon.svg`;
 
-const bannerVideo = `${process.env.REACT_APP_API_URL}/assests/services/services-page/service-banner-video.mp4`;
 
 const servicesBannerItem = [
     {
