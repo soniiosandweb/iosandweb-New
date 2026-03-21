@@ -16,12 +16,12 @@ const presenceLists = [
     {
         image: indiaFlag,
         text: "India",
-        para:"India- Vip shopping complex ,VIP Road, Zirakpur - Chandigarh"
+        para:"Vip shopping complex ,VIP Road, Zirakpur - Chandigarh(India)"
     },
     {
         image: USFlag,
         text: "United States",
-        para:"USA address- 237 Warrick Road, Putnam Station, NY 12861 US"
+        para:"237 Warrick Road, Putnam Station, NY 12861 USA"
     },
     {
         image: UKFlag,

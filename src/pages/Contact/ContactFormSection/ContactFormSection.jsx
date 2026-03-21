@@ -35,7 +35,7 @@ const locations = [
     {
         icon: indiaIcon,
         title: "India (HQ)",
-        address: "India- Vip shopping <br> complex ,VIP Road, <br> Zirakpur - Chandigarh"
+        address: "Vip shopping <br> complex ,VIP Road, <br> Zirakpur - Chandigarh(India)"
     },
     {
         icon: ukIcon,
@@ -45,7 +45,7 @@ const locations = [
     {
         icon: usaIcon,
         title: "United States",
-        address: "Sheffield City <br/> Centre, Sheffield, <br/> S1 1AA, United Kingdom"
+        address: "237 Warrick Road <br/> Putnam Station <br/> 12861 USA"
     }
 ]
 
