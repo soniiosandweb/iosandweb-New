@@ -61,7 +61,7 @@ function PdfToHtml(){
             <div className="what-software-section section-padding text-white">
                 <Container>
                     <Row className="align-items-center">
-                        <Col lg={7}>
+                        <Col >
                             <div className="leadtxt">
                                 <h2>Why is IosAndWeb the best PDF-to- HTML conversion service available when so many other options exist?</h2>
                             </div>
@@ -69,12 +69,12 @@ function PdfToHtml(){
                                 The IosAndWeb Team has been officially acknowledged as one of the Top pdf to html designing services provider. IosAndWeb is widely regarded as one of the world's most successful pdf to html convert online companies. This is mainly attributable to its concentration on converting and sensibly stacking your Portable Document Format into fully mobile responsive, W3C valid HTML5/CS3 codes, as well as the expertise of its front-end developers. We can provide better PDF to responsive HTML conversion services because we accept files in various designs and formats. Some of these designs and structures include but are not limited to PDF, PSD, JPG, PNG, and AI, amongst others.
                             </div>
                         </Col>
-                        <Col lg={5}>
+                        {/* <Col lg={5}>
                             <div className="leadsubtxt mb-3 text-center">
                                 Fill the form and get quote for your project.
                             </div>
                             <ContactForm />
-                        </Col>
+                        </Col> */}
                     </Row>
                 </Container>
             </div>

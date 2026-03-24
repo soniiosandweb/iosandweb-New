@@ -122,9 +122,9 @@ const SliderContent = () => {
                 </ul>
                 </span>
 
-                <button className="consult-btn">
+               <a href="/contact-us" target="blank"> <button className="consult-btn">
                   Book Free Consultation Now  <FontAwesomeIcon icon={faAnglesRight} />
-                </button>
+                </button></a>
               </div>
             </div>
           ))}

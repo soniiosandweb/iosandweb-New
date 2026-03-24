@@ -10,7 +10,7 @@ import MoreThanWebSection from './MoreThanWebSection/MoreThanWebSection.jsx'
 import ReadyBuildSection from "./ReadyBuildSection/ReadyBuildSection.jsx";
 import HowWeHelp from './howWeHelp/howWeHelp.jsx';
 import AnimatedText from "../../../components/AnimatedText/AnimatedText.jsx";
-import ConcludingSection from "../MobileAppDevelopment/ConcludingSection/ConcludingSection.jsx";
+import ConcludingSection from "./ConcludingSection.jsx";
 import FAQSection from "../../../components/FAQSection/FAQSection.jsx";
 import BusinessGoals from "./BusinessGoals/BusinessGoals.jsx";
 
@@ -37,7 +37,7 @@ const uber = `${basePath}/young-uber-driver-car-interior.webp`
 const van = `${basePath}/young-courier-his-colleague-unloading-cardboard-boxes-from-delivery-van.webp`
 const designerWork = `${basePath}/set-designer-work-indoors.webp`;
 const chickenFood = `${basePath}/side-view-chicken-meatballs-with-greens-ketchup-plate.webp`;
-const webdevBg = `${basePath}/WebDevbg.webp`;
+const webdevBg = `${basePath}/WebDevbg.gif`;
 const contactBg = `${process.env.REACT_APP_API_URL}/assests/contact/bannerbg.webp`;
 const bannerArrow = `${basePath}/bannerArrow.webp`;
 
@@ -205,35 +205,7 @@ const innovativeItems = [
                   <div className='bannerImgContanier'>
                   <img src={webdevBg} className="responsiveSectionBannerImage" alt="Portfolio" />
                     <img src={contactBg} alt="Contact Us" className="webDevlopment_banner_bg" />
-                        {innovativeItems.map((item, i) => (
-                            <span> 
-                              <span className={`innovative_items_span ${item.text}`} key={i}    style={{ '--icon-url': `url(${bannerArrow})` }}
-                               >{item.title}</span>
-                                </span>    ))}
-                             <div className="software_banner_cols">
-                                 {/* <div className="lines-wrapper">
-                                    <div className="line line-1">
-                                        <span className="gradient-block delay-1" />
-                                    </div>
-
-                                    <div className="line line-2">
-                                        <span className="gradient-block delay-2" />
-                                    </div>
-
-                                    <div className="line line-3">
-                                        <span className="gradient-block delay-3" />
-                                    </div>
-
-                                    <div className="line line-4">
-                                        <span className="gradient-block delay-4" />
-                                    </div>
-
-                                    <div className="line line-5">
-                                        <span className="gradient-block delay-5" />
-                                    </div>
-                                </div> */}
-             </div>
-                            </div>
+                 </div>
                      <Container>
                          <Row className="align-items-center">
                              <Col lg={6}>

@@ -180,72 +180,6 @@ filter: invert(14%) sepia(100%) saturate(6000%) hue-rotate(230deg) brightness(10
     opacity: 29%;
 }
 
-.software_banner_cols .lines-wrapper {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    justify-content: space-around;
-    pointer-events: none;
-    top: 0;
-    right: 0;
-    width: calc(36% + 13vw);
-    bottom: 0;
-    left: auto;
-}
-.software_banner_cols .lines-wrapper .line {
-    position: relative;
-    width: 1px;
-    height: 100%;
-    background: #FFFFFF;
-    overflow: hidden;
-}
-.software_banner_cols .lines-wrapper .gradient-block {
-    position: absolute;
-    top: -30%;
-    left: 0;
-    width: 100%;
-    height: 30%;
-    background: linear-gradient(180deg, #BF00FF 0%, #0044FF 100%);
-    animation-name: moveUpDown;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-fill-mode: both;
-}
-
-/* animation */
-@keyframes moveUpDown {
-    0% {
-        transform: translateY(0%);
-    }
-    100% {
-        transform: translateY(430%);
-    }
-}
-
-.delay-1 {
-    animation-duration: 6s;
-    animation-delay: -0s;
-}
-
-.delay-2 {
-    animation-duration: 6s;
-    animation-delay: -1.2s;
-}
-
-.delay-3 {
-    animation-duration: 6s;
-    animation-delay: -2.4s;
-}
-
-.delay-4 {
-    animation-duration: 6s;
-    animation-delay: -3.6s;
-}
-
-.delay-5 {
-    animation-duration: 6s;
-    animation-delay: -4.8s;
-}
 /* ============================= */
 /* Services Listing */
 /* ============================= */
@@ -256,20 +190,22 @@ filter: invert(14%) sepia(100%) saturate(6000%) hue-rotate(230deg) brightness(10
     list-style: inside square;
     padding: 0;
 }
-
+img.responsiveSectionBannerImage {
+    padding: 8rem;
+}
 
 .services-listing li {
     flex: 1 0 50%;
     padding: 6px 0;
 }
 @media (min-width:1400px) {
-    
 .responsiveSectionBannerImage {
     right: 0px;
-    width: 65%;
+    width: 50%;
     position: absolute;
     height: 100%;
     z-index: 1;
+    left: 50%;
 }
 .webDevlopomentBannerSection{
     display: flex;
@@ -347,11 +283,17 @@ filter: invert(14%) sepia(100%) saturate(6000%) hue-rotate(230deg) brightness(10
         flex: 1 1 100%;
     }
 }
-
 .bannerImgContanier {
     right: 0px;
     position: absolute;
     height: 100%;
+    left: 0px;
+}
+img.webDevlopment_banner_bg {
+    width: 100% !important;
+    left: 0px;
+    right: 0px;
+    object-fit: cover;
 }
 .services-includes-section .paragraph {
     position: unset;
@@ -640,6 +582,9 @@ span.arrow-btn:hover{
     .numbers_grid_section {
         grid-template-columns: repeat(2, 1fr);
     }
+    img.responsiveSectionBannerImage {
+    padding: 1rem;
+}
     .industry-card-wrapper {
     display: grid;
     grid-template-columns: repeat(1,1fr);

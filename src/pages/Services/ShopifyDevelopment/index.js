@@ -29,9 +29,8 @@ function ShopifyDevelopment(){
     return(
         <>
             <SEO
-                title={"Shopify Development Services - Get Quote - IAW Technologies"}
-                description={"Our Shopify Development Services are designed to help businesses build and customize Shopify online stores. Get Quote at IAW Technologies."}
-                name={"IosAndWeb Technologies"}
+                title={"Get Shopify Development Services in USA - IosAndWeb Technologies"}
+                description={"Shopify Development Services in USA to build fast, secure, and scalable eCommerce stores. Boost sales with custom design, apps, and seamless user experience."}
                 canonicalUrl={`${process.env.REACT_APP_API_URL}${location.pathname}`}
             />
 
@@ -69,7 +68,7 @@ function ShopifyDevelopment(){
             <div className="what-software-section section-padding text-white">
                 <Container>
                     <Row className="align-items-center">
-                        <Col lg={7}>
+                        <Col>
                             <div className="leadtxt">
                                 <h2>Shopify Development Services</h2>
                             </div>
@@ -80,12 +79,12 @@ function ShopifyDevelopment(){
                                 Additionally, Shopify offers a 14-day free trial. The tools' necessity can be tested. Everything is evident when you utilize the Shopify store administration panel's interface, which is simple and easy to use.
                             </div>
                         </Col>
-                        <Col lg={5}>
+                        {/* <Col lg={5}>
                             <div className="leadsubtxt mb-3 text-center">
                                 Fill the form and get quote for your project.
                             </div>
                             <ContactForm />
-                        </Col>
+                        </Col> */}
                     </Row>
                 </Container>
             </div>

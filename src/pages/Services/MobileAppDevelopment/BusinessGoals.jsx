@@ -103,7 +103,8 @@ const BusinessGoals = () => {
             <Container>
                 <Row>
                     <Col className="BussincessCol">
-                        <h2 className="heading_main split">How Our Custom Software Solutions Support Your Business Goals</h2>
+                        <h2 className="heading_main split">From Concept to Launch: Our Development Lifecycle</h2>
+                        <p className="FontSize18">Whether you are validating a startup idea or scaling an enterprise platform, our structured approach ensures a high-quality cross-platform experience from day one.</p>
                         <div className="business_goals_grid less-top-padding">
                             {goalsLists.map((item,index) => (
                                 <div className="business_goals_item goals_boxes" key={index}>

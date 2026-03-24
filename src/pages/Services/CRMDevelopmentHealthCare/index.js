@@ -29,8 +29,8 @@ function CRMDevelopmentHealthCare(){
     return(
         <>
             <SEO
-                title={"We Offer CRM Development For Healthcare Industry"}
-                description={"Get Quote - CRM development for healthcare industry can help healthcare enterprises provide more concrete benefits to their patients."}
+                title={" CRM Development For Healthcare Industry - IosAndWeb Technologies"}
+                description={"CRM Development for Healthcare Industry. Streamline patient management, improve care, and boost efficiency with secure, scalable CRM solutions."}
                 name={"IosAndWeb Technologies"}
                 canonicalUrl={`${process.env.REACT_APP_API_URL}${location.pathname}`}
             />
@@ -68,7 +68,7 @@ function CRMDevelopmentHealthCare(){
             <div className="what-software-section section-padding text-white">
                 <Container>
                     <Row className="align-items-center">
-                        <Col lg={7}>
+                        <Col>
                             <div className="leadtxt">
                                 <h2>Consider how quickly the hospital staff becomes divided amongst their numerous roles</h2>
                             </div>
@@ -78,12 +78,6 @@ function CRMDevelopmentHealthCare(){
                             <div className="leadsubtxt">
                                 In terms of saving time, the most prominent example is provided by the ability to update and integrate patient electronic health data automatically. Keeping their businesses afloat in today's cutthroat market is no easy feat. Still, healthcare CRM aids in enhancing the quality of care, decreasing expenses, and better use of patient information.
                             </div>
-                        </Col>
-                        <Col lg={5}>
-                            <div className="leadsubtxt mb-3 text-center">
-                                Fill the form and get quote for your project.
-                            </div>
-                            <ContactForm />
                         </Col>
                     </Row>
                 </Container>

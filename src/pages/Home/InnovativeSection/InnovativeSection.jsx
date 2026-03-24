@@ -52,7 +52,7 @@ const innovativeLists = [
     {
         text: "Pay Per Click Service",
         icon: payIcon,
-        link: "/ppc-services",
+        link: "#",
         blank: false,
     },
     {

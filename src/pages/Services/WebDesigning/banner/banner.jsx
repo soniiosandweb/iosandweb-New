@@ -6,7 +6,7 @@ import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 
 
 
-const bannerImage = `${process.env.REACT_APP_API_URL}/assests/services/MobileDevlopment/Mbg.gif`;
+const bannerImage = `${process.env.REACT_APP_API_URL}/assests/services/webDesgin/Mbg.gif`;
 
 const Banner = () => {
     return(

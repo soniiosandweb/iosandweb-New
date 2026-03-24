@@ -63,7 +63,7 @@ function MagentoDevelopment(){
             <div className="what-software-section section-padding text-white">
                 <Container>
                     <Row className="align-items-center">
-                        <Col lg={7}>
+                        <Col>
                             <div className="leadtxt">
                                 <h2>Comprehensive Magento Website Development Services</h2>
                             </div>
@@ -72,12 +72,12 @@ function MagentoDevelopment(){
                                 <br />We deal with several different versions of Magento, such as Magento 2.0, so we can provide our customers with reliable storefront models. We can provide a comprehensive range of Magento website design services, including specialized eCommerce solutions, because we are a <b><u>Magento ecommerce development</u></b> company with a team of Magento-certified web developers.
                             </div>
                         </Col>
-                        <Col lg={5}>
+                        {/* <Col lg={5}>
                             <div className="leadsubtxt mb-3 text-center">
                                 Fill the form and get quote for your project.
                             </div>
                             <ContactForm />
-                        </Col>
+                        </Col> */}
                     </Row>
                 </Container>
             </div>

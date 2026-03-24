@@ -81,9 +81,8 @@ const faqLists = [
     return (
         <>
             <SEO
-                title={"Web Designing Services | Web Design Agency | Web Designer Near Me"}
-                description={"IosAndWeb Tech – A top web design company & agency. Expert web designer near you with 12+ yrs of experience. A trusted website builder near me.."}
-                keywords={"Web designing services, Website Design Company, Web Design Company, Web design agency, Website builder near me, Web designer near me"}
+                title={"Web Designing Services in USA | Web Design Agency - IosAndWeb"}
+                description={"Web Designing Services in USA by a leading web design agency. Get responsive, user-friendly, and modern websites that enhance brand identity and drive results."}
                 name={"IosAndWeb Technologies"}
                 canonicalUrl={`${process.env.REACT_APP_API_URL}${location.pathname}`}
             />

@@ -19,111 +19,74 @@ const FAQSection = lazy(() => import("../../components/FAQSection/FAQSection"));
 
 const Home = () => {
 
-    const localSchema = {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "IOSAndWeb Technologies",
-        "image": "https://iosandweb.net/static/media/IAW-black-logo.c17961e0b493c00d409f.png",
-        "url": "https://iosandweb.net/",
-        "telephone": "099158 41204",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "SCO No. 30, First Floor, VIP Shopping Centre",
-            "addressLocality": "Zirakpur",
-            "postalCode": "140603",
-            "addressCountry": "IN"
-        }
-    };
-
-    const organisationalSchema = {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "IOSAndWeb Technologies",
-        "url": "https://iosandweb.net/",
-        "logo": "https://iosandweb.net/static/media/IAW-black-logo.c17961e0b493c00d409f.png"
-    };
-    const serviceSchema = {
+  const localSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "IosAndWeb Technologies",
+  "@type": "LocalBusiness",
+  "name": "iosandweb",
+  "image": "https://iosandweb.net/assests/IAW-logo-white.png",
+  "@id" : "",
   "url": "https://iosandweb.net/",
-  "logo": "https://iosandweb.net/wp-content/uploads/2023/01/logo.png",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+91 7717689799",
-    "contactType": "customer support",
-    "areaServed": "IN",
-    "availableLanguage": ["English", "Hindi"]
+  "telephone": "+91 7717689799",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Vip shopping complex ,VIP Road,Zirakpur",
+    "addressLocality": "chandigarh",
+    "postalCode": "",
+    "addressCountry": "IN"
   },
-  "email": "info@iosandweb.net",
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": "Monday",
+    "opens": "09:30",
+    "closes": "18:30"
+  },{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": "Tuesday",
+    "opens": "09:30",
+    "closes": "18:30"
+  },{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": "Wednesday",
+    "opens": "09:30",
+    "closes": "18:30"
+  },{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": "Thursday",
+    "opens": "09:30",
+    "closes": "18:30"
+  },{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": "Friday",
+    "opens": "09:30",
+    "closes": "18:30"
+  },{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": "Saturday",
+    "opens": "09:30",
+    "closes": "18:30"
+  }],
   "sameAs": [
     "https://www.facebook.com/iosandwebtechnologies/",
     "https://www.instagram.com/iosandwebtechnologies/",
     "https://in.linkedin.com/company/iosandweb-technologies"
-  ],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "IT & Digital Services",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Web Development Services",
-          "description": "Custom website development using WordPress, Shopify, and modern frameworks tailored to business needs."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Mobile App Development",
-          "description": "Android, iOS, and cross-platform mobile app development focused on performance and user experience."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Digital Marketing Services",
-          "description": "SEO, PPC, social media marketing, and content strategies to grow online visibility and leads."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Search Engine Optimization (SEO)",
-          "description": "Complete on-page and off-page SEO services to improve rankings and organic traffic."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Pay-Per-Click Advertising (PPC)",
-          "description": "High-converting Google Ads campaigns designed to maximize ROI and generate quality leads."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "UI/UX Design",
-          "description": "Modern, user-friendly, and visually engaging UI/UX design for web and mobile platforms."
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Custom Software Development",
-          "description": "Custom-built software solutions to streamline operations and improve business efficiency."
-        }
-      }
-    ]
-  }
-};
+  ] 
+}
+
+
+    const organisationalSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "iosandweb",
+  "alternateName": "IosAndWeb Technologies",
+  "url": "https://iosandweb.net/",
+  "logo": "https://iosandweb.net/assests/IAW-logo-white.png",
+  "sameAs": [
+    "https://www.facebook.com/iosandwebtechnologies/",
+    "https://www.instagram.com/iosandwebtechnologies/",
+    "https://in.linkedin.com/company/iosandweb-technologies"
+  ]
+}
+ 
 
     const faqSchema = {
         "@context": "https://schema.org",
@@ -206,7 +169,6 @@ const Home = () => {
             localSchema={localSchema}
             organisationalSchema={organisationalSchema}
             faqSchema={faqSchema}
-            serviceSchema={serviceSchema}   
         />
 
             <Banner />
