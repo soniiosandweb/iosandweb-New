@@ -70,7 +70,7 @@ function B2BLeadGenerationCampaign(){
             <div className="what-software-section section-padding text-white">
                 <Container>
                     <Row className="align-items-center">
-                        <Col lg={7}>
+                        <Col>
                             <div className="leadtxt">
                                 <h2>Why is b2b lead generation campaign services vital for companies?</h2>
                             </div>
@@ -80,12 +80,7 @@ function B2BLeadGenerationCampaign(){
                             For over a decade, we have been serving with our web development services in UK and in all over the world. While developing your website, our team uses the latest techniques like ultra-clean and bold styles for the standard-based markup codes of the websites that help in improving the position in SERPs and increase conversions. As a web development company, we know that it is important to have a great website for a good online presence and it leaves the first impression on your website visitors. Some people consider a website just as a virtual representation of their company but it is not only that. Your website is the reflector of your business objectives and goals. That's why having an appealing, attractive, informative website is necessary for a great online presence.
                             </div>
                         </Col>
-                        <Col lg={5}>
-                            <div className="leadsubtxt mb-3 text-center">
-                                Fill the form and get quote for your project.
-                            </div>
-                            <ContactForm />
-                        </Col>
+                        
                     </Row>
                 </Container>
             </div>

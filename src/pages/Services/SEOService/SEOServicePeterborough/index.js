@@ -72,18 +72,13 @@ function SEOServicePeterborough(){
             <div className="what-software-section section-padding text-white">
                 <Container>
                     <Row className="align-items-center">
-                        <Col lg={7}>
+                        <Col>
                             <div className="leadtxt">
                                 <h2>Quality SEO Services Will Ensure a Good User Experience</h2>
                             </div>
                             <div className="leadsubtxt">Above all, you want your potential clients to enjoy their experience on your website since it will encourage them to visit it again and again anytime they need services or goods that are similar to your offerings. Google prioritizes user experience as one of the main elements when ranking web pages. To get the most out of Seo Optimisation, you must, however, make sure that your website is mobile-friendly. The majority of Indian SEO businesses also offer responsive website design services to help you enhance your user experience.</div>
                         </Col>
-                        <Col lg={5}>
-                            <div className="leadsubtxt mb-3 text-center">
-                                Fill the form and get quote for your project.
-                            </div>
-                            <ContactForm />
-                        </Col>
+                        
                     </Row>
                 </Container>
             </div>

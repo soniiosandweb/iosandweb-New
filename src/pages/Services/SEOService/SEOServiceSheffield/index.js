@@ -76,7 +76,7 @@ function SEOServiceSheffield(){
             <div className="what-software-section section-padding text-white">
                 <Container>
                     <Row className="align-items-center">
-                        <Col lg={7}>
+                        <Col>
                             <div className="leadtxt">
                                 <h2>How Natural Searches Affect Share Clicks in the "Sharing Is Caring" Movement</h2>
                             </div>
@@ -85,12 +85,7 @@ function SEOServiceSheffield(){
                             </div>
                             <div className="leadsubtxt mt-3">Whether you're working with a Sheffield SEO company or a top-rated SEO agency in Sheffield, better SEO means more clicks. Due to the high click-through rate of organic results, the better your SEO, the greater your click-through rate will be, helping your business grow with the help of <b>local SEO experts in Sheffield.</b></div>
                         </Col>
-                        <Col lg={5}>
-                            <div className="leadsubtxt mb-3 text-center">
-                                Fill the form and get quote for your project.
-                            </div>
-                            <ContactForm />
-                        </Col>
+                        
                     </Row>
                 </Container>
             </div>

@@ -83,7 +83,7 @@ function SEOService(){
             <div className="what-software-section section-padding text-white">
                 <Container>
                     <Row className="align-items-center">
-                        <Col lg={7}>
+                        <Col >
                             <div className="leadtxt">
                                 <h2>Advanced SEO Services To Get Better Ranking</h2>
                             </div>
@@ -91,12 +91,7 @@ function SEOService(){
                             With powerful and demonstrated strategies especially focused to achieve your clients, our White Hat techniques guarantee that your site is showing signs of improvement naturally as time passes, which is why we are known to be the providers of best SEO Services in London,Birmingham and many areas of United Kingdom. We focus on most recent Google  updates and following every one of their rules to ensure that whatever we are doing is according to Google's rules. 
                             </div>
                         </Col>
-                        <Col lg={5}>
-                            <div className="leadsubtxt mb-3 text-center">
-                                Fill the form and get quote for your project.
-                            </div>
-                            <ContactForm />
-                        </Col>
+                       
                     </Row>
                 </Container>
             </div>

@@ -74,7 +74,7 @@ function SEOPageSpeedOptimization(){
             <div className="what-software-section section-padding text-white">
                 <Container>
                     <Row className="align-items-center">
-                        <Col lg={7}>
+                        <Col>
                             <div className="leadtxt">
                                 <h2>Get Help with Page Speed Optimization Services</h2>
                             </div>
@@ -88,12 +88,7 @@ function SEOPageSpeedOptimization(){
                             If a page doesn't load within three seconds, more than 55 percent of visitors will either leave the site altogether or return later. You risk losing potential customers if your website takes longer than two seconds to load on any device. 
                             </div>
                         </Col>
-                        <Col lg={5}>
-                            <div className="leadsubtxt mb-3 text-center">
-                                Fill the form and get quote for your project.
-                            </div>
-                            <ContactForm />
-                        </Col>
+                      
                     </Row>
                 </Container>
             </div>

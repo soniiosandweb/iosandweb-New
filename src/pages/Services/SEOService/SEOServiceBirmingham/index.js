@@ -78,7 +78,7 @@ function SEOServiceBirmingham(){
             <div className="what-software-section section-padding text-white">
                 <Container>
                     <Row className="align-items-center">
-                        <Col lg={7}>
+                        <Col >
                             <div className="leadtxt">
                                 <h2>Get SEO Services in Birmingham @ IosAndWeb Technologies</h2>
                             </div>
@@ -92,12 +92,7 @@ function SEOServiceBirmingham(){
                                 The high level of competition makes it tough to rank an eCommerce website. For retailers to sell their goods online, there are numerous eCommerce systems, including BigCommerce, Shopify, and WooCommerce. This post will discuss how to drive exposure to your eCommerce store. So let's dive in and explore. In the following segment, you will learn the importance of ranking in the SEO market. 
                             </div>
                         </Col>
-                        <Col lg={5}>
-                            <div className="leadsubtxt mb-3 text-center">
-                                Fill the form and get quote for your project.
-                            </div>
-                            <ContactForm />
-                        </Col>
+                       
                     </Row>
                 </Container>
             </div>

@@ -6,7 +6,7 @@ import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 
 
 
-const bannerImage =  `${process.env.REACT_APP_API_URL}/assests/images/how-we-work/How%20We%20Work.webp`
+const bannerImage =  `${process.env.REACT_APP_API_URL}/assests/images/how_we_work/how_we_work.gif`
 
 const Banner = () => {
     return(

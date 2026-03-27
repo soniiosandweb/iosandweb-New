@@ -83,7 +83,7 @@ function EnglishCopywritingProofreading(){
             <div className="what-software-section section-padding text-white">
                 <Container>
                     <Row className="align-items-center">
-                        <Col lg={7}>
+                        <Col>
                             <div className="leadtxt">
                                 <h2>Explore our Copywriting and Proofreading Services</h2>
                             </div>
@@ -91,12 +91,7 @@ function EnglishCopywritingProofreading(){
                             IosAndWeb boasts a high degree of professionalism in the composition of texts in English and in the correction, revision, and editorial care of texts in English; authors and publishers are guaranteed precise and reliable <b>content writing services</b> and proofreading services. The proposed editing and correction service provides for both the revision and the standardization of the texts according to the editorial rules of the publishing house in order to improve the contents and readability. 
                             </div>
                         </Col>
-                        <Col lg={5}>
-                            <div className="leadsubtxt mb-3 text-center">
-                                Fill the form and get quote for your project.
-                            </div>
-                            <ContactForm />
-                        </Col>
+                       
                     </Row>
                 </Container>
             </div>
