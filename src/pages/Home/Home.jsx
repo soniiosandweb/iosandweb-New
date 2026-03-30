@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import SEO from "../../components/SEO";
 
 import Banner from "./Banner/Banner";
@@ -18,7 +18,14 @@ const AnimatedText = lazy(() => import("../../components/AnimatedText/AnimatedTe
 const FAQSection = lazy(() => import("../../components/FAQSection/FAQSection"));
 
 const Home = () => {
-
+ const [IsMobile , setIsMobile] = useState(window.innerWidth <=768)
+    useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+ 
+ 
   const localSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -173,19 +180,19 @@ const Home = () => {
 
             <Banner />
             <AboutSection />
-            <PoweringSection />
+           {       !IsMobile &&  <PoweringSection />}
 
             <Suspense fallback={<div style={{ height: "200px" }}>Loading...</div>}>
 
                 <InnovativeSection />
                 <IndustriesSection />
-                <AIPoweredSection />
-                <ServicesSection />
-                <StrategicPartners />
+                <AIPoweredSection />    
+               <StrategicPartners /> 
                 <ElevateSuccess />
                 <CaseStudies />
                 <WhyChoose />
-                <Testimonials />
+                 {       !IsMobile &&
+                <Testimonials />}
                 <AnimatedText />
 
                 <FAQSection
