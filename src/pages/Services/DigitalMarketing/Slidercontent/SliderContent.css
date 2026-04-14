@@ -1,7 +1,7 @@
 
 
 .slider-section {
-  padding: 80px 40px;
+  padding: 40px 40px;
 }
 
 .slider-container {
@@ -48,7 +48,7 @@
   transition: all 0.3s ease;
   border: 1px solid transparent;
 
-  min-height: 620px;   /* Desktop height */
+  min-height: 540px;   /* Desktop height */
 }
 
 .service-card:hover {

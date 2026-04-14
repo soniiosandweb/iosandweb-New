@@ -96,7 +96,7 @@ const BussinessGoal = () => {
                 <Row>
                     <Col className="BussincessCol">
                         <h2 className="heading_main split">Beyond Design: We Architect Digital Experiences That Connect</h2>
-                        <p className="FontSize">At iosAndWeb Technologies, we believe a website should do more than just look stunning, it must perform as your most powerful sales and engagement tool. By merging aesthetic excellence with technical rigor, we ensure every visitor interaction moves your business forward.</p>
+                        <p className="FontSize lessPadding">At iosAndWeb Technologies, we believe a website should do more than just look stunning, it must perform as your most powerful sales and engagement tool. By merging aesthetic excellence with technical rigor, we ensure every visitor interaction moves your business forward.</p>
                         <div className="business_goals_grid less-top-padding">
                             {goalsLists.map((item,index) => (
                                 <div className="business_goals_item goals_boxes" key={index}>

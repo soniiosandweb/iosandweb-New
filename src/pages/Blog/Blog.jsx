@@ -86,22 +86,33 @@ function Blog(){
             setLoading(false);
         })
     }, [page]);
-            const blogSchema = {
+
+        const blogSchema = {
         "@context": "https://schema.org",
-        "@type": "Blog",
-        "name": "IosAndWeb Technologies Blog",
-        "description": "Read the latest insights on web development, mobile app development, blockchain technology, and digital marketing from IosAndWeb Technologies.",
-        "url": "https://iosandweb.net/blog",
-        "inLanguage": "en",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://iosandweb.net/blog"
+        },
+        "headline": "IosAndWeb Technologies Blog | Web Development, App Development & Digital Marketing Insights",
+        "description": "Creative blog background representing web development, digital marketing, and modern technology solutions by IosAndWeb Technologies.",
+        "image": "https://iosandweb.net/assests/blog/Blogbg.gif",
+        "author": {
+            "@type": "Organization",
+            "name": "iosandweb Team",
+            "url": "https://iosandweb.net/iaw-team"
+        },
         "publisher": {
             "@type": "Organization",
-            "name": "IosAndWeb Technologies",
+            "name": "iosandweb",
             "logo": {
             "@type": "ImageObject",
-            "url": "https://iosandweb.net/static/media/IAW-black-logo.c17961e0b493c00d409f.png"
+            "url": "https://iosandweb.net/assests/IAW-logo-white.png"
             }
-        }
-        }
+        },
+        "datePublished": "2026-04-13",
+        "dateModified": "2026-04-13"
+        };
 
     return(
         <>

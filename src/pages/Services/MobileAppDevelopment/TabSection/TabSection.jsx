@@ -50,7 +50,7 @@ const TabSection = () => {
 };
 
     return (
-        <div className='TabSectionSection black section-padding no-bottom-padding'>
+        <div className='TabSectionSection black  no-bottom-padding'>
          <Container>
             <Row>
                 <Col>

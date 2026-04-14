@@ -217,7 +217,6 @@ function Ecommerce(){
                     </Row>
                 </Container>
             </div>
-
             {/* Industries Capabilities section */}
             <div className="what-software-section industries-capabilities-section section-padding text-white">
                 <Container>

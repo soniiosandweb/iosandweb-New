@@ -105,8 +105,8 @@ const faqLists = [
                         <Col>
                          <h1 className="heading_main split textaliginCenter">Empowering Brands with Data-Driven Digital Marketing</h1>
                          <span className="FontSize18 textaliginCenter">IosAndWeb Technologies designs customized, ROI-focused marketing strategies that accelerate growth, elevate brand visibility, and turn clicks into loyal customers</span>
-                         <div className="numberGridMobileDev textaliginCenter padding"><NumbersGrid /></div>
-                        <h1 className="heading_main  textaliginCenter">Partner with IosAndWeb Technologies to unlock intelligent, future-ready marketing powered by AI insights, precision targeting, and seamless omnichannel execution</h1>
+                         <div className="numberGridMobileDev textaliginCenter padding less-top-padding"><NumbersGrid /></div>
+                        <h1 className="heading_main  textaliginCenter less-top-padding ">Partner with IosAndWeb Technologies to unlock intelligent, future-ready marketing powered by AI insights, precision targeting, and seamless omnichannel execution</h1>
 
                         </Col>
                     </Row>
@@ -158,7 +158,7 @@ const faqLists = [
 
 
                 {/*why to parthner with us Section  */}
-                <div className="WhyToParthnerSection padding black">
+                <div className="WhyToParthnerSection  black">
                     <Container>
                         <Row>
                             <Col>
@@ -222,7 +222,7 @@ const faqLists = [
                 </div>
 
                 {/*  */}
-                <div className="turstedBySection padding black">
+                <div className="turstedBySection section-padding less-bottom-padding black">
                     <Container>
                         <Row>
                             <Col>
@@ -258,7 +258,7 @@ const faqLists = [
                     </Row>
                 </Container>
             </div>
-                        <div className="letsBuldTogtherSection  letsPowerBussince black section-padding ">
+                        <div className="letsBuldTogtherSection  letsPowerBussince black section-padding no-bottom-padding ">
                         <Container>
                             <Row className="letsBuldTogtherdiv">
                             <Col lg="6">

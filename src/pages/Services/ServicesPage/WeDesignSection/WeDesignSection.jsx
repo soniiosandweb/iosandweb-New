@@ -2,7 +2,6 @@ import { Col, Container, Row } from "react-bootstrap";
 import "./WeDesignSection.css";
 import { Link } from "react-router-dom";
 
-const innovativeBg = `${process.env.REACT_APP_API_URL}/assests/home/innovative/innovative-bg.webp`;
 const htmlIcon = `${process.env.REACT_APP_API_URL}/assests/services/services-page/html.webp`;
 const cssIcon = `${process.env.REACT_APP_API_URL}/assests/services/services-page/css.webp`;
 const xdIcon = `${process.env.REACT_APP_API_URL}/assests/services/services-page/xd.webp`;
@@ -55,7 +54,6 @@ const designIcons = [
 const WeDesignSection = () => {
     return(
         <div className="services_we_design_section section-padding body-background">
-            <img src={innovativeBg} alt="We Design. We Build. We Deliver." className="we_design_bgimg" />
             <Container>
                 <Row>
                     <Col>

@@ -91,7 +91,7 @@ const ReasonChooseSection = () => {
     }, []);
     
     return(
-        <div className="reason_choose_section section-padding body-background no-bottom-padding">
+        <div className="reason_choose_section section-padding body-background ">
             <Container>
                 <Row>
                     <Col>
@@ -120,10 +120,6 @@ const ReasonChooseSection = () => {
                                 </div>
                             ))}
                         </div>
-
-                        <h1 className="heading_main textaliginCenter section-padding less-bottom-padding split ">Technology Solutions Engineered for Results</h1>
-
-                        <h1 className="FontSize18 textaliginCenter">We build what works. Period.</h1>
                     </Col>
                 </Row>
             </Container>

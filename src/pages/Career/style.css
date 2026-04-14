@@ -197,9 +197,13 @@ img.ImgSection {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
+  }.investInYou .Build_whats_next{
+    height: auto;
   }
     .bulid_you_coreer_Piont_div {
     grid-template-columns: repeat(1 ,1fr);
+}.bulid_you_coreer_Piont_div .Build_whats_next{
+  height: auto;
 }
 .collabertionSection {
     flex-direction: column;

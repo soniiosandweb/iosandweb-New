@@ -18,12 +18,11 @@ const PortfolioBanner = () => {
                             <div className="portfolio_left_cols">
                                 <h1 style={{
                                     fontSize: "40px",
-                                    background: "linear-gradient( to right ,#024BFE, #7535FF)",
+                                    background: "radial-gradient(50% 50% at 50% 50%, #0011FF 0%, #A600FF 100%)",
                                     WebkitBackgroundClip: "text",
                                     WebkitTextFillColor: "transparent",
-                                    WebkitTextStroke:"0.3px #c6c2c2"
-
-                                }}
+                                    textShadow: "0 0 2px rgba(198,194,194,0.5)"
+                                }}        
                                 >
                                 Our Success Stories
                                 </h1>

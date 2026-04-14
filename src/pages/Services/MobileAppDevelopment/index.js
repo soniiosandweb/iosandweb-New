@@ -186,7 +186,7 @@ function MobileAppDevelopment() {
          
 
 
-            <div className="black VideoSection section-padding no-top-padding">
+            <div className="black VideoSection less-top-padding">
             <Container>
                 <Row>
                 <Col>

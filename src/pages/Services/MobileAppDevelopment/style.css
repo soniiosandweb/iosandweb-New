@@ -15,7 +15,10 @@
     filter: unset;
 }
 
-
+.black.VideoSection.less-top-padding p.FontSize25.bold {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
 
 .numberGridMobileDev .numbers_grid_section{
     display:grid;
@@ -27,6 +30,10 @@
     display:grid;
     grid-template-columns: repeat(4, 220px);
 }
+.numberGridMobileDev .numbers_grid_item {
+    width: auto;
+    height: auto;
+}
  .numberGridMobileDev .numbers_grid_item span {
     font-size: 55px;
     line-height: 86px;
@@ -36,7 +43,7 @@
 }@media (max-width:991px) {
     .numberGridMobileDev .numbers_grid_section{
     display:grid;
-    grid-template-columns: repeat(2, 220px);
+    grid-template-columns: repeat(2, 257px);
 }
  .numberGridMobileDev .numbers_grid_item span {
     font-size: 55px;

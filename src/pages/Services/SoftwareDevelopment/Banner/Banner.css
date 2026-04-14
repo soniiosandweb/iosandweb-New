@@ -24,7 +24,9 @@
     font-weight: 900;
     margin-bottom: 20px;
     text-transform: uppercase;
-    color: blue;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.3px rgb(198, 194, 194);
+    background: linear-gradient(to right, rgb(2, 75, 254), rgb(117, 53, 255)) text;
 }
 .software_banner_flexs .software_banner_cols {
     flex: 1;

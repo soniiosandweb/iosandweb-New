@@ -432,11 +432,16 @@ img.webDevlopment_banner_bg {
 .What_set_us_part_content_liftSide {
     display: flex;
     gap: 40px;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
+    /* flex-direction: column; */
+    margin-top: 5rem;
 }
 .What_set_us_part_content_rightSide_contantDiv{
     width: 50%;
+}
+.What_set_us_part_content_rightSide_contantDiv .FontSize18 {
+    margin-bottom: 2rem;
 }
 
 .What_set_us_part_content_rightSide_imgContanier {
@@ -450,6 +455,10 @@ img.webDevlopment_banner_bg {
 }
 .What_set_us_part_content_liftSide_imgDiv {
     width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 31px;
+    flex-wrap: wrap;
 }
 .What_set_us_part_content_rightSide_imgContanier img {
     position: absolute;
@@ -464,7 +473,7 @@ img.webDevlopment_banner_bg {
 
 .numbers_grid_section {
     display: grid;
-    grid-template-columns: repeat(2, minmax(160px, 1fr));
+    grid-template-columns: repeat(2,  1fr);
     gap: 30px;
     justify-content: center;
     margin-bottom: 20px;
@@ -565,6 +574,7 @@ span.arrow-btn:hover{
     .What_set_us_part_content_rightSide_imgContanier,
     .What_set_us_part_content_liftSide_NuberGrid {
         width: 100%;
+        margin-bottom: 3rem;
     }
 
     .What_set_us_part_content_rightSide_imgContanier {

@@ -260,7 +260,8 @@ const innovativeItems = [
                                     </h1>
 
                                 </div>
-                                    <div className="What_set_us_part_content_liftSide_NuberGrid less-top-padding">
+                                    <div className="What_set_us_part_content_liftSide_NuberGrid ">
+                                        
                                                                         <NumbersGrid />
 
                                     </div>

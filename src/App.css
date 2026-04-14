@@ -1,30 +1,53 @@
+
+/* Product Sans */
 @font-face {
   font-family: "ProductSans";
-  src: url('./fonts/ProductSans-Regular.woff2');
+  src: url('./fonts/ProductSans-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
-@font-face {
-  font-family: "ProductSans-Medium";
-  src: url('./fonts/ProductSans-Medium.woff2');
-}
+
+/* Inter */
 @font-face {
   font-family: "Inter";
-  src: url('./fonts/Inter-Medium.ttf');
+  src: url('./fonts/Inter-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
+
+/* Poppins (OLD SYSTEM - KEEPING NAMES) */
 @font-face {
-  font-family: "Poppins";
-  src: url('./fonts/Poppins-Regular.ttf');
+  font-family: "Poppins-Regular";
+  src: url('./fonts/Poppins-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
+
 @font-face {
   font-family: "Poppins-Medium";
-  src: url('./fonts/Poppins-Medium.ttf');
+  src: url('./fonts/Poppins-Medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
+
 @font-face {
   font-family: "Poppins-SemiBold";
-  src: url('./fonts/Poppins-SemiBold.ttf');
+  src: url('./fonts/Poppins-SemiBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
+
 @font-face {
   font-family: "Poppins-Bold";
-  src: url('./fonts/Poppins-Bold.ttf');
+  src: url('./fonts/Poppins-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 :root {
   --font-poppins: "Poppins";

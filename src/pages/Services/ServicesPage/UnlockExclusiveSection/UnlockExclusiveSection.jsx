@@ -10,7 +10,6 @@ import { useEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const innovativeBg = `${process.env.REACT_APP_API_URL}/assests/home/innovative/innovative-bg.webp`;
 
 const exclusiveLists = [
     {
@@ -79,7 +78,6 @@ const UnlockExclusiveSection = ({visions}) => {
 
     return (
         <div className="services_unlock_exclusive_section section-padding linear-dark-background" ref={containerRef}>
-            <img src={innovativeBg} alt="We Design. We Build. We Deliver." className="services_unlock_bgimg" />
             <Container>
                 <Row>
                     <Col>

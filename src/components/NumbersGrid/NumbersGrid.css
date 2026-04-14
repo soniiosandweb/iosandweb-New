@@ -15,6 +15,13 @@
     cursor: pointer;
     text-align: left;
     color: var(--color-white);
+    width: 256px;
+    height: 220px;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .numbers_grid_item:hover {
     background: linear-gradient(306.1deg, #5E00FF 0%, #00076F 88.58%) padding-box,
@@ -54,7 +61,7 @@
 }
 @media (max-width: 1199px) {
     .numbers_grid_section {
-        grid-template-columns: repeat(3, 256px);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 @media (max-width: 991px) {
