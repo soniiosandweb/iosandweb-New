@@ -55,7 +55,7 @@ const TabSection = () => {
             <Row>
                 <Col>
                 <div className='TabSection textaliginCenter '>
-                    <h1 className='heading_main split'>Developing High-Performance Web Applications with Advanced Technologies</h1>
+                    <h2 className='heading_main split'>Developing High-Performance Web Applications with Advanced Technologies</h2>
                     <p className='FontSize18'>Our custom web application development leverages state-of-the-art technologies to deliver solutions that address today's requirements and scale for the future.</p>
 
                     <div className="tab-header less-top-padding">

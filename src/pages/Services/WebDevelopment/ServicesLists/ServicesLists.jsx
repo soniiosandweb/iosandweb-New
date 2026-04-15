@@ -87,8 +87,8 @@ const ServicesLists = () => {
             <Container>
                 <Row>
                     <Col>
-                    <h1 className="heading_main textaliginCenter  less-bottom-padding split ">Technology Solutions Engineered for Results</h1>
-                    <h1 className="FontSize18 textaliginCenter">We build what works. Period.</h1>
+                    <h2 className="heading_main textaliginCenter  less-bottom-padding split ">Technology Solutions Engineered for Results</h2>
+                    <h3 className="FontSize18 textaliginCenter">We build what works. Period.</h3>
                         <ServicesGridSection lists={services} />
                     </Col>
                 </Row>

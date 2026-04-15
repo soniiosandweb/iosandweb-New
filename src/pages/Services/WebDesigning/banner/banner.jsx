@@ -16,8 +16,8 @@ const Banner = () => {
                     <Col lg='7' >
                         <div className="MobileWeb_banner_flexs   no-bottom-padding">
                             <div className="software_banner_cols contents_block">
-                                <p className="services_banner_subheading">web designing services</p>
-                                <h1 className="heading_main split">Design-Driven Web Experiences That Engage, Convert & Scale</h1>
+                                <h1 className="services_banner_subheading">web designing services</h1>
+                                <h2 className="heading_main split">Design-Driven Web Experiences That Engage, Convert & Scale</h2>
                                 <p className="paragraph_content">At IosAndWeb Technologies, we deliver custom web designing services for businesses across the USA. Our websites are built with a strong focus on user experience, performance, and conversions—helping brands stand out in competitive digital markets. From startups to enterprises, we design websites that are modern, responsive, and results-driven.</p>
                             </div>
                         </div>

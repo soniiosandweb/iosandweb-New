@@ -18,8 +18,8 @@ const Banner = () => {
                     <Col lg='7' >
                         <div className="MobileWeb_banner_flexs   no-bottom-padding">
                             <div className="software_banner_cols contents_block">
-                               <p className="services_banner_subheading">mobile app development services</p>
-                                <h1 className="heading_main split">End-to-End App & Web Development Experts</h1>
+                               <h1 className="services_banner_subheading">mobile app development services</h1>
+                                <h2 className="heading_main split">From Concept to Code: End-to-End App & Web Development Experts“</h2>
                                 <p className="paragraph_content">IosAndWeb Technologies is a leading custom mobile app development company in India, delivering high-performance Android, iOS, and cross-platform solutions. With 10+ years of expertise, we build scalable, future-ready apps that help startups and enterprises succeed.</p>
                             </div>
                         </div>

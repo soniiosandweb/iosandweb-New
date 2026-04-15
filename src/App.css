@@ -50,7 +50,7 @@
   font-display: swap;
 }
 :root {
-  --font-poppins: "Poppins";
+  --font-poppins: "Poppins-MediumYUI    ";
   --font-poppins-medium: "Poppins-Medium";
   --font-poppins-semibold: "Poppins-SemiBold";
   --font-poppins-bold: "Poppins-Bold";
@@ -317,7 +317,7 @@ h1, h2, h3, h4, h5, h6{
 }
 .FontSize18{
   font-size: 18px !important;
-  font-family: "Poppins";
+  font-family: "Poppins-Regular";
 }
 .FontSize25{
   font-size: 25px !important;

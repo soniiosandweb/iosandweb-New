@@ -24,7 +24,7 @@ const featuresPoints = [
 const SoftwareDevelopment = () => {
 
     const location = useLocation();
-
+    
     const faqLists = [
         {
             title: "What is custom software development, and why does my business need it?",

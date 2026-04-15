@@ -117,10 +117,10 @@ const faqLists = [
                 </Col >
                 <Col lg={5}>
                 <div className="TowFactorsContent">
-                    <h1 className="TowFactorsContentHedaing">Two essential factors play a decisive role in your business success</h1>
+                    <h2 className="TowFactorsContentHedaing">Two essential factors play a decisive role in your business success</h2>
                      <div>
-                        <span className="TowFactorsContentSubhaeding"> <img src={rating}alt="" /> <h2 className="TowFactorsContentsub">Customer Experience</h2> </span>
-                        <span className="TowFactorsContentSubhaeding"> <img src={satisfaction} alt="" /> <h2 className="TowFactorsContentsub">Customer Satisfaction</h2> </span>
+                        <span className="TowFactorsContentSubhaeding"> <img src={rating}alt="" /> <h3 className="TowFactorsContentsub">Customer Experience</h3> </span>
+                        <span className="TowFactorsContentSubhaeding"> <img src={satisfaction} alt="" /> <h3 className="TowFactorsContentsub">Customer Satisfaction</h3> </span>
                         <hr className="Line" />
                         <p className="TowFactorsContentPara">We design optimized customer experiences that drive up to 2× higher customer satisfaction</p>
                           <Link to="/contact-us" reloadDocument className="btn-gradient-blue">See Full Overview <FontAwesomeIcon icon={faAnglesRight} /></Link>
@@ -138,7 +138,7 @@ const faqLists = [
                     <Row>
                         <Col lg={6}>
                             <div className="TowFactorsContent">
-                            <h1 className="TowFactorsContentHedaing">Two essential factors play a decisive role in your business success</h1>
+                            <h2 className="TowFactorsContentHedaing">Two essential factors play a decisive role in your business success</h2>
                             <div>
                                 <span className="DDSImgHeadding">
                                     <span className="headingSection">
@@ -258,9 +258,9 @@ const faqLists = [
                         <Row>
                             <Col className="rightToLeft">
                             <div className="AdditionalSectionTextDiv">
-                                <h1 className="MianHeading">
+                                <h2 className="MianHeading">
                                  Advanced Search Engine Optimization
-                                </h1>
+                                </h2>
                                 <span className="subMainText">Crafting High-Impact Digital Experiences for Modern Businesses</span>
                              <span className="additionalSectionList">
                                 <ul>
@@ -286,9 +286,9 @@ const faqLists = [
                         <Row>
                             <Col className="leftToright ">
                             <div className="AdditionalSectionTextDiv">
-                                <h1 className="MianHeading">
+                                <h2 className="MianHeading">
                                   Full-Funnel Digital Marketing
-                                </h1>
+                                </h2>
                                 <span className="subMainText">Strategic Digital Marketing Solutions for Sustainable Business Growth</span>
                              <span className="additionalSectionList">
                                 <ul>
@@ -317,9 +317,9 @@ const faqLists = [
                         <Row>
                             <Col className="rightToLeft">
                             <div className="AdditionalSectionTextDiv">
-                                <h1 className="MianHeading">
+                                <h2 className="MianHeading">
                                  Expert Copywriting & Content Strategy
-                                </h1>
+                                </h2>
                                 <span className="subMainText">Expert Copywriting Services That Engage, Persuade, and Drive Results</span>
                              <span className="additionalSectionList">
                                 <ul>
@@ -345,9 +345,9 @@ const faqLists = [
                         <Row>
                             <Col className="leftToright">
                             <div className="AdditionalSectionTextDiv">
-                                <h1 className="MianHeading">
+                                <h2 className="MianHeading">
                                   Reliable Website Support & Maintenance
-                                </h1>
+                                </h2>
                                 <span className="subMainText">Reliable Website Support & Maintenance for Seamless Performance</span>
                              <span className="additionalSectionList">
                                 <ul>
@@ -379,7 +379,7 @@ const faqLists = [
                     <Row>
                         <Col>
                             <span className="ReadyToJionUsDiv">
-                                <h1 className="heading_main split">Ready to Fuel Your Digital Transformation?</h1>
+                                <h2 className="heading_main split">Ready to Fuel Your Digital Transformation?</h2>
                                 <span className="subHeading FontSize25">Empowering businesses to outpace the competition with precision design and intelligent marketing.</span>
                                 <p className="FontSize18">Starting a complex digital project can be daunting, but you don't have to navigate it alone. Our growth consultants are ready to discuss your unique requirements and build a technical roadmap to your success</p>
                             </span>
@@ -390,7 +390,7 @@ const faqLists = [
                             {/* what set as apart */}
 
                             <div className="section-padding SetUsPart no-bottom-padding" >
-                                <h1 className="heading_main"> What Sets Us Apart?</h1>
+                                <h2 className="heading_main"> What Sets Us Apart?</h2>
                                 <span className="FontSize25 Bold less-bottom-padding">Unlocking Business Expansion with High-Velocity and Performance-Driven Solutions</span>
                                 <div className="heading5">We not only run the campaigns, but rather, we can engineer the growth. We do all of this on a platform of absolute clarity.</div>
                                  <span className="piontList margintop">

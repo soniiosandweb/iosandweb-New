@@ -210,8 +210,8 @@ const innovativeItems = [
                          <Row className="align-items-center">
                              <Col lg={6}>
                                  <div className="heading-wrapper">
-                                    <p className="services_banner_subheading">Web Development services</p>
-                                     <h1 className="heading_main split">Web Development That Drives Results</h1>
+                                    <h1 className="services_banner_subheading">Web Development services</h1>
+                                     <h2 className="heading_main split">Web Development That Drives Results</h2>
                                      <span className="subHeading">Your vision. Our expertise. Exceptional outcomes.</span>
                                      <div className="heading5">IosAndWeb Technologies transforms ideas into high-performance web solutions. Our full-stack development team builds secure, scalable, and stunning websites that work flawlessly across all devices—from custom web applications to enterprise e-commerce platforms powered by Magento.</div>
                                  </div>
@@ -232,7 +232,7 @@ const innovativeItems = [
                         <Row>
                             <Col>
                         <div className="What_set_us_part_section">
-                            <div className="heading-wrapper"><h1 className="heading_main textaliginCenter">What Sets Us Apart: Full-stack mastery • Enterprise security • Smart architecture • E-commerce specialists • Long-term value • Unwavering support</h1></div>
+                            <div className="heading-wrapper"><h2 className="heading_main textaliginCenter">What Sets Us Apart: Full-stack mastery • Enterprise security • Smart architecture • E-commerce specialists • Long-term value • Unwavering support</h2></div>
                             <div className="What_set_us_part_Content">
                                 <div className="What_set_us_part_content_rightSide">
                                     <div  className="What_set_us_part_content_rightSide_contantDiv">
@@ -240,8 +240,8 @@ const innovativeItems = [
                                         # Software Development Company
                                     </div>
                                 <div className="heading-wrapper ">
-                                    <h1 className="heading_main split">Trusted By Leading Brands Worldwide
-                                    </h1>
+                                    <h2 className="heading_main split">Trusted By Leading Brands Worldwide
+                                    </h2>
                                 </div>
                                 </div>
 
@@ -254,8 +254,8 @@ const innovativeItems = [
                                 </div>
                                 <div className="What_set_us_part_content_liftSide">
                                 <div className="What_set_us_part_content_rightSide_imgContanier less-top-padding">
-                                    <h1 className="heading_main">10+ Years
-                                    </h1>
+                                    <h2 className="heading_main">10+ Years
+                                    </h2>
                                     <h1 className="heading_main">As A Top Web App Development Company
                                     </h1>
 
@@ -280,7 +280,7 @@ const innovativeItems = [
                         <Row className="align-items-center textaliginCenter">
                             <Col>
                                 <div className=''>
-                                    <h1 ref={goalsRef} className='split'>What We Deliver Through Our Web Development Expertise</h1>
+                                    <h2 ref={goalsRef} className='split'>What We Deliver Through Our Web Development Expertise</h2>
                                     <div>
                                         <span>
                                         Transforming business challenges into digital opportunities with scalable, secure web solutions that drive measurable results.</span>
@@ -322,12 +322,12 @@ const innovativeItems = [
                         <Row>
                         <Col>
                         <div className="textaliginCenter   shortBnanerSection">
-                            <h1 className="FontSize18 bold">Let's Build Something Extraordinary Together</h1>
-                            <h1 className="FontSize25">Join 500+ businesses that have transformed their digital presence with IosAndWeb Technologies. From concept to launch, we're with you every step of the way.</h1>
-                            <h1 className="FontSize18 bold">
+                            <h2 className="FontSize18 bold">Let's Build Something Extraordinary Together</h2>
+                            <h3 className="FontSize25">Join 500+ businesses that have transformed their digital presence with IosAndWeb Technologies. From concept to launch, we're with you every step of the way.</h3>
+                            <h3 className="FontSize18 bold">
                                 Free project consultation | Custom solution blueprint | Transparent pricing | 30-day launch guarantee
 
-                            </h1>
+                            </h3>
 
                             <div className="BtnGroup"><button className="btn-gradient-blue">Start Your Project Today</button>
                             <button className="btn-gradient-border">Talk to Our Experts</button>

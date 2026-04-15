@@ -54,7 +54,7 @@ const TabSection = () => {
             <Row>
                 <Col>
                 <div className='TabSection textaliginCenter '>
-                    <h1 className='heading_main split'>Powered by Technologies That Drive Performance</h1>
+                    <h2 className='heading_main split'>Powered by Technologies That Drive Performance</h2>
                     <p className='FontSize18'>We don't just use the latest tech—we master it. Our development stack combines proven reliability with cutting-edge innovation.</p>
 
                     <div className="tab-header less-top-padding">

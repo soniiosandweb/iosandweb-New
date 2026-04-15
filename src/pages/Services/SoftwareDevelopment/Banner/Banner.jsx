@@ -17,8 +17,8 @@ const Banner = () => {
                     <Col>
                         <div className="software_banner_flexs section-padding no-bottom-padding">
                             <div className="software_banner_cols contents_block">
-                                 <p className="services_banner_subheading">software development company</p>
-                                <h1 className="heading_main split">Searching for a Reliable Tech Partner?</h1>
+                                 <h1 className="services_banner_subheading">software development company</h1>
+                                <h2 className="heading_main split">Unlock Growth with Our Custom Software Development Services</h2>
                                 <p className="paragraph_content">IosAndWeb Tech delivers cutting-edge custom software, AI-driven tools, blockchain security, and digital strategies to propel your business forward.</p>
                                 <Link to="/contact-us" reloadDocument className="btn-gradient-blue">Launch Your Future <FontAwesomeIcon icon={faAnglesRight} /></Link>
                             </div>

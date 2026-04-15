@@ -11,7 +11,7 @@ import AnimatedText from "../../../components/AnimatedText/AnimatedText";
 import ServiceBanner from "./ServiceBanner/ServiceBanner";
 
 const ServicesPage = () => {
-       const serviceSchema = {
+  const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "IosAndWeb Technologies",
@@ -93,6 +93,37 @@ const ServicesPage = () => {
     ]
   }
 };
+ 
+ const BreadcrumbSchema = {
+  "@context": "https://schema.org/", 
+  "@type": "BreadcrumbList", 
+  "itemListElement": [{
+    "@type": "ListItem", 
+    "position": 1, 
+    "name": "software development company",
+    "item": "https://iosandweb.net/custom-software-development-company"  
+  },{
+    "@type": "ListItem", 
+    "position": 2, 
+    "name": "mobile app development services",
+    "item": "https://iosandweb.net/mobile-app-development-services"  
+  },{
+    "@type": "ListItem", 
+    "position": 3, 
+    "name": "web designing services",
+    "item": "https://iosandweb.net/web-designing-services"  
+  },{
+    "@type": "ListItem", 
+    "position": 4, 
+    "name": "Web Development services",
+    "item": "https://iosandweb.net/web-development-services"  
+  },{
+    "@type": "ListItem", 
+    "position": 5, 
+    "name": "digital marketing services",
+    "item": "https://iosandweb.net/digital-marketing-services"  
+  }]
+}
 
     const location = useLocation();
 
@@ -103,6 +134,7 @@ const ServicesPage = () => {
                 description={"Looking for high-quality web development services for your business? Look no further than IAW Technologies. Contact us Today."}
                 name={"IosAndWeb Technologies"}
                 serviceSchema={serviceSchema}   
+                BreadcrumbSchema={BreadcrumbSchema}
                 canonicalUrl={`${process.env.REACT_APP_API_URL}${location.pathname}`}
             />
 
