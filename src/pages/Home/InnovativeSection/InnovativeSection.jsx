@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const innovativeImg = `${process.env.REACT_APP_API_URL}/assests/home/innovative/imnnovative-img.webp`;
 const innovativeBg = `${process.env.REACT_APP_API_URL}/assests/home/innovative/innovative-bg.webp`;
@@ -129,10 +129,16 @@ const InnovativeSection = () => {
             ctx && ctx.revert();
         };
     }, []);
-    
+     const [IsMobile , setIsMobile] = useState(window.innerWidth <=768)
+        useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth <= 768);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+      }, []);
+     
     return(
         <div className="innovative_section section-padding bg-black text-white">
-            <img src={innovativeBg} alt="Innovative IosAndWeb Technology" className="innovativeBG" />
+          {!IsMobile  &&  <img src={innovativeBg} alt="Innovative IosAndWeb Technology" className="innovativeBG" />}
             <Container>
                 <Row>
                     <Col>
@@ -144,7 +150,7 @@ const InnovativeSection = () => {
                         <p className="paragraph_content">With a focus on innovation, reliability, and future-ready development, Bird empowers businesses to create powerful digital products that connect, engage, and scale effortlessly.</p>
 
                         <div className="innovative_section_flex less-top-padding" ref={innovativeRef}>
-                            <div className="innovative_left_col">
+                            {       !IsMobile &&   <div className="innovative_left_col">
                                 <div className="innovative_blocks_image">
                                     <img src={innovativeImg} alt="Innovative IosAndWeb" className="innovative_img" />
                                     {innovativeItems.map((item, i) => (
@@ -153,7 +159,7 @@ const InnovativeSection = () => {
                                 </div>
 
                                 <Link reloadDocument to="/contact-us" className="btn-gradient-blue">Get Expert Help <FontAwesomeIcon icon={faAnglesRight} /></Link>
-                            </div>
+                            </div>}
                             <div className="innovative_right_col">
                                 <div className="innovative_lists_grid">
                                     {innovativeLists.map((item, i) => (

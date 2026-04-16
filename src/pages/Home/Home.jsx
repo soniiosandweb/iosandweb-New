@@ -191,9 +191,9 @@ const Home = () => {
                 <ElevateSuccess />
                 <CaseStudies />
                 <WhyChoose />
-                 {       !IsMobile &&
+              {       !IsMobile &&
                 <Testimonials />}
-                <AnimatedText />
+               {       !IsMobile &&<AnimatedText />}
 
                 <FAQSection
                     subheading={"Insights"}
