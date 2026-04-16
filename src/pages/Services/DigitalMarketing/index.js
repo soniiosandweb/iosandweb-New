@@ -111,9 +111,7 @@ const faqLists = [
 
                         </Col>
                     </Row>
-                </Container>
-               
-
+                </Container>               
             </div>
 
             <div className="linear-dark-background section-padding DDSSection ChatSection">
