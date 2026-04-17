@@ -360,14 +360,19 @@ const AIPoweredSection = () => {
 
         return () => observer.disconnect();
     }, [activeId]);
-
+         const [IsMobile , setIsMobile] = useState(window.innerWidth <=768)
+            useEffect(() => {
+            const handleResize = () => setIsMobile(window.innerWidth <= 768);
+            window.addEventListener("resize", handleResize);
+            return () => window.removeEventListener("resize", handleResize);
+          }, []);
     return(
         <div className="ai_powered_section section-padding no-bottom-padding body-background">
             <Container>
                 <Row>
                     <Col>
                         <SubHeading text={"Solutions"} />
-                        <h2 className="heading_main split">AI-Powered Solutions <br />Built for Global Impact by IosAndWeb Technologies</h2>
+ {!IsMobile ?<h2 className="heading_main">AI-Powered Solutions <br />Built for Global Impact by IosAndWeb Technologies</h2>: <h2 className="heading_main split">AI-Powered Solutions <br />Built for Global Impact by IosAndWeb Technologies</h2>}
 
                         <div className="ai_powered_flex_block less-top-padding">
                             <div className="ai_powered_sidebar" ref={menuContainerRef}>

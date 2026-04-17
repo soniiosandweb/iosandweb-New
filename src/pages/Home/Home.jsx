@@ -185,9 +185,12 @@ const Home = () => {
 
                 <InnovativeSection />
                 <IndustriesSection />
-                <AIPoweredSection />    
-               <StrategicPartners /> 
-                <ElevateSuccess />
+                {!IsMobile &&
+                <AIPoweredSection />    }
+                {!IsMobile &&
+               <StrategicPartners /> }
+                               {!IsMobile &&
+                <ElevateSuccess />}
                 <CaseStudies />
                 <WhyChoose />
               {       !IsMobile &&

@@ -36,10 +36,12 @@ const Banner = () => {
                         </div>
                         <img 
                             src={homeBanner} 
-                            alt="banner" 
-                            className="intro_video"
+                            class="intro_video"
                             loading="eager"
-                            />
+                            fetchpriority="high"
+                            width="1200"
+                            height="600"
+/>
                         
                         <div className="home-banner-overlay"></div>
                     </Col>
