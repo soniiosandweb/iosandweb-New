@@ -41,7 +41,6 @@ import { useEffect } from 'react';
 import Home from './pages/Home/Home';
 import ServicesPage from './pages/Services/ServicesPage/ServicesPage';
 import './App.css';
-import TestHome from './pages/Home/TestHome.jsx';
 
 const useRedirect = (targetUrl) => {
   const navigate = useNavigate();
@@ -123,7 +122,8 @@ function App() {
       <BodyBackground />
       <Routes>
         <Route path="/" element={<Layout />}>
-<Route index element={isMobile ? <TestHome /> : <Home />} />          <Route path="/about-us" element={<About />} />
+          <Route index element={<Home />} />
+          <Route path="/about-us" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:url" element={<BlogDetails />} />
