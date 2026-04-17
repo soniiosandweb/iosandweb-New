@@ -56,4 +56,13 @@
     .home-banner .heading_main {
       font-size: 40px;
     }
+
+}@media (max-width: 547px) {
+    .home-banner .heading_main {
+      font-size: 40px;
+    }
+    .home-banner {
+            height: auto;
+
+    }
 }

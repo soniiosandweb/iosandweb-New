@@ -3,7 +3,6 @@ import './style.css';
 import { Container, Row, Col } from "react-bootstrap";
 import SEO from "../../../components/SEO";
 import NumbersCards from "../../../components/NumbersCards";
-import ContactForm from "../../../components/ContactForm";
 import GetStarted from "../../../components/GetStarted";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

@@ -8,7 +8,6 @@ import PoweringSection from "./PoweringSection/PoweringSection";
 const InnovativeSection = lazy(() => import("./InnovativeSection/InnovativeSection"));
 const IndustriesSection = lazy(() => import("./IndustriesSection/IndustriesSection"));
 const AIPoweredSection = lazy(() => import("./AIPoweredSection/AIPoweredSection"));
-const ServicesSection = lazy(() => import("./ServicesSection/ServicesSection"));
 const StrategicPartners = lazy(() => import("./StrategicPartners/StrategicPartners"));
 const ElevateSuccess = lazy(() => import("./ElevateSuccess/ElevateSuccess"));
 const CaseStudies = lazy(() => import("./CaseStudies/CaseStudies"));
