@@ -130,6 +130,7 @@ function Blog(){
                 <Container>
                     <Row className="align-items-center">
                         <Col lg={7}>
+                        
                             <div className="heading-wrapper">
                             <h1 style={{
                                     fontSize: "40px",
