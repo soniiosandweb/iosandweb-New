@@ -9,6 +9,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@grafana/faro-web-sdk": "^2.6.3",
+    "@grafana/faro-web-tracing": "^2.6.3",
     "@sentry/react": "^10.53.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
