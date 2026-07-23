@@ -25,74 +25,117 @@ const Home = () => {
   }, []);
  
  
-  const localSchema = {
+ const localSchema = {
+
   "@context": "https://schema.org",
+
   "@type": "LocalBusiness",
-  "name": "iosandweb",
+
+  "@id": "https://iosandweb.net/#business",
+
+  "name": "IosAndWeb",
+
+  "alternateName": "IosAndWeb Technologies",
+
+  "description": "iOS and Web app development company based in Zirakpur, near Chandigarh, offering mobile app, web app, and software development services.",
+
   "image": "https://iosandweb.net/assests/IAW-logo-white.png",
-  "@id" : "",
+
+  "logo": "https://iosandweb.net/assests/IAW-logo-white.png",
+
   "url": "https://iosandweb.net/",
-  "telephone": "+91 7717689799",
+
+  "telephone": "+91-7717689799",
+
+  "priceRange": "$$",
+
   "address": {
+
     "@type": "PostalAddress",
-    "streetAddress": "Vip shopping complex ,VIP Road,Zirakpur",
-    "addressLocality": "chandigarh",
-    "postalCode": "",
+
+    "streetAddress": "VIP Shopping Complex, VIP Road",
+
+    "addressLocality": "Zirakpur",
+
+    "addressRegion": "Punjab",
+
+    "postalCode": "140603",
+
     "addressCountry": "IN"
+
   },
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": "Monday",
-    "opens": "09:30",
-    "closes": "18:30"
-  },{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": "Tuesday",
-    "opens": "09:30",
-    "closes": "18:30"
-  },{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": "Wednesday",
-    "opens": "09:30",
-    "closes": "18:30"
-  },{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": "Thursday",
-    "opens": "09:30",
-    "closes": "18:30"
-  },{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": "Friday",
-    "opens": "09:30",
-    "closes": "18:30"
-  },{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": "Saturday",
-    "opens": "09:30",
-    "closes": "18:30"
-  }],
+
+  "geo": {
+
+    "@type": "GeoCoordinates",
+
+    "latitude": "30.6425",
+
+    "longitude": "76.8173"
+
+  },
+
+  "openingHoursSpecification": [
+
+    {
+
+      "@type": "OpeningHoursSpecification",
+
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+
+      "opens": "09:30",
+
+      "closes": "18:30"
+
+    }
+
+  ],
+
   "sameAs": [
+
     "https://www.facebook.com/iosandwebtechnologies/",
+
     "https://www.instagram.com/iosandwebtechnologies/",
+
     "https://in.linkedin.com/company/iosandweb-technologies"
-  ] 
-}
+
+  ]
+
+};
+ 
 
 
-    const organisationalSchema = {
+   const organisationalSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "iosandweb",
+  "@id": "https://iosandweb.net/#organization",
+  "name": "IosAndWeb",
   "alternateName": "IosAndWeb Technologies",
   "url": "https://iosandweb.net/",
   "logo": "https://iosandweb.net/assests/IAW-logo-white.png",
+  "image": "https://iosandweb.net/assests/IAW-logo-white.png",
+  "description": "iOS and Web app development company offering mobile app, web app, and software development services.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "VIP Shopping Complex, VIP Road",
+    "addressLocality": "Zirakpur",
+    "addressRegion": "Punjab",
+    "postalCode": "140603",
+    "addressCountry": "IN"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-7717689799",
+    "contactType": "customer service",
+    "areaServed": "IN",
+    "availableLanguage": ["English", "Hindi"]
+  },
   "sameAs": [
     "https://www.facebook.com/iosandwebtechnologies/",
     "https://www.instagram.com/iosandwebtechnologies/",
     "https://in.linkedin.com/company/iosandweb-technologies"
   ]
-}
- 
+};
 
     const faqSchema = {
         "@context": "https://schema.org",
