@@ -72,7 +72,7 @@ function GraphicDesign(){
             <div className="what-software-section section-padding text-white">
                 <Container>
                     <Row className="align-items-center">
-                        <Col lg={7}>
+                        <Col>
                             <div className="leadtxt">
                                 <h2>Graphic Designing Services</h2>
                             </div>
@@ -82,12 +82,6 @@ function GraphicDesign(){
                             <div className="leadsubtxt">
                                 Our <b><u>Graphic designer expert</u></b> will bring your brand vision and objectives through graphic designs, utilizing simple & sophisticated graphic design tools and technologies.
                             </div>
-                        </Col>
-                        <Col lg={5}>
-                            <div className="leadsubtxt mb-3 text-center">
-                                Fill the form and get quote for your project.
-                            </div>
-                            <ContactForm />
                         </Col>
                     </Row>
                 </Container>

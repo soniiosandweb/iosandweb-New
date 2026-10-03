@@ -1,8 +1,10 @@
 .footer_contact_form {
-    background: linear-gradient(151.1deg, rgba(184, 184, 184, 0.22) 6.8%, rgba(154, 154, 154, 0.22) 99.93%);
+    background: white;
     border: 1px solid var(--color-white);
     border-radius: 15px;
-    padding: 40px;
+    padding: 40px;backdrop-filter: blur(0px);
+    color:black;
+
 }
 .footer_contact_form .paragraph_content {
     margin-bottom: 40px;
@@ -18,15 +20,16 @@
 }
 .footer_contact_form .form-group .form-control {
     background: linear-gradient(151.1deg, rgba(184, 184, 184, 0.22) 6.8%, rgba(154, 154, 154, 0.22) 99.93%);
-    border: 1px solid var(--color-white);
-    color: var(--color-white);
+    backdrop-filter: blur(0px);
+    border: 1px solid #989898;
+    color: black;
     border-radius: 8px;
     padding: 12px 15px;
     box-shadow: unset !important;
     font-family: var(--font-poppins);
 }
 .footer_contact_form .form-group .form-control::placeholder {
-    color: #DDDDDD;
+    color: black;
 }
 .footer_contact_form .form-group .text-danger {
     font-size: 14px;
@@ -60,16 +63,14 @@
     border-radius: 8px;
     color: var(--color-white);
     padding: 13px 20px;
-    background: linear-gradient(90deg, #1B51CC 0%, #2B0E66 100%) padding-box,
-              linear-gradient(90deg, #1B51CC  0%, #2B0E66 100%) border-box;
+    background: #0046FF;
     border: 1px solid transparent;
-    justify-content: space-between;
+    justify-content: center;
     position: relative;
     overflow: hidden;
 }
 .footer_contact_form .form-submit-btn:hover {
-    background: linear-gradient(90deg, #2B0E66 0%, #1B51CC 100%) padding-box,
-              linear-gradient(90deg, #2B0E66 0%, #1B51CC 100%) border-box;
+    background: #0046FF;
 }
 .footer_contact_form .form-submit-btn::before {
     animation: shine 1.5s ease-in-out infinite;

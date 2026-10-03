@@ -183,7 +183,7 @@
         width: 100%;
     }
     .social_icons_lists {
-        justify-content: center;
+        justify-content: start;
     }
 }
 /* footer bottom */

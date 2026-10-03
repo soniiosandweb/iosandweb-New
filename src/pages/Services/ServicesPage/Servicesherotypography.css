@@ -1,0 +1,36 @@
+
+
+.servicesHero__eyebrow {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 37px;
+  letter-spacing: 0%;
+}
+
+.servicesHero__title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 37px;
+  letter-spacing: 0%;
+  color: #0046FF;
+}
+
+.servicesHero__subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 35px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.servicesHero__description {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+}

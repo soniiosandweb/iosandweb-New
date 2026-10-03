@@ -73,7 +73,7 @@ function PayPerClick(){
             <div className="what-software-section section-padding text-white">
                 <Container>
                     <Row className="align-items-center">
-                        <Col lg={7}>
+                        <Col>
                             <div className="leadtxt">
                                 <h2>IosAndWeb Technologies - PPC Services</h2>
                             </div>
@@ -82,12 +82,12 @@ function PayPerClick(){
                                 <br/>We at IosAndWeb dependably underline conveying the correct answers for the different customer's needs. Our greatest need as a <b>Digital marketing services</b> is to guarantee that we perform total examination and research about a business at whatever point we are going to serve them the best out of our administrations. As the pioneers in giving the best PPC Services, we ensure that our customers rise as a brand in the worldwide markets. We realize where to focus on the group of spectators for upgraded yield for our customers such that it fits their business. 
                             </div>
                         </Col>
-                        <Col lg={5}>
+                        {/* <Col lg={5}>
                             <div className="leadsubtxt mb-3 text-center">
                                 Fill the form and get quote for your project.
                             </div>
                             <ContactForm />
-                        </Col>
+                        </Col> */}
                     </Row>
                 </Container>
             </div>

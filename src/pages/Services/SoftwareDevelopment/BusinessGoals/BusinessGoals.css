@@ -59,6 +59,10 @@
     .business_goals_section .business_goals_grid {
         gap: 2rem;
     }
+       .business_goals_section  .heading_main {
+ 
+    line-height: 44px;
+}
     .business_goals_item {
         padding: 20px;
     }

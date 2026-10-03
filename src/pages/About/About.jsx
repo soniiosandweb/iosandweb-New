@@ -6,9 +6,9 @@ import RedefiningWork from "./RedefiningWork/RedefiningWork";
 import AnimatedText from "../../components/AnimatedText/AnimatedText";
 import OurMarketingSection from "../Services/ServicesPage/OurMarketingSection/OurMarketingSection";
 import OurCommitment from "./OurCommitment/OurCommitment";
-import AboutWhyChoose from "./AboutWhyChoose/AboutWhyChoose";
 import OurAchievements from "./OurAchievements/OurAchievements";
-
+import MarketingStrategy from "./MarketingStrategy";
+import AboutWhyChoose from "./AboutWhyChoose/WhyChooseUs/WhyChooseUs"
 const About = () => {
 
     const location = useLocation();
@@ -16,8 +16,8 @@ const About = () => {
     return(
         <>
             <SEO
-                title={"IosAndWeb Technologies - We approach with a purpose. Visit Now"}
-                description={"Team of IosAndWeb Technologies - We approach with a purpose. Effective Team Communication and collaboration. Visit Now Know About Us."}
+                title={"About IosAndWeb Technologies | App, Web & Digital Experts"}
+                description={"Learn about IosAndWeb Technologies, a trusted company offering expert web development, mobile app development, and digital marketing services to grow your business online."}
                 name={"IosAndWeb Technologies"}
                 canonicalUrl={`${process.env.REACT_APP_API_URL}${location.pathname}`}
             />
@@ -38,13 +38,15 @@ const About = () => {
             <OurAchievements />
 
             {/* Why Choose */}
-            <AboutWhyChoose />
+            {/* <AboutWhyChoose /> */}
 
             {/* Our Marketing */}
-            <OurMarketingSection classes={"black-background section-padding no-top-padding"} />
-
+            {/* <OurMarketingSection classes={"black-background section-padding no-top-padding"} /> */}
+            
             {/* Animated Text */}
-            <AnimatedText background={"black"} />
+            {/* <AnimatedText background={"black"} /> */}
+     <AboutWhyChoose  />
+            <MarketingStrategy />
         </>
     )
 }

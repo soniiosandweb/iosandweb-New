@@ -1,5 +1,24 @@
 .services_unlock_exclusive_section {
     position: relative;
+    background-image: url("../newImagesServiecesPage/unlock/bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+}
+.services_unlock_exclusive_section .heading_main{
+    font-size: 35px;
+    line-height: 45px;
+    font-family: var(--font-poppins-semibold);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.services_unlock_exclusive_section .paragraph_content{
+font-weight: 500;
+font-size: 25px;
+line-height: 30px;
+letter-spacing: 0%;
+
 }
 .services_unlock_exclusive_section .services_unlock_bgimg {
     position: absolute;
@@ -14,11 +33,42 @@
 .services_unlock_exclusive_section .container {
     position: relative;
 }
-.services_unlock_grid {
+
+
+.benefitsGrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 70px;
+    row-gap: 60px;
 }
+
+.benefitItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.benefitIcon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+.benefitItem h3 {
+    margin: 0 0 8px;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.benefitItem p {
+    margin: 0;
+    color: white;
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 14px;
+}
+
 .services_unlock_grid .services_unlock_item {
     background-color: #040812;
     border-radius: 8px;
@@ -32,27 +82,77 @@
     font-size: 14px;
     margin: 0;
 }
-@media (max-width: 1199px) {
-    .services_unlock_grid .services_unlock_item {
-        padding: 20px;
-    }
+
+.bussinseGrowth {
+    display: flex;
+    margin-top: 120px;
+    gap: 10%;
 }
-@media (max-width: 991px) {
-    .services_unlock_grid {
-        grid-template-columns: repeat(2, 1fr);;
-    }
+.bussinseLeft {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.bussinseLeft h2.hrading {
+    font-family: var(--font-poppins-semibold);
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 55px;
+    letter-spacing: 0%;
+}
+.bussinseLeft p{
+    font-family: var(--font-poppins);
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+
+}
+.bussinseright {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+.bussinseright .text {
+    font-family: var(--font-poppins-semibold);
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 100%;
+}
+@media (max-width: 1199px) {
+.services_unlock_exclusive_section {
+   background-size: cover;  
+}
 }
 @media (max-width: 767px) {
-    .services_unlock_grid {
-        grid-template-columns: repeat(1, 1fr);;
-    }
-    .services_unlock_grid .services_unlock_item {
-        max-width: 380px;
-        margin: auto;
-    }
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+  }.services_unlock_exclusive_section {
+   background-size: cover;  
+}
+}
+@media (max-width: 767px) {
+
     .services_unlock_exclusive_section .services_unlock_bgimg {
         display: none;
     }
+    .bussinseGrowth {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 95px;
+    gap: 64px;
+}
+.bussinseLeft {
+    width: 100%;
+
+}
+.bussinseright{
+    width: 100%;
+    gap: 30px;
+}
 }
 
 /* Visions block */

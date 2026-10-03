@@ -63,7 +63,7 @@ const services = [
     },
     {
         title: "Pay Per Click Service",
-        link: "/ppc-services",
+        link: "",
         icon: payPerClick,
         feature: [
             "Data-driven ad campaigns.",

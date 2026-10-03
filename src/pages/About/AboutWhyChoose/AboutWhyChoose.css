@@ -3,6 +3,10 @@
     gap: 2rem;
     align-items: center;
 }
+.about_why_choose_section{
+    background-color: white;
+    color: black;
+}
 .about_why_choose_cols {
     width: 100%;
     flex: 1;
@@ -27,7 +31,7 @@
 .about_choose_grid_item .about_choose_item_icon {
     width: 39px;
     height: 39px;
-    background-color: #A600FF63;
+    background-color: #0046FF;
     border-radius: 50%;
     display: flex;
     align-items: center;

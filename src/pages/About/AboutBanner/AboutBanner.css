@@ -1,5 +1,4 @@
 .main_banner_section {
-    background: linear-gradient(321.36deg, #090B2A 52.92%, #0B2733 92.21%);
     color: var(--color-white);
     min-height: 735px;
     position: relative;
@@ -13,7 +12,7 @@
     left: 0;
     object-fit: cover;
     object-position: center;
-    opacity: 29%;
+    opacity: 79%;
 }
 .main_banner_section .container {
     position: relative;
@@ -27,9 +26,10 @@
     padding: 3rem 0;
 }
 .main_banner_flex .main_banner_left_col {
-    max-width: 483px;
+    max-width: 683px;
     flex: 1;
 }
+
 .main_banner_flex .main_banner_right_col {
     flex: 1;
     padding: 0 20px 0 0;
@@ -57,8 +57,7 @@
     border-radius: 25px;
     color: var(--color-white);
     padding: 10px 20px;
-    background: linear-gradient(90deg, #A600FF 0%, var(--color-purple) 100%) padding-box,
-              linear-gradient(90deg, #A600FF 0%, var(--color-purple) 100%) border-box;
+    background: #0046FF;
     border: 1px solid transparent;
     position: relative;
     overflow: hidden;
@@ -73,8 +72,7 @@
     background: linear-gradient(120deg, transparent, rgba(255, 255, 255, .5), transparent);
 }
 .btn-gradient-pink:hover {
-    background: linear-gradient(90deg, var(--color-purple) 0%, #A600FF 100%) padding-box,
-              linear-gradient(90deg, var(--color-purple) 0%, #A600FF 100%) border-box;
+    background:#0046FF;
 }
 .btn-gradient-pink:hover::before{
     width: 100%;
@@ -171,6 +169,11 @@
     mask-position: center;
     transition: opacity 0.8s ease-in-out;
 }
+.main_banner_flex .main_banner_left_col .paragraph_content{
+    text-align: left;
+    margin-top: 16px;
+    margin-bottom: 33px;
+}
 @media (max-width: 1399px) {
     .about_image_wrapper {
         max-width: 550px;
@@ -200,9 +203,20 @@
         flex-direction: column;
         min-height: auto;
     }
+    .main_banner_btn_section {
+    justify-content: center;
+}
+.main_banner_flex .main_banner_left_col .paragraph_content{
+    text-align: center;
+}
+
     .main_banner_section {
         min-height: auto;
     }
+    .main_banner_subheading {
+    text-align: center;
+}
+
     .about_image_wrapper {
         max-width: 350px;
         height: 290px;

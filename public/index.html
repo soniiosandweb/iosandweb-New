@@ -8,7 +8,11 @@
     
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/IAW-black-logo.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-
+<link 
+  rel="preload" 
+  as="image" 
+  href="/assests/home/HomeBnner.webp"
+/>
     
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>  
     <!-- Google tag (gtag.js) -->
@@ -20,8 +24,52 @@
 
       gtag('config', 'G-8P9ZC2H8G5');
     </script>
+    <script type="text/javascript">    
+     (function(c,l,a,r,i,t,y){         
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};         
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;        
+       y=l.getElementsByTagName(r)[0];
+       y.parentNode.insertBefore(t,y);     })
+       (window, document, "clarity", "script", "wc3c2c2el2"); 
+      </script>
+      <style>
+  #loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .spinner {
+    width: 45px;
+    height: 45px;
+    border: 4px solid #ccc;
+    border-top: 4px solid #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("load", function () {
+    document.getElementById("loader").style.display = "none";
+  });
+</script>
   </head>
-  <body>
-    <div id="root"></div>
-  </body>
+  <body> <div id="loader">
+    <div class="spinner"></div>
+  </div>
+<div id="root">
+</div>  </body>
 </html>

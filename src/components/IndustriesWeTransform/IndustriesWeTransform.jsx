@@ -113,13 +113,17 @@ const IndustriesWeTransform = () => {
     }, []);
 
     return(
-        <div className="industries_we_transform section-padding body-background" ref={industriesRef}>
+        <div className="industries_we_transform section-padding" ref={industriesRef}>
             <Container>
                 <Row>
                     <Col>
-                        <h2 className="heading_main text-center split">Industries We Transform</h2>
-                        <p className="paragraph_content text-center">Building Digital Excellence Across Every Vertical</p>
-                        <div className="industries_transform_grid less-top-padding">
+                    <p className="paragraph_content text-center">Industries We Transform
+</p>
+                       <h2 className="heading_main">
+            Building Digital Excellence 
+            <br />
+            <span>Across Every Vertical</span>
+          </h2><div className="industries_transform_grid ">
                             {industriesLists.map((item,i) => (
                                 <Link reloadDocument to={item.link} key={i} className="industries_transform_item industries_boxes">
                                     <img src={item.image} alt={item.title} className="industries_transform_image" />

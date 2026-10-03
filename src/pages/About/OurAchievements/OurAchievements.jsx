@@ -69,7 +69,7 @@ const OurAchievements = () => {
     };
 
     return(
-        <div className="our_achievements_section section-padding no-bottom-padding black-background">
+        <div className="our_achievements_section section-padding no-bottom-padding ">
             <Container>
                 <Row>
                     <Col>

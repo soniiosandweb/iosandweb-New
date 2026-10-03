@@ -1,7 +1,8 @@
 .powering_section {
     position: relative;
-    background: linear-gradient(254.09deg, var(--color-blackblue) 15.15%, var(--color-green) 83.93%);
-    color: var(--color-white);
+    background:var(--color-white) ;
+    color: var(--color-black);
+    overflow: hidden;
 }
 .powering_overlay {
     position: absolute;
@@ -15,6 +16,261 @@
 .powering_section .container {
     position: relative;
 }
+.caseStudySection {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.powering_content_block.no-bottom-padding.text-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.powering_section .paraHeading{
+  font-family: var(--font-poppins);
+font-weight: 500;
+font-size: 18px;
+line-height: 24px;
+text-align: center;
+        margin-bottom: 45px;
+
+}
+.powering_section .heading_main{
+    font-size: 45px;
+    line-height: 50px;
+    max-width: 80%;
+    text-align: center;
+    color: #0046FF;
+        font-family: var(--font-poppins-bold);
+        font-weight: 600;
+        margin-bottom: 35px;
+
+
+}
+
+.caseStudyContent {
+  width: 100%;
+  min-height: 300px;
+  border: 1px solid #757575;
+  border-radius: 10px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  align-items: center;
+  padding: 28px 26px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  transition: transform 0.3s ease;
+}
+
+.caseStudyContent:hover {
+  transform: scale(1.03);
+}
+/* LEFT */
+.caseStudyText {
+  padding-left: 0;    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    align-items: start;
+}
+
+.caseStudyText h2 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight:600;
+  color: #000000;
+font-family: var(--font-poppins-semibold);
+text-align: left;
+
+}
+
+.caseStudyDescription {
+  margin: 12px 0 16px;
+  font-size: 16px;
+  line-height: 20px;
+      font-family: var(--font-poppins);
+
+  color: #515151;
+}
+
+/* STATS */
+.stats {
+  display: flex;
+  gap: 38px;
+  margin-bottom: 25px;
+}
+
+.stat h3 {
+  margin: 0;
+  font-size: 35px;
+  line-height: 45px;
+  font-weight: 700;
+  color: black;
+  text-align: left;
+}
+
+.stat p {
+  margin: 5px 0 0;
+  font-size: 16px;
+  line-height:20px;
+  color: black;
+}
+
+/* BUTTON */
+.caseStudyButton {
+  height: 100%;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+      font-family: var(--font-poppins);
+  background: linear-gradient(90deg, #174cff, #6b00ff);
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+/* IMAGE */
+.caseStudyImage {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 34px;
+}
+.caseStudyImage img {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  object-fit: contain;
+}
+.caseStudyDescription{
+    text-align: left;
+}
+
+@media (max-width: 991px) {
+  .caseStudyContent {
+    grid-template-columns: 1fr 1fr;
+    padding: 25px 20px;
+  }
+
+  .caseStudyImage img {
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 767px) {
+  .caseStudyContent {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 30px 20px;
+  }
+
+  .caseStudyText {
+    text-align: center;
+  }
+
+
+
+  .stats {
+    justify-content: center;
+  }
+
+  .caseStudyImage {
+    order: -1;
+    padding-left: 0px;
+  }
+
+  .caseStudyImage img {
+    max-width: 280px;
+  }
+}
+
+
+.caseStudyMarqueeTrack{
+    display: flex;
+    overflow: hidden;
+}
+.caseStudySection{
+    min-width: 800px;
+    max-width: 800px;
+}
+.caseStudyMarqueeTrack {
+  display: flex;
+  width: max-content;
+  animation: caseStudyMarquee 40s linear infinite;
+}
+
+.caseStudyMarqueeWrapper:hover .caseStudyMarqueeTrack {
+  animation-play-state: paused;
+}
+.caseStudyMarqueeWrapper{
+    overflow: hidden;
+}
+@keyframes caseStudyMarquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+@media (max-width: 767px) {
+.caseStudySection {
+    min-width: 320px;
+}
+.caseStudyImage{
+    height: 340px;
+}
+.caseStudyText h2{
+    font-size: 25px;
+    line-height: 35px;
+}
+.powering_section .heading_main{
+    font-size: 35px;
+}
+}
+@media (max-width: 460px) {
+.caseStudySection {
+    width: 320px;
+}
+.caseStudyImage{
+    height: 320px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .powering_grid {
     display: grid;
     gap: 40px;

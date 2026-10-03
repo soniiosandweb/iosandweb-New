@@ -1,0 +1,142 @@
+.our_marketing_grids {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    gap: 1rem;
+}
+.our_marketing_item {
+    text-align: center;
+    max-width: 180px;
+    margin: 0 auto;
+}
+.our_marketing_item .our_marketing_numbers {
+    background: linear-gradient(var(--color-body), var(--color-body)) padding-box, 
+                linear-gradient(180deg, #0037FF 0%, #5E00FF 100%) border-box;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto auto 20px;
+}
+.our_marketing_item .paragraph_content {
+    margin-bottom: 15px;
+}
+.our_marketing_item .our_marketing_text {
+    margin: 0;
+    font-size: 14px;
+    font-family: var(--font-poppins-medium);
+}
+@media (max-width: 991px) {
+    .our_marketing_grids {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem 1rem;
+    }
+}
+@media (max-width: 767px) {
+    .our_marketing_grids {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 525px) {
+    .our_marketing_grids {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+import "./OurMarketingSection.css";
+import { Col, Container, Row } from "react-bootstrap";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const marketingLists = [
+    {
+        title: "Research",
+        text: "Deep Dive into competitors and Market Trends",
+    },
+    {
+        title: "Targeting",
+        text: "Identifying your ideal Customer Persona",
+    },
+    {
+        title: "Execution",
+        text: "Launching campaigns Across chosen channels",
+    },
+    {
+        title: "Analysis",
+        text: "Monitoring data and performance metrics",
+    },
+    {
+        title: "Refinement",
+        text: "Monitoring data and performance metrics",
+    }
+]
+
+const OurMarketingSection = ({classes}) => {
+
+    const marketingRef = useRef(null);
+
+    useEffect(() => {
+        let ctx;
+
+        const initAnimation = () => {
+            ctx = gsap.context(() => {
+            gsap.fromTo(
+                ".marketing_boxes",
+                { y: 60, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.6,
+                    ease: "power3.out",
+                    stagger: 0.2,
+                    scrollTrigger: {
+                        trigger: marketingRef.current,
+                        start: "top 75%",
+                        toggleActions: "play reverse play reverse",
+                    }
+                }
+            );
+            }, marketingRef);
+
+            ScrollTrigger.refresh();
+        };
+
+        const timeout = setTimeout(initAnimation, 150);
+
+        return () => {
+            clearTimeout(timeout);
+            ctx && ctx.revert();
+        };
+    }, []);
+
+    return(
+        <div className={`services_our_marketing_section ${classes ? classes : "body-background"}`} ref={marketingRef}>
+            <Container>
+                <Row>
+                    <Col>
+                        <h2 className="heading_main text-center split">Our Marketing Strategy</h2>
+                        <p className="paragraph_content text-center">We Dont Guess. We Calculate</p>
+                        <div className="our_marketing_grids less-top-padding">
+                            {marketingLists.map((item,i) => (
+                                <div className="our_marketing_item marketing_boxes" key={i}>
+                                    <div className="our_marketing_numbers">{i+1}</div>
+                                    <p className="paragraph_content">{item.title}</p>
+                                    <p className="our_marketing_text">{item.text}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
+    )
+}
+
+export default OurMarketingSection

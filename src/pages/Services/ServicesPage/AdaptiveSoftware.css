@@ -1,0 +1,202 @@
+.adaptiveSoftware {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.adaptiveSoftware__container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* =================================
+   HERO TEXT
+================================= */
+
+.adaptiveSoftware__heroText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.adaptiveSoftware__eyebrow {
+  font-family: var(--font-poppins);
+font-weight: 600;
+font-size: 18px;
+line-height: 24px;
+text-transform: uppercase;
+margin-bottom: 25px;
+
+}
+
+.adaptiveSoftware__heading {
+  font-family: var(--font-poppins);
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 37px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #3A3939;
+  margin: 0 0 20px;
+}
+
+.adaptiveSoftware__heading span {
+  color: #0046ff;
+}
+
+.adaptiveSoftware__subtitle {
+  font-family: var(--font-poppins);
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 35px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #000000;
+  margin: 0 0 13px;
+}
+
+.adaptiveSoftware__description {
+  font-family: var(--font-poppins);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #000000;
+  margin: 0;
+}
+
+/* =================================
+   CARDS
+================================= */
+
+.adaptiveSoftware__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.adaptiveSoftware__card {
+  /* min-height: 165px; */
+  padding: 42px;
+height: 356px;
+  background-color: #f5f5f5;
+  border: 1px solid #cfcfcf;
+  border-radius: 4px;
+
+  transition: all 0.25s ease;
+}
+
+/* Empty image/icon area */
+
+.adaptiveSoftware__icon {
+  width: 78px;
+  height: 78px;
+  margin-bottom: 28px;
+}
+
+.adaptiveSoftware__icon img{
+  width: 100%;
+}
+/* Card title */
+
+.adaptiveSoftware__card h3 {
+  font-family: var(--font-poppins);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: 0%;
+  text-align: left;
+  color: #000000;
+  margin: 0 0 20px;
+}
+
+/* Card description */
+
+.adaptiveSoftware__card p {
+  font-family: var(--font-poppins);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  color: #5C5C5C;
+  margin: 0;
+}
+
+/* =================================
+   HOVER
+================================= */
+
+.adaptiveSoftware__card:hover {
+  background-color: #e3ebff;
+  border-color: #0046ff;
+}
+
+.adaptiveSoftware__card:hover h3 {
+  color: #0046ff;
+}
+
+.adaptiveSoftware__card:hover p {
+  color: #000000;
+}
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 991px) {
+  .adaptiveSoftware__container {
+    max-width: 100%;
+  }
+
+  .adaptiveSoftware__heading {
+    max-width: 100%;
+  }
+}
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 767px) {
+  .adaptiveSoftware {
+    padding: 50px 0;
+  }
+
+  .adaptiveSoftware__eyebrow {
+    font-size: 18px;
+  }
+
+.adaptiveSoftware__subtitle{
+  margin-bottom: 27px;
+  margin-top: 28px;
+}
+
+  .adaptiveSoftware__cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .adaptiveSoftware__card {
+    min-height: auto;
+  }
+
+  .adaptiveSoftware__description br {
+    display: none;
+  }
+}
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 480px) {
+
+
+
+
+
+}

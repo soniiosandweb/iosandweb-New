@@ -19,6 +19,18 @@
     align-items: stretch;
     min-height: 735px;
 }
+.software_banner_section .services_banner_subheading {
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.services_banner_subheading{
+    
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.3px rgb(198, 194, 194);
+    background: linear-gradient(to right, rgb(2, 75, 254), rgb(117, 53, 255)) text;
+}
 .software_banner_flexs .software_banner_cols {
     flex: 1;
 }
@@ -138,6 +150,11 @@
     .software_banner_cols .lines-wrapper .line.line-4 {
         display: none;
     }
+    .software_banner_flexs .software_banner_cols {
+    position: relative;
+    position: relative;
+    flex: 1 1;
+}
     .software_banner_images .software_bannerImage {
         max-width: 350px;
     }
@@ -181,4 +198,5 @@
     .software_banner_flexs {
         padding-top: 120px;
     }
+
 }

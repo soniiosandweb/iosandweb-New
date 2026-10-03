@@ -13,6 +13,15 @@
 .reliable_custom_section .container {
     position: relative;
 }
+.reliable_custom_section .heading_main {
+    font-size: 35px;
+    line-height: 40px;
+    font-family: var(--font-poppins-semibold);
+    margin-bottom: 32px;
+}
+.reliable_custom_section p.paragraph_content.desktop {
+    margin-bottom: 0px;
+}
 .reliable_custom_flexs {
     display: flex;
     gap: 4rem;
@@ -47,7 +56,7 @@
     font-size: 20px;
     line-height: 25px;
     font-family: var(--font-poppins-semibold);
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 .reliable_links_item .paragraph_content {
     font-family: var(--font-poppins-medium);
@@ -58,7 +67,7 @@
 }
 @media (max-width: 1399px) {
     .reliable_links_grid .reliable_links_item {
-        padding: 30px 0;
+        padding: 40px 0;
     }
 }
 @media (max-width: 1199px) {

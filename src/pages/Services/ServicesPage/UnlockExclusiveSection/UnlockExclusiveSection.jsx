@@ -2,42 +2,21 @@ import { Link } from "react-router-dom";
 import "./UnlockExclusiveSection.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
+import { faAnglesRight, faCircleArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
-
+import iocn1 from "../newImagesServiecesPage/unlock/img1.png"
+import iocn2 from "../newImagesServiecesPage/unlock/img2.png"
+import iocn3 from "../newImagesServiecesPage/unlock/img3.png"
+import iocn4 from "../newImagesServiecesPage/unlock/img4.png"
+import iocn5 from "../newImagesServiecesPage/unlock/img5.png"
+import iocn6 from "../newImagesServiecesPage/unlock/img6.png"
 gsap.registerPlugin(ScrollTrigger);
 
-const innovativeBg = `${process.env.REACT_APP_API_URL}/assests/home/innovative/innovative-bg.webp`;
 
-const exclusiveLists = [
-    {
-        title: "Increased Traffic",
-        text: "Drive qualified visitors who actually convert. Our data-driven strategies attract your ideal customers, boost engagement, and turn browsers into buyers—not just vanity metrics.",
-    },
-    {
-        title: "Better Leads",
-        text: "Quality over quantity, every time. We generate high-intent leads that align with your ideal customer profile, resulting in shorter sales cycles and higher close rates.",
-    },
-    {
-        title: "Higher Rankings",
-        text: "Dominate search results for the keywords that matter. Our proven SEO methodology gets you found by ready-to-buy customers while your competitors scramble for page two.",
-    },
-    {
-        title: "Stronger Trust",
-        text: "Build lasting credibility that converts. We establish your brand as the go-to authority in your space, earning customer trust that translates directly to loyalty and revenue",
-    },
-    {
-        title: "Improved ROI",
-        text: "Every dollar works harder. Our optimization-obsessed approach maximizes marketing efficiency, increases conversion rates, and delivers returns that justify every investment.",
-    },
-    {
-        title: "Scalable Growth",
-        text: "Infrastructure built for expansion. We implement systems and strategies designed to grow with your business, ensuring sustainable success without hitting growth ceilings.",
-    }
-]
+
 
 const UnlockExclusiveSection = ({visions}) => {
 
@@ -76,34 +55,76 @@ const UnlockExclusiveSection = ({visions}) => {
             ctx && ctx.revert();
         };
     }, []);
-
+const benefits = [
+  {
+    title: "Increased Traffic",
+    description:
+      "Drive qualified visitors who actually convert. Our data-driven strategies attract your ideal customers, boost engagement, and turn browsers into buyers—not just vanity metrics.",
+    icon: iocn1,
+  },
+  {
+    title: "Better Leads",
+    description:
+      "Quality over quantity, every time. We generate high-intent leads that align with your ideal customer profile, resulting in shorter sales cycles and higher close rates.",
+    icon: iocn2,
+  },
+  {
+    title: "Higher Rankings",
+    description:
+      "Dominate search results for the keywords that matter. Our proven SEO methodology gets you found by ready-to-buy customers while your competitors scramble for page two.",
+    icon: iocn3,
+  },
+  {
+    title: "Stronger Trust",
+    description:
+      "Build lasting credibility that converts. We establish your brand as the go-to authority in your space, earning customer trust that translates directly to loyalty and revenue.",
+    icon: iocn4,
+  },
+  {
+    title: "Improved ROI",
+    description:
+      "Every dollar works harder. Our optimization-obsessed approach maximizes marketing efficiency, increases conversion rates, and delivers returns that justify every investment.",
+    icon: iocn5,
+  },
+  {
+    title: "Scalable Growth",
+    description:
+      "Infrastructure built for expansion. We implement systems and strategies designed to grow with your business, ensuring sustainable success without hitting growth ceilings.",
+    icon: iocn6,
+  },
+];
     return (
-        <div className="services_unlock_exclusive_section section-padding linear-dark-background" ref={containerRef}>
-            <img src={innovativeBg} alt="We Design. We Build. We Deliver." className="services_unlock_bgimg" />
+        <div className="services_unlock_exclusive_section section-padding " ref={containerRef}>
             <Container>
                 <Row>
                     <Col>
                         <h2 className="heading_main text-center split">Unlock Exclusive Advantages by Partnering with Us</h2>
-                        <p className="paragraph_content text-center">Six Reasons Your Competitors Wish They'd Chosen Us First</p>
+                        <p className="paragraph_content text-center">Driving Results by Understanding Your Business and Its Audience</p>
                         <div className="services_unlock_grid less-top-padding">
-                            {exclusiveLists.map((item,i) => (
-                                <div className="services_unlock_item slide_boxes" key={i}>
-                                    <p className="paragraph_content">{item.title}</p>
-                                    <p className="services_unlock_content">{item.text}</p>
-                                </div>
-                            ))}
+                           <div className="benefitsGrid">
+  {benefits.map((item, index) => (
+    <div className="benefitItem" key={index}>
+      <img src={item.icon} alt="" className="benefitIcon" />
+
+      <div>
+        <h3>{item.title}</h3>
+        <p>{item.description}</p>
+      </div>
+    </div>
+  ))}
+</div>
                         </div>
 
-                        {visions &&
-                            <div className="services_visions_block less-top-padding">
-                                <h3 className="heading_main text-center">Turn Your Vision Into a Powerful Reality</h3>
-                                <p className="paragraph_content text-center">Let's Build Something Amazing Together</p>
-                                <div className="visions_btns_group">
-                                    <Link to="/contact-us" reloadDocument className="btn-gradient-blue">Contact Us <FontAwesomeIcon icon={faAnglesRight} /></Link>
-                                    <Link to="/contact-us" reloadDocument className="btn-gradient-blue">View More Projects <FontAwesomeIcon icon={faAnglesRight} /></Link>
-                                </div>
-                            </div>
-                        }
+                    <div className="bussinseGrowth">
+                        <div className="bussinseLeft">
+                            <h2 className="hrading">Your Business Deserves a Growth  Strategy That Delivers Real Result</h2>
+                            <p>Infrastructure built for expansion. We implement systems and strategies designed to grow with your business, ensuring sustainable success without hitting growth ceilings.</p>
+                        </div>
+                        <div className="bussinseright">
+                            <span className="text">Tailored Strategies | Measurable Result |Sustainable Growth</span>
+                                    <Link to="/contact-us" reloadDocument className="btn-gradient-blue">Let’s Build Your Next Growth Story Together <FontAwesomeIcon icon={faCircleArrowRight} /></Link>
+                        </div>
+                    </div>
                     </Col>
                 </Row>
             </Container>

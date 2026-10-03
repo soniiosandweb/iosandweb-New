@@ -70,7 +70,7 @@ function SocialMediaMarketing(){
             <div className="what-software-section section-padding text-white">
                 <Container>
                     <Row className="align-items-center">
-                        <Col lg={7}>
+                        <Col>
                             <div className="leadtxt">
                                 <h2>Social Media Marketing Services</h2>
                             </div>
@@ -79,12 +79,7 @@ function SocialMediaMarketing(){
                             <div className="leadsubtxt">Enhance your business or brand with social media marketing or <b>Lead generation campaign services</b> and achieve your goals.
                             </div>
                         </Col>
-                        <Col lg={5}>
-                            <div className="leadsubtxt mb-3 text-center">
-                                Fill the form and get quote for your project.
-                            </div>
-                            <ContactForm />
-                        </Col>
+                       
                     </Row>
                 </Container>
             </div>

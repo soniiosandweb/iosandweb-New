@@ -200,15 +200,17 @@ const IndustriesSection = () => {
     }, []);
 
     return(
-        <div className="industries_section section-padding no-bottom-padding body-background">
+        <div className="industries_section section-padding ">
             <Container>
                 <Row>
                     <Col>
-                        <SubHeading text={"Industries"} />
-                        <h2 className="heading_main split">Serving Diverse Industry Needs with Tailored Solutions</h2>
-                        <p className="paragraph_content">At IosAndWeb Tech, we understand that each industry comes with its own unique challenges and opportunities. That's why we offer specialized software and digital solutions designed to meet the specific needs of a wide range of sectors:</p>
-
-                        <div className="industries_wrapper less-top-padding">
+                         <div className="spanInCenter">
+                         <div className="sectionHeading">INDUSTRIES</div>
+                            <h2 className="heading_main ">Intelligence That Transforms Every Industry</h2>
+                            <p className="paragraph_content">From intelligent automation to AI-driven applications, 
+we help businesses innovate faster, operate smarter, and scale with confidence.</p>
+                       </div>
+                        <div className="industries_wrapper ">
                             
                             {/* Slider */}
                             <Slider 

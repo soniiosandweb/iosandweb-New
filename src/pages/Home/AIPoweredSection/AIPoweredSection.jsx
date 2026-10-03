@@ -2,426 +2,288 @@ import { useEffect, useRef, useState } from "react";
 import "./AIPoweredSection.css";
 import { Col, Container, Row } from "react-bootstrap";
 import SubHeading from "../../../components/SubHeading/SubHeading";
+import dashbord from "../newHomeImage/scrrolScetion/dashbord.png"
+import dashbord2 from "../newHomeImage/scrrolScetion/dashbord2.png"
+import dashbord3 from "../newHomeImage/scrrolScetion/dashbord3.png"
+import dashbord4 from "../newHomeImage/scrrolScetion/dashbord4.png"
+import dashbord5 from "../newHomeImage/scrrolScetion/dashbord5.png"
+import dashbord6 from "../newHomeImage/scrrolScetion/dashbord6.png"
+import dashbord7 from "../newHomeImage/scrrolScetion/dashbord7.png"
+import dashbord8 from "../newHomeImage/scrrolScetion/dashbord8.png"
+import icon1 from "../newHomeImage/scrrolScetion/icon1.png"
+import icon2 from "../newHomeImage/scrrolScetion/icon2.png"
+import icon3 from "../newHomeImage/scrrolScetion/icon3.png"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAnglesRight, faCircleArrowRight } from "@fortawesome/free-solid-svg-icons";
+import img1 from "../newHomeImage/scrrolScetion/main/img1.png"
+import img2 from "../newHomeImage/scrrolScetion/main/img2.png"
+import img3 from "../newHomeImage/scrrolScetion/main/img3.png"
+import img4 from "../newHomeImage/scrrolScetion/main/img4.png"
+import img5 from "../newHomeImage/scrrolScetion/main/img5.png"
+import img6 from "../newHomeImage/scrrolScetion/main/img6.png"
+import img7 from "../newHomeImage/scrrolScetion/main/img7.png"
+import img8 from "../newHomeImage/scrrolScetion/main/img8.png"
+import { Link } from "react-router-dom";
 
-const technology = `${process.env.REACT_APP_API_URL}/assests/home/aiPowered/technology.svg`;
-const trending = `${process.env.REACT_APP_API_URL}/assests/home/aiPowered/trending.svg`;
-const customerService = `${process.env.REACT_APP_API_URL}/assests/home/aiPowered/customer-service.svg`;
 const seo = `${process.env.REACT_APP_API_URL}/assests/home/aiPowered/seo.svg`;
 const softwareDevelopment = `${process.env.REACT_APP_API_URL}/assests/home/aiPowered/software-development.svg`;
 const communicationSkills = `${process.env.REACT_APP_API_URL}/assests/home/aiPowered/communication-skills.svg`;
 const machineLearning = `${process.env.REACT_APP_API_URL}/assests/home/aiPowered/machine-learning.svg`;
 const chatbot = `${process.env.REACT_APP_API_URL}/assests/home/aiPowered/chatbot.svg`;
-const projectTeam = `${process.env.REACT_APP_API_URL}/assests/home/aiPowered/project-team.svg`;
-const digitalTransformation = `${process.env.REACT_APP_API_URL}/assests/home/aiPowered/digital-transformation.svg`;
-const appStore = `${process.env.REACT_APP_API_URL}/assests/home/aiPowered/app-store.svg`;
-const android = `${process.env.REACT_APP_API_URL}/assests/home/aiPowered/android.svg`;
-const fluter = `${process.env.REACT_APP_API_URL}/assests/home/aiPowered/fluter.svg`;
-const native = `${process.env.REACT_APP_API_URL}/assests/home/aiPowered/native.svg`;
-const PWA = `${process.env.REACT_APP_API_URL}/assests/home/aiPowered/pwa.svg`;
-const encrypted = `${process.env.REACT_APP_API_URL}/assests/home/aiPowered/encrypted.svg`;
-const smartContract = `${process.env.REACT_APP_API_URL}/assests/home/aiPowered/smart-contract.svg`;
-const decentralized = `${process.env.REACT_APP_API_URL}/assests/home/aiPowered/decentralized.svg`;
-const planning = `${process.env.REACT_APP_API_URL}/assests/home/aiPowered/planning.svg`;
-const office = `${process.env.REACT_APP_API_URL}/assests/home/aiPowered/office.svg`;
-const uxDesign = `${process.env.REACT_APP_API_URL}/assests/home/aiPowered/ux-design.svg`;
-const promotion = `${process.env.REACT_APP_API_URL}/assests/home/aiPowered/promotion.svg`;
-const investment = `${process.env.REACT_APP_API_URL}/assests/home/aiPowered/investment.svg`;
+
 
 const sectionsData = [
     {
-        id: "intelligence",
-        menu_title: "Intelligence",
-        title: "Your Intelligent Tech Partner",
-        subheading: "Empowering your business with AI solutions that drive growth, efficiency, and transformation.",
-        color: "purple",
+        menu_title: "Agentic AI",
+        Mainiocn: img1,
+        title: "Agentic AI",
+        subheading: "Transform your business with AI agents and intelligent automation built to work, learn, and scale. We develop AI agents, copilots, and autonomous workflows that streamline operations, automate repetitive tasks, improve customer experiences, optimize processes, and unlock smarter, faster, future-ready growth.",
+        dashbord: dashbord,
         apps: false,
         features: [
-            {
-                text: "Accelerate Operational Excellence",
-                icon: technology,
-            },
-            {
-                text: "Unlock Strategic Data Insights",
-                icon: trending,
-            },
-            {
-                text: "Transform Customer Experiences",
-                icon: customerService,
-            }
+            { text: "AI Agents & Copilots", icon: icon1 },
+            { text: "Autonomous Workflow", icon: icon2 },
+            { text: "Intelligent Process Automation", icon: icon3 }
         ],
         lists: [
-            {
-                text: "AI Strategy & Consulting",
-                icon: seo,
-            },
-            {
-                text: "AI-Software Development",
-                icon: softwareDevelopment,
-            },
-            {
-                text: "Generative AI",
-                icon: communicationSkills,
-            },
-            {
-                text: "Machine Learning",
-                icon: machineLearning,
-            },
-            {
-                text: "AI Agent & Chat bot",
-                icon: chatbot,
-            }
+            { text: "AI Strategy & Consulting", icon: seo },
+            { text: "AI-Software Development", icon: softwareDevelopment },
+            { text: "Generative AI", icon: communicationSkills },
+            { text: "Machine Learning", icon: machineLearning },
+            { text: "AI Agent & Chat bot", icon: chatbot }
         ]
-    },
-    {
-        id: "studio",
-        menu_title: "Studio",
-        title: "Premier Digital Development Studio",
-        subheading: "Driving Sustainable Business Growth Through Superior, Future-Ready Digital Engineering Excellence",
-        color: "orange",
-        apps: true,
-        features: [
-            {
-                text: "Exclusive 5 Projects Annually",
-                icon: projectTeam,
-            },
-            {
-                text: "Direct C-Suite Strategic Oversight",
-                icon: seo,
-            },
-            {
-                text: "Top 1% Global Tech Talent",
-                icon: digitalTransformation,
-            }
-        ],
-        lists: [
-            {
-                text: "IOS App",
-                icon: appStore,
-            },
-            {
-                text: "Android App",
-                icon: android,
-            },
-            {
-                text: "Flutter App",
-                icon: fluter,
-            },
-            {
-                text: "React Native App",
-                icon: native,
-            },
-            {
-                text: "PWA App",
-                icon: PWA,
-            }
-        ]
-    },
-    {
-        id: "blockchain",
-        menu_title: "Blockchain",
-        title: "Powering the Next Era of Decentralization",
-        subheading: "Enabling businesses with secure, efficient, and future-ready decentralized technologies",
-        color: "green",
+    },  {
+        menu_title: "AI-Powered Software ",
+        Mainiocn: img2,
+        title: "AI-Powered Software",
+        subheading: "Transform conventional software into intelligent platforms with AI-powered features, predictive insights, and automated decision-making. We integrate AI to streamline operations, improve efficiency, enhance user experiences, optimize workflows, and enable smarter, faster, scalable business outcomes built for the future.",
+        dashbord: dashbord2,
         apps: false,
         features: [
-            {
-                text: "Enterprise-Grade Security Architecture",
-                icon: encrypted,
-            },
-            {
-                text: "Future-Ready Smart Contracts",
-                icon: smartContract,
-            },
-            {
-                text: "Scalable Decentralized Solutions",
-                icon: decentralized,
-            }
+            { text: "Generative AI Integration", icon: icon1 },
+            { text: "Predictive Intelligence", icon: icon2 },
+            { text: "AI-Driven Automation", icon: icon3 }
         ],
         lists: [
-            {
-                text: "Blockchain Consulting & Development",
-                icon: seo,
-            },
-            {
-                text: "Tokenization & NFT Solutions",
-                icon: softwareDevelopment,
-            },
-            {
-                text: "Custom Crypto Solutions",
-                icon: communicationSkills,
-            },
-            {
-                text: "Smart Contract Design & Auditing",
-                icon: machineLearning,
-            },
-            {
-                text: "Metaverse Solutions",
-                icon: chatbot,
-            }
+            { text: "AI Strategy & Consulting", icon: seo },
+            { text: "AI-Software Development", icon: softwareDevelopment },
+            { text: "Generative AI", icon: communicationSkills },
+            { text: "Machine Learning", icon: machineLearning },
+            { text: "AI Agent & Chat bot", icon: chatbot }
         ]
-    },
-    {
-        id: "startup",
-        menu_title: "Startup",
-        title: "A Strategic Launchpad for the Next Big Startups",
-        subheading: "Empowering startups to go from idea to impact with expert guidance and advanced technology.",
-        color: "yellow",
+    },  {
+        menu_title: "Web & App Development",
+        Mainiocn: img3,
+        title: "Web & App Development",
+        subheading: "Create high-performance digital experiences for modern users and evolving businesses. We build scalable websites, web applications, and mobile apps with intelligent features, seamless integrations, robust performance, and future-ready architecture that accelerates growth and delivers exceptional user experiences.",
+        apps: false,dashbord: dashbord3,
+        features: [
+            { text: "Modern Web Applications", icon: icon1 },
+            { text: "Modern Web Applications", icon: icon2 },
+            { text: "Scalable Digital Platforms", icon: icon3 }
+        ],
+        lists: [
+            { text: "AI Strategy & Consulting", icon: seo },
+            { text: "AI-Software Development", icon: softwareDevelopment },
+            { text: "Generative AI", icon: communicationSkills },
+            { text: "Machine Learning", icon: machineLearning },
+            { text: "AI Agent & Chat bot", icon: chatbot }
+        ]
+    },  {
+        menu_title: "Cloud & DevOps",
+        Mainiocn: img4,
+        title: "Cloud & DevOps",
+        subheading: "Build a flexible technology foundation with cloud-native infrastructure, automated deployment, and scalable environments. We help businesses launch faster, improve reliability, optimize performance, and streamline operations through secure, resilient, future-ready cloud solutions that adapt to evolving business needs.",
+        apps: false,dashbord: dashbord4,
+        features: [
+            { text: "Cloud-Native Architecture", icon: icon1 },
+            { text: "DevSecOps & CI/CD", icon: icon2 },
+            { text: "Scalable Infrastructure", icon: icon3 }
+        ],
+        lists: [
+            { text: "AI Strategy & Consulting", icon: seo },
+            { text: "AI-Software Development", icon: softwareDevelopment },
+            { text: "Generative AI", icon: communicationSkills },
+            { text: "Machine Learning", icon: machineLearning },
+            { text: "AI Agent & Chat bot", icon: chatbot }
+        ]
+    },  {
+        menu_title: "Cybersecurity",
+        Mainiocn: img5,
+        title: "Cybersecurity",
+        subheading: "Protect applications, infrastructure, data, and digital identities with security built into every layer. We combine modern security practices, AI-driven monitoring, proactive threat detection, and resilient protection to strengthen digital ecosystems, minimize risks, safeguard critical assets, and ensure secure, reliable business operations.",
+        apps: false,dashbord: dashbord5,
+        features: [
+            { text: "AI-Powered Threat Detection", icon: icon1 },
+            { text: "Zero-Trust Security", icon: icon2 },
+            { text: "Data & Application Protection", icon: icon3 }
+        ],
+        lists: [
+            { text: "AI Strategy & Consulting", icon: seo },
+            { text: "AI-Software Development", icon: softwareDevelopment },
+            { text: "Generative AI", icon: communicationSkills },
+            { text: "Machine Learning", icon: machineLearning },
+            { text: "AI Agent & Chat bot", icon: chatbot }
+        ]
+    },  {
+        menu_title: "Blockchain & Web3",
+        Mainiocn: img6,
+        title: "Blockchain & Web3",
+        subheading: "Unlock new models of ownership, trust, and digital value with blockchain technology. We build secure blockchain solutions spanning smart contracts, tokenization, decentralized applications, and Web3 platforms, helping businesses innovate, streamline transactions, enhance transparency, and create new opportunities in the evolving digital economy.",
+        dashbord: dashbord6,
         apps: false,
         features: [
-            {
-                text: "User-Centric Design Excellence",
-                icon: encrypted,
-            },
-            {
-                text: "AI-Assisted Wireframing & Prototyping",
-                icon: smartContract,
-            },
-            {
-                text: "Strategic Brand Architecture",
-                icon: decentralized,
-            }
+            { text: "Smart Contracts & DApps", icon: icon1 },
+            { text: "Tokenization & Digital Assets", icon: icon2 },
+            { text: "Web3 Infrastructure", icon: icon3 }
         ],
         lists: [
-            {
-                text: "Business Planning",
-                icon: planning,
-            },
-            {
-                text: "Legal Setup",
-                icon: office,
-            },
-            {
-                text: "UI/UX Design",
-                icon: uxDesign,
-            },
-            {
-                text: "Marketing Strategy",
-                icon: promotion,
-            },
-            {
-                text: "Investor Pitch Decks",
-                icon: investment,
-            }
+            { text: "AI Strategy & Consulting", icon: seo },
+            { text: "AI-Software Development", icon: softwareDevelopment },
+            { text: "Generative AI", icon: communicationSkills },
+            { text: "Machine Learning", icon: machineLearning },
+            { text: "AI Agent & Chat bot", icon: chatbot }
         ]
-    },
-    {
-        id: "app",
-        menu_title: "App",
-        title: "AI-Driven App Creation Suite",
-        subheading: "Pre-built tech solutions designed for real business use cases—launch faster with zero coding.",
-        color: "pink",
+    },  {
+        menu_title: "Data & Analytics",
+        Mainiocn: img7,
+        title: "Data & Analytics",
+        subheading: "Turn complex business data into actionable intelligence with modern analytics and AI-powered insights. We connect data across systems to help organizations monitor performance, uncover opportunities, predict trends, optimize operations, and make faster, smarter, data-driven decisions that drive measurable growth.",
+        dashbord: dashbord7,
         apps: false,
         features: [
-            {
-                text: "70% Ready Code Architecture",
-                icon: encrypted,
-            },
-            {
-                text: "Get It Customized Your Way",
-                icon: smartContract,
-            },
-            {
-                text: "Launch MVP in 2 Days",
-                icon: decentralized,
-            }
+            { text: "Real-Time Analytics", icon: icon1 },
+            { text: "Real-Time Analytics", icon: icon2 },
+            { text: "Predictive Data Intelligence", icon: icon3 }
         ],
         lists: [
-            {
-                text: "Ordering & Service Booking",
-                icon: planning,
-            },
-            {
-                text: "Delivery Management",
-                icon: office,
-            },
-            {
-                text: "Taxi & Mobility Solution",
-                icon: uxDesign,
-            },
-            {
-                text: "Online Consultation",
-                icon: promotion,
-            },
-            {
-                text: "All-in-one Marketplace",
-                icon: investment,
-            }
+            { text: "AI Strategy & Consulting", icon: seo },
+            { text: "AI-Software Development", icon: softwareDevelopment },
+            { text: "Generative AI", icon: communicationSkills },
+            { text: "Machine Learning", icon: machineLearning },
+            { text: "AI Agent & Chat bot", icon: chatbot }
         ]
-    }
+    },  {
+        menu_title: "Digital Transformation",
+        Mainiocn: img8,
+        title: "Digital Transformation",
+        subheading: "Modernize outdated technology with intelligent digital ecosystems that connect your business. We help organizations adopt AI, cloud, automation, and modern architectures to streamline operations, improve agility, accelerate innovation, enhance efficiency, and build future-ready digital capabilities for sustainable growth.",
+        dashbord: dashbord8,
+        apps: false,
+        features: [
+            { text: "Legacy Modernization", icon: icon1 },
+            { text: "Intelligent Automation", icon: icon2 },
+            { text: "Connected Digital Ecosystems", icon: icon3 }
+        ],
+        lists: [
+            { text: "AI Strategy & Consulting", icon: seo },
+            { text: "AI-Software Development", icon: softwareDevelopment },
+            { text: "Generative AI", icon: communicationSkills },
+            { text: "Machine Learning", icon: machineLearning },
+            { text: "AI Agent & Chat bot", icon: chatbot }
+        ]
+    },
 ];
 
 const AIPoweredSection = () => {
 
-    const [activeId, setActiveId] = useState("intelligence");
-    const sectionRefs = useRef({});
-    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+    const [activeIndex, setActiveIndex] = useState(0);
     const menuRefs = useRef({});
     const menuContainerRef = useRef(null);
-    const hasMounted = useRef(false);
-    const hasUserScrolled = useRef(false);
 
-    const scrollToSection = (id) => {
-        hasUserScrolled.current = true;
-        sectionRefs.current[id]?.scrollIntoView({
-            behavior: "smooth",
-            block: "center",
-        });
+    const isMobile = () =>
+        typeof window !== "undefined" && window.matchMedia("(max-width: 767px)").matches;
+
+    const handleTabClick = (index) => {
+        setActiveIndex(index);
     };
 
+    // Only on mobile: slide the clicked/active tab into view within the horizontal strip
     useEffect(() => {
-        if (!isMobile) return;
+        if (!isMobile()) return;
 
-        const onScroll = () => {
-            hasUserScrolled.current = true;
-            window.removeEventListener("scroll", onScroll);
-        };
-
-        window.addEventListener("scroll", onScroll, { passive: true });
-
-        return () => window.removeEventListener("scroll", onScroll);
-    }, [isMobile]);
-
-    useEffect(() => {
-        if (!isMobile) return;
-        if (!hasMounted.current) return;
-        if (!hasUserScrolled.current) return;
-
-        const activeMenu = menuRefs.current[activeId];
-        activeMenu?.scrollIntoView({
-            behavior: "smooth",
-            inline: "center",
-            block: "nearest",
-        });
-    }, [activeId, isMobile]);
-
-    useEffect(() => {
-        if (!isMobile) return;
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-                if (!hasMounted.current) return;
-
-                let visibleId = null;
-                let maxRatio = 0;
-
-                entries.forEach((entry) => {
-                    if (entry.intersectionRatio > maxRatio) {
-                        maxRatio = entry.intersectionRatio;
-                        visibleId = entry.target.id;
-                    }
-                });
-
-                if (visibleId) setActiveId(visibleId);
-            },
-            {
-                threshold: [0.25, 0.5, 0.75],
-            }
-        );
-
-        Object.values(sectionRefs.current).forEach((section) =>
-            observer.observe(section)
-        );
-
-        return () => observer.disconnect();
-    }, [isMobile]);
-
-    useEffect(() => {
-        hasMounted.current = true;
-    }, []);
-
-    useEffect(() => {
-
-        const container = menuContainerRef.current;
-
-        if (!container) return;
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-            let maxRatio = 0;
-            let visibleId = activeId;
-
-            entries.forEach((entry) => {
-                if (entry.intersectionRatio > maxRatio) {
-                maxRatio = entry.intersectionRatio;
-                visibleId = entry.target.id;
-                }
+        const activeMenu = menuRefs.current[activeIndex];
+        if (activeMenu) {
+            activeMenu.scrollIntoView({
+                behavior: "smooth",
+                inline: "center",
+                block: "nearest",
             });
+        }
+    }, [activeIndex]);
 
-            setActiveId(visibleId);
-            },
-            {
-            threshold: [0.25, 0.5, 0.75, 1],
-            }
-        );
-
-        Object.values(sectionRefs.current).forEach((section) => {
-            observer.observe(section);
-        });
-
-        return () => observer.disconnect();
-    }, [activeId]);
+    const activeItem = sectionsData[activeIndex];
 
     return(
-        <div className="ai_powered_section section-padding no-bottom-padding body-background">
+        <div className="ai_powered_section section-padding ">
             <Container>
                 <Row>
                     <Col>
-                        <SubHeading text={"Solutions"} />
-                        <h2 className="heading_main split">AI-Powered Solutions <br />Built for Global Impact by IosAndWeb Technologies</h2>
-
-                        <div className="ai_powered_flex_block less-top-padding">
+                    <div className="spanInCenter">
+                         <div className="sectionHeading">Our Capabilities</div>
+                            <h2 className="heading_main ">One Technology Partner. Every Digital Possibility. </h2>
+                            <p className="paragraph_content">From AI agents to enterprise software, cloud platforms, automation and cybersecurity—we build the technology your business needs to move faster.</p>
+                       </div>
+                        <div className="ai_powered_flex_block ">
                             <div className="ai_powered_sidebar" ref={menuContainerRef}>
-                                {sectionsData.map((item) => (
+                                {sectionsData.map((item, index) => (
                                     <div 
-                                        key={item.id}
+                                        key={index}
                                         className={`ai_powered_sidebar_items ${
-                                            activeId === item.id ? "active" : ""
+                                            activeIndex === index ? "active" : ""
                                         }`}
-                                        onClick={() => scrollToSection(item.id)}
-                                        ref={(el) => (menuRefs.current[item.id] = el)}
+                                        onClick={() => handleTabClick(index)}
+                                        ref={(el) => (menuRefs.current[index] = el)}
                                     >
+                                        <div className="sidebar_icon_box">
+                                            <img src={item.Mainiocn} alt={item.menu_title} className="features_icon" />
+                                        </div>
                                         <h2 className="heading_main">
-                                            <span className={`${item.color}`}>CB</span> 
                                             {item.menu_title}
                                         </h2>
-                                        <p className="powered_text">{item.title}</p>
                                     </div>
                                 ))}
                             </div>
                             <div className="ai_powered_contents">
-                                {sectionsData.map((item) => (
-                                    <div 
-                                        className={`powered_content_sections ${
-                                            activeId === item.id ? "active" : ""
-                                        }`}
-                                        key={item.id}
-                                        id={item.id}
-                                        ref={(el) => (sectionRefs.current[item.id] = el)}
-                                    >
-                                        <h2 className={`heading_main split ${item.color}`}>{item.title}</h2>
-                                        <p className="paragraph_content">{item.subheading}</p>
-                                        <div className="features_lists less-top-padding less-bottom-padding">
-                                            {item.features.map((feature,index) => (
-                                                <div className="features_lists_item" key={index}>
-                                                    <div className="features_item_icon">
-                                                        <img src={feature.icon} alt={feature.text} className="features_icon" />
-                                                    </div>
-                                                    <p className="features_item_text">{feature.text}</p>
-                                                </div>
-                                            ))}
+                                <div key={activeIndex}>
+                                    <div className="powered_content_sections active">
+                                        <div className="LeftDivAi">
+                                            <h2 className="heading_main">{activeItem.title}</h2>
+                                            <p className="paragraph_content">{activeItem.subheading}</p>
                                         </div>
-                                        <div className={`powered_lists_grid ${item.apps && "apps"}`}>
-                                            {item.lists.map((list,index) => (
-                                                <div className="powered_lists_item" key={index}>
-                                                    <div className="powered_item_icon">
-                                                        <img src={list.icon} alt={list.text} className="powered_icon" />
+                                        <div className="rigthDivAi">
+                                            <div className="ImageDivForScrrol">
+                                                <img src={activeItem.dashbord} alt="340px" />
+                                            </div>
+                                           
+                                        </div>  
+                                    </div>
+                                    <div className="features_lists less-bottom-padding ">
+                                                {activeItem.features.map((feature, index) => (
+                                                    <div className="features_lists_item" key={index}>
+                                                        <div className="features_item_icon">
+                                                            <img src={feature.icon} alt={feature.text} className="features_icon" />
+                                                        </div>
+                                                        <p className="features_item_text">{feature.text}</p>
                                                     </div>
-                                                    <p className="powered_item_text">{list.text}</p>
-                                                </div>
-                                            ))}
+                                                ))}
+                                            </div>
+                                    <div className="scrrolSectionMain">
+                                         
+                                        <div className="scrrolSectionLast">
+                                          <h2 className="heading_main">Let's Build Your Next Big Idea</h2>
+                                          <p className="paragraph_content">Smart technology. Real business growth.</p>
+                                        </div>
+                                        <div className="btnDiv">
+                                       <Link to="/contact-us" className="caseStudyButton " >
+                                            Let’s Get Started
+                                            <span>
+                                                <FontAwesomeIcon icon={faCircleArrowRight} />
+                                            </span>
+                                        </Link>
                                         </div>
                                     </div>
-                                ))}
+                                </div>
                             </div>
                         </div>
                     </Col>

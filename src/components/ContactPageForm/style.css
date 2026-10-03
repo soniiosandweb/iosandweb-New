@@ -2,8 +2,8 @@
     padding-bottom: 5px;
 }
 .contactpageForm .form-group .form-control {
-    background-color: #0C0C0C6E;
-    color: var(--color-white);
+    background-color: #C4BEBE6E;
+    color: var(--color-black);
     border-radius: 8px;
     border: 1px solid #ffffff6e;
     padding: 12px 20px;
@@ -11,11 +11,11 @@
     box-shadow: unset;
 }
 .contactpageForm .form-group .form-control::placeholder {
-    color: var(--color-white);
+    color: var(--color-black);
 }
 .contactpageForm .form-group .PhoneInputInput {
     background-color: var(--color-transparent);
-    color: var(--color-white);
+    color: var(--color-black);
     padding: 0;
 }
 .contactpageForm .form-group .PhoneInputCountry {
@@ -49,15 +49,16 @@
 .contactpageForm .form-submit-btn {
     text-decoration: unset;
     width: 100%;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
     display: inline-flex;
     align-items: center;
     gap: 8px; 
-    border-radius: 8px;
+    border-radius:50px;
     color: var(--color-white);
     padding: 14px 20px;
-    background: linear-gradient(90deg, #A600FF 0%, #0011FF 100%);
+    background: #0046FF;
     border: none;
     justify-content: center;
     position: relative;

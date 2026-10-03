@@ -5,7 +5,9 @@ import { Col, Container, Row } from "react-bootstrap";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
-
+import img1 from "./img1.png"
+import img2 from "./img2.png"
+import img3 from "./img3.png"
 const indiaIcon = `${process.env.REACT_APP_API_URL}/assests/contact/cont-loc-india.webp`;
 const ukIcon = `${process.env.REACT_APP_API_URL}/assests/contact/cont-loc-uk.webp`;
 const usaIcon = `${process.env.REACT_APP_API_URL}/assests/contact/cont-loc-usa.webp`;
@@ -31,21 +33,23 @@ const presenceLists = [
     }
 ]
 
+
+
 const locations = [
     {
-        icon: indiaIcon,
+        icon: img1,
         title: "India (HQ)",
-        address: "SCO 30, First Floor, <br/>Near Devaji Plaza, VIP Road, <br/>Zirakpur, PB (India)"
+        address: "SCO 30, VIP Road <br> Zirakpur, Chandigarh Tricity - 140603 <br> Punjab, India"
     },
     {
-        icon: ukIcon,
+        icon: img2,
         title: "United Kingdom",
         address: "Sheffield City Centre, <br/>Sheffield, S1 1AA, <br/>United Kingdom"
     },
     {
-        icon: usaIcon,
+        icon: img3,
         title: "United States",
-        address: "Suite #304, 11200 <br/>Manchaca, <br/>Austin, Texas, <br/>United States, 78748"
+        address: "237 Warrick Road <br/> Putnam Station <br/> New York - 12861"
     }
 ]
 
@@ -88,8 +92,7 @@ const ContactFormSection = () => {
     }, []);
 
     return(
-        <div className="contactpage_form_section section-padding linear-dark-background" ref={contactFormRef}>
-            <img src={contactBG} alt="IosAndWeb Technologies Serving Businesses Worldwide" className="contactpage_bg" />
+        <div className="contactpage_form_section  " ref={contactFormRef}>
             <Container>
                 <Row>
                     <Col>
@@ -113,7 +116,7 @@ const ContactFormSection = () => {
                                 <h3 className="heading_main small split FontSize_25">Reach Out & Let's Build Something Exceptional Together</h3>
                                 <div className="contactpage_form_block">
                                     <div className="contactpage_form_block_content">
-                                        <h4 className="contactpage_form_heading">Share Details & Begin</h4>
+                                        <h4 className="contactpage_form_heading font-bold">Share Details & Begin</h4>
                                         <SubHeading text={"Our Presence"} />
                                         <ul className="presence_lists">
                                             {presenceLists.map((item,i) => (

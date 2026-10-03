@@ -33,7 +33,7 @@ const whyChooseLists = [
 
 const AboutWhyChoose = () => {
     return(
-        <div className="about_why_choose_section section-padding black-background">
+        <div className="about_why_choose_section section-padding ">
             <Container>
                 <Row>
                     <Col>

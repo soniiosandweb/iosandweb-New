@@ -45,7 +45,7 @@
     margin: 0;
 }
 .services_grid_item a:hover .services_lists_title {
-    color: #AE86FF;
+    color: white;
 }
 .services_grid_item .services_features_lists {
     margin: 0;

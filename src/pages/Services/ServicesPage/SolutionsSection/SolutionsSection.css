@@ -1,12 +1,47 @@
 .services_powering_section {
-    background-color: var(--color-white);
+    background-color: #EDE4FF;
     margin-top: 6rem;
     border-radius: 10px;
     padding: 3rem 1rem;
     text-align: center;
-    margin-bottom: -182px;
+    color: black;
+    width:100%;
+    border-radius: 10px;
+
 }
-.services_powering_section .heading_main {
+.services_solutions_section{
+    background: white;
+    color: black;
+}
+.sectionsubHeading{
+  border: 2px solid #0011FF;
+  /* border-image: linear-gradient(90deg, #0011FF 0%, #A600FF 100%) 1; */
+  border-radius: 40px;
+  font-size: 18px;
+  line-height: 44px;
+      font-family: var(--font-poppins-semibold);
+
+  font-weight: 600;
+  padding: 0px 24px;
+  margin-bottom: 34px;
+}
+.services_solutions_section .heading_main {
+    font-size: 35px;
+    font-family: var(--font-poppins-semibold);
+    color: #5500FF;
+    margin-bottom: 24px;
+}
+.services_solutions_section .paragraph_content{
+    font-size: 18px;
+    line-height: 24px;
+    font-family: var(--font-poppins);
+}
+.services_solutions_section .col{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}.services_powering_section .heading_main {
     color: var(--color-blackblue);
     margin-bottom: 4rem;
 }
@@ -23,6 +58,47 @@
 .services_powering_section .btn-gradient-blue {
     margin-top: 3rem;
 }
+
+
+
+.fullWidthPowerSSection {
+    background: #2A59DB;
+    color: white;
+    padding: 55px 0px;
+}
+.fullWidthPowerSSection .col{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.poerSectionMain {
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+}
+.poerSectionMain .span.SideHaeding {
+
+font-family: var(--font-poppins-medium);
+font-weight: 500;
+font-size: 18px;
+line-height: 24px;
+
+}
+
+.SideHaeding{
+    font-family: var(--font-poppins-medium);
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+}
+.PowerSectionInnerDiv {
+    display: flex;
+    gap:12px;
+    /* max-width: 260px; */
+    align-items: start;
+}
 @media (max-width: 767px) {
     .services_powering_section .heading_main {
         margin-bottom: 3rem;
@@ -30,4 +106,15 @@
     .services_powering_section {
         margin-top: 4rem;
     }
+.poerSectionMain {
+    flex-direction: column;
+    gap: 50px;
+}.sectionsubHeading{
+    font-size: 16px;
+}
+}
+@media (max-width: 427px) {
+  .sectionsubHeading{
+    font-size: 15px;
+}
 }

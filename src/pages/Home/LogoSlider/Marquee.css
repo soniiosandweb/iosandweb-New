@@ -1,0 +1,43 @@
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  background-color: #FFFFFF;
+}
+.marquee{
+ border-bottom: 4px #0046FF solid;
+}
+
+.marquee-track {
+    margin: 30px;
+    display: flex;
+    width: max-content;
+    gap: 6rem;
+    justify-content: center;
+    padding-bottom: 0px;
+    /* height: 70px; */
+    align-items: center;
+    animation: marquee 30s linear infinite;
+}
+
+.marquee-item {
+  height: 100%;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.marquee-item img {
+  object-fit: contain;
+  display: block;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

@@ -1,229 +1,420 @@
 import { Col, Container, Row } from "react-bootstrap";
 import "./Testimonials.css";
-import SubHeading from "../../../components/SubHeading/SubHeading";
 import Slider from "react-slick";
 import { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faArrowRight, faCirclePlay } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronLeft,
+  faChevronRight,
+  faStar,
+} from "@fortawesome/free-solid-svg-icons";
 
-const testimonialBG = `${process.env.REACT_APP_API_URL}/assests/home/testimonials/testimonials_bg.webp`;
-const video1 = `${process.env.REACT_APP_API_URL}/assests/home/testimonials/Video_Generation_From_User_Feedback.mp4`;
-const video2 = `${process.env.REACT_APP_API_URL}/assests/home/testimonials/Positive_SEO_Service_Review_and_Video.mp4`;
-const testimonial1 = `${process.env.REACT_APP_API_URL}/assests/home/testimonials/testimonial1.webp`;
-const testimonial2 = `${process.env.REACT_APP_API_URL}/assests/home/testimonials/testimonial2.webp`;
-const testimonial3 = `${process.env.REACT_APP_API_URL}/assests/home/testimonials/testimonials_3bg.webp`;
+import overview1 from "../newHomeImage/testimonials/overview1.png";
+import overview12 from "../newHomeImage/testimonials/overview1_2.png";
+import overview2 from "../newHomeImage/testimonials/overview2.png";
+// import overview4 from "../newHomeImage/testimonials/overview2_2.png";
+import overview3 from "../newHomeImage/testimonials/overview3.png";
+import overview4 from "../newHomeImage/testimonials/overview4.png";
+import overview5 from "../newHomeImage/testimonials/overview5.png";
+import overview6 from "../newHomeImage/testimonials/overview6.png";
+import clinetlogo from "../newHomeImage/testimonials/logo1.png";
+import client from "../newHomeImage/testimonials/client1.png";
+import clinetlogo2 from "../newHomeImage/testimonials/logo2.png";
+import client2 from "../newHomeImage/testimonials/client2.png";
+import client4 from "../newHomeImage/testimonials/client4.png";
+import client5 from "../newHomeImage/testimonials/client2.png";
+import client6 from "../newHomeImage/testimonials/client6.png";
+import clinetlogo3 from "../newHomeImage/testimonials/logo3.png";
+import clinetlogo4 from "../newHomeImage/testimonials/logo4.png";
+import clinetlogo5 from "../newHomeImage/testimonials/logo5.png";
+import clinetlogo6 from "../newHomeImage/testimonials/logo6.png";
+import client3 from "../newHomeImage/testimonials/client3.png";
+import step from "../newHomeImage/testimonials/step.png";
+import arrow from "../newHomeImage/testimonials/arrow.png";
+import overview22 from "../newHomeImage/testimonials/overview2_2.png";
+import overview32 from "../newHomeImage/testimonials/overview3_2.png";
+import overview42 from "../newHomeImage/testimonials/overview4_2.png";
+import overview52 from "../newHomeImage/testimonials/overview5_2.png";
+import overview62 from "../newHomeImage/testimonials/overview6_2.png";
 
-const video3 = `${process.env.REACT_APP_API_URL}/assests/home/testimonials/testimonial3.mp4`;
 
-const testimonials = [
-    {
-        name: "Geema",
-        content: "“Thanks to IosAndWeb team for Swiss Swaps. You guys managed a lot of functions that I thought weren't quite possible. The best thing I liked is that you guys never stopped until I was satisfied with the product.”",
-        video: video1,
-        image: testimonial1,
+
+const testimonialData = [
+  {
+    id: "my-germany",
+    name: "Mattias Schmelzer",
+    company: "CEO",
+    rating: "5/5",
+
+    review: `We had a great experience working with IosAndWeb. The team understood our requirements, communicated clearly throughout the project, and was always open to our feedback. They delivered a professional website and were supportive whenever we needed help. Overall, we’re happy with the work and would recommend IosAndWeb.`,
+
+    companyLogo: clinetlogo,
+    clientImage: client,
+
+    projectOverview: {
+      title: "Project Overview",
+      projectName: "My Germany",
+      description: `MyGermany is an international package forwarding and logistics service that helps customers outside Germany purchase products from German and European online stores and have them delivered internationally.`,
     },
-    {
-        name: "Marty James",
-        content: "“Amazing experience! The team genuinely cares about delivering results and the way of reports like every single link you can check where they promote our website. I have been working with the Iosandweb team for 1.8 year now. I think my search for SEO is over and I can assure my further work with Utkarsh and his team. Satisfied with the results and professional behavior. I will recommend Iosandweb team.”",
-        video: video2,
-        image: testimonial2,
+
+    overviewImages: [
+      overview1,
+      overview12,
+    ],
+
+    stepImage: step,
+  },
+
+  
+  {
+    id: "armra",
+    name: "Sarah Rahal",
+    company: "CEO",
+    rating: "5/5",
+
+    review: `IosAndWeb was great to work with. The team was professional, responsive, and understood our requirements well. We appreciated their support and communication throughout the project and are happy with the overall experience.`,
+
+    companyLogo: clinetlogo4,
+    clientImage: client4,
+
+    projectOverview: {
+      title: "Project Overview",
+      projectName: "ARMRA",
+      description: `ARMRA is a health and wellness e-commerce brand specializing in bovine colostrum supplements that support gut health, immunity, skin, energy, and overall wellness.`,
     },
-    {
-        name: "Paul Azzurro",
-        content: "“Hi Finally I found a web designer who has created me the coolest designed chess site ever love it (chessondemand.com). I have had several developers throughout the years some good most just hold you hostages and never seem to finish what they started. Utkarsh and his team have exceeded my expectations great service honest affordable pricing and their skill level with web design and seo is top notch. I highly recommend them they are the real deal. Thank you.”",
-        video: video3,
-        image: testimonial3,
-    }
-]
 
-function CustomNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style }}
-        onClick={onClick}
-      >
-        <FontAwesomeIcon icon={faArrowRight} />
-      </div>
-    );
-}
+    overviewImages: [
+      overview4,
+      overview42,
+    ],
 
-function CustomPrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-        className={className}
-        style={{ ...style }}
-        onClick={onClick}
-    >
-        <FontAwesomeIcon icon={faArrowLeft} />
-    </div>
-  );
-}
+    stepImage: step,
+  }, {
+    id: "greenleaf",
+    name: "Amyn Murji",
+    company: "CEO, GreenLeaf Solutions",
+    rating: "5/5",
+
+    review: `Working with IosAndWeb has been a great experience. The team understood our requirements, communicated clearly, and was always responsive whenever we needed support. They were easy to work with and handled our feedback professionally. We’re very happy with the overall experience and would definitely recommend IOSAndWeb.`,
+
+    companyLogo: clinetlogo2,
+    clientImage: client2,
+
+    projectOverview: {
+      title: "Project Overview",
+      projectName: "Tenant Pay",
+      description: `TenantPay is a Canadian rent-payment and rewards platform that helps tenants pay rent online, earn rewards, and build credit, while simplifying rent collection for landlords and property managers.`,
+    },
+
+    overviewImages: [
+      overview5,
+      overview52,
+    ],
+
+    stepImage: step,
+  },
+
+  {
+    id: "kiddospace",
+    name: "Einzelhandel",
+    company: "CEO",
+    rating: "5/5",
+
+    review: `Really happy with our experience with IosAndWeb. The team was friendly, professional, and easy to work with. They listened to our requirements and were helpful whenever we needed support. Would definitely recommend them.`,
+
+    companyLogo: clinetlogo3,
+    clientImage: client3,
+
+    projectOverview: {
+      title: "Project Overview",
+      projectName: "The KiddoSpace",
+      description: `The KiddoSpace is an online store offering a range of products designed for children, with a focus on learning, creativity, and everyday needs.`,
+    },
+
+    overviewImages: [
+      overview3,
+      overview32,
+    ],
+
+    stepImage: step,
+  },
+
+  {
+     id: "picard",
+    name: "Martin Picard",
+    company: "CEO",
+    rating: "5/5",
+
+    review: `We had a great experience working with IosAndWeb on our PICARD Fashion website. The team was professional, responsive, and understood our requirements well. They delivered a clean, modern, and user-friendly e-commerce website that represents our brand beautifully.`,
+
+    companyLogo: clinetlogo6,
+    clientImage: client6,
+
+    projectOverview: {
+      title: "Project Overview",
+      projectName: "Picard",
+      description: `PICARD Fashion is a German brand offering premium handbags, leather bags, backpacks, wallets, and accessories, combining quality craftsmanship with modern design.`,
+    },
+
+    overviewImages: [
+      overview6,
+      overview62,
+    ],
+
+    stepImage: step,
+  }
+];
+
 
 const Testimonials = () => {
+  const testimonialRef = useRef(null);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  
+  
+  //const [currentSlide, setCurrentSlide] = useState(0);
+const [expanded, setExpanded] = useState(false);
 
-    const testimonialRef = useRef(null);
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-    const videoRefs = useRef([]);
-    
-    const isMobile = windowWidth < 992;
-    
-    useEffect(() => {
-        const handleResize = () => setWindowWidth(window.innerWidth);
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
-    
-    const handleSlideChange = () => {
-        const slides = document.querySelectorAll(
-            ".testimonials_slider_carousel .slick-slide"
-        );
+  const isMobile = windowWidth < 992;
 
-        slides.forEach((slide) => {
-            const video = slide.querySelector("video");
-            const thumb = slide.querySelector(".video-thumbnail");
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
 
-            if (!video) return;
+    window.addEventListener("resize", handleResize);
 
-            if (slide.classList.contains("slick-current")) {
-                video.classList.add("show");
-                video.muted = true;
-                video.currentTime = 0;
-                thumb && (thumb.style.display = "none");
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-                setTimeout(() => {
-                    video.play().catch(() => {});
-                }, 150);
-                
-            } else {
-                video.pause();
-                video.currentTime = 0;
-                thumb && (thumb.style.display = "block");
-                video.classList.remove("show");
-            }
-        });
-    };
+ const testimonialSetting = {
+  dots: false,
+  arrows: false,
 
-    const testimonialSetting = {
-        dots: false,
-        arrows: isMobile ? false : true,
-        infinite: true,
-        slidesToShow: isMobile ? 1 : 2,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 8000,
-        pauseOnHover: true,
-        nextArrow: <CustomNextArrow />,
-        prevArrow: <CustomPrevArrow />,
-        afterChange: handleSlideChange,
-    };
+  // IMPORTANT
+  infinite: !isMobile,
 
-    useEffect(() => {
-        handleSlideChange();
-    }, []);
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  centerMode: !isMobile,
+  centerPadding: isMobile ? "0px" : "209px",
+  autoplay: true,
+  autoplaySpeed: 8000,
+  pauseOnHover: true,
+  speed: 600,
+};
 
-    const handlePlayClick = (index, event) => {
-        const clickedSlide = event.currentTarget.closest(".item");
-        if (!clickedSlide) return;
+  const nextSlide = () => {
+    testimonialRef.current?.slickNext();
+  };
 
-        const allSlides = document.querySelectorAll(".testimonials_slider_carousel .item");
+  const previousSlide = () => {
+    testimonialRef.current?.slickPrev();
+  };
 
-        allSlides.forEach((slide) => {
-            const video = slide.querySelector("video");
-            const thumb = slide.querySelector(".video-thumbnail");
-            if (!video) return;
+  return (
+    <div className="testimonials_section section-padding  no-top-padding">
 
-            if (slide === clickedSlide) {
-                if (thumb) thumb.style.display = "none";
+      <Container>
+        <Row>
+          <Col>
+            <div className="testimonials_section_block">
 
-                video.classList.add("show");
-                // Reset and play
-                video.pause();
-                video.currentTime = 0;
+              <div className="testimonials_contents">
+                <div className="about_section_cols">
 
-                // Muted first to allow autoplay
-                video.muted = true;
-                video.play()
-                .then(() => {
-                    video.muted = false; // unmute after click
-                })
-                .catch(() => {
-                    video.muted = true;
-                });
+                  <div className="sectionHeading">
+                    TESTIMONIALS
+                  </div>
 
-            } else {
-                // Stop other videos
-                video.pause();
-                video.currentTime = 0;
-                if (thumb) thumb.style.display = "block";
-                video.classList.remove("show");
-            }
-        });
-    };
+                  <h2 className="heading_main">
+                    Trusted by Visionaries. Built for What’s Next.
+                  </h2>
+                               <p className="paramainHeading">From AI automation to scalable digital platforms, 
+businesses trust us to turn complex technology into measurable outcomes.</p>
+                </div>
+              </div>
 
-    return(
-        <div className="testimonials_section section-padding">
-            <Container>
-                <Row>
-                    <Col>
-                        <div className="testimonials_section_block">
-                            <img src={testimonialBG} alt="Testimonials" className="testimonials_bg" />
-                            <div className="testimonials_contents">
-                                <div className="testimonials_headings">
-                                    <SubHeading text={"Testimonials"} />
-                                    <h2 className="heading_main split">Don't Just Take Our Word for It—See What Our Clients Say</h2>
-                                </div>
-                            </div>
-                            <Slider 
-                                className="testimonials_slider_carousel" 
-                                {...testimonialSetting}
-                                ref={testimonialRef}
-                            >
-                                {testimonials.map((item,i) => (
-                                    <div className="item" key={i}>
-                                        <div className="testimonials_flex">
-                                            <div className="testimonials_video">
-                                                <div className="video-thumbnail">
-                                                    <img src={item.image} alt={item.name} className="testimonials_image" />
-                                                    <span
-                                                        className="play-btn"
-                                                        onClick={(e) => handlePlayClick(i, e)}
-                                                    >
-                                                        <FontAwesomeIcon icon={faCirclePlay} />
-                                                    </span>
-                                                </div>
+            </div>
+          </Col>
+        </Row>
+      </Container>
 
-                                                <video
-                                                    className="testimonial_video_block"
-                                                    loop
-                                                    playsInline
-                                                    preload="auto"
-                                                    muted
-                                                    ref={(el) => (videoRefs.current[i] = el)}
-                                                >
-                                                    <source src={item.video} type="video/mp4" />
-                                                </video>
 
-                                                <div className="testimonials_name_div">
-                                                    <FontAwesomeIcon icon={faCirclePlay} />
-                                                    <span className="testimonials_name">{item.name}</span>
-                                                </div>
-                                            </div>
-                                            <div className="testimonials_content">
-                                                {item.content}
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </Slider>
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
+ 
+      <div className="testimonials_slider_wrapper">
+        <Container  className="custom-container">
+
+        
+
+        <Slider
+          className="testimonials_slider_carousel"
+          {...testimonialSetting}
+          ref={testimonialRef}
+        >
+
+          {testimonialData.map((testimonial) => (
+
+            <div
+              className="testimonial_slide_wrapper"
+              key={testimonial.id}
+            >
+
+              <div className="testmonialsSlide">
+
+                {/* TOP SECTION */}
+                <div className="uppersectionTestimonials">
+
+                  <div className="photoSection">
+
+                    <span className="clientImage">
+                      <img
+                        src={testimonial.clientImage}
+                        alt={testimonial.name}
+                      />
+                    </span>
+
+
+                    <span className="shortIntroSection">
+
+                      <span className="nameAndCompany">
+
+                        <h3 className="clientName">
+                          {testimonial.name}
+                        </h3>
+
+                        <h4 className="CompanyName">
+                          {testimonial.company}
+                        </h4>
+
+                      </span>
+
+
+                      <span className="CompanyLogo">
+                        <img
+                          src={testimonial.companyLogo}
+                          alt={testimonial.company}
+                        />
+                      </span>
+
+
+                      <span className="ratingStar">
+
+                        {[1, 2, 3, 4, 5].map((star) => (
+                          <FontAwesomeIcon
+                            key={star}
+                            icon={faStar}
+                          />
+                        ))}
+
+                        <span className="ratingText">
+                          {testimonial.rating}
+                        </span>
+
+                      </span>
+
+                    </span>
+
+                  </div>
+
+
+                  <div className="introSectionCLient">
+                    {testimonial.review}
+                  </div>
+
+                </div>
+
+
+                {/* BOTTOM SECTION */}
+                {/* {(expandedIndex === index || !isMobile) && ( */}
+                {(expanded || !isMobile) && (
+  <div className="blewtestomparlSection">
+               
+
+                  <div className="rightImageSection">
+
+                  <div className="OverImageSection">
+
+
+  <div className="overviewImageOne">
+    <img
+      src={testimonial.overviewImages[0]}
+      alt="Project overview1"
+    />
+  </div>
+
+  <div className="overviewImageTwo">
+    <img
+      src={testimonial.overviewImages[1]}
+      alt="Project overview2"
+    />
+  </div>
+
+</div>
+
+                    {/* <div className="stepimage">
+
+                      <img
+                        src={testimonial.stepImage}
+                        alt="Project steps"
+                      />
+
+                    </div> */}
+
+                  </div>
+
+
+                  <div className="projectoverviewText">
+
+                    <h3 className="overwieHeading">
+                      {testimonial.projectOverview.title}
+                    </h3>
+
+                    <p className="subheadingovervi">
+                      {testimonial.projectOverview.projectName}
+                    </p>
+
+                    <p className="dataoverview">
+                      {testimonial.projectOverview.description}
+                    </p>
+
+                  </div>
+
+                </div>)}
+{isMobile && (
+  <button
+    className="testimonial_read_more"
+    onClick={() => setExpanded((prev) => !prev)}
+  >
+    {expanded ? "View Less" : "View More"}
+  </button>
+)}
+              </div>
+
+            </div>
+
+          ))}
+
+        </Slider>
+
+</Container>
+
+        {/* ARROWS BELOW CARD */}
+        <div className="testimonial_slider_arrows slider_prev_next">
+           <button className="button"            onClick={previousSlide}
+>
+                                               <FontAwesomeIcon icon={faChevronLeft} />
+                                           </button>
+                                           <button className="button"             onClick={nextSlide}
+>
+                                               <FontAwesomeIcon icon={faChevronRight} />
+                                           </button>
+       
+
         </div>
-    )
-}
 
-export default Testimonials
+      </div>
+
+    </div>
+  );
+};
+
+
+export default Testimonials;

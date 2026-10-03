@@ -4,7 +4,7 @@ import SubHeading from "../SubHeading/SubHeading";
 
 const FAQSection = ({subheading, heading, lists, fullwidth}) => {
     return(
-        <div className="faq_section_block section-padding body-background">
+        <div className="faq_section_block section-padding body-background ">
             <Container>
                 <Row>
                     <Col>

@@ -8,6 +8,7 @@ import Testimonials from "../Home/Testimonials/Testimonials";
 import AnimatedText from "../../components/AnimatedText/AnimatedText";
 import UnlockExclusiveSection from "../Services/ServicesPage/UnlockExclusiveSection/UnlockExclusiveSection";
 import CaseStudiesSection from "./CaseStudiesSection/CaseStudiesSection";
+import PortfolioGrid from "./PortfolioGrid";
 
 const Portfolio = () => {
 
@@ -25,6 +26,8 @@ const Portfolio = () => {
             {/* Portfolio Banner */}
             <PortfolioBanner />
 
+
+<PortfolioGrid />
             {/* Portfolio Slider */}
             <PortfolioSlider />
 
@@ -35,13 +38,13 @@ const Portfolio = () => {
             <CaseStudiesSection />
 
             {/* Technical Expert */}
-            <TechnicalExpert />
+            {/* <TechnicalExpert /> */}
 
             {/* Unlock Exclusive */}
-            <UnlockExclusiveSection visions={true} />
+            {/* <UnlockExclusiveSection visions={true} /> */}
 
             {/* Animated Text */}
-            <AnimatedText background={"black"} />
+            {/* <AnimatedText background={"black"} /> */}
             
             {/* Testimonials */}
             <Testimonials />

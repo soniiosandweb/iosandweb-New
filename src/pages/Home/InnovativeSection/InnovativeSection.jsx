@@ -1,173 +1,76 @@
 import { Link } from "react-router-dom";
 import "./InnovativeSection.css";
 import { Col, Container, Row } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
 
-const innovativeImg = `${process.env.REACT_APP_API_URL}/assests/home/innovative/imnnovative-img.webp`;
-const innovativeBg = `${process.env.REACT_APP_API_URL}/assests/home/innovative/innovative-bg.webp`;
-const softwareIcon = `${process.env.REACT_APP_API_URL}/assests/home/innovative/software.webp`;
-const designIcon = `${process.env.REACT_APP_API_URL}/assests/home/innovative/ui-design.webp`;
-const codingIcon = `${process.env.REACT_APP_API_URL}/assests/home/innovative/coding.webp`;
-const pocIcon = `${process.env.REACT_APP_API_URL}/assests/home/innovative/poc.webp`;
-const digitalIcon = `${process.env.REACT_APP_API_URL}/assests/home/innovative/digital.webp`;
-const payIcon = `${process.env.REACT_APP_API_URL}/assests/home/innovative/pay.webp`;
-const blockchainIcon = `${process.env.REACT_APP_API_URL}/assests/home/innovative/blockchain.webp`;
-const targetIcon = `${process.env.REACT_APP_API_URL}/assests/home/innovative/target.webp`;
+import destopRobo from "../newHomeImage/roboSection/destopRObo.png"
+import io1 from "../newHomeImage/roboSection/io1.png"
+import io4 from "../newHomeImage/roboSection/io4.png"
+import io3 from "../newHomeImage/roboSection/io2.png"
+import io2 from "../newHomeImage/roboSection/io2.png"
+import mobileBg from "../newHomeImage/roboSection/mobileBg.png"
 
-const innovativeLists = [
-    {
-        text: "Software Development",
-        icon: softwareIcon,
-        link: "/custom-software-development-company",
-        blank: false,
-    },
-    {
-        text: "Mobile App Development",
-        icon: designIcon,
-        link: "/mobile-app-development-services",
-        blank: false,
-    },
-    {
-        text: "Web Development",
-        icon: codingIcon,
-        link: "/web-development-services",
-        blank: false,
-    },
-    {
-        text: "Development of POC & ICO",
-        icon: pocIcon,
-        link: "https://www.blockchain77.com/services/",
-        blank: true,
-    },
-    {
-        text: "Digital Transformation",
-        icon: digitalIcon,
-        link: "/digital-marketing-services",
-        blank: false,
-    },
-    {
-        text: "Pay Per Click Service",
-        icon: payIcon,
-        link: "/ppc-services",
-        blank: false,
-    },
-    {
-        text: "Blockchain Service",
-        icon: blockchainIcon,
-        link: "https://www.blockchain77.com/services/",
-        blank: true,
-    },
-    {
-        text: "Ideation & Design Strategy",
-        icon: targetIcon,
-        link: "/web-designing-services",
-        blank: false,
-    }
-]
 
-const innovativeItems = [
-    {
-        title: "Reliability",
-        text: "reliability"
-    },
-    {
-        title: "Innovation",
-        text: "innovation"
-    },
-    {
-        title: "Growth",
-        text: "growth"
-    },
-    {
-        title: "Scalability",
-        text: "scalability"
-    },
-    {
-        title: "Security",
-        text: "security"
-    }
-];
+
 
 const InnovativeSection = () => {
 
-    const innovativeRef = useRef(null);
-
-    useEffect(() => {
-        let ctx;
-
-        const initAnimation = () => {
-            ctx = gsap.context(() => {
-            gsap.fromTo(
-                ".innovative_boxes",
-                { y: 60, opacity: 0 },
-                {
-                    y: 0,
-                    opacity: 1,
-                    duration: 0.6,
-                    ease: "power3.out",
-                    stagger: 0.2,
-                    scrollTrigger: {
-                        trigger: innovativeRef.current,
-                        start: "top 75%",
-                        toggleActions: "play reverse play reverse",
-                    }
-                }
-            );
-            }, innovativeRef);
-
-            ScrollTrigger.refresh();
-        };
-
-        const timeout = setTimeout(initAnimation, 150);
-
-        return () => {
-            clearTimeout(timeout);
-            ctx && ctx.revert();
-        };
-    }, []);
+  const solutions = [
+  {
+    title: "Solutions Built Around Your Vision",
+    para: "We don’t just build software — we transform your ideas into powerful digital solutions designed to solve real business challenges and drive growth.",
+    icon: io1,
+  },
+  {
+    title: "Technology That Keeps You Ahead",
+    para: "Using modern technologies and innovative strategies, we create fast, secure, and scalable solutions that help your business stay competitive.",
+    icon: io2,
+  },
+  {
+    title: " Your Growth Is Our Mission",
+    para: "From the first idea to final delivery and beyond, we work as your technology partner to create seamless experiences and long-term success.",
+    icon: io3,
+  }, {
+    title: "Long-Term Support",
+    para: "We stay on after launch — updates, fixes, and scaling as your product grows",
+    icon: io4,
+  },
+];
     
     return(
-        <div className="innovative_section section-padding bg-black text-white">
-            <img src={innovativeBg} alt="Innovative IosAndWeb Technology" className="innovativeBG" />
-            <Container>
+        <div className="innovative_section ">
+            {/* <img src={innovativeBg} alt="Innovative IosAndWeb Technology" className="innovativeBG" /> */}
+            <Container className="no-top-padding">
                 <Row>
                     <Col>
-                        <h2 className="heading_main split">Innovative IosAndWeb Technology Solutions</h2>
-                        <p className="paragraph_content">In the dynamically changing digital landscape of today, creating robust, scalable, and user-centric technology solutions is crucial to meaningful business growth. Bird is an award-winning global tech development agency that uses cutting-edge frameworks, modern architectures, and engineering excellence to elevate your digital presence across all platforms.</p>
+                        <h2 className="heading_main ">Why Forward-Thinking Businesses Choose IosAndWeb</h2>
+                      
+                      <div className="mainDivForRoboSection">
+                           {solutions.map((item, index) => (
+  <div className="solutionItem" key={index}>
+    <div className="roboIcon">
+      <img src={item.icon} alt={item.title} />
+    </div>
 
-                        <p className="paragraph_content">At Blink, our forward-thinking iOS and web technology experts are skilled in native iOS development, cross-platform solutions, and advanced web engineering. This team develops seamless user experiences, improves performance, and delivers measurable results. By crafting intelligent apps, optimizing digital workflows, and deploying high-impact web solutions, we're helping your brand rise above in an extremely competitive technological landscape.</p>
+    <div className="robotext">
+      <h2 className="roboTitle">{item.title}</h2>
 
-                        <p className="paragraph_content">With a focus on innovation, reliability, and future-ready development, Bird empowers businesses to create powerful digital products that connect, engage, and scale effortlessly.</p>
-
-                        <div className="innovative_section_flex less-top-padding" ref={innovativeRef}>
-                            <div className="innovative_left_col">
-                                <div className="innovative_blocks_image">
-                                    <img src={innovativeImg} alt="Innovative IosAndWeb" className="innovative_img" />
-                                    {innovativeItems.map((item, i) => (
-                                        <span className={`innovative_items_span ${item.text}`} key={i}>{item.title}</span>
-                                    ))}
-                                </div>
-
-                                <Link reloadDocument to="/contact-us" className="btn-gradient-blue">Get Expert Help <FontAwesomeIcon icon={faAnglesRight} /></Link>
-                            </div>
-                            <div className="innovative_right_col">
-                                <div className="innovative_lists_grid">
-                                    {innovativeLists.map((item, i) => (
-                                        <Link to={item.link} target={item.blank ? "_blank" : "_self"} className="innovative_lists_item innovative_boxes" key={i}>
-                                            <img src={item.icon} alt={item.text} className="innovative_lists_icon" />
-                                            <p className="innovative_lists_heading">{item.text}</p>
-                                        </Link>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    </Col>
+      <p className="roboParA">
+        {item.para}
+      </p>
+    </div>
+  </div>
+))}</div>
+                       </Col>
                 </Row>
-            </Container>
+            </Container> 
+                         <div className="destopRoboSection">
+                            <img className="destoprobosection" src={destopRobo} alt="robo"></img>
+                         </div>
+
+
+
+                        {/* */}
+                    
         </div>
     )
 }

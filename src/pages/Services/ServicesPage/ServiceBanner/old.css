@@ -1,0 +1,183 @@
+.services_banner_main {
+    position: relative;
+    overflow: hidden;
+}
+.services_banner_main .service_banner_video {
+    position: absolute;
+    object-fit: cover;
+    object-position: top center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.services_banner_main .services_page_bannerbg {
+    position: absolute;
+    object-fit: cover;
+    opacity: 0.5;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.services_banner_main .services_banner_bg {
+    background-color: #0A0D3199;
+    position: relative;
+    color: var(--color-white);
+}
+.services_banner_main .services_banner_flex {
+    display: flex;
+    min-height: 742px;
+}
+.services_banner_flex .services_banner_contents {
+    max-width: 483px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.services_banner_flex .services_banner_right {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.services_banner_contents .services_banner_subheading {
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: blue;
+}
+/* .heading_main span {
+    background: radial-gradient(50% 50% at 50% 50%, #0011FF 0%, #A600FF 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+.services_banner_contents .paragraph_content {
+    margin-bottom: 30px;
+}
+.services_banner_flex .services_banner_right .sservices_banner_layer {
+    width: 100%;
+    height: max-content;
+    max-width: 530px;
+    position: absolute;
+    object-fit: contain;
+    object-position: center;
+    left: 0;
+    top: 0;
+    animation: rotate-animation 15s infinite linear;
+}
+.services_banner_right .services_banner_box {
+    width: 370px;
+    height: 275px;
+    background-color: #2625254D;
+    backdrop-filter: blur(14px);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.services_banner_box .services_banner_box_item {
+    background-color: var(--color-black);
+    border: 0.5px solid var(--color-white);
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 280px;
+    width: 100%;
+}
+.services_banner_box .services_banner_box_item:nth-child(2n) {
+    margin-left: auto;
+}
+.services_banner_box_item .services_banner_box_icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6DC2FF59;
+    border-radius: 8px;
+}
+.services_banner_box_item .services_banner_box_icon.green {
+    background-color: #3B6B075C;
+}
+.services_banner_box_icon .services_banner_box_icon_img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+.services_banner_box_item .services_banner_box_contents {
+    flex: 1;
+}
+.services_banner_box_contents .paragraph_content {
+    margin: 0;
+}
+.services_banner_box_contents .services_banner_text {
+    font-size: 14px;
+    margin: 0;
+}
+@media (max-width: 1199px) {
+    .services_banner_right .services_banner_box {
+        width: 320px;
+        height: 320px;
+    }
+    .services_banner_box .services_banner_box_item {
+        max-width: 250px;
+    }
+}
+@media (max-width: 991px) {
+    .services_banner_box_item .services_banner_box_icon {
+        width: 34px;
+        height: 34px;
+    }
+    .services_banner_box_icon .services_banner_box_icon_img {
+        width: 22px;
+        height: 22px;
+    }
+    .services_banner_box .services_banner_box_item {
+        max-width: 230px;
+    }
+    .services_banner_right .services_banner_box {
+        width: 280px;
+        height: 280px;
+        padding: 8px;
+    }
+    .services_banner_main .services_banner_flex {
+        min-height: 640px;
+    }
+}
+@media (max-width: 767px) {
+    .services_banner_main .services_banner_flex {
+        flex-direction: column;
+        padding-top: 150px;
+    }
+    .services_banner_flex .services_banner_contents {
+        max-width: 100%;
+    }
+    .services_banner_flex .services_banner_right {
+        justify-content: end;
+        padding-top: 300px;
+    }
+}
+@media (max-width: 480px) {
+    .services_banner_flex .services_banner_right {
+        padding-top: 200px;
+    }
+    .services_banner_main .services_banner_flex {
+        padding-top: 120px;
+    }
+}
+@media (max-width: 375px) {
+    .services_banner_right .services_banner_box {
+        width: 90%;
+        height: 280px;
+    }
+}

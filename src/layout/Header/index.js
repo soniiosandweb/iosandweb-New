@@ -1,14 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import './style.css';
 import {Container, Offcanvas} from 'react-bootstrap';
-import { useLocation } from "react-router-dom";
+import {  useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-
+import newlogo from "./newLogo.png"
 import Dropdown from 'react-bootstrap/Dropdown';
-
+import ai from "./ai.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAnglesRight, faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { faAnglesRight, faCaretDown, faPhone, faWandMagicSparkles } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import OwlCarousel from "react-owl-carousel";
 
@@ -69,19 +70,19 @@ const massageIcon = `${process.env.REACT_APP_API_URL}/assests/menu/massage.png`;
 const servicesMenu = [
   {
     title: "Software Development",
-    url: "/custom-software-development-company",
+    url: "/iosandwebnew/custom-software-development-company",
     image: softwareDevelopment,
     class: "bg-red"
   },
   {
     title: "Web Development",
-    url: "/web-development-services",
+    url: "/iosandwebnew/web-development-services",
     image: digitalTransformation,
     class: "bg-purple"
   },
   {
     title: "Mobile App Development",
-    url: "/mobile-app-development-services",
+    url: "/iosandwebnew/mobile-app-development-services",
     image: mobileApp,
     class: "bg-orange"
   },
@@ -94,13 +95,13 @@ const servicesMenu = [
   },
   {
     title: "Web / Graphic Design",
-    url: "/web-designing-services",
+    url: "/iosandwebnew/web-designing-services",
     image: ideationDesign,
     class: "bg-green"
   },
   {
     title: "Digital Marketing",
-    url: "/digital-marketing-services",
+    url: "/iosandwebnew/digital-marketing-services",
     image: dataScience,
     class: "bg-pink"
   }
@@ -110,25 +111,25 @@ const servicesMenu = [
 const industriesMenu = [
   {
     title: "eCommerce",
-    url: "/ecommerce-app-development",
+    url: "/iosandwebnew/ecommerce-app-development",
     image: eCommerceIcon,
     class: "bg-pink"
   },
   {
     title: "Real Estate",
-    url: "/real-estate-app-development",
+    url: "/iosandwebnew/real-estate-app-development",
     image: realEstateIcon,
     class: "bg-green"
   },
   {
     title: "Generative AI",
-    url: "/generative-ai-development",
+    url: "/iosandwebnew/generative-ai-development",
     image: generativeAI,
     class: "bg-orange"
   },
   {
     title: "Healthcare",
-    url: "/healthcare-software-development",
+    url: "/iosandwebnew/healthcare-software-development",
     image: healthcareIcon,
     class: "bg-blue"
   }
@@ -138,28 +139,28 @@ const industriesMenu = [
 const companyMenu = [
   {
     title: "About Us",
-    url: "/about-us",
+    url: "/iosandwebnew/about-us",
     image: aboutIcon,
     class: "bg-pink"
   },
   {
     title: "IAW Team",
-    url: "/iaw-team",
+    url: "/iosandwebnew/iaw-team",
     image: teamIcon,
     class: "bg-green"
   },
-  {
-    title: "Career",
-    url: "/careers",
-    image: careerIcon,
-    class: "bg-orange"
-  },
-  {
-    title: "How We Work",
-    url: "/how-we-work",
-    image: howWorkIcon,
-    class: "bg-blue"
-  }
+  // {
+  //   title: "Career",
+  //   url: "/iosandwebnew/careers",
+  //   image: careerIcon,
+  //   class: "bg-orange"
+  // },
+  // {
+  //   title: "How We Work",
+  //   url: "/iosandwebnew/how-we-work",
+  //   image: howWorkIcon,
+  //   class: "bg-blue"
+  // }
 ]
 
 // Portfolio Live Menu
@@ -269,7 +270,7 @@ const portfolioMenu = [
     class: "bg-pink",
     tech: "Wordpress",
   }
-  
+
 ]
 
 // Portfolio Staging Menu
@@ -332,7 +333,7 @@ const portfolioStagingMenu = [
   },
   {
     title: "Careplans",
-    url: "https://careplans.iosandweb.net/",
+    url: "#",
     image: careplanIcon,
     class: "bg-green",
     tech: "Wordpress",
@@ -360,14 +361,14 @@ const portfolioStagingMenu = [
   },
   {
     title: "RDY Signs",
-    url: "https://iosandweb.net/rdysigns",
+    url: "#",
     image: signIcon,
     class: "bg-pink",
     tech: "Wordpress",
   },
   {
     title: "Windbooster",
-    url: "https://iosandweb.net/windbooster/",
+    url: "#",
     image: carIcon,
     class: "bg-red",
     tech: "Wordpress",
@@ -424,6 +425,11 @@ function Header() {
   const [image, setImage] = useState(logo);
   const [fixed, setFixed] = useState("sticky-top");
   const [headerbg, setHeaderbg] = useState("white text-white");
+
+  // Offcanvas / hamburger menu open state — now controlled so we can
+  // programmatically close it from any nav link click.
+  const [expanded, setExpanded] = useState(false);
+
   const [show, setShow] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
   const [showIndustry, setShowIndustry] = useState(false);
@@ -435,13 +441,42 @@ function Header() {
   const industryRef = useRef(null);
   const aboutRef = useRef(null);
   const servicesRef = useRef(null);
-
+  const dropdownTimerRef = useRef(null);
   const isMobile = window.innerWidth < 992;
 
   const NON_FIXED_ROUTES = ["blog", "privacy", "terms-and-conditions", "cancellation-policy"];
 
   const isNonFixedRoute = NON_FIXED_ROUTES.includes(locationValue[1]);
 
+  // Closes the mobile offcanvas menu. Pass this to onClick on every
+  // real navigation link (Nav.Link / Dropdown.Item that goes somewhere),
+  // but NOT on the little caret spans that only toggle a submenu open.
+  const closeMenu = () => setExpanded(false);
+const openDropdown = (menu) => {
+  if (dropdownTimerRef.current) {
+    clearTimeout(dropdownTimerRef.current);
+  }
+
+  if (menu !== "services") setShow(false);
+  if (menu !== "portfolio") setShowPortfolio(false);
+  if (menu !== "products") setShowProducts(false);
+  if (menu !== "company") setShowAbout(false);
+
+  if (menu === "services") setShow(true);
+  if (menu === "portfolio") setShowPortfolio(true);
+  if (menu === "products") setShowProducts(true);
+  if (menu === "company") setShowAbout(true);
+};
+
+const closeDropdown = (setter) => {
+  if (dropdownTimerRef.current) {
+    clearTimeout(dropdownTimerRef.current);
+  }
+
+  dropdownTimerRef.current = setTimeout(() => {
+    setter(false);
+  }, 200);
+};
   const updateHeader = React.useCallback(() => {
     if (isNonFixedRoute) {
       setFixed("sticky-top text-white");
@@ -461,7 +496,7 @@ function Header() {
     setImage(logo);
   }, [isNonFixedRoute]);
 
-  
+
   const listenScrollEvent = React.useCallback(() => {
     if (!isNonFixedRoute) {
       updateHeader();
@@ -487,6 +522,12 @@ function Header() {
       window.removeEventListener("resize", handleResize);
     };
   }, [listenScrollEvent, handleResize]);
+
+  // Close the offcanvas menu automatically whenever the route changes
+  // (covers same-page routes navigated via Nav.Link / Link as={Link}).
+  useEffect(() => {
+    setExpanded(false);
+  }, [pathname]);
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -521,16 +562,21 @@ function Header() {
   }, []);
 
   return (
-    <Navbar expand="lg" className={`header ${fixed} ${headerbg}`}>
+    <Navbar
+      expand="lg"
+      className={`header ${fixed} ${headerbg}`}
+      expanded={expanded}
+      onToggle={(val) => setExpanded(val)}
+    >
       <Container className="header-container">
-        <Navbar.Brand href="/">
-          <img src={image} alt="IosAndWeb logo" className="responsive logo" />
+        <Navbar.Brand as={Link} to="/" onClick={closeMenu}>
+          <img src={newlogo} alt="IosAndWeb logo" className="responsive logo" />
         </Navbar.Brand>
 
-        <Nav.Link href="/contact-us" className={locationValue[1] === "contact" ? "btn mobile active" : "mobile btn"}>
-          Get In Touch
-          <FontAwesomeIcon icon={faAnglesRight} />
+           <Nav.Link as={Link} to="/contact-us" className={locationValue[1] === "contact" ? "btn mobile active" : "mobile btn"}>
+         Contact Us  <FontAwesomeIcon icon={faAnglesRight} />
         </Nav.Link>
+ 
 
         <Navbar.Toggle aria-controls="responsive-navbar-nav">
           <img src={menuIcon} alt="Menu" className="bars-icon" />
@@ -542,17 +588,34 @@ function Header() {
 
           <Offcanvas.Body>
             <Nav className="container">
+<Nav.Link
+  as={Link}
+    target="_blank"
 
+  to="https://backupbuying.com/aiplayground/"
+  className={"alwasACtive "}
+  style={{color:"#ffffff",fontWeight:"700" , fontSize:"18px"}}
+  onClick={closeMenu}
+>
+  Agentic AI{" "}
+  <img
+    src={ai}
+    alt="AI"
+    style={{marginLeft:"4px", width: "17px", height: "17px" }}
+  />
+</Nav.Link>
               {/* Products */}
-              <Nav.Item
-                ref={servicesRef}
-                className="nav-item-dropdown"
-                onMouseEnter={!isMobile ? () => setShow(true) : undefined}
-                onMouseLeave={!isMobile ? () => setShow(false) : undefined}
-              >
+          <Nav.Item 
+  ref={servicesRef} 
+  className="nav-item-dropdown" 
+onMouseEnter={!isMobile ? () => openDropdown("services") : undefined}
+  onMouseLeave={!isMobile ? () => closeDropdown(setShow) : undefined} 
+>
+
                 <div className="nav-link-wrapper">
-                  <Nav.Link
-                    href="/services"
+                  <Nav.Link as={Link}
+                    to="/services"
+                    onClick={closeMenu}
                   >
                     Services
                   </Nav.Link>
@@ -560,15 +623,15 @@ function Header() {
                     onClick={(e) => {
                       e.preventDefault();
                       e.stopPropagation();
-                      setShow((prev) => !prev);
+                       setShow((prev) => !prev);
                     }}
                     className="down_arrow"
                   >
-                    <FontAwesomeIcon icon={faCaretDown} />
+                    {/* <FontAwesomeIcon icon={faCaretDown} /> */}
                   </span>
                 </div>
 
-                {show && (
+                {/* {show && (
                   <div className="dropdown-menu-custom">
                     <div className="header-submenu-wrap">
                       <div className="header-submenu-left">
@@ -642,19 +705,21 @@ function Header() {
                       </div>
                     </div>
                   </div>
-                )}
+                )} */}
               </Nav.Item>
 
               {/* Portfolio Menu */}
-              <Nav.Item
-                ref={portfolioRef}
-                className="nav-item-dropdown"
-                onMouseEnter={!isMobile ? () => setShowPortfolio(true) : undefined}
-                onMouseLeave={!isMobile ? () => setShowPortfolio(false) : undefined}
-              >
+<Nav.Item
+  ref={portfolioRef}
+  className="nav-item-dropdown"
+  onMouseEnter={!isMobile ? () => openDropdown("portfolio") : undefined}
+  onMouseLeave={!isMobile ? () => closeDropdown(setShowPortfolio) : undefined}
+>
                 <div className="nav-link-wrapper">
                   <Nav.Link
-                    href="/portfolio"
+                  as={Link}
+                    to="/portfolio"
+                    onClick={closeMenu}
                   >
                     Portfolio
                   </Nav.Link>
@@ -678,7 +743,15 @@ function Header() {
 
                           {portfolioMenu.map((link, i) => (
                             <li className="submenu-item" key={i}>
-                              <Dropdown.Item href={link.url} target={"_blank"} rel="noreferrer">
+                              <Dropdown.Item
+                                href={link.url}
+                                target={"_blank"}
+                                rel="noreferrer"
+                                onClick={() => {
+                                  setShowPortfolio(false);
+                                  closeMenu();
+                                }}
+                              >
                                 <div className={`${link.class} submenu-img`}>
                                   <img src={link.image} className="service-img" alt={link.title} /> 
                                 </div>
@@ -695,15 +768,20 @@ function Header() {
               </Nav.Item>
 
               {/* Products */}
-              <Nav.Item
-                ref={productsRef}
-                className="nav-item-dropdown"
-                onMouseEnter={!isMobile ? () => setShowProducts(true) : undefined}
-                onMouseLeave={!isMobile ? () => setShowProducts(false) : undefined}
-              >
+<Nav.Item
+  ref={productsRef}
+  className="nav-item-dropdown"
+  onMouseEnter={!isMobile ? () => openDropdown("products") : undefined}
+  onMouseLeave={!isMobile ? () => closeDropdown(setShowProducts) : undefined}
+> 
                 <div className="nav-link-wrapper">
                   <Nav.Link
-                    href="/portfolio"
+  onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setShowProducts((prev) => !prev);
+                    }}
+                    href=""
                   >
                     Products
                   </Nav.Link>
@@ -727,7 +805,15 @@ function Header() {
 
                           {portfolioStagingMenu.map((link, i) => (
                             <li className="submenu-item" key={i}>
-                              <Dropdown.Item href={link.url} target={"_blank"} rel="noreferrer">
+                              <Dropdown.Item
+                                href={link.url}
+                                target={"_blank"}
+                                rel="noreferrer"
+                                onClick={() => {
+                                  setShowProducts(false);
+                                  closeMenu();
+                                }}
+                              >
                                 <div className={`${link.class} submenu-img`}>
                                   <img src={link.image} className="service-img" alt={link.title} /> 
                                 </div>
@@ -744,7 +830,7 @@ function Header() {
               </Nav.Item>
 
               {/* Industries */}
-              <Nav.Item
+              {/* <Nav.Item
                 ref={industryRef}
                 className="nav-item-dropdown less-dropdown"
                 onMouseEnter={!isMobile ? () => setShowIndustry(true) : undefined}
@@ -790,15 +876,15 @@ function Header() {
                     </ul>
                   </div>
                 )}
-              </Nav.Item>
+              </Nav.Item> */}
 
               {/* About */}
-              <Nav.Item
-                ref={aboutRef}
-                className="nav-item-dropdown less-dropdown"
-                onMouseEnter={!isMobile ? () => setShowAbout(true) : undefined}
-                onMouseLeave={!isMobile ? () => setShowAbout(false) : undefined}
-              >
+<Nav.Item
+  ref={aboutRef}
+  className="nav-item-dropdown less-dropdown"
+  onMouseEnter={!isMobile ? () => openDropdown("company") : undefined}
+  onMouseLeave={!isMobile ? () => closeDropdown(setShowAbout) : undefined}
+>
                 <div className="nav-link-wrapper">
                   <Nav.Link
                     href="#"
@@ -823,11 +909,17 @@ function Header() {
                 </div>
 
                 {showAbout && (
-                  <div className="dropdown-menu-custom portfolio-dropdown">
+                  <div className="dropdown-menu-custom portfolio-dropdown" style={{backgroundColor:"white",color:"black"}}>
                     <ul className="header-submenu-items">
                       {companyMenu.map((link, i) => (
                         <li className="submenu-item" key={i}>
-                          <Dropdown.Item href={link.url}>
+                          <Dropdown.Item
+                            href={link.url}
+                            onClick={() => {
+                              setShowAbout(false);
+                              closeMenu();
+                            }}
+                          >
                             <div className={`${link.class} submenu-img`}>
                               <img src={link.image} className="service-img" alt={link.title} /> 
                             </div>
@@ -841,10 +933,18 @@ function Header() {
                 )}
               </Nav.Item>
 
-              <Nav.Link href="/blog" className={locationValue[1] === "blog" ? "active" : ""}>Blog</Nav.Link>
-              <Nav.Link href="/contact-us" className={locationValue[1] === "contact" ? "btn active" : "btn"}>
+              {/* <Nav.Link as={Link} to="/blog" className={locationValue[1] === "blog" ? "active" : ""}>Blog</Nav.Link> */}
+              <Nav.Link
+                as={Link}
+                to="/contact-us"
+                className={locationValue[1] === "contact" ? "btn active" : "btn"}
+                onClick={closeMenu}
+              >
+                              <FontAwesomeIcon icon={faPhone} style={{ color: "white", fontSize: "17px",paddingRight:"5px" }} />
+
                 Get In Touch
-                <FontAwesomeIcon icon={faAnglesRight} />
+
+
               </Nav.Link>
             </Nav>
           </Offcanvas.Body>

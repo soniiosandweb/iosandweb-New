@@ -123,7 +123,8 @@ function Healthcare(){
     return(
         <>
             <SEO
-                title={"Healthcare Software Development - IosAndWeb Technologies"}
+                title={"Healthcare Software Development | IosAndWeb Technologies"}
+                description={"IosAndWeb Technologies offers secure healthcare software development including telemedicine apps, hospital management systems, and patient-centric digital solutions."}
                 canonicalUrl={`${process.env.REACT_APP_API_URL}${location.pathname}`}
             />
 

@@ -2,7 +2,6 @@ import { Col, Container, Row } from "react-bootstrap";
 import "./WeDesignSection.css";
 import { Link } from "react-router-dom";
 
-const innovativeBg = `${process.env.REACT_APP_API_URL}/assests/home/innovative/innovative-bg.webp`;
 const htmlIcon = `${process.env.REACT_APP_API_URL}/assests/services/services-page/html.webp`;
 const cssIcon = `${process.env.REACT_APP_API_URL}/assests/services/services-page/css.webp`;
 const xdIcon = `${process.env.REACT_APP_API_URL}/assests/services/services-page/xd.webp`;
@@ -54,13 +53,13 @@ const designIcons = [
 
 const WeDesignSection = () => {
     return(
-        <div className="services_we_design_section section-padding body-background">
-            <img src={innovativeBg} alt="We Design. We Build. We Deliver." className="we_design_bgimg" />
+        <div className="services_we_design_section section-padding">
             <Container>
                 <Row>
                     <Col>
                         <h2 className="heading_main text-center split">We Design. We Build. We Deliver.</h2>
                         <p className="paragraph_content text-center">Digital Experiences That Convert Visitors Into Customers</p>
+                        <div className="about_section_div">
 
                         <div className="we_design_deliver_block">
                             <div className="we_design_contents">
@@ -76,6 +75,7 @@ const WeDesignSection = () => {
                                         <img src={item.icon} alt={item.title} className="we_design_icon_img" key={i} />
                                     ))}
                                 </div>
+                            </div>
                             </div>
                         </div>
                     </Col>

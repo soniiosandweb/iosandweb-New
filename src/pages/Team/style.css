@@ -2,13 +2,28 @@
 .our-team-banner{
     background-color: #000;
 }
-
+ 
+.get-started-btn .btn-white-border {
+    display: inline-flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 10px;
+    padding: 6px 26px;
+    border-radius: 50px;
+    width: 70%;
+}
+.get-started-btn .btn-white-border:hover {
+    background-color: #0046FF;
+    color:white;
+    border: 2px solid white;
+}
 /* Our team section */
 .team-grid-row {
     grid-gap: 30px;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    padding: 5rem 0 0;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 120px 0 0;
+    align-items: center;
 }
 .team-grid-row .team-item {
     text-align: center;
@@ -55,20 +70,71 @@
 .team-grid-row .team-item .profile-content .social-icons a:hover{
     color: #000;
 }
-
+.team-grid-row .team-item:nth-last-child(2) {
+    grid-column: 2;
+}
+.heading5.text-center.max-width-70.mx-auto {
+    margin-bottom: 60px;
+    font-weight: 500;
+}
+.our-team-section .heading2{
+font-family: var(--font-poppins);
+font-weight: 600;
+font-size: 35px;
+line-height: 45px;
+color: #0046FF;
+}
+.team-grid-row .team-item:last-child {
+    grid-column: 3;
+}
 @media (max-width: 1199px) {
     .team-grid-row {
         grid-template-columns: repeat(3,1fr);
     }
 }
 @media (max-width: 767px) {
+ 
+}
+@media (max-width: 767px) {
     .team-grid-row {
         grid-template-columns: repeat(2,1fr);
-        padding: 2rem 0 0;
+        padding: 95px 0px 0px ;
     }
+ 
+    .team-grid-row .team-item:nth-last-child(2),
+    .team-grid-row .team-item:last-child {
+        grid-column: auto;
+    }
+   
 }
 @media (max-width: 480px) {
     .team-grid-row {
         grid-template-columns: repeat(1,1fr);
     }
 }
+ 
+ 
+.get-startedTeamMain{
+    background-color: #0046FF;
+    padding: 71px 42px;
+    border-radius: 25px;
+}
+ 
+h3.heading2Team {
+    font-family: var(--font-poppins);
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 55px;
+    letter-spacing: 0%;
+}
+ 
+@media (max-width: 767px) {
+    h3.heading2Team {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 42px;
+        letter-spacing: 0;
+    }
+}
+ 

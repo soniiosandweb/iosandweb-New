@@ -30,16 +30,19 @@
     color: var(--color-white);
 }
 .faq_container .faq_Accordion .accordion-button {
+    align-items: start;
     border-radius: 15px !important;
-    font-size: 20px;
+    font-size: 16px;
     font-family: var(--font-poppins-medium);
     padding: 20px 25px;
     box-shadow: unset !important;
     text-transform: capitalize;
+    display: flex;
+    line-height: 24px;
 }
 .faq_container .faq_Accordion .accordion-button::after {
     content: "\+";
-    font-size: 20px;
+    font-size: 16px;
     background: var(--color-transparent);
     transition: unset;
     transform: unset;
@@ -59,14 +62,15 @@
 }
 .faq_container .faq_Accordion .accordion-body {
     padding: 16px 25px;
+    padding-top: 0px;
     font-size: 16px;
-    line-height: 1.4;
+    line-height:24px !important;
     font-family: var(--font-poppins);
 }
 .faq_container .faq_Accordion .accordion-collapse {
     position: relative;
 }
-.faq_container .faq_Accordion .accordion-body::before {
+/* .faq_container .faq_Accordion .accordion-body::before {
     content: "";
     background-color: #837E7E;
     width: calc(100% - 50px);
@@ -76,13 +80,13 @@
     right: 0;
     margin: auto;
     top: 0;
-}
+} */
 .faq_container .faq_Accordion .accordion-body ul {
     margin: 15px 0;
 }
 @media (max-width: 767px) {
     .faq_container .faq_Accordion .accordion-button span {
-        font-size: 20px;
+        font-size: 18px;
     }
     .faq_container .faq_Accordion .accordion-button {
         font-size: 18px;
@@ -99,7 +103,7 @@
     .faq_container .faq_Accordion .accordion-button {
         padding: 16px 15px;
     } 
-    .faq_container .faq_Accordion .accordion-body::before {
+    /* .faq_container .faq_Accordion .accordion-body::before {
         width: calc(100% - 30px); 
-    }
+    } */
 }

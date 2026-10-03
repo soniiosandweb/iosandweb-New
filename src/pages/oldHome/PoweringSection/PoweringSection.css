@@ -1,0 +1,93 @@
+.powering_section {
+    position: relative;
+    background: linear-gradient(254.09deg, var(--color-blackblue) 15.15%, var(--color-green) 83.93%);
+    color: var(--color-white);
+}
+.powering_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: scale-down;
+    width: 500px;
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+.powering_section .container {
+    position: relative;
+}
+.powering_grid {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(4, 256px);
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.powering_grid_item {
+    padding: 20px;
+    background: linear-gradient(306.1deg, #0b1b4f 0%, #181662 88.58%) padding-box,
+              linear-gradient(90deg, var(--color-gradientblue) 0%, var(--color-pink) 100%) border-box;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(130, 40, 255, 0.25);
+    cursor: pointer;
+    text-align: left;
+}
+.powering_grid_item:hover {
+    background: linear-gradient(306.1deg, #5E00FF 0%, #00076F 88.58%) padding-box,
+              linear-gradient(90deg, var(--color-gradientblue) 0%, var(--color-pink) 100%) border-box;
+}
+.powering_grid_item span {
+    font-size: 75px;
+    line-height: 86px;
+    font-family: var(--font-poppins-semibold);
+}   
+.powering_grid_item .content_powering {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+.content_powering .powering_icon {
+    background-color: var(--color-blackblue);
+    width: 36px;
+    height: 36px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content_powering .powering_icon img {
+    width: 20px;
+    height: 20px;
+}
+.content_powering .paragraph_content {
+    margin: 0;
+    flex: 1;
+}
+@media (max-width: 1399px) {
+    .powering_grid {
+        gap: 20px;
+    }
+}
+@media (max-width: 1199px) {
+    .powering_grid {
+        grid-template-columns: repeat(3, 256px);
+    }
+}
+@media (max-width: 991px) {
+    .powering_grid {
+        grid-template-columns: repeat(2, 256px);
+    }
+}
+@media (max-width: 767px) {
+    .powering_grid {
+        grid-template-columns: repeat(2, 245px);
+    }
+}
+@media (max-width: 575px) {
+    .powering_grid {
+        grid-template-columns: repeat(1, 245px);
+    }
+    .powering_overlay {
+        width: 100%;
+    }
+}

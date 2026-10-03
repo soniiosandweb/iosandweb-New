@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import "./AboutBanner.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
+import { faAnglesRight, faCircleArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
-
+import bg from "./img1.png"
 const contactBg = `${process.env.REACT_APP_API_URL}/assests/contact/bannerbg.webp`;
 const frameImg = `${process.env.REACT_APP_API_URL}/assests/about/frame_image.webp`;
 const aboutImg = `${process.env.REACT_APP_API_URL}/assests/about/aboutImg.webp`;
@@ -37,7 +37,7 @@ const AboutBanner = () => {
 
     return(
         <div className="main_banner_section">
-            <img src={contactBg} alt="Contact Us" className="contactus_banner_bg" />
+            <img src={bg} alt="Contact Us" className="contactus_banner_bg" />
             <Container>
                 <Row>
                     <Col>
@@ -47,24 +47,11 @@ const AboutBanner = () => {
                                 <h1 className="heading_main split">Building Digital Excellence For Tomorrow</h1>
                                 <p className="paragraph_content">We are premier digital transformation agency crafting bespoke mobile apps, web solution, and custom software. We turn ambitious idea into powerful digital realities.</p>
                                 <div className="main_banner_btn_section">
-                                    <Link to="/portfolio" reloadDocument className="btn-gradient-pink">View Our Work <FontAwesomeIcon icon={faAnglesRight} /></Link>
-                                    <Link to="/contact-us" reloadDocument className="btn-text-only">Contact us</Link>
+                                    <Link to="/portfolio" reloadDocument className="btn-gradient-pink">View Our Work <FontAwesomeIcon icon={faCircleArrowRight} /></Link>
                                 </div>
                                 
                             </div>
-                            <div className="main_banner_right_col">
-                               <div className="about_image_wrapper">
-                                    <img src={frameImg} className="about_image_shape" alt="shape" />
-                                    <div 
-                                        className="about_image"
-                                        style={{
-                                            backgroundImage: `url(${imagesLists[currentIndex]})`,
-                                            WebkitMaskImage: `url(${frameImg})`,
-                                            maskImage: `url(${frameImg})`,
-                                        }}
-                                    ></div>
-                                </div>
-                            </div>
+                           
                         </div>
                     </Col>
                 </Row>

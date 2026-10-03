@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import AnalogClock from "analog-clock-react";
 import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
+import newLogo from "./newLogo.png"
 
 const footerBg = `${process.env.REACT_APP_API_URL}/assests/footer_bg.webp`;
 
@@ -16,12 +17,12 @@ const hqUk = `${process.env.REACT_APP_API_URL}/assests/hq-uk.png`;
 const hqUs = `${process.env.REACT_APP_API_URL}/assests/hq-us.svg`;
 
 const facebook = `${process.env.REACT_APP_API_URL}/assests/facebook.png`;
-const twitter = `${process.env.REACT_APP_API_URL}/assests/twitter.png`;
+const twitter = `${process.env.REACT_APP_API_URL}/assests/xwhite.png`;
 const instagram = `${process.env.REACT_APP_API_URL}/assests/instagram.png`;
 const linkedin = `${process.env.REACT_APP_API_URL}/assests/linkedin.png`;
 const whatsapp = `${process.env.REACT_APP_API_URL}/assests/whatsapp.png`;
 const facebookWhite = `${process.env.REACT_APP_API_URL}/assests/facebook-white.png`;
-const twitterWhite = `${process.env.REACT_APP_API_URL}/assests/twitter-white.png`;
+const twitterWhite = `${process.env.REACT_APP_API_URL}/assests/x.webp`;
 const instagramWhite = `${process.env.REACT_APP_API_URL}/assests/instagram-white.png`;
 const linkedinWhite = `${process.env.REACT_APP_API_URL}/assests/linkedin-white.png`;
 const whatsappWhite = `${process.env.REACT_APP_API_URL}/assests/whatsapp-white.png`;
@@ -35,7 +36,7 @@ const socialLinks = [
     },
     {
         title: "Twitter",
-        link: "https://https://twitter.com/Iosandwebtech.com/Iosandwebtech",
+        link: "https://x.com/Iosandwebtech",
         icon: twitter,
         white: twitterWhite,
     },
@@ -47,16 +48,10 @@ const socialLinks = [
     },
     {
         title: "Linkedin",
-        link: "https://www.linkedin.com/company/iosandweb-technologies",
+        link: "https://in.linkedin.com/company/iosandweb-technologies",
         icon: linkedin,
         white: linkedinWhite,
     },
-    {
-        title: "Whatsapp",
-        link: "https://api.whatsapp.com/send/?phone=919915841204&text&type=phone_number&app_absent=0",
-        icon: whatsapp,
-        white: whatsappWhite,
-    }
 ]
 
 function Footer(){
@@ -92,16 +87,20 @@ function Footer(){
     const [ukMin, setukMin] = useState(ukDate.getMinutes());
     const [ukSec, setukSec] = useState(ukDate.getSeconds());
     
-    setInterval(() => {
-        const ukTime = new Date().toLocaleString("en-US", {
-          timeZone: "Europe/London",
-        });
-        const ukDate = new Date(ukTime);
-        setukHours(ukDate.getHours());
-        setukMin(ukDate.getMinutes());
-        setukSec(ukDate.getSeconds());
-    }, 1000);
-    
+useEffect(() => {
+  const interval = setInterval(() => {
+    const ukTime = new Date().toLocaleString("en-US", {
+      timeZone: "Europe/London",
+    });
+    const ukDate = new Date(ukTime);
+
+    setukHours(ukDate.getHours());
+    setukMin(ukDate.getMinutes());
+    setukSec(ukDate.getSeconds());
+  }, 1000);
+
+  return () => clearInterval(interval);
+}, []);
     let ukOptions = {
         width: clockWidth,
         heigth: clockHeight,
@@ -162,46 +161,48 @@ function Footer(){
         let ctx;
     
         const initAnimation = () => {
-            ctx = gsap.context(() => {
-                gsap.fromTo(
-                    ".clock_boxes",
-                    { y: 60, opacity: 0 },
-                    {
-                        y: 0,
-                        opacity: 1,
-                        duration: 0.6,
-                        ease: "power3.out",
-                        stagger: 0.2,
-                        scrollTrigger: {
-                            trigger: clocksRef.current,
-                            start: "top 75%",
-                            toggleActions: "play reverse play reverse",
-                        }
-                    }
-                );
-            }, clocksRef);
+           const ctx1 = gsap.context(() => {
+  gsap.fromTo(
+    ".clock_boxes",
+    { y: 60, opacity: 0 },
+    {
+      y: 0,
+      opacity: 1,
+      duration: 0.6,
+      ease: "power3.out",
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: clocksRef.current,
+        start: "top 75%",
+      }
+    }
+  );
+}, clocksRef);
 
-            ctx = gsap.context(() => {
-                gsap.fromTo(
-                    ".footer_boxes",
-                    { y: 60, opacity: 0 },
-                    {
-                        y: 0,
-                        opacity: 1,
-                        duration: 0.6,
-                        ease: "power3.out",
-                        stagger: 0.2,
-                        scrollTrigger: {
-                            trigger: footerColsRef.current,
-                            start: "top 75%",
-                            toggleActions: "play reverse play reverse",
-                        }
-                    }
-                );
-            }, footerColsRef);
+const ctx2 = gsap.context(() => {
+  gsap.fromTo(
+    ".footer_boxes",
+    { y: 60, opacity: 0 },
+    {
+      y: 0,
+      opacity: 1,
+      duration: 0.6,
+      ease: "power3.out",
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: footerColsRef.current,
+        start: "top 75%",
+      }
+    }
+  );
+}, footerColsRef);
+
+return () => {
+  ctx1.revert();
+  ctx2.revert();
+};
     
-            ScrollTrigger.refresh();
-        };
+ };
     
         const timeout = setTimeout(initAnimation, 150);
     
@@ -211,12 +212,14 @@ function Footer(){
         };
     }, []);
 
+
+
     return(
         <>
             <div className="footer_main">
                 <img src={footerBg} alt="Footer_bg" className="footer_bg_images" />
 
-                <div className="footer_collaborate section-padding no-bottom-padding">
+                {/* <div className="footer_collaborate section-padding no-bottom-padding">
                     <Container>
                         <Row>
                             <Col>  
@@ -224,21 +227,11 @@ function Footer(){
                             </Col>
                         </Row>
                     </Container>
-                </div>
+                </div> */}
 
                 <div className="footer-top section-padding text-white" ref={clocksRef}>
                     <Container>
                         <Row className="location-wrapper-footer">
-                            <Col md={4}>
-                                <div className="location-div clock_boxes">
-                                    <img src={india} alt="India" className="location-image" />
-                                    <div className="location-heading">HQ India</div>
-                                    <p className="location-text">SCO 30, First Floor, <br/>Near Devaji Plaza, VIP Road, <br/>Zirakpur, PB (India)</p>
-                                    <div className="footer-clock">
-                                        <AnalogClock {...options} />
-                                    </div>
-                                </div>
-                            </Col>
                             <Col md={4}>
                                 <div className="location-div clock_boxes">
                                     <img src={hqUk} alt="United Kingdom" className="location-image" />
@@ -249,11 +242,23 @@ function Footer(){
                                     </div>
                                 </div>
                             </Col>
+            
+                            <Col md={4}>
+                                <div className="location-div clock_boxes">
+                                    <img src={india} alt="India" className="location-image" />
+                                    <div className="location-heading">HQ India</div>
+                                    <p className="location-text">SCO 30, VIP Road,<br/> Zirakpur, Chandigarh Tricity - 140603 <br/> Punjab, India </p>
+                                    <div className="footer-clock">
+                                        <AnalogClock {...options} />
+                                    </div>
+                                </div>
+                            </Col>
+                            
                             <Col md={4}>
                                 <div className="location-div clock_boxes">
                                     <img src={hqUs} alt="United States" className="location-image" />
                                     <div className="location-heading">United States</div>
-                                    <p className="location-text">Suite #304, 11200 Manchaca, <br/>Austin, Texas, <br/>United States, 78748</p>
+                                    <p className="location-text">237 Warrick Road, <br/>Putnam Station,  <br/>New York - 12861</p>
                                     <div className="footer-clock">
                                         <AnalogClock {...usOptions} />
                                     </div>
@@ -268,12 +273,12 @@ function Footer(){
                         <Row>
                             <Col md={6} lg={4} className="footer_columns col1 footer_boxes">
                                 <div className="footer-col">
-                                    <a href="/"><img src={logoWhite} alt="IAW logo" className="footer-logo" /></a>
+                                    <a href="/"><img src={newLogo} alt="IAW logo" className="footer-logo" /></a>
                                     <p className="footer-about">IosAndWeb Technologies believes in achieving goals and client satisfaction. We deliver inspiring & eye-catching websites and conduct profitable marketing campaigns that attract the audience and boost the client's business. We provide Support & Maintenance even after the completion of the project.</p>
                                     {/* <p className="paragraph">
                                         <a href="mailto:info@iosandweb.net" className="contact-link"><FontAwesomeIcon icon={faEnvelope} /> info@iosandweb.net</a>
                                     </p> */}
-                                    <div className="social_icons_div">
+                                    {/* <div className="social_icons_div">
                                         <h5 className="footer-col-head">Social Links</h5>
                                         <ul className="social_icons_lists">
                                             {socialLinks.map((item,i) => (
@@ -285,11 +290,11 @@ function Footer(){
                                                 </li>
                                             ))}
                                         </ul>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </Col>
                             
-                            <Col md={6} lg={3} className="footer_columns col2 footer_boxes">
+                            {/* <Col md={6} lg={3} className="footer_columns col2 footer_boxes">
                                 <h5 className="footer-col-head">Services</h5>
                                 <ul className="footer-col-list">
                                     <li><a href="/custom-software-development-company">Software Development</a></li>
@@ -299,15 +304,20 @@ function Footer(){
                                     <li><a href="/web-designing-services">Web / Graphic Design</a></li>
                                     <li><a href="/digital-marketing-services">Digital Marketing</a></li>
                                 </ul>
-                            </Col>
+                            </Col> */}
                             <Col md={6} lg={2} className="footer_columns col3 footer_boxes">
-                                <h5 className="footer-col-head">About</h5>
+                                <h5 className="footer-col-head">Useful Links</h5>
                                 <ul className="footer-col-list">
-                                    <li><a href="/about-us">About us</a></li>
-                                    <li><a href="/iaw-team">IAW Team</a></li>
-                                    <li><a href="/careers">Career</a></li>
-                                    <li><a href="/how-we-work">How we work</a></li>
-                                    <li><a href="/portfolio">Portfolio</a></li>
+                      
+                            
+                                    <li><a href="/services">Services</a></li>
+                                                 <li><a href="/portfolio">Portfolio</a></li>
+                                    {/* <li><a href="/careers">Career</a></li> */}
+                                          <li><a href="">Company</a></li>
+                                            <li><a href="/about-us">About us</a></li>
+                                    {/* <li><a href="/how-we-work">How we work</a></li> */}
+                       
+                                      <li><a href="/iaw-team">IAW Team</a></li>
                                 </ul>
                             </Col>
                             <Col md={6} lg={3} className="footer_columns col4 footer_boxes">

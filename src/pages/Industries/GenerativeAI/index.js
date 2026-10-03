@@ -99,7 +99,8 @@ function GenerativeAI(){
     return(
         <>
             <SEO
-                title={"Generative AI Development - IosAndWeb Technologies"}
+                title={"Generative AI Development Services | IosAndWeb Technologies"}
+                description={"IosAndWeb Technologies provides generative AI development services to build smart AI solutions, automate tasks, and create innovative applications for businesses."}
                 canonicalUrl={`${process.env.REACT_APP_API_URL}${location.pathname}`}
             />
 

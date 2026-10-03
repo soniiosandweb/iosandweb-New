@@ -1,9 +1,15 @@
 .contact_banner_section {
-    background: linear-gradient(321.36deg, #090B2A 52.92%, #0B2733 92.21%);
     color: var(--color-white);
-    min-height: 735px;
+    max-height: 550px;
     position: relative;
-    padding-top: 71px;
+    /* padding-top: 71px; */
+}
+.contactus_center {
+    display: flex;
+    position: relative;
+    /* align-items: center; */
+    justify-content: center;
+    top: 20%;
 }
 .contact_banner_section .contactus_banner_bg {
     position: absolute;
@@ -21,9 +27,11 @@
 .contactus_banner_flex {
     height: 100%;
     display: flex;
-    align-items: center;
+    width: 100%;
+    justify-content: center;
+    align-items: top;
     gap: 2rem;
-    min-height: calc(735px - 71px);
+    min-height: calc(600px - 61px);
     padding: 3rem 0;
 }
 .contactus_banner_flex .contactus_left_cols {
@@ -38,6 +46,12 @@
     width: 100%;
     max-height: 550px;
 }
+.contactusPageForm .postionChangeUp{
+    position: relative;
+    top: -25%;
+    padding: 0rem;
+    background-color: linear-gradient(254.09deg, #0D0F38 15.15%, #093142 83.93%) !important;
+}
 @media (max-width: 991px) {
     .contactus_banner_flex {
         min-height: calc(640px - 71px);
@@ -51,13 +65,35 @@
         flex-direction: column;
         min-height: auto;
     }
-    .contact_banner_section {
+    .postionChangeUp {
+    top: 4% !important;
+    margin-bottom: -125%;
+}
+    
+.contact_banner_section {
         /* padding-top: 150px; */
-        min-height: auto;
+        min-height: 850px;
+
     }
+
+ 
+
 }
-@media (max-width: 480px) {
-    /* .contact_banner_section {
-        padding-top: 120px;
-    } */
+
+
+
+@media (max-width: 768px) {
+  h1.heading_main.split{
+  
+    text-align: center;
+  }
+      .contactpage_form_section {
+    position: relative;
+    top: -600px;
 }
+
+.contact_talk_growth_heading {
+    margin-top: -25rem;
+}
+}
+

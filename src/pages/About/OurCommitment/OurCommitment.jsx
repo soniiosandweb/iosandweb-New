@@ -59,12 +59,12 @@ const OurCommitment = () => {
         }, []);
 
     return(
-        <div className="our_commitment_section section-padding black-background" ref={commitementRef}>
+        <div className="our_commitment_section section-padding " ref={commitementRef}>
             <Container>
                 <Row>
                     <Col>
-                        <h2 className="heading_main text-center split">Our Commitment to Excellence</h2>
-                        <p className="paragraph_content text-center less-bottom-padding">Supporting People Beyond the Workplace</p>
+                                         <h2 className="paragraph_content  text-center split" style={{textTransform:"uppercase",fontWeight:"bold"}}>Our Commitment to Excellence</h2>
+                        <p className="heading_main text-center less-bottom-padding" style={{color:"#3A3939"}}>Supporting People  <span style={{color:"#0046FF"}}> Beyond the Workplace </span> </p>
                         <div className="our_commitment_grids">
                             {commitmentLists.map((item,index) => {
                                 const formattedKey = (index + 1).toString().padStart(2, '0');

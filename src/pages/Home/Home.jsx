@@ -1,18 +1,18 @@
-import AnimatedText from "../../components/AnimatedText/AnimatedText";
-import FAQSection from "../../components/FAQSection/FAQSection";
+
 import SEO from "../../components/SEO";
+import BlogMarquee from "../Blog/blogMarquee";
 import AboutSection from "./About/About";
 import AIPoweredSection from "./AIPoweredSection/AIPoweredSection";
-import Banner from "./Banner/Banner";
-import CaseStudies from "./CaseStudies/CaseStudies";
-import ElevateSuccess from "./ElevateSuccess/ElevateSuccess";
+import BuilttoDeliver from "./BuilttoDeliver/BuilttoDeliver";
+import FAQ from "./FAQ";
+
 import IndustriesSection from "./IndustriesSection/IndustriesSection";
 import InnovativeSection from "./InnovativeSection/InnovativeSection";
+import ImageMarquee from "./LogoSlider/LogoSlider";
+import Banner from "./NewBanner/Banner";
 import PoweringSection from "./PoweringSection/PoweringSection";
-import ServicesSection from "./ServicesSection/ServicesSection";
-import StrategicPartners from "./StrategicPartners/StrategicPartners";
 import Testimonials from "./Testimonials/Testimonials";
-import WhyChoose from "./WhyChoose/WhyChoose";
+
 
 const Home = () => {
 
@@ -104,29 +104,48 @@ const Home = () => {
         ]
     }
 
-    const faqLists = [
-        {
-            title: "What is custom software development?",
-            text: "<a href='/custom-software-development-company'>Custom software development</a> is the process of creating software specifically designed to meet the unique needs of your business. Unlike off-the-shelf software, custom software is built from the ground up to address your specific workflows, challenges, and goals.",
-        },
-        {
-            title: "How do I know if custom software is right for me?",
-            text: "If you have unique business needs that are not met by off-the-shelf software, or if you are looking to improve efficiency, gain a competitive edge, or integrate with existing systems, then custom software development might be a good fit for you.",
-        },
-        {
-            title: "What mobile app development services do you offer?",
-            text: "At IAW Technologies, we're a team of passionate mobile app developers specializing in bringing your ideas to life. We offer a full suite of custom software development services, including:<ul><li>Native App and Software Development: Build best-in-class apps for iOS and Android, optimized for each platform's unique features and user experience.</li><li>Cross-Platform App Development: Reach a wider audience with cost-effective solutions using frameworks like Flutter and React Native.</li><li>Web App Development: Extend your digital reach with web applications that seamlessly complement your mobile strategy.</li></ul>Our commitment goes beyond just coding. We take a client-centric approach, partnering with you every step of the way. From validating your initial concept to post-launch support, we ensure a smooth and successful journey and we also offer blockchain development services.",
-        },
-        {
-            title: "Do you offer ongoing maintenance and support?",
-            text: "Yes, as a custom software development company we offer ongoing maintenance and support plans to ensure the smooth operation of your software and address any future needs.",
-        },
-        {
-            title: "How do you ensure the security and quality of the software you develop?",
-            text: "We prioritize security and quality from the start. We sign NDAs to protect your confidentiality, adhere to industry security standards (like GDPR), and implement rigorous testing to deliver exceptional, secure software.",
-        }
-    ]
-
+  const faqLists = [
+  {
+    title: "What AI solutions can you build for my business?",
+    text: "We build custom AI solutions including AI agents, copilots, intelligent automation, recommendation systems, document intelligence, predictive analytics, and AI-powered business applications tailored to your goals.",
+  },
+  {
+    title: "Can you integrate AI into our existing software?",
+    text: "Yes. We integrate AI into existing websites, mobile apps, enterprise platforms, CRMs, and business systems using secure APIs, AI models, automation workflows, and intelligent features—without disrupting your core operations.",
+  },
+  {
+    title: "How can AI agents automate our business processes?",
+    text: "AI agents can understand tasks, make decisions, interact with systems, and execute workflows with minimal human intervention. They can automate customer support, lead qualification, data processing, reporting, outreach, and repetitive operations.",
+  },
+  {
+    title: "Can you build a custom AI-powered application?",
+    text: "Absolutely. We design and develop AI-powered applications from concept to deployment, combining intuitive UX, intelligent features, scalable architecture, APIs, automation, and secure AI integrations to create solutions built around your business needs.",
+  },
+  {
+    title: "How do you secure AI applications and business data?",
+    text: "We follow security-first development practices including secure APIs, access controls, data protection, encryption, authentication, monitoring, and privacy-focused architecture to help safeguard your applications, AI workflows, and business data.",
+  },
+  {
+    title: "Can you modernize our existing or legacy software?",
+    text: "Yes. We modernize legacy applications through technology upgrades, cloud migration, API integration, performance optimization, UI modernization, architecture improvements, and AI integration while minimizing disruption to existing operations.",
+  },
+  {
+    title: "Do you provide cloud and DevOps solutions?",
+    text: "Yes. We provide cloud-native development, infrastructure setup, CI/CD pipelines, automated deployments, containerization, monitoring, and scalable cloud environments that help businesses release faster and operate more reliably.",
+  },
+  {
+    title: "How long does it take to build an AI MVP?",
+    text: "The timeline depends on the complexity, integrations, features, and AI requirements. A focused AI MVP can typically be developed in a few weeks, followed by testing, refinement, and scaling based on real-world feedback.",
+  },
+  {
+    title: "Which AI technologies and models can you integrate?",
+    text: "We work with modern AI technologies, APIs, language models, machine learning solutions, computer vision, vector databases, and intelligent automation frameworks. We select the right technology based on your use case, performance, security, and scalability requirements.",
+  },
+  {
+    title: "Can you scale an AI solution as our business grows?",
+    text: "Yes. We architect AI and software solutions for scalability from the beginning. As your business grows, we can expand infrastructure, integrations, automation, AI capabilities, and system performance without rebuilding the entire platform.",
+  },
+];
     return(
         <>
             <SEO
@@ -141,47 +160,52 @@ const Home = () => {
             />
 
             {/* Banner */}
+            {/* <Banner /> */}
             <Banner />
+            
+            <ImageMarquee />
 
+            <BuilttoDeliver />
             {/* About section */}
             <AboutSection />
 
             {/* Powering and Award section */}
             <PoweringSection />
-
+            {/* AI Powered section */}
+            <AIPoweredSection />
             {/* Innovative section */}
+            <IndustriesSection />
+
+            <BlogMarquee /> 
             <InnovativeSection />
 
             {/* Industries section */}
-            <IndustriesSection />
 
-            {/* AI Powered section */}
-            <AIPoweredSection />
+          
 
             {/* Services Section */}
-            <ServicesSection />
+            {/* <ServicesSection /> */}
 
             {/* Our Strategic Partners */}
-            <StrategicPartners />
+            {/* <StrategicPartners /> */}
 
             {/* Elevate success */}
-            <ElevateSuccess />
+            {/* <ElevateSuccess /> */}
 
             {/* Case Studies */}
-            <CaseStudies />
+            {/* <CaseStudies /> */}
 
             {/* Why Choose */}
-            <WhyChoose />
+            {/* <WhyChoose /> */}
 
             {/* Testimonials */}
             <Testimonials />
 
             {/* Animated Text */}
-            <AnimatedText />
+            {/* <AnimatedText /> */}
 
             {/* FAQ */}
-            <FAQSection 
-                subheading={"Insights"}
+            <FAQ
                 heading={"Frequently Asked Questions"}
                 lists={faqLists}
                 fullwidth={false}

@@ -70,7 +70,7 @@ function DigitalMarketingBristol(){
             <div className="what-software-section section-padding text-white">
                 <Container>
                     <Row className="align-items-center">
-                        <Col lg={7}>
+                        <Col>
                             <div className="leadtxt">
                                 <h2>Why Should We Give Digital marketing company in Bristol Any Thought?</h2>
                             </div>
@@ -81,12 +81,7 @@ function DigitalMarketingBristol(){
                                 In the first place, it entitles you to widen your crowd and draw for all the expected business proposals. These clients could be those who reside in unapproachable areas that are not much approachable for basic marketing strategies.
                             </div>
                         </Col>
-                        <Col lg={5}>
-                            <div className="leadsubtxt mb-3 text-center">
-                                Fill the form and get quote for your project.
-                            </div>
-                            <ContactForm />
-                        </Col>
+            
                     </Row>
                 </Container>
             </div>

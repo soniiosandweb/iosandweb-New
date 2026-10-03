@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root{
+  --gap-platform: 27px;      /* gap between "Platform:" label and platform list */
+  --gap-features: 20px;      /* gap between "Key Features:" label and features text */
+  --gap-image-text: 43px;    /* gap between image and text block */
+  --row-gap: 30px;           /* gap between grid rows */
+}
+.portfoliGrid{
+  background-color: white;
+  color: black;
+}
+.grid-wrap{
+  font-family: var(--font-poppins);
+}
+
+.grid-row{
+  row-gap: var(--row-gap);
+}
+span.portfolioDivForFlex {
+    display: flex;
+    align-items: start;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+.card-item{
+  border-radius: 25px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  border: 1px solid #A9A9A9
+  /* background color is set inline per card from the data array */
+}
+.card-item:hover {
+    border-color: #0011FF;
+  
+}
+
+
+/* image / color block */
+.card-thumb{
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.card-thumb img{
+  width: 100%;
+  height: 100%;
+}
+.card-body{
+  padding: 70px 28px;
+  margin-top: var(--gap-image-text);
+  padding-top: 0;
+  color: black;
+}
+
+.card-title{
+  font-family: var(--font-poppins);;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0%;
+  margin: 0 0 12px 0;
+  color: black;
+}
+
+.card-desc{
+  font-family: var(--font-poppins);;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  color: black;
+  margin: 0 0 20px 0;
+}
+
+.card-label{
+  font-family: var(--font-poppins);;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0%;
+  color: black;
+  margin-bottom: 0px;
+}
+
+.card-label.features-label{
+  line-height: 20px;
+}
+
+.card-platform-text{
+  font-family: var(--font-poppins);;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  color: black;
+  margin-bottom: 0px;
+}
+
+.card-features-text{
+  font-family: var(--font-poppins);;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  color: black;
+  margin: 0;
+}
+span.portfolioDivForFlex.secound {
+    margin-bottom: 0px;
+    align-items: start;
+}
+/* half-width cards scale text down, keeping the same line-height ratio */
+.card-item.is-half .card-title{ font-size: 16px; line-height: 20px; }
+.card-item.is-half .card-desc,
+.card-item.is-half .card-platform-text,
+.card-item.is-half .card-features-text{ font-size: 12px; line-height: 16px; }
+.card-item.is-half .card-label{ font-size: 14px; line-height: 20px; }
+
+/* Tablet and below: force everything to a single column, one per row.
+   (Bootstrap's col-lg-6 already does this — this is just a safety net
+   in case you're not using Bootstrap's grid CSS.) */
+@media (max-width: 991.98px){
+  .col-force-full{
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 767px){
+span.portfolioDivForFlex {
+    flex-direction: column;
+}
+}

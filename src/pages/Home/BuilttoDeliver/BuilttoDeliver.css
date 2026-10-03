@@ -1,0 +1,167 @@
+.imageGroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.builttoDelliver{
+    background-color: white;
+    color: black;
+}
+.BuiltToSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.builttoDelliver .heading_main{
+font-weight: 600;
+font-size: 45px;
+line-height: 55px;
+text-align: center;
+color: #0046FF;
+margin-bottom: 40px;
+max-width: 40%;
+
+}
+.builtImages{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.imageBox {
+}
+
+.imageBox img {
+  height: auto;
+  display: block;
+}
+.builtratingSection {
+    margin-top: 60px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background: #2A59DB;
+  border-radius: 15px;
+  padding: 25px 30px;
+  box-sizing: border-box;
+}
+
+.builtratingdiv {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 5px 20px;
+  border-right: .5px solid #FFFFFF;
+}
+
+.builtratingdiv:last-child {
+  border-right: none;
+}
+
+.builtratingHeading {
+    color: white;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 45px;
+    letter-spacing: 0%;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-bottom: 0px;
+}
+.ratingStar{
+    width: 25px;
+    height: 25px;
+}
+
+.builtratingPara {
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+color: white;
+max-width: 104px;
+text-align: start   ;
+
+}
+.builtRatingInnerDiv{
+        display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+.ratingStar {
+  font-size: 13px;
+  margin-left: 2px;
+}
+@media (max-width: 991px) {
+    .builttoDelliver .heading_main {
+
+    max-width: 100%;
+}}
+/* Mobile */
+@media (max-width: 767px) {
+  .builtratingSection {
+    padding: 10px;
+    margin-top: 95px;
+  }
+
+  .builtratingdiv {
+    width: 50%;
+    min-height: 70px;
+    padding: 10px;
+  }
+
+  /* Right border only for left column */
+  .builtratingdiv:nth-child(2n) {
+    border-right: none;
+    border: none;
+  }
+
+  /* Horizontal divider between rows */
+  .builtratingdiv:nth-child(3),
+  .builtratingdiv:nth-child(4) {
+    border-top: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .imageGroup {
+    display: gird;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+.imageGroup {
+    display: grid;
+    justify-content: center;
+    align-items: start;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+  .imageBox {
+    width: 100%;
+}
+.imageGroup.secound{
+    display: grid;
+    justify-content: center;
+    align-items: start;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+ .imageBox img{
+    width: 100%;
+    height: 100%;
+}
+  .imageBox {
+    width: 100%;
+    height: 100%;
+}
+.builttoDelliver .heading_main {
+    max-width: 100%;
+    font-size: 35px;
+    line-height: 45px;
+}
+}

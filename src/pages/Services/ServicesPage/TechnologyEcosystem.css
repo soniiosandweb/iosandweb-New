@@ -1,0 +1,202 @@
+.technologyEcosystem {
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.technologyEcosystem__container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+  gap: 50px;
+}
+
+/* =================================
+   LEFT CONTENT
+================================= */
+
+.technologyEcosystem__content {
+  max-width: 520px;
+}
+
+.technologyEcosystem__label {
+  display: block;
+
+  margin-bottom: 32px;
+
+  font-family: var(--font-poppins);
+  font-size: 18px;
+  line-height: 37px;
+  font-weight: 600;
+
+  color: #111111;
+}
+
+.technologyEcosystem__content h2 {
+  margin: 0 0 31px;
+
+  font-family: var(--font-poppins);
+  font-size: 35px;
+  line-height: 37px;
+  font-weight: 600;
+
+  color: #3b3b3b;
+}
+
+.technologyEcosystem__content h2 span {
+  color: #0046ff;
+}
+
+.technologyEcosystem__content p {
+  max-width: 525px;
+
+  margin: 0;
+
+  font-family: var(--font-poppins);
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+
+  color: #000000;
+}
+
+/* =================================
+   TECHNOLOGY GRID
+================================= */
+
+.technologyEcosystem__grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 8px;
+}
+
+/* =================================
+   TECHNOLOGY CARD
+================================= */
+
+.technologyEcosystem__card {
+  min-height: 110px;
+
+  background-color: #101010;
+
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.technologyEcosystem__card:hover {
+  transform: translateY(-4px);
+
+  background-color: #181818;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.technologyEcosystem__card img {
+
+
+  object-fit: contain;
+
+  display: block;
+}
+
+.technologyEcosystem__card span {
+  font-family: var(--font-poppins);
+  font-size: 9px;
+  line-height: 12px;
+  font-weight: 500;
+
+  color: #ffffff;
+
+  text-align: center;
+}
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 991px) {
+  .technologyEcosystem__container {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .technologyEcosystem__content {
+    max-width: 100%;
+  }
+
+  .technologyEcosystem__content p {
+    max-width: 500px;
+  }
+
+  .technologyEcosystem__grid {
+    max-width: 600px;
+  }
+}
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 767px) {
+  .technologyEcosystem__container {
+    padding: 55px 20px;
+
+    gap: 35px;
+  }
+
+  .technologyEcosystem__content {
+    text-align: center;
+  }
+
+
+  .technologyEcosystem__content p {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .technologyEcosystem__grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+    max-width: 100%;
+  }
+
+}
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 480px) {
+  .technologyEcosystem__container {
+    padding: 45px 16px;
+  }
+
+
+
+
+  .technologyEcosystem__grid {
+    gap: 8px;
+  }
+
+
+
+
+}

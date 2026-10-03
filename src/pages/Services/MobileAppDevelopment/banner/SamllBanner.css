@@ -1,0 +1,79 @@
+.samllBannerSection {
+    min-height: 766px;
+    background: linear-gradient(254.09deg, #090B2A 15.15%, #0B2733 83.93%);
+    color:white;
+    padding-top: 8rem;
+}
+
+
+.samllBanner .col-lg-5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.samllBanner .Mobile_banner_images{
+    display: flex;
+    /* flex-direction: column;
+     */
+     align-items: center;
+     margin: 12px 2rem;
+}
+.samllBanerImgDiv{
+    display: flex;
+    gap: 22px;
+
+}
+.imgBlack,.imgWhite{
+    position: relative;
+    width: 48%;
+    object-fit: contain;
+}
+img.imgWhite {
+    top: -9.2rem;
+}
+img.imgBlack{
+    top: 1rem;
+}
+
+@media (max-width:1191px) {
+    .samllBannerSection {
+    min-height: 690px;
+    background: linear-gradient(254.09deg, #090B2A 15.15%, #0B2733 83.93%);
+    color: white;
+    padding-top: 8rem;
+}
+    
+}
+@media (max-width:991px){
+     .samllBannerSection {
+    min-height: 570px;
+    height: 1330px;
+}
+.samllBanerImgDiv {
+    position: relative;
+    top: 150px;
+}
+}
+@media  (max-width:787px){
+.samllBannerSection {
+    min-height: 570px;
+    height: 958px;
+    padding-top: 4rem;
+}
+}
+@media (max-width:400px){
+.samllBanerImgDiv img {
+    width: 135px;
+    height: 300px;
+}
+
+.samllBannerSection {
+    min-height: 250px;
+    height: 823px;
+    padding-top: 4rem;
+}
+}
+@media (max-width:5675px){
+
+}

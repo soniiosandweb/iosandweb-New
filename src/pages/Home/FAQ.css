@@ -1,0 +1,121 @@
+.homeFaq.faq_section_block .faq_Accordion {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    align-items: start;
+}
+
+.homeFaq.faq_section_block .faq_accordion_item:nth-child(-n+5) {
+    grid-column: 1;
+}
+
+.homeFaq.faq_section_block .faq_accordion_item:nth-child(n+6) {
+    grid-column: 2;
+}
+
+.homeFaq.faq_section_block {
+    background: white;
+    color: black;
+    background-image: url("./newHomeImage/faqbg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+.homeFaq.faq_section_block .heading_main {
+   color: #0046FF;
+   font-weight: 600;
+   text-align: center;
+   font-size: 45px;
+}
+
+.homeFaq.faq_accordion_itemc .faq_container .faq_Accordion .accordion-button span {
+    font-size: 16px;
+    line-height: 33px;
+}
+
+.homeFaq.faq_section_block .faq_accordion_item {
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+.homeFaq.faq_section_block .faq_container .faq_Accordion .accordion-body {
+    line-height: 18px;
+    font-size: 16px;
+    font-family: var(--font-poppins);
+}
+
+.homeFaq.faq_section_block .accordion-button {
+    background-color: #E7E7E9;
+}
+
+.homeFaq.faq_section_block .faq_container .faq_Accordion .accordion-button:not(.collapsed) {
+    border-radius: 15px 0px 0 0 !important;
+    color: white;
+}
+
+.homeFaq.faq_section_block .faq_container .faq_Accordion .accordion-button span {
+    color: black;
+}
+
+.homeFaq.faq_section_block .faq_container .faq_Accordion .accordion-button::after {
+    content: "\+";
+    font-size: 20px;
+    background: var(--color-transparent);
+    transition: unset;
+    transform: unset;
+    color: black;
+}
+.homeFaq.faq_accordion_itemc .faq_number{
+    font-weight: 500;
+    font-family: var(--font-poppins);
+font-size: 20px;
+line-height: 18px;
+
+}
+.homeFaq.faq_section_block .faq_container .faq_Accordion .accordion-button span {
+    font-size: 16px;
+    font-family: var(--font-poppins);
+    line-height: 33px;    font-weight: 500;
+
+}
+
+.homeFaq.faq_section_block .faq_section_block .faq_accordion_item .accordion-button.collapsed .faq_title,
+.homeFaq.faq_section_block .faq_accordion_item .accordion-button.collapsed .faq_number {
+    color: #000000;
+}
+
+/* Open question — white text */
+.homeFaq.faq_section_block .faq_accordion_item .accordion-button:not(.collapsed) .faq_title,
+.homeFaq.faq_section_block .faq_accordion_item .accordion-button:not(.collapsed) .faq_number {
+    color: #ffffff;
+}
+
+.homeFaq.faq_section_block
+.faq_container
+.faq_Accordion
+.accordion-button:not(.collapsed)::after {
+    color: white;
+}
+
+/* Fallback to single column on smaller screens */
+@media (max-width: 767px) {
+    .homeFaq.faq_section_block .faq_Accordion {
+        column-count: 1;
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+    }
+
+    .homeFaq.faq_section_block .faq_Accordion {
+        grid-template-columns: 1fr;
+    }
+
+    .homeFaq.faq_section_block .faq_accordion_item {
+        grid-column: 1 !important;
+    }
+    
+}

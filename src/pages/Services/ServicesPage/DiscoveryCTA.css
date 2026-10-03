@@ -1,0 +1,162 @@
+.discoveryCTA {
+  width: 100%;
+  min-height: 340px;
+
+  background-color: #020b1d;
+  background-image: url("./newImagesServiecesPage/cta-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.discoveryCTA::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 8, 25, 0.35);
+
+  pointer-events: none;
+}
+
+.discoveryCTA__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+}
+
+.discoveryCTA__content h2 {
+ font-family: var(--font-poppins);
+font-weight: 500;
+font-size: 55px;
+line-height: 65px;
+text-align: center;
+color: white;
+margin-bottom: 40px;
+
+}
+
+.discoveryCTA__content p {
+  font-family: var(--font-poppins);
+font-weight: 500;
+font-size: 18px;
+line-height: 24px;
+text-align: center;
+color: white;
+margin-bottom: 53px;
+
+}
+
+.discoveryCTA__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 11px 12px 11px 20px;
+
+  background-color: #0046ff;
+  color: #ffffff;
+
+  border-radius: 30px;
+
+  text-decoration: none;
+
+  font-family: var(--font-poppins);
+  font-size: 13px;
+  font-weight: 500;
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.discoveryCTA__button:hover {
+  background-color: #0036cc;
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 25px rgba(0, 70, 255, 0.35);
+}
+
+.discoveryCTA__arrow {
+  width: 27px;
+  height: 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #ffffff;
+  color: #0046ff;
+
+  border-radius: 50%;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  transition: transform 0.25s ease;
+}
+
+.discoveryCTA__button:hover .discoveryCTA__arrow {
+  transform: translateX(3px);
+}
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 991px) {
+  .discoveryCTA {
+    min-height: 320px;
+  }
+
+}
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 767px) {
+  .discoveryCTA {
+    min-height: 320px;
+  }
+
+  .discoveryCTA__content {
+    padding: 50px 20px;
+  }
+
+
+  .discoveryCTA__content p br {
+    display: none;
+  }
+}
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 480px) {
+  .discoveryCTA {
+    min-height: 300px;
+  }
+
+
+
+  .discoveryCTA__button {
+    font-size: 12px;
+    padding-left: 16px;
+  }
+
+  .discoveryCTA__arrow {
+    width: 25px;
+    height: 25px;
+  }
+}

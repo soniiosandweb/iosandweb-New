@@ -45,9 +45,10 @@
 }
 .home-banner .heading_main{
     font-size: 52px;
-    line-height: 1.2;
+    line-height: 55px;
     margin-bottom: 0;
     font-weight: 700;
+    font-family: var(--font-poppins-bold);
 }
 @media (max-width: 767px) {
     .home-banner .heading_main {

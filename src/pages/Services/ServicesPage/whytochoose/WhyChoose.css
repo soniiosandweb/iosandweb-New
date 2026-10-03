@@ -1,0 +1,161 @@
+.whyChooseSection {
+  width: 100%;
+  padding: 10px 20px 55px;
+  background: #fff;
+  box-sizing: border-box;
+}
+.why_choose_section{
+    background-color: white;
+    color: black;
+}
+.why_choose_cols .heading_main{
+    font-family: var(--font-poppins-semibold);
+font-weight: 600;
+font-size: 35px;
+line-height: 45px;
+color: #5500FF;
+margin-bottom: 12px;
+
+}
+.whyChooseContainer {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.whyChooseHeading {
+  text-align: center;
+  margin-bottom: 27px;
+}
+
+.whyChooseHeading h2 {
+  margin: 0 0 5px;
+  font-size: 21px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #4b00ff;
+}
+
+.whyChooseHeading p {
+  margin: 0;
+  color: #111;
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* GRID */
+
+.whyChooseGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-top: 65px;
+}
+
+/* CARD */
+
+.whyChooseCard {
+  padding: 22px 20px;
+  background: #F9F9F9;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.whyChooseCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+  color: #4b00ff;
+  background-color: #F3F0FF;
+}
+
+.whyChooseCard.activeCard {
+  background: #f1edff;
+}
+
+.whyChooseIcon {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+.whyChooseIcon img {
+  color: #111;
+  height: 100%;
+}
+
+.whyChooseIcon img:hover{
+    fill: #4b00ff;
+}
+
+
+.whyChooseCard h3 {
+  font-family: var(--font-poppins);
+font-weight: 500;
+font-size: 20px;
+line-height: 22px;
+margin-top: 24px;
+margin-bottom: 24px;
+
+}
+
+.activeCard h3 {
+  color: #4b00ff;
+}
+
+.whyChooseCard p {
+ font-family: var(--font-poppins);
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+color: #5C5C5C;
+}
+
+@media (max-width: 1199px) {
+  .whyChooseContainer {
+    max-width: 750px;
+  }
+
+  .whyChooseGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+
+}
+/* TABLET */
+
+@media (max-width: 991px) {
+  .whyChooseContainer {
+    max-width: 750px;
+  }
+
+  .whyChooseGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+
+
+  .whyChooseHeading h2 {
+    font-size: 18px;
+  }
+
+
+
+  .whyChooseGrid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 8px;
+  }
+
+
+
+}
+
+
+/* SMALL MOBILE */

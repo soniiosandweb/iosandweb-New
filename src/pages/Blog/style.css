@@ -6,7 +6,7 @@
     background-color: #0c5bc4;
 }
 .blogs-list {
-    margin-top: 50px;
+    margin-top: 0px;
 }
 .blog-list-item {
     border: 1px solid rgba(100, 107, 110, 0.15);
@@ -28,18 +28,20 @@
 }
 .blog-list-item  p {
     color: #333;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     padding-top: 12px;
+    line-height: 18px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 8px;
 }
 .blog-list-item h4 {
-    color: #000;
-    font-size: 28px;
+    font-size: 16px ;
     margin-bottom: 0;
+    font-weight: 600;
+    line-height: 18px;
 }
 .blog-list-item:hover h4{
     color: #1050bc;
@@ -57,7 +59,7 @@
 }
 .pagination li a {
     padding: 5px 15px;
-    border: 1px solid #eee;
+    border: 1px solid #b6b6b6;
     color: #000;
     border-radius: 4px;
     margin: 5px;

@@ -2,6 +2,18 @@
     position: relative;
     overflow: hidden;
 }
+.redefining_work_section h2.heading_main.text-center {
+    font-size: 35px;
+    line-height: 45px;
+}
+.redefining_work_section {
+ background-image: url("./bgg.png");
+     background-size: cover;
+    background-position: center;
+    repeat: no-repeat;
+    background-color: #2A59DB;
+    color: white;
+}
 .redefining_work_section .redefining_overlay {
     position: absolute;
     top: 0;

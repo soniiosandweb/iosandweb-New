@@ -1,0 +1,152 @@
+.blog-marquee-section {
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+}
+ 
+.blog-marquee-section .spanInCenter {
+    color: #0046FF;
+}
+.blog-marquee-section .blog-list-item .paragraph{
+    font-size: 14px;
+    font-weight:  400;
+    line-height: 18px;
+    padding-top: 36px;
+}
+@media (min-width:1499px) {
+    .blog-marquee-section .blog-list-item .paragraph{
+    font-size: 16px;
+    font-weight:  400px;
+    line-height: 20px;
+    padding-top: 34px;
+}
+}
+.blog-marquee-section .read-more {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+    color: #0046FF;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-top: 14px;
+}
+.blog-marquee-section .read-more img {
+    height: 11px;
+    width: 16px;
+}
+.blog-marquee-section .spanInCenter .heading_main{
+    font-size: 35px;
+    line-height: 45px;
+    font-family: var(--font-poppins-semibold);
+    font-weight: 600;
+    margin-bottom: 35px;
+ }
+.blog-marquee-section .blog-list-item h4 {
+    color: #0046FF;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+}
+ 
+.blog-list-item {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #B8B8B8;
+    height: 100%;
+    border-radius: 15px;
+}
+ .blog-list-item:hover{
+        border: 1px solid #0046FF;
+
+ }
+.blog-list-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+ 
+ 
+/* =========================
+   MARQUEE
+========================= */
+ 
+.blog-marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+ 
+.blog-marquee-track {
+    display: flex;
+    width: max-content;
+    gap: 30px;
+    animation: blogMarqueeScroll 40s linear infinite;
+    will-change: transform;
+}
+ 
+.blog-marquee-wrapper:hover .blog-marquee-track {
+    animation-play-state: paused;
+}
+ 
+.blog-col {
+    width: 400px;
+    flex: 0 0 400px;
+    padding: 20px;
+}
+ 
+ 
+/* =========================
+   ANIMATION
+========================= */
+ 
+@keyframes blogMarqueeScroll {
+    from {
+        transform: translateX(0);
+    }
+ 
+    to {
+        transform: translateX(calc(-50% - 15px));
+    }
+}
+ 
+ 
+/* =========================
+   TABLET
+========================= */
+ 
+@media (max-width: 991px) {
+    .blog-col {
+        width: 350px;
+        flex: 0 0 350px;
+    }
+ 
+    .blog-marquee-track {
+        gap: 25px;
+        animation-duration: 25s;
+    }
+}
+ 
+ 
+/* =========================
+   MOBILE
+========================= */
+ 
+@media (max-width: 767px) {
+    .blog-col {
+        width: 300px;
+        flex: 0 0 300px;
+    }
+ 
+    .blog-marquee-track {
+        gap: 20px;
+        animation-duration: 20s;
+    }
+}
+span.blog-date {
+    color: black;
+    font-size: 12px;
+    font-weight: 600;
+    padding-top: 4px;
+    padding-bottom: 5px;
+}

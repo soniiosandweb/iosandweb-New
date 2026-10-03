@@ -85,7 +85,7 @@ function ContactForm(){
             })
             .then(function (response) {
                 //handle success
-                if (response.data.status === 0) {
+                if (response.data.status === 1) {
                     setLoading(false);
                     setFormSuccess("Your message was sent successfully");
                     resetForm();
@@ -139,7 +139,7 @@ function ContactForm(){
                             defaultCountry="IN" 
                             value={phoneValue} 
                             onChange={setPhoneValue}
-                            className="form-control"
+                             className="form-control"
                         />
 
                         {formerrors.phoneValue && (

@@ -1,213 +1,139 @@
-.portfolio_case_studies {
-    position: relative;
-    overflow: hidden;
+.ForAIEraSection{
+    background-color: white;
 }
-.portfolio_case_studies .portfolio_case_studies_bg {
-    background: linear-gradient(254.09deg, #0D0F38 15.15%, #093142 83.93%);
-    max-height: 788px;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+
+.aiEraFullwidthSection{
+    display: flex;
+    background: #2A59DB;
+    padding: 48px;
+    color: white;
+    gap: 43px;
+    border-radius: 25px;
+    align-items: center;
 }
-.portfolio_case_studies_bg .portfolio_circle {
-    position: absolute;
-    left: -50px;
-    top: auto;
-    bottom: 150px;
-    width: 118px;
-    height: 118px;
-    object-fit: contain;
-    animation: rotate-animation 15s infinite linear;
+
+.aiEraLeft{
+    width: 45%;
 }
-.portfolio_case_studies_bg .portfolio_square {
-    position: absolute;
-    right: -30px;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    width: 84px;
-    height: 84px;
-    object-fit: contain;
-    z-index: 1;
-    animation: rotate-animation 15s infinite linear;
-}
-.portfolio_case_studies_bg .portfolio_square.square_top {
-    position: absolute;
-    top: 0;
-    margin: 0;
-    left: 0;
-}
-.portfolio_case_studies_bg .container {
-    height: 100%;
-}
-.portfolio_case_studies .container {
-    position: relative;
-    z-index: 1;
-}
-.portfolio_casestudies_block {
-    max-width: 1100px;
-    margin: auto;
-}
-.portfolio_casestudies_grid {
+
+.aiEraRight{
+    width: 55%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px 20px;
+    gap: 20px;
 }
-.portfolio_casestudies_item {
-    background-color: #06102B;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid transparent;
-}
-.portfolio_casestudies_item:hover {
-    background: linear-gradient(90deg, #06102B 0%, #06102B 100%) padding-box,
-              linear-gradient(270deg, #0011FF 0%, #A600FF 100%) border-box;
-}
-.portfolio_casestudies_item .portfolio_casestudies_link {
-    height: 300px;
+
+.aiEraEyebrow{
     display: block;
-}
-.portfolio_casestudies_item .portfolio_casestudies_image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
-}
-.portfolio_casestudies_item .portfolio_casestudies_content {
-    padding: 25px;
-}
-.portfolio_casestudies_content .portfolio_casestudies_title {
+    font-family: var(--font-poppins);
+    font-weight: 400;
+    font-style: Regular;
     font-size: 20px;
+    leading-trim: NONE;
     line-height: 25px;
-    font-family: var(--font-poppins-semibold);
-    margin-bottom: 15px;
+    letter-spacing: 0%;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 18px;
 }
-.portfolio_casestudies_content .portfolio_casestudies_text {
-    font-size: 14px;
+
+.aiEraHeading{
+    font-family: var(--font-poppins);
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 45px;
+    leading-trim: NONE;
+    line-height: 55px;
+    letter-spacing: 0%;
+    color: #fff;
+    margin: 0 0 24px 0;
+}
+
+.aiEraPara{
+    font-family: var(--font-poppins);
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    leading-trim: NONE;
+    line-height: 22px;
+    letter-spacing: 0%;
+    color: rgba(255,255,255,0.85);
     margin: 0;
 }
-.portfolio_casestudies_content .portfolio_casestudies_features {
-    margin: 2rem 0;
+
+.aiEraCard{
+    width: 267px;
+    height: 162px;
+    max-width: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(251.28deg, rgba(167, 167, 167, 0.35) 7.59%, rgba(115, 115, 115, 0.28) 100%);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px 22px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
-}
-.portfolio_casestudies_features .portfolio_casestudies_features_item {
-    display: flex;
-    gap: 10px;
-}
-.portfolio_casestudies_features_item .portfolio_features_title {
-    font-family: var(--font-poppins-semibold);
-    margin: 0;
-    min-width: 100px;
-}
-.portfolio_casestudies_features_item .portfolio_features_content {
-    font-size: 14px;
-    margin: 0;
-    flex: 1;
-}
-.portfolio_casestudies_block .portfolio_pagination {
-    margin: 3rem 0 0;
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
     justify-content: center;
-    align-items: center;
 }
-.portfolio_casestudies_block .portfolio_pagination .page-item a {
-    height: 41px;
-    min-width: 41px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-    background: #D9D9D9;
-    color: var(--color-black);
-}
-.portfolio_casestudies_block .portfolio_pagination .page-item.active a,
-.portfolio_casestudies_block .portfolio_pagination .page-item:hover a {
-    background: linear-gradient(270deg, #0011FF 0%, #A600FF 100%);
-    color: var(--color-white);
-}
-.portfolio_casestudies_block .portfolio_pagination li a {
-    color: var(--color-white);
-    font-family: var(--font-poppins-semibold);
+
+.aiEraCardNum{
+    font-family: var(--font-poppins);
+    font-weight: 600;
+    font-style: SemiBold;
     font-size: 20px;
-    text-decoration: unset;
+    leading-trim: NONE;
+    line-height: 35px;
+    letter-spacing: 0%;
+    color: #00BBFF;
 }
-.portfolio_casestudies_block .portfolio_pagination li:hover a {
-    color: #A600FF;
+
+.aiEraCardTitle{
+    font-family: var(--font-poppins);
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 20px;
+    leading-trim: NONE;
+    line-height: 45px;
+    letter-spacing: 0%;
+    color: #fff;
+    margin: 0;
 }
-.portfolio_casestudies_block .portfolio_pagination li.previous {
-    margin-right: auto;
+
+.aiEraCardDesc{
+    font-family: var(--font-poppins);
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    leading-trim: NONE;
+    line-height: 22px;
+    letter-spacing: 0%;
+    color: rgba(255,255,255,0.8);
+    margin: 0;
 }
-.portfolio_casestudies_block .portfolio_pagination li.next {
-    margin-left: auto;
-}
-.portfolio_casestudies_block .portfolio_pagination li.disabled a {
-    color: #AEAEAE;
-}
-@media (max-width: 1399px) {
-    .portfolio_case_studies_bg .portfolio_circle {
-        left: -70px;
+
+/* Tablet and below: stack text on top, cards below, single column */
+@media (max-width: 991.98px){
+    .aiEraFullwidthSection{
+        flex-direction: column;
+        padding: 32px;
     }
-    .portfolio_case_studies_bg .portfolio_square {
-        right: -50px;
+
+    .aiEraLeft,
+    .aiEraRight{
+        width: 100%;
     }
-}
-@media (max-width: 991px) {
-    .portfolio_casestudies_grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-@media (max-width: 767px) {
-    .portfolio_case_studies .heading_main {
-        padding-top: 1rem;
-    }
-    .portfolio_case_studies_bg .portfolio_circle {
-        width: 95px;
-        height: 95px;
-        bottom: 50%;
-        left: -10px;
-    }
-    .portfolio_case_studies_bg .portfolio_square.square_top {
-        display: none;
-    }
-    .portfolio_case_studies_bg .portfolio_square {
-        top: 0;
-        bottom: auto;
-        right: -10px;
-    }
-}
-@media (max-width: 575px) {
-    .portfolio_casestudies_block .portfolio_pagination li a {
-        font-size: 14px;
-    }
-    .portfolio_casestudies_block .portfolio_pagination .page-item a {
-        height: 30px;
-        min-width: 30px;
-    }
-    .portfolio_casestudies_block .portfolio_pagination {
-        gap: 8px;
+
+    .aiEraHeading{
+        font-size: 32px;
+        line-height: 40px;
     }
 }
-@media (max-width: 480px) {
-    .portfolio_casestudies_item .portfolio_casestudies_link {
-        height: 250px;
+
+@media (max-width: 575.98px){
+    .aiEraRight{
+        grid-template-columns: 1fr;
     }
-}
-@media (max-width: 380px) {
-    .portfolio_casestudies_item .portfolio_casestudies_content {
-        padding: 25px 15px;
-    }
-    .portfolio_casestudies_item .portfolio_casestudies_link {
-        height: 200px;
-    }
-    .portfolio_case_studies_bg .portfolio_circle {
-        bottom: 43%;
+
+    .aiEraCard{
+        width: 100%;
+        height: auto;
     }
 }

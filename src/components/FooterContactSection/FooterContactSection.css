@@ -5,15 +5,16 @@
 .footer_contact_flex {
     display: flex;
     gap: 4rem;
-    align-items: center;
+    align-items: start;
 }
 .footer_contact_flex .footer_contact_cols {
     flex: 1;
 }
 .footer_contact_cols.footer_left_col {
     display: flex;
-    gap: 3rem;
+    gap: 4rem;
     flex-direction: column;
+    justify-content: space-between;
 }
 .footer_contact_cols .presence_lists {
     padding: 0;
@@ -27,8 +28,22 @@
     height: 58px;
 }
 .footer_contact_cols .heading_main {
-    font-size: 45px;
-    line-height: 1.2;
+font-family: var(--font-poppins-semibold);
+font-weight: 600;
+font-size: 35px;
+text-align: left;
+text-transform: capitalize;
+
+}
+.footer_contact_cols .parasubheading{
+  font-family: var(--font-poppins-semibold);
+font-weight: 600;
+font-size: 18px;
+text-transform: capitalize;
+  
+}
+.footer_contact_cols .paragraph_content{
+    text-align:left;
 }
 .footer_contact_cols .footer_contact_lists {
     display: flex;
@@ -127,6 +142,7 @@ p.presence_lists_text.split {
     display: flex;
     flex-direction: column;
     /* align-items: center; */
+    height: 100%;
 }
 /* .center > .heading_sub {
     display: flex;

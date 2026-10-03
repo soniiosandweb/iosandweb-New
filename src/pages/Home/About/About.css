@@ -1,32 +1,223 @@
 .about_section {
-    padding-bottom: 300px;
-    background-color: var(--color-black);
-    color: var(--color-white);
+    background-color: var(--color-white);
+    color: var(--color-black);
+    position: relative;
+    overflow: hidden;
+ 
+    
+}
+.imageBgAboutus{
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+    width: 100vw;
 }
 .about_section_flex {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .about_section_cols {
-    flex: 1;
+    flex: 1 1;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 .heading_main {
-    font-size: 35px;
-    line-height: 40px;
+    font-size: 45px;
+    line-height:55px;
+    font-family: var(--font-poppins
+    
+    );
+    margin-bottom: 34px;
+    text-align: left;
+}
+.about_section_cols .heading_main{
+    font-family: var(--font-poppins-bold);
+font-weight: 600;
+font-size: 45px;
+line-height: 55px;
+text-align: left;
+margin-bottom: 24px;
+}
+.about_section_cols .heading_main{
+    color: #0046FF;
+    font-weight: 600;
+}
+.about_section_cols .sectionHeading{
+    text-align: center;
+    font-size: 18px;
+    line-height: 37px;
     font-family: var(--font-poppins-semibold);
-    margin-bottom: 20px;
+    width: 100%;
+    color: #040731;
+    font-weight: 600;
+    padding-bottom: 24px;
+
+}
+.about_section_cols .paragraph_content{
+    color: black;
+    font-weight: 500;
 }
 .paragraph_content {
     font-size: 18px;
     line-height: 24px;
     font-family: var(--font-poppins-medium);
-    margin-bottom: 20px;
+    text-align: center;
+}
+.about_section_cols .towPara{
+    margin-bottom: 54px;
+    margin-top: 20px;
 }
 .paragraph_content a {
     color: var(--color-white);
     text-underline-offset: 3px;
 }
+
+.ratingSection {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    /* padding: 30px 0px; */
+    height: 116px;
+}
+.ratingSection .secound {
+    border-left: .5px solid black;
+    border-right: .5px solid black;
+
+}
+.ratingSection .third{
+        border-right: 1px solid black;
+
+}
+.ratingdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+            padding: 0px 35px ;
+
+  
+}
+.ratingdiv .ratingHeading {
+    font-size: 35px;
+    color: #0046FF;
+    font-family: var(--font-poppins-semibold);
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+.ratingdiv .ratingPara{
+    font-size: 16px;
+    line-height: 20px;
+    font-family: var(--font-poppins);
+
+
+}
+.ratingStar {
+  font-size: 28px;
+  color: #ffc107;
+}
+@media (max-width: 1199px) {
+    .ratingSection {
+        width: 100%;
+                height: 100%;
+
+    }.ratingdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+            padding: 0px 36px ;
+
+  
+} .ratingSection {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(1, 1fr);
+        height: 100%;
+
+    }.about_section_cols .towPara{
+    margin-bottom: 35px;
+}
+.about_section_cols .paragraph_content{
+    line-height: 24px;
+}
+.ratingSection .third{
+    border-bottom: 1px solid black;
+    border-left: none;
+    border-right: none;
+    
+
+} .ratingSection {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(1, 1fr);
+        height: 100%;
+
+    }
+    .about_section_cols .heading_main{
+    color: #0046FF;
+    max-width:100%;
+font-size: 35px;
+line-height: 45px;
+text-align: center;
+margin-bottom: 15px;
+}
+    .ratingdiv{
+        padding-bottom: 30px ;
+    }
+    .ratingSection .secound {
+    border-bottom: 1px solid black;
+    border-right: none;
+    border-left: none;
+
+}
+.about_section_cols .towPara{
+    margin-bottom: 35px;
+}
+.about_section_cols .paragraph_content{
+    line-height: 24px;
+}
+.ratingSection .third{
+    border-bottom: 1px solid black;
+    border-left: none;
+    border-right: none;
+    
+
+}
+.ratingSection .first{
+        border-bottom: 1px solid black;
+
+}
+}
+@media (max-width: 767px) {
+    
+   
+}
+@media (max-width: 575px) {
+    .ratingSection{
+        width: 100%;
+    }
+    .ratingSection {
+       display:flex;
+       flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }.ratingSection .third{
+        border-bottom: 1px solid black;
+    }
+    .ratingdiv{
+        width: 90%;
+        padding: 10px 10px;
+    }
+}
+
 .btn-gradient-blue {
     text-decoration: unset;
     font-size: 18px;
@@ -37,15 +228,13 @@
     border-radius: 25px;
     color: var(--color-white);
     padding: 10px 20px;
-    background: linear-gradient(90deg, var(--color-blue) 0%, var(--color-purple) 100%) padding-box,
-              linear-gradient(90deg, var(--color-blue) 0%, var(--color-purple) 100%) border-box;
+    background: #0046FF;
     border: 1px solid transparent;
     position: relative;
     overflow: hidden;
 }
 .btn-gradient-blue:hover {
-    background: linear-gradient(90deg, var(--color-purple) 0%, var(--color-blue) 100%) padding-box,
-              linear-gradient(90deg, var(--color-purple) 0%, var(--color-blue) 100%) border-box;
+    background: #0046FF;
 }
 .btn-gradient-blue::before {
     animation: shine 1.5s ease-in-out infinite;
@@ -68,8 +257,7 @@
     }
 }
 .btn-gradient-blue:hover {
-    background: linear-gradient(90deg, var(--color-purple) 0%, var(--color-blue) 100%) padding-box,
-              linear-gradient(90deg, var(--color-purple) 0%, var(--color-blue) 100%) border-box;
+    background: #0046FF;
 }
 .about_section_cols.image_col {
     text-align: center;
@@ -83,14 +271,36 @@
 .about_img.mobile_img {
     display: none;
 }
+.destopRoboSectionaboutUs {
+    width: 100%;
+    overflow: visible;
+    z-index: -1;
+}
+
+.destoprobosectionAboutus {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.timelineHighlight_box{
+    display: none;
+}
 @media (max-width: 991px) {
+    .builttoDelliver .heading_main {
+
+    max-width: 100%;
+}
+    .about_section_cols .sectionHeading{
+        padding-bottom: 16px;
+    }
     .heading_main {
-        font-size: 30px;
-        line-height: 35px;
+        font-size: 35px;
+        line-height: 45px;
     }
     .paragraph_content {
-        font-size: 16px;
-        line-height: 20px;
+        font-size: 18px;
+        line-height: 24px;
     }
     .btn-gradient-blue {
         font-size: 16px;
@@ -101,6 +311,9 @@
     }
 }
 @media (max-width: 767px) {
+    .destopRoboSectionaboutUs .destoprobosectionAboutus{
+        display: none;
+    }
     .about_img.mobile_img {
         display: block;
         margin-bottom: 20px;
@@ -110,5 +323,74 @@
     }
     .about_section_cols.image_col {
         display: none;
+    }
+    .timelineHighlight_box {
+        display: inline;
+    border-radius: 12px;
+    background: #ffffff;
+    padding: 20px 16px;
+    max-width: 260px;
+    margin: 0 auto;
+}
+
+/* This is the key fix: give the image wrapper a fixed height and let
+   object-fit: contain scale the image down to fit inside it, instead
+   of the image spilling outside the box at its natural size. */
+.timelineHighlight_imageWrap {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timelineHighlight_image {
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 75px;
+}
+
+.timelineHighlight_list {
+    display: flex;
+    flex-direction: column;
+    gap: 52px;
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.timelineHighlight_item {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    gap: 21px;
+    color: #111827;
+    align-items: center;
+    justify-content: center;
+}
+
+.timelineHighlight_year {
+font-weight: 400;
+font-size: 25px;
+line-height: 24px;
+text-align: center;
+width: 60%;
+}
+
+.timelineHighlight_label {
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+text-align: center;
+
+}
+
+
+}
+@media (max-width: 480px) {
+    .timelineHighlight_box {
+        max-width: 90%;
     }
 }

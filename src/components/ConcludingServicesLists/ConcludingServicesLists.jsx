@@ -46,7 +46,7 @@ const ConcludingServicesLists = ({lists, classname}) => {
         lists && lists.length >= 1 &&
         <div className={`concluding_services_grid ${classname && classname}`} ref={consludingRef}>
             {lists.map((item, i) => (
-                <Link reloadDocument className="concluding_services_item consluding_boxes" key={i}>
+                <Link  to={item.link} className="concluding_services_item consluding_boxes" key={i}>
                     <img src={item.icon} alt={item.title} className="concluding_services_img" />
                     <p className="concluding_services_title">{item.title}</p>
                 </Link>

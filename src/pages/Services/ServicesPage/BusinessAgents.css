@@ -1,0 +1,254 @@
+
+.bussinceAgents {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  color: #000000;
+}
+
+
+.bussinceAgents {
+  position: relative;
+  width: 100%;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.bussinceAgents__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+
+.bussinceAgents__container {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 38px 20px 55px;
+}
+
+.bussinceAgents__header {
+  text-align: center;
+}
+
+.bussinceAgents__eyebrow {
+  font-family: var(--font-poppins);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 37px;
+  text-transform: uppercase;
+
+}
+
+.bussinceAgents__heading {
+  margin: 0 auto 14px;
+  font-family: var(--font-poppins);
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 37px;
+  margin-bottom: 31px;
+    padding-top: 29px !important;
+
+  color: #0046ff;
+  
+}
+
+.bussinceAgents__description {
+  font-family: var(--font-poppins);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 61px;
+}
+
+.bussinceAgents__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  gap: 10px;
+}
+
+.bussinceAgents__card:nth-child(5) {
+  grid-column: 2;
+}
+
+.bussinceAgents__card:nth-child(6) {
+  grid-column: 3;
+}
+
+.bussinceAgents__card {
+  padding: 20px 40px;
+  background: #e6e6e6;
+  min-width: 294px;
+  border: 1px solid #dedede;
+  border-radius: 4px;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.bussinceAgents__icon {
+  width: 78px;
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #111111;
+}
+.bussinceAgents__icon img{
+  width: 100%;
+  height: 100%;
+}
+.featureIcon {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.bussinceAgents__card h3 {
+  font-family: var(--font-poppins);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 22px;
+    margin-top:35px;
+  margin-bottom :25px;
+}
+
+.bussinceAgents__card p {
+  font-family: var(--font-poppins);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #5c5c5c;
+}
+
+.bussinceAgents__card:hover {
+  transform: translateY(-3px);
+  background: #dfe8ff;
+  border-color: #d5dfff;
+  box-shadow: 0 7px 18px rgba(0, 0, 0, 0.08);
+}
+
+.bussinceAgents__card:hover .bussinceAgents__icon {
+  color: #0046ff;
+}
+
+.bussinceAgents__card:hover h3 {
+  color: #0046ff;
+}
+
+.bussinceAgents__card:hover p {
+  color: #000000;
+}
+
+.bussinceAgents__dots {
+  position: absolute;
+  z-index: 1;
+  width: 38px;
+  height: 38px;
+  background-image: radial-gradient(
+    circle,
+    #0046ff 1.3px,
+    transparent 1.3px
+  );
+  background-size: 7px 7px;
+  opacity: 0.95;
+}
+
+.bussinceAgents__dots--top {
+  top: 37px;
+  right: 28px;
+}
+
+.bussinceAgents__dots--bottom {
+  right: 28px;
+  bottom: 48px;
+}
+
+@media (max-width: 1399px) and (min-width: 992px) {
+  .bussinceAgents__cards {
+    grid-template-columns: repeat(3, minmax(294px, 294px));
+    gap: 20px;
+  }
+
+  .bussinceAgents__card:nth-child(5),
+  .bussinceAgents__card:nth-child(6) {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .bussinceAgents__container {
+    max-width: 700px;
+  }
+
+  .bussinceAgents__cards {
+    grid-template-columns: repeat(2, minmax(294px, 294px));
+    gap: 20px;
+  }
+
+  .bussinceAgents__card:nth-child(5),
+  .bussinceAgents__card:nth-child(6) {
+    grid-column: auto;
+    margin: 0;
+  }
+}
+
+@media (max-width: 767px) {
+
+
+
+
+
+
+
+
+
+  .bussinceAgents__cards {
+    grid-template-columns: minmax(294px, 294px);
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .bussinceAgents__card:nth-child(5),
+  .bussinceAgents__card:nth-child(6) {
+    grid-column: auto;
+    margin: 0;
+  }
+
+  .bussinceAgents__card {
+    width: 294px;
+    min-width: 294px;
+    min-height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+
+
+ 
+
+  .bussinceAgents__cards {
+    grid-template-columns: minmax(294px, 294px);
+    gap: 12px;
+  }
+
+  .bussinceAgents__card {
+    width: 294px;
+    min-width: 294px;
+    min-height: 145px;
+    padding: 14px 20px 12px;
+  }
+}
+

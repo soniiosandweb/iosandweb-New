@@ -1,7 +1,7 @@
 import "./RedefiningWork.css";
 import { Col, Container, Row } from "react-bootstrap";
 import ServicesGridSection from "../../../components/ServicesGridSection/ServicesGridSection";
-
+import bgredefingin from "./bgg.png"
 const aboutOverlay = `${process.env.REACT_APP_API_URL}/assests/about/about_overlay.webp`;
 const circleGroup = `${process.env.REACT_APP_API_URL}/assests/circle-group.webp`;
 const squareGroup = `${process.env.REACT_APP_API_URL}/assests/square-group.webp`;
@@ -84,15 +84,8 @@ const services = [
 
 const RedefiningWork = () => {
     return(
-        <div className="redefining_work_section section-padding linear-dark-background">
-            <img src={aboutOverlay} alt="Redefining Work-Life Balance Through Innovation" className="redefining_overlay" />
-            <div className="redefining_animations">
-                <Container>
-                    <img src={circleGroup} alt="Circle" className="redefining_circle" />
-                    <img src={squareGroup} alt="Square" className="redefining_square square_top" />
-                    <img src={squareGroup} alt="Square" className="redefining_square" />
-                </Container>
-            </div>
+        <div className="redefining_work_section section-padding   ">
+           
             <Container>
                 <Row>
                     <Col>

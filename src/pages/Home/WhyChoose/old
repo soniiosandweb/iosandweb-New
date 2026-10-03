@@ -1,0 +1,233 @@
+.why_choose_flex_block {
+    display: flex;
+    gap: 4rem;
+    align-items: start;
+}
+.why_choose_flex_block .why_choose_cols {
+    flex: 1;
+}
+.why_choose_cols.why_choose_left_col {
+    position: sticky;
+    top: 71px;
+}
+.why_choose_flex_block .why_choose_img {
+    max-width: 367px;
+    width: 100%;
+    border-radius: 15px;
+    height: 202px;
+    object-fit: cover;
+    object-position: top center;
+    margin-top: 20px;
+}
+.why_choose_accordion .accordion-item {
+    background-color: var(--color-transparent);
+    color: var(--color-white);
+    border: none !important;
+    position: relative;
+}
+.why_choose_accordion .accordion-item::after {
+    content: "";
+    background: linear-gradient(90deg, #9900FF 0%, #2A00FF 100%);
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.why_choose_accordion .accordion-item:last-child::after {
+    display: none;
+}
+.why_choose_accordion .accordion-item .accordion-button {
+    background-color: var(--color-transparent);
+    color: var(--color-white);
+    padding: 20px 15px;
+    box-shadow: none;
+    gap: 2rem;
+    justify-content: space-between;
+}
+.why_choose_accordion .why_choose_header {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    font-size: 25px;
+    font-family: var(--font-poppins-medium);
+}
+.why_choose_header .why_choose_numbers {
+    background: linear-gradient(var(--color-body), var(--color-body)) padding-box,
+              linear-gradient(180deg, #0037FF 0%, #5E00FF 100%) border-box;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.why_choose_accordion .accordion-item .accordion-button::after {
+    display: none;
+}
+.why_choose_accordion .why_choose_header .why_choose_title {
+    flex: 1;
+}
+.why_choose_accordion .accordion-item .read_nore_block {
+    font-size: 18px;
+    font-family: var(--font-poppins);
+    white-space: nowrap;
+}
+.why_choose_accordion .accordion-button:not(.collapsed) .read_nore_block svg{
+    rotate: -180deg;
+}
+.why_choose_accordion .accordion-body {
+    padding: 0px 15px 25px;
+}
+.why_choose_accordion .accordion-body .paragraph_content {
+    margin: 0;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: var(--font-poppins);
+}
+@media (max-width: 1199px) {
+    .why_choose_flex_block {
+        gap: 2rem;
+    }
+    .why_choose_accordion .why_choose_header {
+        font-size: 20px;
+    }
+}
+@media (max-width: 991px) {
+    .why_choose_accordion .why_choose_header {
+        font-size: 18px;
+    }
+    .why_choose_accordion .why_choose_header {
+        gap: 15px;
+    }
+    .why_choose_accordion .accordion-item .read_nore_block {
+        font-size: 16px;
+    }
+    .why_choose_header .why_choose_numbers {
+        width: 30px;
+        height: 30px;
+    }
+    .why_choose_flex_block {
+        gap: 1rem;
+    }
+    .why_choose_accordion .accordion-item .accordion-button {
+        padding: 15px 10px;
+    }
+}
+@media (max-width: 767px) {
+    .why_choose_flex_block {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .why_choose_flex_block .why_choose_cols {
+        width: 100%;
+    }
+    .why_choose_accordion .accordion-item .accordion-button {
+        padding: 20px 0;
+    }
+    .why_choose_accordion .accordion-body {
+        padding: 0px 0px 25px;
+    }
+    .why_choose_cols.why_choose_left_col {
+        position: static;
+    }
+}
+@media (max-width: 375px) {
+    .why_choose_flex_block .why_choose_img {
+        height: 187px;
+    }
+}
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./WhyChoose.css";
+import { Accordion, Col, Container, Row } from "react-bootstrap";
+import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
+
+const whyChooseImg = `${process.env.REACT_APP_API_URL}/assests/home/why_choose.webp`;
+
+const whyChooseLists = [
+    {
+        title: "Customized Solutions:",
+        text: "Your business is unique. We tailor every service to align perfectly with your vision, goals, and industry challenges, ensuring maximum impact.",
+    },
+    {
+        title: "Experienced Team:",
+        text: "Work with an award-winning team that expertly combines creativity, cutting-edge technology, and data-driven insights to deliver exceptional results.",
+    },
+    {
+        title: "Future-Proof Results:",
+        text: "We build scalable, flexible solutions designed to grow with your business and adapt to emerging market trends and technologies.",
+    },
+    {
+        title: "Transparent & Reliable:",
+        text: "Clear communication, honest timelines, and consistent delivery are at the heart of our approach, giving you peace of mind throughout the project.",
+    },
+    {
+        title: "Customer-Centric Approach:",
+        text: "We prioritize your satisfaction through close collaboration and personalized support at every project stage.",
+    },
+    {
+        title: "Innovative Mindset:",
+        text: "Committed to continuous learning, we leverage the latest tools in AI, blockchain, and digital marketing to keep you ahead of the curve.",
+    },
+    {
+        title: "End-to-End Services:",
+        text: "From strategy to execution and ongoing optimization, we offer comprehensive services under one roof, simplifying your vendor management.",
+    },
+    {
+        title: "Proven Track Record:",
+        text: "Our portfolio includes successful projects across industries, backed by positive client testimonials and measurable business growth.",
+    },
+    {
+        title: "Rigorous Quality Standards:",
+        text: "We implement thorough testing, usability assessments, and performance tuning to ensure your solutions are reliable and user-friendly.",
+    },
+    {
+        title: "Agile & Flexible Development:",
+        text: "Our agile methodology allows for quick iterations and adjustments based on your feedback and evolving needs.",
+    },
+    {
+        title: "Security Focused:",
+        text: "We prioritize data security and privacy in all our solutions to protect your business and customers.",
+    }
+]
+
+const WhyChoose = () => {
+    return(
+        <div className="why_choose_section section-padding body-background">
+            <Container>
+                <Row>
+                    <Col>
+                        <div className="why_choose_flex_block">
+                            <div className="why_choose_cols why_choose_left_col">
+                                <h2 className="heading_main split">Why Choose IAW Technologies, You May Ask?</h2>
+                                <p className="paragraph_content">We ensure web solutions that work flawlessly across multiple devices.</p>
+                                <img src={whyChooseImg} alt="Why Choose IAW Technologies" className="why_choose_img" />
+                            </div>
+                            <div className="why_choose_cols">
+                                <Accordion defaultActiveKey="0" flush className="why_choose_accordion">
+                                    {whyChooseLists.map((item,i) => (
+                                        <Accordion.Item eventKey={i+1} key={i}>
+                                            <Accordion.Header>
+                                                <div className="why_choose_header">
+                                                    <span className="why_choose_numbers">{i+1}</span>
+                                                    <span className="why_choose_title">{item.title}</span>
+                                                </div>
+                                                <span className="read_nore_block">Read <FontAwesomeIcon icon={faAnglesRight} /></span>
+                                            </Accordion.Header>
+                                            <Accordion.Body>
+                                                <p className="paragraph_content">{item.text}</p>
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                    ))}
+                                </Accordion>
+                            </div>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
+    )
+}
+
+export default WhyChoose

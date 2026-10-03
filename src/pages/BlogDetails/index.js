@@ -27,6 +27,7 @@ function BlogDetails() {
     const [relatedLoading, setRelatedLoading] = useState(true);
 
     useEffect(() => {
+        
 
         axios({
             method: "post",

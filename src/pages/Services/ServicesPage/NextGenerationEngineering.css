@@ -1,0 +1,121 @@
+.nextGenerationEngineering {
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.nextGenerationEngineering__container {
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Eyebrow */
+
+.nextGenerationEngineering__eyebrow {
+  font-family: var(--font-poppins);
+font-weight: 600;
+font-size: 18px;
+line-height: 37px;
+text-transform: uppercase;
+
+  margin: 0 0 24px;
+}
+
+/* Heading */
+
+.nextGenerationEngineering__heading {
+  font-family: var(--font-poppins);
+font-weight: 600;
+font-size: 35px;
+line-height: 37px;
+letter-spacing: 0%;
+
+  color: #3A3939;
+
+  margin: 0 0 32px;
+}
+
+.nextGenerationEngineering__heading span {
+  color: #0046ff;
+}
+
+/* Description */
+.nextGenerationEngineering__image{
+  width: 100%;
+  max-height: 470px;
+  height: auto;
+  margin-top: 59px;
+}
+.nextGenerationEngineering__description {
+
+  font-family: var(--font-poppins);
+font-weight: 500;
+font-size: 18px;
+line-height: 24px;
+text-align: center;
+
+  color: #000000;
+
+  margin: 0;
+}
+ img.MobilrnextGenerationEngineering__image{
+  display: none;
+  width: 100%;
+ }
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 991px) {
+
+
+  .nextGenerationEngineering__heading {
+    font-size: 25px;
+    line-height: 32px;
+  }
+
+  .nextGenerationEngineering__description {
+    max-width: 850px;
+  }
+}
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 767px) {
+ img.MobilrnextGenerationEngineering__image{
+  display: flex;
+  width: 100%;
+    margin-top: 59px;
+ }
+ .nextGenerationEngineering__image{
+  display: none;
+}
+.nextGenerationEngineering__container{
+  margin-bottom: 45px;
+}
+  .nextGenerationEngineering__eyebrow {
+
+  }
+
+  .nextGenerationEngineering__heading {
+    
+  }
+
+  .nextGenerationEngineering__description {
+
+  }
+
+  .desktopBreak {
+    display: none;
+  }
+}
+
+/* =================================
+   SMALL MOBILE
+================================= */

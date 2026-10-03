@@ -1,28 +1,36 @@
-import React, {useEffect, useState} from "react";
-import './style.css';
+import React, { useEffect, useState } from "react";
+import "./style.css";
 
-function TypeWritter({ text, delay, infinite }){
-    const [currentText, setCurrentText] = useState('');
-    const [currentIndex, setCurrentIndex] = useState(0);
-  
-    useEffect(() => {
-      let timeout;
-  
-      if (currentIndex <= text.length) {
-        timeout = setTimeout(() => {
-          setCurrentText(prevText => prevText + text[currentIndex]);
-          setCurrentIndex(prevIndex => prevIndex + 1);
-        }, delay);
-  
-      } else if (infinite) {
-        setCurrentIndex(0);
-        setCurrentText('');
+function TypeWritter({ text, delay = 100, infinite = false, onComplete }) {
+  const [currentText, setCurrentText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [completed, setCompleted] = useState(false);
+
+  useEffect(() => {
+    let timeout;
+
+    if (currentIndex < text.length) {
+      timeout = setTimeout(() => {
+        setCurrentText((prev) => prev + text[currentIndex]);
+        setCurrentIndex((prev) => prev + 1);
+      }, delay);
+    } else if (!completed) {
+      setCompleted(true);
+      if (onComplete) onComplete();
+
+      if (infinite) {
+        setTimeout(() => {
+          setCurrentText("");
+          setCurrentIndex(0);
+          setCompleted(false);
+        }, 1500);
       }
-  
-      return () => clearTimeout(timeout);
-    }, [currentIndex, delay, infinite, text]);
-  
-    return <span className="type-writter-text">{currentText}</span>;
+    }
+
+    return () => clearTimeout(timeout);
+  }, [currentIndex, text, delay, infinite, onComplete, completed]);
+
+  return <span className="type-writter-text">{currentText}</span>;
 }
 
 export default TypeWritter;

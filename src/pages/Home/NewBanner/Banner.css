@@ -1,0 +1,111 @@
+.home-banner {
+    position: relative;
+    width: 100%;
+    height: calc(100vh);
+    background: #000;
+    overflow: hidden;
+    padding: 100px 0;
+    overflow: hidden;
+}
+.home-banner-overlay {
+    /* background: rgb(0 0 0 / 50%); */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.whatsapp-floating {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  text-decoration: none;
+  z-index: 9999;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.whatsapp-floating:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+.home-banner .container,
+.home-banner .row{
+    height: 100%;
+}
+.home-banner .intro-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home-banner .intro_video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    right: 0;
+    border: 0;
+    object-fit: cover;
+}
+.home-banner .heading_main  {
+    color: var(--color-white);
+    background: none;
+    text-align: center;
+    background-clip: unset;
+    -webkit-text-fill-color: unset;
+}
+.home-banner .heading_main{
+    font-size: 45px;
+    line-height: 55px;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+.home-banner .paragraph_content{
+    text-align: center;
+    font-size: 24px;
+    line-height: 28px;
+    padding-top: 34px;
+    font-weight: 500;
+    max-width: 75%;
+}
+.home-banner .btn-gradient-blue{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-top: 62px;
+    background: #0046FF;
+
+}
+@media (max-width: 767px) {
+    .home-banner .heading_main {
+      font-size:45px;
+      line-height: 50px;
+    }
+    .home-banner .paragraph_content{
+    font-size: 24px;
+}
+.home-banner{
+min-height: 740px !important;
+}
+}
+@media (max-width: 340px) {
+.home-banner .btn-gradient-blue{
+    font-size: 20px;
+    line-height: 24px;
+}
+}

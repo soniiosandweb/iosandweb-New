@@ -4,86 +4,50 @@ import { Col, Container, Row } from "react-bootstrap";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
-
+import desktop from "../newImagesServiecesPage/aboutus/destop.png"
+import mobile from "../newImagesServiecesPage/aboutus/mobile.png"
+import img1 from "../newImagesServiecesPage/aboutus/img1.png"
+import img2 from "../newImagesServiecesPage/aboutus/img2.png"
+import img3 from "../newImagesServiecesPage/aboutus/img3.png"
+import img4 from "../newImagesServiecesPage/aboutus/img4.png"
 gsap.registerPlugin(ScrollTrigger);
 
-const marketingLists = [
-    {
-        title: "Research",
-        text: "Deep Dive into competitors and Market Trends",
-    },
-    {
-        title: "Targeting",
-        text: "Identifying your ideal Customer Persona",
-    },
-    {
-        title: "Execution",
-        text: "Launching campaigns Across chosen channels",
-    },
-    {
-        title: "Analysis",
-        text: "Monitoring data and performance metrics",
-    },
-    {
-        title: "Refinement",
-        text: "Monitoring data and performance metrics",
-    }
-]
+
 
 const OurMarketingSection = ({classes}) => {
-
-    const marketingRef = useRef(null);
-
-    useEffect(() => {
-        let ctx;
-
-        const initAnimation = () => {
-            ctx = gsap.context(() => {
-            gsap.fromTo(
-                ".marketing_boxes",
-                { y: 60, opacity: 0 },
-                {
-                    y: 0,
-                    opacity: 1,
-                    duration: 0.6,
-                    ease: "power3.out",
-                    stagger: 0.2,
-                    scrollTrigger: {
-                        trigger: marketingRef.current,
-                        start: "top 75%",
-                        toggleActions: "play reverse play reverse",
-                    }
-                }
-            );
-            }, marketingRef);
-
-            ScrollTrigger.refresh();
-        };
-
-        const timeout = setTimeout(initAnimation, 150);
-
-        return () => {
-            clearTimeout(timeout);
-            ctx && ctx.revert();
-        };
-    }, []);
+let data = [
+    {
+    icon:img1,
+    text:"100% Transparency"
+},{
+    icon:img2,
+    text:"Get A Dedicated Manager"
+},{
+    icon:img3,
+    text:"Campaign Optimization"
+},{
+    icon:img4,
+    text:"Flexible Pricing"
+}
+]
 
     return(
-        <div className={`services_our_marketing_section ${classes ? classes : "body-background"}`} ref={marketingRef}>
+        <div className=" ourmarketingsection" >
             <Container>
                 <Row>
                     <Col>
-                        <h2 className="heading_main text-center split">Our Marketing Strategy</h2>
-                        <p className="paragraph_content text-center">We Dont Guess. We Calculate</p>
-                        <div className="our_marketing_grids less-top-padding">
-                            {marketingLists.map((item,i) => (
-                                <div className="our_marketing_item marketing_boxes" key={i}>
-                                    <div className="our_marketing_numbers">{i+1}</div>
-                                    <p className="paragraph_content">{item.title}</p>
-                                    <p className="our_marketing_text">{item.text}</p>
-                                </div>
-                            ))}
+                        <div className="subHeadingOurmakret "> We Build AI-First Solutions</div>
+                        <h2 className="heading_main text-center split">From Complex Challenges to Intelligent Solutions</h2>
+                       <div className="ImageSectionOurMark">
+                        <div className="destopImag">
+                            <img src={desktop} alt="" />
                         </div>
+                        <div className="MobileImg">
+                            <img src={mobile} alt="" />
+                        </div>
+                       </div>
+                       
+                       
                     </Col>
                 </Row>
             </Container>

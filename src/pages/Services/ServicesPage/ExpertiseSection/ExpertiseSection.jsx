@@ -4,67 +4,26 @@ import { Col, Container, Row } from "react-bootstrap";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAnglesRight, faCircleArrowRight } from "@fortawesome/free-solid-svg-icons";
+import {
+    faGear,
+    faMobileScreenButton,
+    faCube,
+    faLink,
+    faArrowsRotate,
+    faFileContract,
+    faCircleNodes,
+    faPenRuler
+} from "@fortawesome/free-solid-svg-icons";
+import img1 from "../newImagesServiecesPage/expertiesSection/img1.png"
+import img2 from "../newImagesServiecesPage/expertiesSection/img2.png"
+import img3 from "../newImagesServiecesPage/expertiesSection/img3.png"
+import img4 from "../newImagesServiecesPage/expertiesSection/img4.png"
+import img5 from "../newImagesServiecesPage/expertiesSection/img5.png"
+import img6 from "../newImagesServiecesPage/expertiesSection/img6.png"
+import leftbg from "../newImagesServiecesPage/expertiesSection/leftbg.png"
 
-
-const webDevelopment = `${process.env.REACT_APP_API_URL}/assests/services/services-page/web-development.svg`;
-const mobileAppDevelop = `${process.env.REACT_APP_API_URL}/assests/services/services-page/mobile-app-develop.svg`;
-const magento = `${process.env.REACT_APP_API_URL}/assests/services/services-page/magento.svg`;
-const blockchain = `${process.env.REACT_APP_API_URL}/assests/services/services-page/blockchain.svg`;
-const digitalTransformation = `${process.env.REACT_APP_API_URL}/assests/services/services-page/digital-transformation.svg`;
-const algorand = `${process.env.REACT_APP_API_URL}/assests/services/services-page/algorand.svg`;
-const POCICO = `${process.env.REACT_APP_API_URL}/assests/services/services-page/POC-ICO.svg`;
-const ideation = `${process.env.REACT_APP_API_URL}/assests/services/services-page/ideation.svg`;
-
-const servicesLists = [
-    {
-        icon: webDevelopment,
-        link: "/web-development-services",
-        title: "Web Development",
-        content: "Fast, scalable, conversion-focused websites",
-    },
-    {
-        icon: mobileAppDevelop,
-        link: "/mobile-app-development-services",
-        title: "Mobile App Development",
-        content: "IOS & Android experiences users love",
-    },
-    {
-        icon: magento,
-        link: "/magento-development-services",
-        title: "Magento Development",
-        content: "Development demands strong planning, design, content, and execution—and IosAndWeb expertly manages every aspect",
-    },
-    {
-        icon: blockchain,
-        link: "https://www.blockchain77.com/services/",
-        title: "Blockchain Development",
-        content: "Secure, innovative Web3 solutions",
-    },
-    {
-        icon: digitalTransformation,
-        link: "/digital-marketing-services",
-        title: "Digital Transformation",
-        content: "Smart automation & modernization",
-    },
-    {
-        icon: algorand,
-        link: "https://www.blockchain77.com/services/",
-        title: "Algorand Smart Contract",
-        content: "We develop smart contracts that simplify execution and support Hyperledger Fabric and Ethereum ecosystems",
-    },
-    {
-        icon: POCICO,
-        link: "https://www.blockchain77.com/services/",
-        title: "Development of POC & ICO",
-        content: "Validated concepts & token launches",
-    },
-    {
-        icon: ideation,
-        link: "/web-designing-services",
-        title: "Ideation & Design Strategy",
-        content: "We transform ideas into interactive digital experiences that boost engagement, usability, and long-term growth",
-    },
-]
 
 const ExpertiseSection = () => {
 
@@ -103,25 +62,103 @@ const ExpertiseSection = () => {
             ctx && ctx.revert();
         };
     }, []);
-
+const expertiseServices = [
+    { icon: faGear, title: "Web Development" },
+    { icon: faMobileScreenButton, title: "Mobile App Development" },
+    { icon: faCube, title: "Magento Development" },
+    { icon: faLink, title: "Blockchain Development" },
+    { icon: faArrowsRotate, title: "Digital Transformation" },
+    { icon: faFileContract, title: "AI & Smart Contract" },
+    { icon: faCircleNodes, title: "Development of POC & ICO" },
+    { icon: faPenRuler, title: "Ideation & Design Strategy" }
+];
     return(
-        <div className="services_expertise_section section-padding no-bottom-padding body-background" ref={expertiseRef}>
+        <div className="services_expertise_section  no-bottom-padding " ref={expertiseRef}>
             <Container>
                 <Row>
-                    <Col className="less-top-padding">
-                        <h2 className="heading_main text-center split">Our Expertise</h2>
-                        <p className="paragraph_content text-center">Comprehensive Digital Solutions, Delivered With Precision</p>
-                        <div className="services_expertise_grid less-top-padding">
-                            {servicesLists.map((item,i) => (
-                                <Link reloadDocument to={item.link} className="services_expertise_item expertise_boxes" key={i}>
-                                    <div className="services_expertise_icon_box">
-                                        <img src={item.icon} alt={item.title} className="services_expertise_icon" />
-                                    </div>
-                                    <p className="paragraph_content">{item.title}</p>
-                                    <p className="services_expertise_text">{item.content}</p>
-                                </Link>
-                            ))}
+                    <Col className="">
+                      
+                       <div className="expertiseSection">
+    <Container>
+        <Row className="align-items-center">
+
+            {/* LEFT IMAGE */}
+            <Col lg={6} md={12} className="ImageDiv">
+                <div className="expertiseImage">
+                    <img src={leftbg} alt="Our Expertise" />
+                </div>
+            </Col>
+
+            {/* RIGHT CONTENT */}
+            <Col lg={6} md={12}>
+                <div className="expertiseContent">
+                     <span className="topSectionExpertise">                    <span className="expertiseTag">
+                       Core Services
+                    </span>
+
+                    <h2>
+                       One Technology Partner
+
+                        <span >An Intelligent Digital Stack</span>
+                    </h2>
+
+                    <p>
+From AI agents to cloud infrastructure, we bring the technologies behind modern digital businesses together.                    </p>
+</span>
+                    <div className="expertiseServices">
+
+                        <div className="expertiseService">
+                            <span className="serviceIcon">
+                                <img src={img1} alt=" " />
+                            </span>
+                            <span>AI Agents & Agentic System</span>
                         </div>
+
+                        <div className="expertiseService">
+                            <span className="serviceIcon">
+                         <img src={img2} alt=" " />
+                            </span>
+                            <span>AI-Native Software</span>
+                        </div>
+
+                        <div className="expertiseService">
+                            <span className="serviceIcon"><img src={img3} alt=" " /></span>
+                            <span>Web & App Engineering</span>
+                        </div>
+
+                        <div className="expertiseService">
+                            <span className="serviceIcon"><img src={img4} alt=" " /></span>
+                            <span>Cloud & AI Infrastructure</span>
+                        </div>
+
+                        <div className="expertiseService">
+                            <span className="serviceIcon"><img src={img5} alt=" " /></span>
+                            <span>AI Security & Cybersecurity</span>
+                        </div>
+
+                        <div className="expertiseService">
+                            <span className="serviceIcon"><img src={img6} alt=" " /></span>
+                            <span>Data & Intelligence</span>
+                        </div>
+
+
+                    </div>
+
+                    <Link
+                        to="/contact-us"
+                        reloadDocument
+                        className="expertiseButton"
+                    >
+                        Let's Get Started
+                        <FontAwesomeIcon icon={faCircleArrowRight} />
+                    </Link>
+
+                </div>
+            </Col>
+
+        </Row>
+    </Container>
+</div>
                     </Col>
                 </Row>
             </Container>

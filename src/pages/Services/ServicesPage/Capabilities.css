@@ -1,0 +1,304 @@
+.capabilities {
+  width: 100%;
+  background: #ffffff;
+  color: #3a3939;
+}
+
+.capabilities__container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 70px 30px;
+}
+
+/* =========================================
+   ROW
+========================================= */
+
+.capabilities__row {
+  display: grid;
+  align-items: start;
+  gap: 70px;
+}
+
+.capabilities__row--cloud {
+  grid-template-columns: 1fr 1.05fr;
+}
+
+.capabilities__row--security {
+  grid-template-columns: 1.05fr 1fr;
+  margin-top: 110px;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.capabilities__content {
+  max-width: 500px;
+}
+
+.capabilities__eyebrow {
+  display: block;
+  margin-bottom: 30px;
+  font-family: var(--font-poppins);
+  font-weight: 600;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+
+.capabilities__title {
+  margin: 0 0 24px;
+
+  font-family: var(--font-poppins);
+  font-weight: 600;
+  font-style: normal;
+  font-size: 35px;
+  line-height: 45px;
+  letter-spacing: 0;
+}
+
+.capabilities__title span,
+.capabilities__title strong {
+  display: block;
+}
+
+.capabilities__title span {
+  color: #3a3939;
+  font-weight: 600;
+}
+
+.capabilities__title strong {
+  color: #0046ff;
+  font-family: var(--font-poppins);
+  font-weight: 600;
+}
+
+.capabilities__description {
+  max-width: 470px;
+  margin: 0;
+
+  font-family: var(--font-poppins);
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #000000;
+}
+
+/* =========================================
+   CAPABILITY ITEMS
+========================================= */
+
+.capabilities__items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  column-gap: 25px;
+  row-gap: 28px;
+
+  padding-top: 2px;
+}
+
+.capabilities__row--security .capabilities__items {
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 38px;
+  row-gap: 30px;
+}
+
+.capabilities__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.capabilities__itemIcon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 8px;
+}
+
+.capabilities__itemIcon img {
+  display: block;
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.capabilities__item span {
+  display: block;
+
+  font-family: var(--font-poppins);
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0;
+
+  color: #000000;
+  text-align: center;
+}
+
+/* =========================================
+   EMPTY IMAGE PLACEHOLDER
+========================================= */
+
+.capabilities__itemIcon:empty {
+  /* Keeps the 52 x 52 space even without an image */
+  flex-shrink: 0;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+  .capabilities__container {
+    padding: 60px 30px;
+  }
+
+  .capabilities__row {
+    gap: 45px;
+  }
+
+
+
+ 
+
+  .capabilities__items {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+  }
+
+  .capabilities__row--security .capabilities__items {
+    column-gap: 20px;
+  }
+
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+  .capabilities__container {
+    padding: 50px 20px;
+  }
+
+  .capabilities__row,
+  .capabilities__row--cloud{
+    display: flex;
+    flex-direction: column;
+
+    gap:54px;
+    margin-top: 0;
+  }
+  .capabilities__row--security {
+    display: flex;
+    flex-direction: column-reverse;
+
+    gap:54px;
+    margin-top: 0;
+  }
+
+  .capabilities__row--security {
+    margin-top: 70px;
+  }
+
+  .capabilities__content {
+    max-width: 100%;
+  }
+
+  .capabilities__eyebrow {
+    margin-bottom: 30px;
+   text-align: center;
+  }
+
+  .capabilities__title {
+    margin-bottom: 26px;
+    text-align: center;
+
+  }
+
+  .capabilities__description {
+    max-width: 100%;
+
+  }
+
+  .capabilities__items,
+  .capabilities__row--security .capabilities__items {
+    width: 100%;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    column-gap: 15px;
+    row-gap: 28px;
+  }
+  .capabilities__description {
+    text-align: center;
+    
+  }
+  .capabilities__itemIcon {
+    width: 52px;
+    height: 52px;
+  }
+
+ 
+
+  /*
+    On mobile, security text should appear
+    after its icons just like the desktop
+    visual relationship.
+  */
+  .capabilities__row--security .capabilities__content {
+    order: 2;
+  }
+
+  .capabilities__row--security .capabilities__items {
+    order: 1;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .capabilities__container {
+    padding: 40px 16px;
+  }
+
+
+
+
+
+  .capabilities__items,
+  .capabilities__row--security .capabilities__items {
+    column-gap: 8px;
+    row-gap: 25px;
+  }
+
+  .capabilities__itemIcon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .capabilities__item span {
+    font-size: 11px;
+    line-height: 15px;
+  }
+}

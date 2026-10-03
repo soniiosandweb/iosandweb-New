@@ -1,0 +1,188 @@
+/* =================================
+   MARKETING STRATEGY
+================================= */
+
+.marketingStrategy {
+  width: 100%;
+  background: #ffffff;
+  color: #000000;
+}
+
+.marketingStrategy__container {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.marketingStrategy__header {
+  text-align: center;
+}
+
+.marketingStrategy__eyebrow {
+  margin: 0 0 25px;
+
+  font-family:var(--font-poppins);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+.marketingStrategy__title {
+  margin: 0;
+
+  font-family:var(--font-poppins);
+  font-weight: 600;
+  font-style: normal;
+  font-size: 35px;
+  line-height: 24px;
+  letter-spacing: 0%;
+
+  color: #0046FF;
+}
+
+
+/* =================================
+   STEPS
+================================= */
+
+.marketingStrategy__steps {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-top: 82px;
+}
+
+
+/* =================================
+   SINGLE STEP
+================================= */
+
+.marketingStrategy__step {
+  flex: 1;
+  max-width: 160px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+
+/* =================================
+   NUMBER CIRCLE
+================================= */
+
+.marketingStrategy__number {
+  box-sizing: border-box;
+
+  padding: 13px;
+
+  min-width: 44px;
+  min-height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #000000;
+  border-radius: 50%;
+
+  font-family:var(--font-mukta);
+  font-weight: 800;
+  font-style: normal;
+  font-size: 25px;
+  line-height: 17px;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+
+  background: #ffffff;
+}
+
+
+/* =================================
+   STEP TITLE
+================================= */
+
+.marketingStrategy__stepTitle {
+  margin: 23px 0 13px;
+
+  font-family:var(--font-poppins);
+  font-weight: 600;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0%;
+}
+
+
+/* =================================
+   DESCRIPTION
+================================= */
+
+.marketingStrategy__description {
+  margin: 5px 0 0;
+
+  font-family:var(--font-poppins);
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  text-align: center;
+
+  max-width: 150px;
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 900px) {
+  .marketingStrategy__steps {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 700px) {
+ .marketingStrategy__steps {
+    flex-wrap: wrap;
+    row-gap: 40px;
+    flex-direction: column;
+    align-items: center;
+}
+
+  .marketingStrategy__step {
+    flex: 0 0 calc(33.333% - 20px);
+  }
+}
+
+@media (max-width: 500px) {
+  .marketingStrategy__container {
+  }
+
+  .marketingStrategy__title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .marketingStrategy__eyebrow {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .marketingStrategy__steps {
+    gap: 35px 15px;
+  }
+
+  .marketingStrategy__step {
+    flex: 0 0 calc(50% - 10px);
+  }
+}

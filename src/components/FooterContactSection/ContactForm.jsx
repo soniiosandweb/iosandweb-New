@@ -30,14 +30,14 @@ const ContactForm = ({title}) => {
     const validate = () => {
     
         let errors = {};
-    
-        //name field
-        if (!values.yourName) {
-          errors.yourName = "First Name is required";
+        const isEmpty = (val) => !val || val.trim() === "";
+
+        if (!values.yourName || values.yourName.trim() === "" ) {
+            errors.yourName = "First name is required";
         }
 
-        if(!values.lastName) {
-            errors.lastName = "Last Name is required";
+        if (!values.lastName || values.lastName.trim() === "") {
+            errors.lastName = "Last name is required";
         }
     
         //email field
@@ -53,7 +53,11 @@ const ContactForm = ({title}) => {
         } else if (!/^[6-9]\d{9}$/.test(phoneValue)) {
             errors.phoneValue = "Invalid Phone number";
         }
-    
+           if (isEmpty(values.yourMessage)) {
+                errors.yourMessage = "Message is required";
+            } else if (values.yourMessage.trim().length < 10) {
+                errors.yourMessage = "Message must be at least 10 characters";
+            }
         setFormErrors(errors);
     
         if (Object.keys(errors).length === 0) {
@@ -91,7 +95,7 @@ const ContactForm = ({title}) => {
             })
             .then(function (response) {
                 //handle success
-                if (response.data.status === 0) {
+                if (response.data.status === 1) {
                     setLoading(false);
                     setFormSuccess("Your message was sent successfully");
                     resetForm();
@@ -128,7 +132,7 @@ const ContactForm = ({title}) => {
     return(
         <>
             <div className="footer_contact_form">
-                <p className="paragraph_content">{title ? title : "Partner With Experts Who Leverage AI & Tech To Transform Ideas Into Market-Leading Solutions."}</p>
+                <p className="paragraph_content">{title ? title : "Tell us about your project and we'll get back to you within 24 hours."}</p>
                 <Form className="footer_contactForm" id="footer_contactForm" onSubmit={handleSubmit}>
 
                     <div className="form_rows">
@@ -155,7 +159,17 @@ const ContactForm = ({title}) => {
                     </Form.Group>
 
                     <Form.Group controlId="yourMessage" className="form-group">
-                        <Form.Control as="textarea" rows={6} name="yourMessage" placeholder="Message" value={values.yourMessage} onChange={handleChange} />
+                    <Form.Control
+                        as="textarea"
+                        rows={4}
+                        name="yourMessage"
+                        placeholder="Message"
+                        value={values.yourMessage}
+                        onChange={handleChange}
+                    />
+                    {formerrors.yourMessage && (
+                        <p className="text-danger visible">{formerrors.yourMessage}</p>
+                    )}
                     </Form.Group>
 
                     <Form.Group className="form-group form-submit-group">
@@ -169,7 +183,7 @@ const ContactForm = ({title}) => {
                             : 
                             <>
                                 Let's Contact
-                                <FontAwesomeIcon icon={faAnglesRight} /> 
+                                {/* <FontAwesomeIcon icon={faAnglesRight} />  */}
                             </>
                         }
                         </Button>
